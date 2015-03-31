@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11400000}
+  m_Layer: 0
+  m_Name: PopupLayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96cc388a8297c7e41bac1d536b48070e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  p_ResultsGUI: {fileID: 11400012, guid: af2f34ef7fade3648be8e41de0ab83c7, type: 2}
+  p_ResultsSuccessGUI: {fileID: 11400008, guid: ba64f53b5fe00d04a9929bd93d41832c,
+    type: 2}
+  p_InfoPopupGUI: {fileID: 11400006, guid: a695d2d201484dc43ae9022eebe08066, type: 2}
+  p_UpdatePopupGUI: {fileID: 11459836, guid: 854580ea4aa3c804ab3f484545fd9bbb, type: 2}
+  p_PurchaseLoadingGUI: {fileID: 11400000, guid: acdd2e4a9e79946459f055f96fbbaa66,
+    type: 2}
+  p_OptionsGUI: {fileID: 11400000, guid: f6878fa987dab7c4da3fa8250b7bd62a, type: 2}
+  p_TutorialGUI: {fileID: 11400006, guid: 78cd8a2d6657d45b4b79125836a26f78, type: 2}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1

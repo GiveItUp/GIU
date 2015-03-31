@@ -1,0 +1,79 @@
+Daily challenge#Daily challenge
+Stage #Stage 
+and your {0}. try...#and your {0}. try...
+Please check your internet connection!#Please check your internet connection!
+Purchase success!#Purchase success!
+Purchase failed!#Purchase failed!
+Purchase cancelled!#Purchase cancelled!
+Settings#Settings
+****** Give It Up! ******#****** Give It Up! ******
+Developed by#Developed by
+INVICTUS-GAMES Ltd#INVICTUS-GAMES Ltd
+EAST2WEST GAMES Ltd#EAST2WEST GAMES Ltd
+Producer#Producer
+Akos Divianszky#Akos Divianszky
+QiangQiang#QiangQiang
+Development#Development
+Zoltan Kovacs#Zoltan Kovacs
+Janos Barkoczi#Janos Barkoczi
+Zsolt Szentpeteri#Zsolt Szentpeteri
+Laszlo Ladik#Laszlo Ladik
+Laszlo Palfi#Laszlo Palfi
+Karoly Molnar#Karoly Molnar
+Rein Lv#Rein Lv
+QA#QA
+Peter Hagen#Peter Hagen
+Laszlo Kiss#Laszlo Kiss
+Laszlo Karacs#Laszlo Karacs
+Gyorgy Laszlo#Gyorgy Laszlo
+Gabor Antal#Gabor Antal
+Gabor Raszava#Gabor Raszava
+Zhang Xin#Zhang Xin
+Special Thanks#Special Thanks
+Krisztina Batonyi#Krisztina Batonyi
+Kaika#Kaika
+Wang Ke#Wang Ke
+Dong Fenfen#Dong Fenfen
+Copyright © 2014 Invictus Games Ltd. All rights reserved.#Copyright © 2014 Invictus Games Ltd. All rights reserved.
+Best: #Best: 
+Download Give It Up! For Free!#
+I just reached {0}% on stage {1}#
+I just completed stage {0}#
+You'd better play something else.#
+You call it a result?#
+I'm bored to be splashed.#
+Come on!_Watch TV instead!#
+Are you kiddin'?#
+I see you're getting intuitive.# 
+Neither bad nor good.#
+What a progress!#
+I'm glad you still hold on.#
+Go ahead!_You can do much better!#
+At last!#
+You seem to be a gamer...#
+I see you keep practicing.#
+Not so hard,_is it.#
+Just a little practice and you can finish it.#
+Whoo, it's almost done!#
+You must be angry._Try again!#
+Just a little more and it's done!#
+You don't give up,_do you.#
+Not just try,_do it!#
+That's it!# 
+Good job!# 
+At last!_Someone got this far!# 
+One hundred percent!!_Believe it?# 
+That's the way it's done!#
+Tap at touchdown to make Blob jump. The rhythm of the music may help.#
+Tap to jump up. Blob knows what to do.#
+It's slightly harder: tap three times in a row to the rhythm of the jump.#
+Blob is jumping down by itself.#
+You don't always have to jump: take care of spikes hanging down.#
+Tap now!#
+GOOD LUCK#
+TAP#
+Waiting for purchase...#
+Update notes:#
+** 9 new levels of varied difficulty#
+** Daily challenge: complete daily challenge levels the higher percent to increase your scores on the Leaderboard#
+** New crazy music#
