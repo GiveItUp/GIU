@@ -1,0 +1,196 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &144272
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 439644}
+  - 114: {fileID: 11437790}
+  - 33: {fileID: 3333134}
+  - 23: {fileID: 2326220}
+  m_Layer: 9
+  m_Name: octopus
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &439644
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144272}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!23 &2326220
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144272}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 730d374255a0447a7bb613f0e68c1cd1, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &3333134
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144272}
+  m_Mesh: {fileID: 0}
+--- !u!114 &11437790
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5f05aedb1f504e319c9bcf67302925c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  managed: 0
+  manager: {fileID: 0}
+  drawLayer: 0
+  persistent: 0
+  plane: 0
+  winding: 1
+  width: 75
+  height: 75
+  bleedCompensation: {x: 0, y: 0}
+  anchor: 9
+  pixelPerfect: 0
+  autoResize: 0
+  billboarded: 0
+  offset: {x: 0, y: 0, z: 0}
+  color: {r: 1, g: 1, b: 1, a: 1}
+  renderCamera: {fileID: 0}
+  pixelsPerUV: {x: 256, y: 256}
+  hideAtStart: 0
+  ignoreClipping: 0
+  playAnimOnStart: 1
+  crossfadeFrames: 0
+  defaultAnim: 0
+  doNotTrimImages: 0
+  animations:
+  - name: New Animation
+    loopCycles: 0
+    loopReverse: 0
+    framerate: 15
+    index: 0
+    onAnimEnd: 2
+  staticTexPath: 
+  staticTexGUID: 
+  _ser_stat_frame_info:
+    uvs:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    scaleFactor: {x: .5, y: .5}
+    topLeftOffset: {x: -1, y: 1}
+    bottomRightOffset: {x: 1, y: -1}
+  staticFrameInfo:
+    uvs:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    scaleFactor: {x: .5, y: .5}
+    topLeftOffset: {x: -1, y: 1}
+    bottomRightOffset: {x: 1, y: -1}
+  textureAnimations:
+  - name: octopus
+    loopCycles: 0
+    loopReverse: 0
+    framerate: 15
+    onAnimEnd: 2
+    framePaths: []
+    frameGUIDs:
+    - eae4eb996d7531e41b825cda9beee7b9
+    - 59aaa9dc870d9674f9b921d258a8b0c1
+    - c523fe6effbda064e819d61680e9dd88
+    - 3f8e4ac2543e2cb44b952267a0ff40a4
+    - b8d13c899b05a5742a345bb6b63f9a76
+    spriteFrames:
+    - uvs:
+        serializedVersion: 2
+        x: .30078125
+        y: .37109375
+        width: .296875
+        height: .33984375
+      scaleFactor: {x: .657894731, y: .574712634}
+      topLeftOffset: {x: -.75999999, y: .959999979}
+      bottomRightOffset: {x: .75999999, y: -.779999971}
+    - uvs:
+        serializedVersion: 2
+        x: .30078125
+        y: 0
+        width: .296875
+        height: .3671875
+      scaleFactor: {x: .657894731, y: .53191489}
+      topLeftOffset: {x: -.75999999, y: .959999979}
+      bottomRightOffset: {x: .75999999, y: -.920000017}
+    - uvs:
+        serializedVersion: 2
+        x: .6015625
+        y: 0
+        width: .296875
+        height: .3671875
+      scaleFactor: {x: .657894731, y: .53191489}
+      topLeftOffset: {x: -.75999999, y: .959999979}
+      bottomRightOffset: {x: .75999999, y: -.920000017}
+    - uvs:
+        serializedVersion: 2
+        x: 0
+        y: .37890625
+        width: .296875
+        height: .37109375
+      scaleFactor: {x: .657894731, y: .526315808}
+      topLeftOffset: {x: -.75999999, y: .959999979}
+      bottomRightOffset: {x: .75999999, y: -.939999998}
+    - uvs:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: .296875
+        height: .375
+      scaleFactor: {x: .657894731, y: .520833313}
+      topLeftOffset: {x: -.75999999, y: .959999979}
+      bottomRightOffset: {x: .75999999, y: -.959999979}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 144272}
+  m_IsPrefabParent: 1

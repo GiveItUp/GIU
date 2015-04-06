@@ -305,7 +305,7 @@ public class UITextField : AutoSpriteControlBase, IKeyFocusable
 				// Cast the pointer's ray against our collider to
 				// find the point clicked:
 				RaycastHit hit;
-				if (collider.Raycast(ptr.ray, out hit, ptr.rayDepth))
+				if (GetComponent<Collider>().Raycast(ptr.ray, out hit, ptr.rayDepth))
 				{
 					PositionInsertionPoint(hit.point);
 				}

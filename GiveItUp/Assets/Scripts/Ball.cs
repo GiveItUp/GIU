@@ -150,7 +150,7 @@ public class Ball : MonoBehaviour
 		pos = Util.Hermite (pFrom, vFrom, pTo, vTo, t);
 		b_pos = pos;
 		b_angle = angle;
-		GetComponent<Rigidbody2D>().MoveRotation (angle);
+//		GetComponent<Rigidbody2D>().MoveRotation (angle);
 	}
     
 	public void UpdatePos ()
