@@ -140,49 +140,49 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .30078125
-        y: .37109375
-        width: .296875
-        height: .33984375
-      scaleFactor: {x: .657894731, y: .574712634}
-      topLeftOffset: {x: -.75999999, y: .959999979}
-      bottomRightOffset: {x: .75999999, y: -.779999971}
+        x: 0
+        y: 0
+        width: .390625
+        height: .1953125
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
-        x: .30078125
+        x: .39453125
         y: 0
-        width: .296875
-        height: .3671875
-      scaleFactor: {x: .657894731, y: .53191489}
-      topLeftOffset: {x: -.75999999, y: .959999979}
-      bottomRightOffset: {x: .75999999, y: -.920000017}
-    - uvs:
-        serializedVersion: 2
-        x: .6015625
-        y: 0
-        width: .296875
-        height: .3671875
-      scaleFactor: {x: .657894731, y: .53191489}
-      topLeftOffset: {x: -.75999999, y: .959999979}
-      bottomRightOffset: {x: .75999999, y: -.920000017}
+        width: .390625
+        height: .1953125
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
         x: 0
-        y: .37890625
-        width: .296875
-        height: .37109375
-      scaleFactor: {x: .657894731, y: .526315808}
-      topLeftOffset: {x: -.75999999, y: .959999979}
-      bottomRightOffset: {x: .75999999, y: -.939999998}
+        y: .197265625
+        width: .390625
+        height: .1953125
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .39453125
+        y: .197265625
+        width: .390625
+        height: .1953125
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: .296875
-        height: .375
-      scaleFactor: {x: .657894731, y: .520833313}
-      topLeftOffset: {x: -.75999999, y: .959999979}
-      bottomRightOffset: {x: .75999999, y: -.959999979}
+        y: .39453125
+        width: .390625
+        height: .1953125
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
