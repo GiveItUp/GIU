@@ -197,7 +197,7 @@ public class ResultsSuccessGUI : GUIPopup {
 				//{ "picture", "" },
 				{ "caption", TextManager.Get(string.Format("I just completed stage {0}",(_results.StageIndex + 1).ToString() ))}
 			};
-            FacebookAndroid.showDialog("stream.publish", parameters);
+//            FacebookAndroid.showDialog("stream.publish", parameters);
 #endif
 #if UNITY_IPHONE
             var parameters = new Dictionary<string, string>

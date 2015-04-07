@@ -266,11 +266,11 @@ public class OptionsGUI : GUIPopup
 		StartCoroutine(IOSFacebookLike());
  
 		#else
-		if (checkPackageAppIsPresent ("com.facebook.katana")) {
-			Application.OpenURL ("fb://page/275295995837831"); //there is Facebook app installed so let's use it
-		} else {
-			Application.OpenURL ("https://www.facebook.com/275295995837831"); // no Facebook app - use built-in web browser
-		}
+//		if (checkPackageAppIsPresent ("com.facebook.katana")) {
+//			Application.OpenURL ("fb://page/275295995837831"); //there is Facebook app installed so let's use it
+//		} else {
+//			Application.OpenURL ("https://www.facebook.com/275295995837831"); // no Facebook app - use built-in web browser
+//		}
 		#endif
 	}
     

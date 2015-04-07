@@ -428,7 +428,7 @@ namespace Umeng
 			var info = util.CallStatic<string>("getDeviceInfo", Context);
 			return info;
 #endif
-
+			return null;
 		}
 
 
@@ -757,7 +757,7 @@ namespace Umeng
                 //instance_mobclick will be null if you run in editor mode
                 //try it on real android device
                 instance_mobclick = new AndroidJavaClass("com.umeng.analytics.game.UMGameAgent");
-                UMGameAnalyticsLibForAndroid.UMGameAnalyticsTool.Init(instance_mobclick);
+//                UMGameAnalyticsLibForAndroid.UMGameAnalyticsTool.Init(instance_mobclick);
 
                 //cls_UnityPlayer and instance_context will be null if you run in editor mode
                 //try it on real android device

@@ -275,7 +275,7 @@ public class PluginManager : MonoBehaviour
 		#endif
 
         #if UNITY_ANDROID
-        FacebookAndroid.init(true);
+//        FacebookAndroid.init(true);
         #endif
         #if UNITY_IPHONE
        // FacebookBinding.init();

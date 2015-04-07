@@ -245,7 +245,7 @@ public class ResultsGUI : GUIPopup {
 
 				{ "caption", TextManager.Get(string.Format( "I just reached {0}% on stage {1}",_results.Score,(_results.StageIndex + 1).ToString()) )}
 			};
-            FacebookAndroid.showDialog("stream.publish", parameters);
+//            FacebookAndroid.showDialog("stream.publish", parameters);
 #endif
 #if UNITY_IPHONE
             var parameters = new Dictionary<string, string>
