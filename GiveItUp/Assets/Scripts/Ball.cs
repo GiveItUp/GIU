@@ -6,7 +6,7 @@ public class Ball : MonoBehaviour
 	bool isActive = false;
 	bool isJumpNeed = false;
 	bool isJumpedOnThisColumn = false;
-	public Pislogas anims;
+	public AnimationControl anims;
 	Vector3 pos;
 	float radius;
 	float angle;
@@ -28,6 +28,7 @@ public class Ball : MonoBehaviour
 
 	public OnJumpedDelegate OnJumped;
 	public PackedSprite placcs;
+
 
 	void Start ()
 	{
@@ -144,11 +145,15 @@ public class Ball : MonoBehaviour
 				CGame.gamelogic.OnJumped ();
             
 			if (CGame.gamelogic.world.IsItTheEnd (transform.position.x))
+			{
 				CGame.gamelogic.ChangeState (Gamelogic.eState.results_success);
+				anims.SuccessfulAnimation();
+			}
 		}
 
 		pos = Util.Hermite (pFrom, vFrom, pTo, vTo, t);
 		b_pos = pos;
+
 		b_angle = angle;
 //		GetComponent<Rigidbody2D>().MoveRotation (angle);
 	}
@@ -162,7 +167,7 @@ public class Ball : MonoBehaviour
 
 	bool isFailSwitch = false;
 
-	void DoJump (bool lateInput = false)
+		void DoJump (bool lateInput = false)
 	{
 		//Android sound delay debug
 		//itt derült ki, hogy a rendszer azt hiszi, jó helyen tart a hanglejátszással, de a hangszórókból bizony megkésve jön a hang :(
@@ -181,19 +186,19 @@ public class Ball : MonoBehaviour
 		Vector3 p1;
 		Vector3 p2;
         
-		p0 = c0.states [c0.currentState].pivots [0].transform.position;
+		p0 = c0.states [c0.currentState].pivots [0].transform.position+anims.jumpOffset;
 		if (c0.states [c0.currentState].pivots.Length >= 2) {
-			p1 = c0.states [c0.currentState].pivots [1].transform.position;
+			p1 = c0.states [c0.currentState].pivots [1].transform.position+anims.jumpOffset;
 		} else {
-			p1 = c1.states [c1.currentState].pivots [0].transform.position;
+			p1 = c1.states [c1.currentState].pivots [0].transform.position+anims.jumpOffset;
 		}
 		if (c0.states [c0.currentState].pivots.Length >= 3) {
-			p2 = c0.states [c0.currentState].pivots [2].transform.position;
+			p2 = c0.states [c0.currentState].pivots [2].transform.position+anims.jumpOffset;
 		} else {
 			if (c1.states [c1.currentState].pivots.Length >= 2) {
-				p2 = c1.states [c1.currentState].pivots [1].transform.position;
+				p2 = c1.states [c1.currentState].pivots [1].transform.position+anims.jumpOffset;
 			} else {
-				p2 = c2.states [c2.currentState].pivots [0].transform.position;
+				p2 = c2.states [c2.currentState].pivots [0].transform.position+anims.jumpOffset;
 			}
 		}
 			
@@ -255,7 +260,7 @@ public class Ball : MonoBehaviour
 			if (y0 < y1) {//up
 				if (y1 == y0 + 1f) {
 					//JUMP UP!
-					anims.Ouch ();
+					anims.JumpOuch();
 					int level = (int)(y1 - 0.5f);
 					if (level == 0) {
 						CGame.gamelogic.currentUpSoundPack = Random.Range (0, CGame.gamelogic.upSounds.Count);
@@ -274,7 +279,7 @@ public class Ball : MonoBehaviour
 			} else if (y0 >= y2) {//forward
 
 				//JUMP FORWARD!
-				anims.Ouch ();
+				anims.JumpOuch();
 
 				CGame.gamelogic.scratchSounds [CGame.gamelogic.currentScratchSoundPack].sounds [CGame.gamelogic.currentScratchSound].Play ();
 #if UNITY_ANDROID	//átugorjuk a felfutást, így kicsit kisebbnek hat a lag..bocs KZ
@@ -374,6 +379,7 @@ public class Ball : MonoBehaviour
 			placcs.transform.eulerAngles = new Vector3 (0f, 0f, -30f);
 			placcs.gameObject.SetActive (true);
 			GetComponent<Animation>().Play ("ball_scale");
+			anims.DieAnimation();
 		}
 	}
 
