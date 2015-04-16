@@ -186,19 +186,19 @@ public class Ball : MonoBehaviour
 		Vector3 p1;
 		Vector3 p2;
         
-		p0 = c0.states [c0.currentState].pivots [0].transform.position+anims.jumpOffset;
+		p0 = c0.states [c0.currentState].pivots [0].transform.position;
 		if (c0.states [c0.currentState].pivots.Length >= 2) {
-			p1 = c0.states [c0.currentState].pivots [1].transform.position+anims.jumpOffset;
+			p1 = c0.states [c0.currentState].pivots [1].transform.position;
 		} else {
-			p1 = c1.states [c1.currentState].pivots [0].transform.position+anims.jumpOffset;
+			p1 = c1.states [c1.currentState].pivots [0].transform.position;
 		}
 		if (c0.states [c0.currentState].pivots.Length >= 3) {
-			p2 = c0.states [c0.currentState].pivots [2].transform.position+anims.jumpOffset;
+			p2 = c0.states [c0.currentState].pivots [2].transform.position;
 		} else {
 			if (c1.states [c1.currentState].pivots.Length >= 2) {
-				p2 = c1.states [c1.currentState].pivots [1].transform.position+anims.jumpOffset;
+				p2 = c1.states [c1.currentState].pivots [1].transform.position;
 			} else {
-				p2 = c2.states [c2.currentState].pivots [0].transform.position+anims.jumpOffset;
+				p2 = c2.states [c2.currentState].pivots [0].transform.position;
 			}
 		}
 			
@@ -334,7 +334,7 @@ public class Ball : MonoBehaviour
 			vTo = Vector3.down * 3;
 		}
 
-		pFrom += Vector3.up * radius;
+		pFrom += Vector3.up * radius + anims.jumpOffset;
 		pTo += Vector3.up * radius;
 
 		isJumpNeed = false;
