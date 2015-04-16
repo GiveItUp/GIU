@@ -25,6 +25,7 @@ public class MainMenuGUI : GUIMenu
 	public GameObject go_levels_2;
 	public JoyStickMenu joyMainMenu;
 	public LevelItemGUI p_LevelItemGUI;
+	public GameObject bgGameObject;
 	private List<LevelItemGUI> levelItemGUIs = new List<LevelItemGUI> ();
 	private int _selectedStageIndex = 0;
 	private Stage _selectedStage;
@@ -37,8 +38,10 @@ public class MainMenuGUI : GUIMenu
 	{
 		inst = this;
 		_inputEnabled = false;
-		ps_bgr.SetSize (GfxSettings.Instance ().GetScreenWidth () + 1, GfxSettings.Instance ().GetScreenHeight () + 1);
-
+		int width = GfxSettings.Instance ().GetScreenWidth () + 1;
+		int height = GfxSettings.Instance ().GetScreenHeight () + 1;
+		ps_bgr.SetSize (width, height);
+		bgGameObject.transform.localScale = new Vector3(width , height , 1);
 		InitLabels ();
 		InitButtons ();
 		joyMainMenu.btns.Add (btn_unlock_all.gameObject);
