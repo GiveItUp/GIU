@@ -26,9 +26,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400002}
-  - 114: {fileID: 11400012}
   - 33: {fileID: 3378542}
   - 23: {fileID: 2378542}
+  - 114: {fileID: 11413322}
   m_Layer: 9
   m_Name: ps_bgr
   m_TagString: Untagged
@@ -213,6 +213,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &104540
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 404540}
+  - 114: {fileID: 11413802}
+  - 114: {fileID: 11453442}
+  - 33: {fileID: 3392534}
+  - 23: {fileID: 2392534}
+  m_Layer: 9
+  m_Name: octopus
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &110260
 GameObject:
   m_ObjectHideFlags: 1
@@ -392,25 +411,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &196438
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 496438}
-  - 114: {fileID: 11496438}
-  - 33: {fileID: 3396438}
-  - 23: {fileID: 2396438}
-  - 114: {fileID: 11496440}
-  m_Layer: 9
-  m_Name: Octopus
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -510,7 +510,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: .00999999978}
   m_Children: []
   m_Father: {fileID: 400018}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!4 &400018
 Transform:
   m_ObjectHideFlags: 1
@@ -521,10 +521,10 @@ Transform:
   m_LocalPosition: {x: 0, y: -224.42569, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 404540}
   - {fileID: 451558}
   - {fileID: 400014}
   - {fileID: 410260}
-  - {fileID: 496438}
   m_Father: {fileID: 400002}
   m_RootOrder: 4
 --- !u!4 &400020
@@ -575,6 +575,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400002}
   m_RootOrder: 8
+--- !u!4 &404540
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 104540}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 7.3999939, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400018}
+  m_RootOrder: 0
 --- !u!4 &410260
 Transform:
   m_ObjectHideFlags: 1
@@ -586,7 +598,7 @@ Transform:
   m_LocalScale: {x: .300000012, y: .300000012, z: .300000012}
   m_Children: []
   m_Father: {fileID: 400018}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!4 &415922
 Transform:
   m_ObjectHideFlags: 1
@@ -648,7 +660,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400018}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!4 &462658
 Transform:
   m_ObjectHideFlags: 1
@@ -697,18 +709,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 432970}
   m_RootOrder: 0
---- !u!4 &496438
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 196438}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.4000001, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 400018}
-  m_RootOrder: 3
 --- !u!23 &2300000
 Renderer:
   m_ObjectHideFlags: 1
@@ -1049,12 +1049,12 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!23 &2396438
+--- !u!23 &2392534
 Renderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 196438}
+  m_GameObject: {fileID: 104540}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -1064,7 +1064,7 @@ Renderer:
   - {fileID: 2100000, guid: 54df0aaabdf0942c88babfbb074f43af, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
+  m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
@@ -1188,12 +1188,12 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_Mesh: {fileID: 0}
---- !u!33 &3396438
+--- !u!33 &3392534
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 196438}
+  m_GameObject: {fileID: 104540}
   m_Mesh: {fileID: 0}
 --- !u!65 &6503036
 BoxCollider:
@@ -1469,7 +1469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 574f309179b4de745a57caf6d5716317, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ps_bgr: {fileID: 11400012}
+  ps_bgr: {fileID: 11413322}
   ps_logo: {fileID: 11400024}
   ps_info: {fileID: 11462658}
   btn_start: {fileID: 11410260}
@@ -2072,64 +2072,6 @@ MonoBehaviour:
   soundOnClick: {fileID: 0}
   repeat: 0
   alwaysFinishActiveTransition: 0
---- !u!114 &11400012
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5f05aedb1f504e319c9bcf67302925c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  managed: 0
-  manager: {fileID: 0}
-  drawLayer: 0
-  persistent: 0
-  plane: 0
-  winding: 1
-  width: 1478
-  height: 768
-  bleedCompensation: {x: 0, y: 0}
-  anchor: 9
-  pixelPerfect: 0
-  autoResize: 0
-  billboarded: 0
-  offset: {x: 0, y: 0, z: 0}
-  color: {r: 1, g: 1, b: 1, a: 1}
-  renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 1024, y: 512}
-  hideAtStart: 0
-  ignoreClipping: 0
-  playAnimOnStart: 0
-  crossfadeFrames: 0
-  defaultAnim: 0
-  doNotTrimImages: 0
-  animations: []
-  staticTexPath: 
-  staticTexGUID: 
-  _ser_stat_frame_info:
-    uvs:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-    scaleFactor: {x: .5, y: .5}
-    topLeftOffset: {x: -1, y: 1}
-    bottomRightOffset: {x: 1, y: -1}
-  staticFrameInfo:
-    uvs:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-    scaleFactor: {x: .5, y: .5}
-    topLeftOffset: {x: -1, y: 1}
-    bottomRightOffset: {x: 1, y: -1}
-  textureAnimations: []
 --- !u!114 &11400018
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2581,7 +2523,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   color: {r: 1, g: 1, b: 1, a: 1}
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 1024, y: 256}
+  pixelsPerUV: {x: 1024, y: 1024}
   hideAtStart: 0
   ignoreClipping: 0
   playAnimOnStart: 0
@@ -2597,7 +2539,7 @@ MonoBehaviour:
       x: 0
       y: 0
       width: .5859375
-      height: .69140625
+      height: .172851562
     scaleFactor: {x: .5, y: .5}
     topLeftOffset: {x: -1, y: 1}
     bottomRightOffset: {x: 1, y: -1}
@@ -2607,7 +2549,7 @@ MonoBehaviour:
       x: 0
       y: 0
       width: .5859375
-      height: .69140625
+      height: .172851562
     scaleFactor: {x: .5, y: .5}
     topLeftOffset: {x: -1, y: 1}
     bottomRightOffset: {x: 1, y: -1}
@@ -2652,7 +2594,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   color: {r: 1, g: 1, b: 1, a: 1}
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 1024, y: 512}
+  pixelsPerUV: {x: 1024, y: 1024}
   hideAtStart: 0
   ignoreClipping: 0
   playAnimOnStart: 0
@@ -2712,7 +2654,7 @@ MonoBehaviour:
         x: .291015625
         y: 0
         width: .290039062
-        height: .490234375
+        height: .245117188
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
@@ -2728,9 +2670,9 @@ MonoBehaviour:
     - uvs:
         serializedVersion: 2
         x: .291015625
-        y: .4921875
+        y: .24609375
         width: .290039062
-        height: .490234375
+        height: .245117188
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
@@ -2746,9 +2688,9 @@ MonoBehaviour:
     - uvs:
         serializedVersion: 2
         x: .291015625
-        y: .4921875
+        y: .24609375
         width: .290039062
-        height: .490234375
+        height: .245117188
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
@@ -2819,6 +2761,366 @@ MonoBehaviour:
   soundOnClick: {fileID: 0}
   repeat: 0
   alwaysFinishActiveTransition: 0
+--- !u!114 &11413322
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5f05aedb1f504e319c9bcf67302925c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  managed: 0
+  manager: {fileID: 0}
+  drawLayer: 0
+  persistent: 0
+  plane: 0
+  winding: 1
+  width: 0
+  height: 0
+  bleedCompensation: {x: 0, y: 0}
+  anchor: 9
+  pixelPerfect: 0
+  autoResize: 0
+  billboarded: 0
+  offset: {x: 0, y: 0, z: 0}
+  color: {r: 1, g: 1, b: 1, a: 1}
+  renderCamera: {fileID: 0}
+  pixelsPerUV: {x: 0, y: 0}
+  hideAtStart: 0
+  ignoreClipping: 0
+  playAnimOnStart: 0
+  crossfadeFrames: 0
+  defaultAnim: 0
+  doNotTrimImages: 0
+  animations: []
+  staticTexPath: 
+  staticTexGUID: 
+  _ser_stat_frame_info:
+    uvs:
+      serializedVersion: 2
+      x: 1
+      y: 1
+      width: 1
+      height: 1
+    scaleFactor: {x: .5, y: .5}
+    topLeftOffset: {x: -1, y: 1}
+    bottomRightOffset: {x: 1, y: -1}
+  staticFrameInfo:
+    uvs:
+      serializedVersion: 2
+      x: 1
+      y: 1
+      width: 1
+      height: 1
+    scaleFactor: {x: .5, y: .5}
+    topLeftOffset: {x: -1, y: 1}
+    bottomRightOffset: {x: 1, y: -1}
+  textureAnimations: []
+--- !u!114 &11413802
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 104540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5f05aedb1f504e319c9bcf67302925c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  managed: 0
+  manager: {fileID: 0}
+  drawLayer: 0
+  persistent: 0
+  plane: 0
+  winding: 1
+  width: 100
+  height: 100
+  bleedCompensation: {x: 0, y: 0}
+  anchor: 9
+  pixelPerfect: 0
+  autoResize: 0
+  billboarded: 0
+  offset: {x: 0, y: 0, z: 0}
+  color: {r: 1, g: 1, b: 1, a: 1}
+  renderCamera: {fileID: 0}
+  pixelsPerUV: {x: 1024, y: 1024}
+  hideAtStart: 0
+  ignoreClipping: 0
+  playAnimOnStart: 1
+  crossfadeFrames: 0
+  defaultAnim: 0
+  doNotTrimImages: 0
+  animations:
+  - name: stage
+    loopCycles: 0
+    loopReverse: 1
+    framerate: 30
+    index: 0
+    onAnimEnd: 2
+  staticTexPath: 
+  staticTexGUID: 
+  _ser_stat_frame_info:
+    uvs:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    scaleFactor: {x: .5, y: .5}
+    topLeftOffset: {x: -1, y: 1}
+    bottomRightOffset: {x: 1, y: -1}
+  staticFrameInfo:
+    uvs:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    scaleFactor: {x: .5, y: .5}
+    topLeftOffset: {x: -1, y: 1}
+    bottomRightOffset: {x: 1, y: -1}
+  textureAnimations:
+  - name: stage
+    loopCycles: 0
+    loopReverse: 1
+    framerate: 30
+    onAnimEnd: 2
+    framePaths: []
+    frameGUIDs:
+    - 55390156a729d4c859cc3d29724cc75c
+    - fa1cc565a1d4442adae2a94797831eaf
+    - a550b72304d8d420b85519f0aac2b28e
+    - 49a7c2899ea7e4f47ae833ce7c5c56e1
+    - 1616110ceb4614b069973e08679ad5aa
+    - 3258e2d984dd34f1686d8956c6bc8c41
+    - f20c64587090541e9a7210c76e2bc5ee
+    - e32d9ae63c4c44144b998d6633de9a81
+    - 205dbd524bcb348eba5fc132d492672d
+    - 7946bb177c2084699ab73a8bca10b36f
+    - 0f797ee804979439583f48697fdc2f30
+    - 72042df9777a543b3b3daabf57167311
+    - 464523f30d6c54c27ac7bfe06a1a7bcb
+    - 9abebc79d6db341ce81b1352c4879adb
+    - eacf74676908e407c882d87d934cd807
+    - 39f9fb9b95cdb4f85a1b23a14e0b3755
+    - 803cd34f7c6ed47abadd7684e95566de
+    - 94f577fddd2674e88b266fd87f39c7bd
+    - 26924962773134baea93574777a2b4a2
+    - b872be1d1cd5e4be7af1996480c356e3
+    - cf0d5faa1b14141c0b7d77f557b7b49d
+    - af08d5afa03164562845c9e4c9f5b0c5
+    - 339eccf21b2254511b15c0f963b6e3e5
+    spriteFrames:
+    - uvs:
+        serializedVersion: 2
+        x: .490722656
+        y: 0
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .588867188
+        y: 0
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .687011719
+        y: 0
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .78515625
+        y: 0
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .883300781
+        y: 0
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: 0
+        y: .0981445312
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: 0
+        y: .196289062
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: 0
+        y: .294433594
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: 0
+        y: .392578125
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: 0
+        y: .490722656
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: 0
+        y: .588867188
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: 0
+        y: .687011719
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: 0
+        y: .78515625
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: 0
+        y: .883300781
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .0981445312
+        y: .0981445312
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .196289062
+        y: .0981445312
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .294433594
+        y: .0981445312
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .392578125
+        y: .0981445312
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .490722656
+        y: .0981445312
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .588867188
+        y: .0981445312
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .687011719
+        y: .0981445312
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .78515625
+        y: .0981445312
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .883300781
+        y: .0981445312
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
 --- !u!114 &11423048
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3325,6 +3627,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   q: 0
   shared: 1
+--- !u!114 &11453442
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 104540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f95c99923cb2934ea8115d360c325a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 11413802}
+  isMenu: 0
 --- !u!114 &11456216
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3370,7 +3685,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   color: {r: 1, g: 1, b: 1, a: 1}
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 256, y: 256}
+  pixelsPerUV: {x: 512, y: 512}
   hideAtStart: 0
   ignoreClipping: 0
   playAnimOnStart: 0
@@ -3385,8 +3700,8 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 0
-      width: 1
-      height: .84375
+      width: .5
+      height: .421875
     scaleFactor: {x: .5, y: .5}
     topLeftOffset: {x: -1, y: 1}
     bottomRightOffset: {x: 1, y: -1}
@@ -3395,8 +3710,8 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 0
-      width: 1
-      height: .84375
+      width: .5
+      height: .421875
     scaleFactor: {x: .5, y: .5}
     topLeftOffset: {x: -1, y: 1}
     bottomRightOffset: {x: 1, y: -1}
@@ -3473,349 +3788,6 @@ MonoBehaviour:
   hideAtStart: 0
   persistent: 0
   ignoreClipping: 0
---- !u!114 &11496438
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 196438}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5f05aedb1f504e319c9bcf67302925c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  managed: 0
-  manager: {fileID: 0}
-  drawLayer: 0
-  persistent: 0
-  plane: 0
-  winding: 1
-  width: 100
-  height: 100
-  bleedCompensation: {x: 0, y: 0}
-  anchor: 9
-  pixelPerfect: 0
-  autoResize: 0
-  billboarded: 0
-  offset: {x: 0, y: 0, z: 0}
-  color: {r: 1, g: 1, b: 1, a: 1}
-  renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 1024, y: 512}
-  hideAtStart: 0
-  ignoreClipping: 0
-  playAnimOnStart: 1
-  crossfadeFrames: 0
-  defaultAnim: 2
-  doNotTrimImages: 0
-  animations:
-  - name: Jump
-    loopCycles: 0
-    loopReverse: 1
-    framerate: 30
-    index: 0
-    onAnimEnd: 0
-  - name: eye
-    loopCycles: 0
-    loopReverse: 1
-    framerate: 20
-    index: 1
-    onAnimEnd: 0
-  - name: SelectStageState
-    loopCycles: 0
-    loopReverse: 1
-    framerate: 60
-    index: 2
-    onAnimEnd: 2
-  staticTexPath: Assets/Textures/Game/character/monstar/octopus/SelectStage/010005.png
-  staticTexGUID: d9db2fa5c73734cdf801ce58e6b02ae7
-  _ser_stat_frame_info:
-    uvs:
-      serializedVersion: 2
-      x: .588867188
-      y: .392578125
-      width: .09765625
-      height: .1953125
-    scaleFactor: {x: .5, y: .5}
-    topLeftOffset: {x: -1, y: 1}
-    bottomRightOffset: {x: 1, y: -1}
-  staticFrameInfo:
-    uvs:
-      serializedVersion: 2
-      x: .588867188
-      y: .392578125
-      width: .09765625
-      height: .1953125
-    scaleFactor: {x: .5, y: .5}
-    topLeftOffset: {x: -1, y: 1}
-    bottomRightOffset: {x: 1, y: -1}
-  textureAnimations:
-  - name: Jump
-    loopCycles: 0
-    loopReverse: 1
-    framerate: 30
-    onAnimEnd: 0
-    framePaths: []
-    frameGUIDs:
-    - c23d17178c98c4936abda2e83171e3a9
-    - 617cf263784db46d5a819a3010ab2f65
-    - 1f7b8839eb52449e4b7617637b60a0d0
-    - 6e84d38a22da14581a6f8b086f7e1412
-    - 5564e14d9ef78429ca6e4e22ff1cfd16
-    - 4f88fc2572e7242aa9dfcc368645ea3f
-    - 36880152484234a58866e3cc1b53849a
-    spriteFrames:
-    - uvs:
-        serializedVersion: 2
-        x: .392578125
-        y: .196289062
-        width: .09765625
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .392578125
-        y: .392578125
-        width: .09765625
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .392578125
-        y: .588867188
-        width: .09765625
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .392578125
-        y: .78515625
-        width: .09765625
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .490722656
-        y: 0
-        width: .09765625
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .490722656
-        y: .196289062
-        width: .09765625
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .490722656
-        y: .392578125
-        width: .09765625
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-  - name: eye
-    loopCycles: 0
-    loopReverse: 1
-    framerate: 20
-    onAnimEnd: 0
-    framePaths: []
-    frameGUIDs:
-    - c7ef92188737c4fbca3a94ae41736a03
-    - 464318627af254fc9945433347c90664
-    - fad4b4c395c824425bdda103f50d16c1
-    spriteFrames:
-    - uvs:
-        serializedVersion: 2
-        x: .490722656
-        y: .588867188
-        width: .09765625
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .490722656
-        y: .78515625
-        width: .09765625
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .588867188
-        y: 0
-        width: .09765625
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-  - name: SelectStageState
-    loopCycles: 0
-    loopReverse: 1
-    framerate: 60
-    onAnimEnd: 2
-    framePaths: []
-    frameGUIDs:
-    - 44b716364ba9c4ef8b900ef3b2b19651
-    - 3c2c21a2045dc444cbe0e038f9d4d29a
-    - 5565a3744428d4acab4b06a1220c4b9a
-    - 2da6f6f9c10224d438975cb1113de0d4
-    - d9db2fa5c73734cdf801ce58e6b02ae7
-    - 778403f11bee34710b6dba11ae0efddb
-    - ca18d85d418d84c799a86d8a6b02c781
-    - 377c5cb2bc2d341338715a55e66927b5
-    - 01f60e835fa0142469d5e35db320ba7f
-    - 140e901c2a36e4edf8770d9f81d78165
-    - 61dcd24962cf0404b8b405e0e2daa4d6
-    - 522dcaaf142a5406287611dcdc18c4c5
-    - f5fab0b7eb1e5496296e0b12eb869f35
-    spriteFrames:
-    - uvs:
-        serializedVersion: 2
-        x: .687011719
-        y: 0
-        width: .09765625
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .78515625
-        y: 0
-        width: .09765625
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .883300781
-        y: 0
-        width: .09765625
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .588867188
-        y: .196289062
-        width: .09765625
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .588867188
-        y: .392578125
-        width: .09765625
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .588867188
-        y: .588867188
-        width: .09765625
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .588867188
-        y: .78515625
-        width: .09765625
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .687011719
-        y: .196289062
-        width: .09765625
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .78515625
-        y: .196289062
-        width: .09765625
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .883300781
-        y: .196289062
-        width: .09765625
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .687011719
-        y: .392578125
-        width: .09765625
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: .09765625
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: 0
-        y: .196289062
-        width: .09765625
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
---- !u!114 &11496440
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 196438}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f95c99923cb2934ea8115d360c325a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 11423048}
-  isMenu: 0
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1

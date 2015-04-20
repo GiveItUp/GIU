@@ -15,11 +15,7 @@ public class OctopusDieStateAnimation : AnimationBase {
 
 	public override void Ouch ()
 	{
-		foreach (var item in packedSprites) {
-			item.gameObject.SetActive(false);
-		}
-		int index = 1;//Random.Range (0,3);
-		packedSprites [index].PlayAnim (0);
-		packedSprites [index].gameObject.SetActive (true);
+		packedSprites [0].PlayAnim (0);
+		packedSprites [0].gameObject.SetActive (true);
 	}
 }

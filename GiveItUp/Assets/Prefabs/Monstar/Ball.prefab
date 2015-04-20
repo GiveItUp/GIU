@@ -549,7 +549,7 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 0
-      width: .4296875
+      width: .21484375
       height: .21484375
     scaleFactor: {x: .5, y: .5}
     topLeftOffset: {x: -1, y: 1}
@@ -584,27 +584,27 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .86328125
+        x: .431640625
         y: 0
-        width: .125
+        width: .0625
         height: .0625
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
-        x: .86328125
+        x: .431640625
         y: 0
-        width: .125
+        width: .0625
         height: .0625
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
-        x: .86328125
+        x: .431640625
         y: 0
-        width: .125
+        width: .0625
         height: .0625
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
@@ -613,16 +613,16 @@ MonoBehaviour:
         serializedVersion: 2
         x: 0
         y: 0
-        width: .4296875
+        width: .21484375
         height: .21484375
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
-        x: .431640625
+        x: .215820312
         y: 0
-        width: .4296875
+        width: .21484375
         height: .21484375
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
@@ -631,25 +631,25 @@ MonoBehaviour:
         serializedVersion: 2
         x: 0
         y: .215820312
-        width: .4296875
+        width: .21484375
         height: .21484375
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
-        x: .431640625
+        x: .215820312
         y: .215820312
-        width: .4296875
+        width: .21484375
         height: .21484375
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
-        x: .431640625
+        x: .215820312
         y: .215820312
-        width: .4296875
+        width: .21484375
         height: .21484375
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
@@ -658,7 +658,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 0
         y: .431640625
-        width: .4296875
+        width: .21484375
         height: .21484375
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}

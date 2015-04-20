@@ -28,6 +28,7 @@ public class Ball : MonoBehaviour
 
 	public OnJumpedDelegate OnJumped;
 	public PackedSprite placcs;
+	public GameObject particleSystem;
 
 
 	void Start ()
@@ -380,6 +381,7 @@ public class Ball : MonoBehaviour
 			placcs.gameObject.SetActive (true);
 			GetComponent<Animation>().Play ("ball_scale");
 			anims.DieAnimation();
+			particleSystem.SetActive(false);
 		}
 	}
 
