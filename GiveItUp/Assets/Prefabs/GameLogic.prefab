@@ -690,6 +690,79 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!1 &155096
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 455096}
+  - 114: {fileID: 11455094}
+  - 33: {fileID: 3355096}
+  - 23: {fileID: 2355096}
+  - 114: {fileID: 11455096}
+  m_Layer: 0
+  m_Name: Die_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!1 &173256
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 473256}
+  - 114: {fileID: 11473258}
+  - 33: {fileID: 3373256}
+  - 23: {fileID: 2373256}
+  - 114: {fileID: 11473260}
+  m_Layer: 0
+  m_Name: Die_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!1 &173260
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 473260}
+  - 114: {fileID: 11404372}
+  m_Layer: 0
+  m_Name: Dies
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &173262
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 473262}
+  - 114: {fileID: 11473270}
+  - 33: {fileID: 3373260}
+  - 23: {fileID: 2373260}
+  - 114: {fileID: 11473268}
+  m_Layer: 0
+  m_Name: Die_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!1 &185612
 GameObject:
   m_ObjectHideFlags: 1
@@ -718,9 +791,8 @@ GameObject:
   - 33: {fileID: 3385614}
   - 23: {fileID: 2385614}
   - 114: {fileID: 11485622}
-  - 114: {fileID: 11487140}
   m_Layer: 0
-  m_Name: Die
+  m_Name: Die_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1286,7 +1358,59 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 485612}
+  m_RootOrder: 1
+--- !u!4 &455096
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155096}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 473260}
+  m_RootOrder: 1
+--- !u!4 &473256
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 173256}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 473260}
   m_RootOrder: 2
+--- !u!4 &473260
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 173260}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .419999987, y: .150000095, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 473262}
+  - {fileID: 455096}
+  - {fileID: 473256}
+  - {fileID: 485616}
+  m_Father: {fileID: 485612}
+  m_RootOrder: 2
+--- !u!4 &473262
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 173262}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 473260}
+  m_RootOrder: 0
 --- !u!4 &485612
 Transform:
   m_ObjectHideFlags: 1
@@ -1298,8 +1422,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 419554}
-  - {fileID: 485616}
   - {fileID: 421600}
+  - {fileID: 473260}
   m_Father: {fileID: 400002}
   m_RootOrder: 1
 --- !u!4 &485616
@@ -1309,11 +1433,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 185616}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .419999987, y: .150000006, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 485612}
-  m_RootOrder: 1
+  m_Father: {fileID: 473260}
+  m_RootOrder: 3
 --- !u!4 &485864
 Transform:
   m_ObjectHideFlags: 1
@@ -1446,6 +1570,66 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!23 &2355096
+Renderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155096}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: 54df0aaabdf0942c88babfbb074f43af, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!23 &2373256
+Renderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 173256}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: 54df0aaabdf0942c88babfbb074f43af, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!23 &2373260
+Renderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 173262}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: 54df0aaabdf0942c88babfbb074f43af, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
 --- !u!23 &2385614
 Renderer:
   m_ObjectHideFlags: 1
@@ -1507,6 +1691,27 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 121600}
+  m_Mesh: {fileID: 0}
+--- !u!33 &3355096
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155096}
+  m_Mesh: {fileID: 0}
+--- !u!33 &3373256
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 173256}
+  m_Mesh: {fileID: 0}
+--- !u!33 &3373260
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 173262}
   m_Mesh: {fileID: 0}
 --- !u!33 &3385614
 MeshFilter:
@@ -4870,6 +5075,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 67006588655f54fb7babbcaf78ac4c48, type: 2}
   - {fileID: 11400000, guid: db601cd4673094ff6b7f176dde5af4da, type: 2}
   mapId: 0
+  mt: {fileID: 0}
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4918,7 +5124,7 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 0
-      width: .4296875
+      width: .21484375
       height: .21484375
     scaleFactor: {x: .5, y: .5}
     topLeftOffset: {x: -1, y: 1}
@@ -4953,27 +5159,27 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .86328125
+        x: .431640625
         y: 0
-        width: .125
+        width: .0625
         height: .0625
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
-        x: .86328125
+        x: .431640625
         y: 0
-        width: .125
+        width: .0625
         height: .0625
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
-        x: .86328125
+        x: .431640625
         y: 0
-        width: .125
+        width: .0625
         height: .0625
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
@@ -4982,16 +5188,16 @@ MonoBehaviour:
         serializedVersion: 2
         x: 0
         y: 0
-        width: .4296875
+        width: .21484375
         height: .21484375
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
-        x: .431640625
+        x: .215820312
         y: 0
-        width: .4296875
+        width: .21484375
         height: .21484375
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
@@ -5000,25 +5206,25 @@ MonoBehaviour:
         serializedVersion: 2
         x: 0
         y: .215820312
-        width: .4296875
+        width: .21484375
         height: .21484375
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
-        x: .431640625
+        x: .215820312
         y: .215820312
-        width: .4296875
+        width: .21484375
         height: .21484375
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
-        x: .431640625
+        x: .215820312
         y: .215820312
-        width: .4296875
+        width: .21484375
         height: .21484375
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
@@ -5027,7 +5233,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 0
         y: .431640625
-        width: .4296875
+        width: .21484375
         height: .21484375
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
@@ -5293,6 +5499,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b7aa515853c50a479ca0e71a8a3b23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11404372
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 173260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11f3a37a525564382851de3da2d85d26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  packedSprites:
+  - {fileID: 11473270}
+  - {fileID: 11455094}
+  - {fileID: 11473258}
+  - {fileID: 11485624}
 --- !u!114 &11419546
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5331,7 +5553,7 @@ MonoBehaviour:
   - name: Jump
     loopCycles: 0
     loopReverse: 1
-    framerate: 30
+    framerate: 20
     index: 0
     onAnimEnd: 2
   staticTexPath: Assets/Textures/Game/character/monstar/octopus/SelectStage/010005.png
@@ -5339,10 +5561,10 @@ MonoBehaviour:
   _ser_stat_frame_info:
     uvs:
       serializedVersion: 2
-      x: .588867188
-      y: .392578125
+      x: .490722656
+      y: .294433594
       width: .09765625
-      height: .1953125
+      height: .09765625
     scaleFactor: {x: .5, y: .5}
     topLeftOffset: {x: -1, y: 1}
     bottomRightOffset: {x: 1, y: -1}
@@ -5375,9 +5597,27 @@ MonoBehaviour:
     - uvs:
         serializedVersion: 2
         x: .392578125
+        y: .0981445312
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .392578125
         y: .196289062
         width: .09765625
-        height: .1953125
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .392578125
+        y: .294433594
+        width: .09765625
+        height: .09765625
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
@@ -5386,25 +5626,7 @@ MonoBehaviour:
         x: .392578125
         y: .392578125
         width: .09765625
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .392578125
-        y: .588867188
-        width: .09765625
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .392578125
-        y: .78515625
-        width: .09765625
-        height: .1953125
+        height: .09765625
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
@@ -5413,7 +5635,16 @@ MonoBehaviour:
         x: .490722656
         y: 0
         width: .09765625
-        height: .1953125
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .490722656
+        y: .0981445312
+        width: .09765625
+        height: .09765625
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
@@ -5422,16 +5653,7 @@ MonoBehaviour:
         x: .490722656
         y: .196289062
         width: .09765625
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .490722656
-        y: .392578125
-        width: .09765625
-        height: .1953125
+        height: .09765625
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
@@ -5494,10 +5716,10 @@ MonoBehaviour:
   _ser_stat_frame_info:
     uvs:
       serializedVersion: 2
-      x: .588867188
-      y: .392578125
+      x: .490722656
+      y: .294433594
       width: .09765625
-      height: .1953125
+      height: .09765625
     scaleFactor: {x: .5, y: .5}
     topLeftOffset: {x: -1, y: 1}
     bottomRightOffset: {x: 1, y: -1}
@@ -5526,18 +5748,9 @@ MonoBehaviour:
     - uvs:
         serializedVersion: 2
         x: .490722656
-        y: .588867188
+        y: .392578125
         width: .09765625
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .490722656
-        y: .78515625
-        width: .09765625
-        height: .1953125
+        height: .09765625
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
@@ -5546,7 +5759,16 @@ MonoBehaviour:
         x: .588867188
         y: 0
         width: .09765625
-        height: .1953125
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .687011719
+        y: 0
+        width: .09765625
+        height: .09765625
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
@@ -5677,10 +5899,10 @@ MonoBehaviour:
   _ser_stat_frame_info:
     uvs:
       serializedVersion: 2
-      x: .588867188
-      y: .392578125
+      x: .490722656
+      y: .294433594
       width: .09765625
-      height: .1953125
+      height: .09765625
     scaleFactor: {x: .5, y: .5}
     topLeftOffset: {x: -1, y: 1}
     bottomRightOffset: {x: 1, y: -1}
@@ -5712,64 +5934,667 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .196289062
-        y: .78515625
-        width: .09765625
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .294433594
+        x: .78515625
         y: 0
         width: .09765625
-        height: .1953125
+        height: .09765625
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
-        x: .294433594
+        x: .883300781
+        y: 0
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .588867188
+        y: .0981445312
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .588867188
         y: .196289062
         width: .09765625
-        height: .1953125
+        height: .09765625
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
-        x: .294433594
+        x: .588867188
+        y: .294433594
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .588867188
         y: .392578125
         width: .09765625
-        height: .1953125
+        height: .09765625
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
-        x: .294433594
-        y: .588867188
+        x: .687011719
+        y: .0981445312
         width: .09765625
-        height: .1953125
+        height: .09765625
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
+--- !u!114 &11455094
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5f05aedb1f504e319c9bcf67302925c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  managed: 0
+  manager: {fileID: 0}
+  drawLayer: 0
+  persistent: 0
+  plane: 0
+  winding: 1
+  width: 1
+  height: 1
+  bleedCompensation: {x: 0, y: 0}
+  anchor: 9
+  pixelPerfect: 0
+  autoResize: 0
+  billboarded: 0
+  offset: {x: 0, y: 0, z: 0}
+  color: {r: 1, g: 1, b: 1, a: 1}
+  renderCamera: {fileID: 0}
+  pixelsPerUV: {x: 1024, y: 512}
+  hideAtStart: 0
+  ignoreClipping: 0
+  playAnimOnStart: 1
+  crossfadeFrames: 0
+  defaultAnim: 0
+  doNotTrimImages: 0
+  animations:
+  - name: Jump
+    loopCycles: 0
+    loopReverse: 1
+    framerate: 30
+    index: 0
+    onAnimEnd: 2
+  - name: eye
+    loopCycles: 1
+    loopReverse: 1
+    framerate: 20
+    index: 1
+    onAnimEnd: 0
+  - name: SelectStageState
+    loopCycles: 0
+    loopReverse: 1
+    framerate: 60
+    index: 2
+    onAnimEnd: 0
+  - name: Die_1
+    loopCycles: 0
+    loopReverse: 0
+    framerate: 10
+    index: 3
+    onAnimEnd: 0
+  - name: Die_2
+    loopCycles: 0
+    loopReverse: 1
+    framerate: 10
+    index: 4
+    onAnimEnd: 0
+  - name: Die_3
+    loopCycles: 0
+    loopReverse: 0
+    framerate: 10
+    index: 5
+    onAnimEnd: 0
+  - name: Die_4
+    loopCycles: 0
+    loopReverse: 0
+    framerate: 10
+    index: 6
+    onAnimEnd: 0
+  staticTexPath: Assets/Textures/Game/character/monstar/octopus/SelectStage/010005.png
+  staticTexGUID: d9db2fa5c73734cdf801ce58e6b02ae7
+  _ser_stat_frame_info:
+    uvs:
+      serializedVersion: 2
+      x: .490722656
+      y: .294433594
+      width: .09765625
+      height: .09765625
+    scaleFactor: {x: .5, y: .5}
+    topLeftOffset: {x: -1, y: 1}
+    bottomRightOffset: {x: 1, y: -1}
+  staticFrameInfo:
+    uvs:
+      serializedVersion: 2
+      x: .687011719
+      y: 0
+      width: .09765625
+      height: .1953125
+    scaleFactor: {x: .5, y: .5}
+    topLeftOffset: {x: -1, y: 1}
+    bottomRightOffset: {x: 1, y: -1}
+  textureAnimations:
+  - name: Die_2
+    loopCycles: 0
+    loopReverse: 0
+    framerate: 8
+    onAnimEnd: 2
+    framePaths: []
+    frameGUIDs:
+    - b9e777a121c284c888cb28a2cf35dd05
+    - b9e777a121c284c888cb28a2cf35dd05
+    - b9e777a121c284c888cb28a2cf35dd05
+    - b9e777a121c284c888cb28a2cf35dd05
+    - b9e777a121c284c888cb28a2cf35dd05
+    - b9e777a121c284c888cb28a2cf35dd05
+    - b9e777a121c284c888cb28a2cf35dd05
+    - b9e777a121c284c888cb28a2cf35dd05
+    - ee39e4f5b96f34ddda7cd2da7e193920
+    - 21df36930fcd94690bcbb0f6553af2be
+    spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .294433594
-        y: .78515625
-        width: .09765625
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .392578125
+        x: 0
         y: 0
         width: .09765625
-        height: .1953125
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: 0
+        y: .0981445312
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: 0
+        y: .196289062
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+--- !u!114 &11455096
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f95c99923cb2934ea8115d360c325a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 11455094}
+  isMenu: 0
+--- !u!114 &11473258
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 173256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5f05aedb1f504e319c9bcf67302925c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  managed: 0
+  manager: {fileID: 0}
+  drawLayer: 0
+  persistent: 0
+  plane: 0
+  winding: 1
+  width: 1
+  height: 1
+  bleedCompensation: {x: 0, y: 0}
+  anchor: 9
+  pixelPerfect: 0
+  autoResize: 0
+  billboarded: 0
+  offset: {x: 0, y: 0, z: 0}
+  color: {r: 1, g: 1, b: 1, a: 1}
+  renderCamera: {fileID: 0}
+  pixelsPerUV: {x: 1024, y: 512}
+  hideAtStart: 0
+  ignoreClipping: 0
+  playAnimOnStart: 1
+  crossfadeFrames: 0
+  defaultAnim: 0
+  doNotTrimImages: 0
+  animations:
+  - name: Jump
+    loopCycles: 0
+    loopReverse: 1
+    framerate: 30
+    index: 0
+    onAnimEnd: 2
+  - name: eye
+    loopCycles: 1
+    loopReverse: 1
+    framerate: 20
+    index: 1
+    onAnimEnd: 0
+  - name: SelectStageState
+    loopCycles: 0
+    loopReverse: 1
+    framerate: 60
+    index: 2
+    onAnimEnd: 0
+  - name: Die_1
+    loopCycles: 0
+    loopReverse: 0
+    framerate: 10
+    index: 3
+    onAnimEnd: 0
+  - name: Die_2
+    loopCycles: 0
+    loopReverse: 1
+    framerate: 10
+    index: 4
+    onAnimEnd: 0
+  - name: Die_3
+    loopCycles: 0
+    loopReverse: 0
+    framerate: 10
+    index: 5
+    onAnimEnd: 0
+  - name: Die_4
+    loopCycles: 0
+    loopReverse: 0
+    framerate: 10
+    index: 6
+    onAnimEnd: 0
+  staticTexPath: Assets/Textures/Game/character/monstar/octopus/SelectStage/010005.png
+  staticTexGUID: d9db2fa5c73734cdf801ce58e6b02ae7
+  _ser_stat_frame_info:
+    uvs:
+      serializedVersion: 2
+      x: .490722656
+      y: .294433594
+      width: .09765625
+      height: .09765625
+    scaleFactor: {x: .5, y: .5}
+    topLeftOffset: {x: -1, y: 1}
+    bottomRightOffset: {x: 1, y: -1}
+  staticFrameInfo:
+    uvs:
+      serializedVersion: 2
+      x: .687011719
+      y: 0
+      width: .09765625
+      height: .1953125
+    scaleFactor: {x: .5, y: .5}
+    topLeftOffset: {x: -1, y: 1}
+    bottomRightOffset: {x: 1, y: -1}
+  textureAnimations:
+  - name: Die_3
+    loopCycles: 0
+    loopReverse: 1
+    framerate: 6.99999857
+    onAnimEnd: 2
+    framePaths: []
+    frameGUIDs:
+    - b6838bf51c5ec4112823b9b31b2944ae
+    - b6838bf51c5ec4112823b9b31b2944ae
+    - b6838bf51c5ec4112823b9b31b2944ae
+    - b6838bf51c5ec4112823b9b31b2944ae
+    - b6838bf51c5ec4112823b9b31b2944ae
+    - b6838bf51c5ec4112823b9b31b2944ae
+    - b6838bf51c5ec4112823b9b31b2944ae
+    - b6838bf51c5ec4112823b9b31b2944ae
+    - b6838bf51c5ec4112823b9b31b2944ae
+    - 17a082af7b1df4c31b8e6de2bc2bd88c
+    - e4d6ef11989754f9d985d39e56935aa3
+    spriteFrames:
+    - uvs:
+        serializedVersion: 2
+        x: 0
+        y: .294433594
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: 0
+        y: .294433594
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: 0
+        y: .294433594
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: 0
+        y: .294433594
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: 0
+        y: .294433594
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: 0
+        y: .294433594
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: 0
+        y: .294433594
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: 0
+        y: .294433594
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: 0
+        y: .294433594
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: 0
+        y: .392578125
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .0981445312
+        y: 0
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+--- !u!114 &11473260
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 173256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f95c99923cb2934ea8115d360c325a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 11473258}
+  isMenu: 0
+--- !u!114 &11473268
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 173262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f95c99923cb2934ea8115d360c325a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 11473270}
+  isMenu: 0
+--- !u!114 &11473270
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 173262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5f05aedb1f504e319c9bcf67302925c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  managed: 0
+  manager: {fileID: 0}
+  drawLayer: 0
+  persistent: 0
+  plane: 0
+  winding: 1
+  width: 1
+  height: 1
+  bleedCompensation: {x: 0, y: 0}
+  anchor: 9
+  pixelPerfect: 0
+  autoResize: 0
+  billboarded: 0
+  offset: {x: 0, y: 0, z: 0}
+  color: {r: 1, g: 1, b: 1, a: 1}
+  renderCamera: {fileID: 0}
+  pixelsPerUV: {x: 1024, y: 512}
+  hideAtStart: 0
+  ignoreClipping: 0
+  playAnimOnStart: 1
+  crossfadeFrames: 0
+  defaultAnim: 0
+  doNotTrimImages: 0
+  animations:
+  - name: Jump
+    loopCycles: 0
+    loopReverse: 1
+    framerate: 30
+    index: 0
+    onAnimEnd: 2
+  - name: eye
+    loopCycles: 1
+    loopReverse: 1
+    framerate: 20
+    index: 1
+    onAnimEnd: 0
+  - name: SelectStageState
+    loopCycles: 0
+    loopReverse: 1
+    framerate: 60
+    index: 2
+    onAnimEnd: 0
+  - name: Die_1
+    loopCycles: 0
+    loopReverse: 0
+    framerate: 10
+    index: 3
+    onAnimEnd: 0
+  - name: Die_2
+    loopCycles: 0
+    loopReverse: 1
+    framerate: 10
+    index: 4
+    onAnimEnd: 0
+  - name: Die_3
+    loopCycles: 0
+    loopReverse: 0
+    framerate: 10
+    index: 5
+    onAnimEnd: 0
+  - name: Die_4
+    loopCycles: 0
+    loopReverse: 0
+    framerate: 10
+    index: 6
+    onAnimEnd: 0
+  staticTexPath: Assets/Textures/Game/character/monstar/octopus/SelectStage/010005.png
+  staticTexGUID: d9db2fa5c73734cdf801ce58e6b02ae7
+  _ser_stat_frame_info:
+    uvs:
+      serializedVersion: 2
+      x: .490722656
+      y: .294433594
+      width: .09765625
+      height: .09765625
+    scaleFactor: {x: .5, y: .5}
+    topLeftOffset: {x: -1, y: 1}
+    bottomRightOffset: {x: 1, y: -1}
+  staticFrameInfo:
+    uvs:
+      serializedVersion: 2
+      x: .687011719
+      y: 0
+      width: .09765625
+      height: .1953125
+    scaleFactor: {x: .5, y: .5}
+    topLeftOffset: {x: -1, y: 1}
+    bottomRightOffset: {x: 1, y: -1}
+  textureAnimations:
+  - name: Die_1
+    loopCycles: 0
+    loopReverse: 0
+    framerate: 5
+    onAnimEnd: 2
+    framePaths: []
+    frameGUIDs:
+    - 49a5c283b52cb4e558b332c05d6ba731
+    - 30491b511574646cabc83e7c567cbb77
+    - 9bf30a28a623c4e61b0995946b4ae26d
+    spriteFrames:
+    - uvs:
+        serializedVersion: 2
+        x: .78515625
+        y: .0981445312
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .883300781
+        y: .0981445312
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .687011719
+        y: .196289062
+        width: .09765625
+        height: .09765625
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
@@ -5785,7 +6610,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpAnimation: {fileID: 11419556}
-  dieAnimation: {fileID: 11487140}
+  dieAnimation: {fileID: 11404372}
   successfulAnimation: {fileID: 11497246}
 --- !u!114 &11485622
 MonoBehaviour:
@@ -5882,10 +6707,10 @@ MonoBehaviour:
   _ser_stat_frame_info:
     uvs:
       serializedVersion: 2
-      x: .588867188
-      y: .392578125
+      x: .490722656
+      y: .294433594
       width: .09765625
-      height: .1953125
+      height: .09765625
     scaleFactor: {x: .5, y: .5}
     topLeftOffset: {x: -1, y: 1}
     bottomRightOffset: {x: 1, y: -1}
@@ -5900,124 +6725,10 @@ MonoBehaviour:
     topLeftOffset: {x: -1, y: 1}
     bottomRightOffset: {x: 1, y: -1}
   textureAnimations:
-  - name: Die_1
-    loopCycles: 0
-    loopReverse: 0
-    framerate: 10
-    onAnimEnd: 2
-    framePaths: []
-    frameGUIDs:
-    - 49a5c283b52cb4e558b332c05d6ba731
-    - 30491b511574646cabc83e7c567cbb77
-    - 9bf30a28a623c4e61b0995946b4ae26d
-    spriteFrames:
-    - uvs:
-        serializedVersion: 2
-        x: 0
-        y: .392578125
-        width: .09765625
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: 0
-        y: .588867188
-        width: .09765625
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: 0
-        y: .78515625
-        width: .09765625
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-  - name: Die_2
-    loopCycles: 0
-    loopReverse: 1
-    framerate: 10
-    onAnimEnd: 2
-    framePaths: []
-    frameGUIDs:
-    - b9e777a121c284c888cb28a2cf35dd05
-    - ee39e4f5b96f34ddda7cd2da7e193920
-    - 21df36930fcd94690bcbb0f6553af2be
-    spriteFrames:
-    - uvs:
-        serializedVersion: 2
-        x: .0981445312
-        y: 0
-        width: .09765625
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .0981445312
-        y: .196289062
-        width: .09765625
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .0981445312
-        y: .392578125
-        width: .09765625
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-  - name: Die_3
-    loopCycles: 0
-    loopReverse: 1
-    framerate: 10
-    onAnimEnd: 2
-    framePaths: []
-    frameGUIDs:
-    - b6838bf51c5ec4112823b9b31b2944ae
-    - 17a082af7b1df4c31b8e6de2bc2bd88c
-    - e4d6ef11989754f9d985d39e56935aa3
-    spriteFrames:
-    - uvs:
-        serializedVersion: 2
-        x: .0981445312
-        y: .588867188
-        width: .09765625
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .0981445312
-        y: .78515625
-        width: .09765625
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .196289062
-        y: 0
-        width: .09765625
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
   - name: Die_4
     loopCycles: 0
     loopReverse: 0
-    framerate: 10
+    framerate: 5
     onAnimEnd: 2
     framePaths: []
     frameGUIDs:
@@ -6027,43 +6738,31 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .196289062
+        x: .0981445312
+        y: .0981445312
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .0981445312
         y: .196289062
         width: .09765625
-        height: .1953125
+        height: .09765625
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
-        x: .196289062
-        y: .392578125
+        x: .0981445312
+        y: .294433594
         width: .09765625
-        height: .1953125
+        height: .09765625
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .196289062
-        y: .588867188
-        width: .09765625
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
---- !u!114 &11487140
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 185616}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11f3a37a525564382851de3da2d85d26, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  packedSprite: {fileID: 11485624}
 --- !u!114 &11497246
 MonoBehaviour:
   m_ObjectHideFlags: 1
