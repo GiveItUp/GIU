@@ -681,7 +681,6 @@ GameObject:
   - 114: {fileID: 11421606}
   - 33: {fileID: 3321600}
   - 23: {fileID: 2321600}
-  - 114: {fileID: 11421604}
   - 114: {fileID: 11497246}
   m_Layer: 0
   m_Name: Successful
@@ -786,8 +785,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.31999993, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 3.31999993, z: -1}
+  m_LocalScale: {x: .800000012, y: .800000012, z: 1}
   m_Children:
   - {fileID: 400070}
   - {fileID: 485612}
@@ -1235,7 +1234,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100072}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.0102325855, y: -.0212701727, z: .103234477}
+  m_LocalPosition: {x: -0, y: -.100000001, z: 1}
   m_LocalScale: {x: 1, y: 1, z: .00999999978}
   m_Children: []
   m_Father: {fileID: 400002}
@@ -1272,7 +1271,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 119554}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: .540000021}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 419556}
@@ -1334,7 +1333,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 185612}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: .400000006}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 419554}
@@ -1567,8 +1566,8 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Radius: .400000006
-  m_Center: {x: -.0299999993, y: -.0399999991}
+  m_Radius: .5
+  m_Center: {x: 0, y: 0}
 --- !u!82 &8200000
 AudioSource:
   m_ObjectHideFlags: 1
@@ -5373,7 +5372,7 @@ MonoBehaviour:
   - name: Jump
     loopCycles: 0
     loopReverse: 0
-    framerate: 30
+    framerate: 40
     index: 0
     onAnimEnd: 2
   staticTexPath: 
@@ -5402,7 +5401,7 @@ MonoBehaviour:
   - name: Jump
     loopCycles: 0
     loopReverse: 0
-    framerate: 30
+    framerate: 40
     onAnimEnd: 2
     framePaths: []
     frameGUIDs:
@@ -5553,7 +5552,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 119554}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3f95c99923cb2934ea8115d360c325a9, type: 3}
   m_Name: 
@@ -5598,7 +5597,7 @@ MonoBehaviour:
   - name: eye
     loopCycles: 0
     loopReverse: 1
-    framerate: 5
+    framerate: 25
     index: 0
     onAnimEnd: 0
   staticTexPath: 
@@ -5627,7 +5626,7 @@ MonoBehaviour:
   - name: eye
     loopCycles: 0
     loopReverse: 1
-    framerate: 5
+    framerate: 25
     onAnimEnd: 0
     framePaths: []
     frameGUIDs:
@@ -5688,19 +5687,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpAnim: {fileID: 11419548}
   eyeAnim: {fileID: 11419552}
---- !u!114 &11421604
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 121600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f95c99923cb2934ea8115d360c325a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 11421606}
-  isMenu: 0
 --- !u!114 &11421606
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6072,7 +6058,7 @@ MonoBehaviour:
     loopCycles: 0
     loopReverse: 0
     framerate: 4
-    onAnimEnd: 2
+    onAnimEnd: 0
     framePaths: []
     frameGUIDs:
     - 2253d333823b346f68e4b46b6d321bec

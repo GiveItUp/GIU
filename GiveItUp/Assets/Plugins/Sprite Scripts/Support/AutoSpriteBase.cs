@@ -668,8 +668,12 @@ public abstract class AutoSpriteBase : SpriteBase, ISpriteAggregator, ISpritePac
 	{
 		if (index >= animations.Length)
 		{
-			Debug.LogError("ERROR: Animation index " + index + " is out of bounds!");
-			return;
+			index = animations.Length-1;
+			if(index<0)
+			{
+				Debug.LogError(this.gameObject.name+"ERROR: Animation index " + index + " is out of bounds!");
+				return;
+			}
 		}
 
 		PlayAnim(animations[index], 0);

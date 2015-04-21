@@ -15,7 +15,6 @@ public class OctopusDieStateAnimation : AnimationBase {
 
 	public override void Ouch ()
 	{
-		packedSprites [0].PlayAnim (0);
 		packedSprites [0].gameObject.SetActive (true);
 	}
 }
