@@ -36,7 +36,7 @@ public class MainMenuGUI : GUIMenu
 
 	void Awake()
 	{
-		GameObject gb = Resources.Load("Prefabs/Monstar/Go_BlackBall") as GameObject;
+		GameObject gb = Resources.Load("Prefabs/Monstar/Go_RedBall") as GameObject;
 		go_ball = GameObject.Instantiate(gb) as GameObject;
 		btn_start = go_ball.transform.Find("btn_start").GetComponent<UIButton>();
 	}
@@ -693,7 +693,7 @@ public class MainMenuGUI : GUIMenu
 		if(GUILayout.Button("BlackBall"))
 		{
 			GameObject temp = go_ball;
-			GameObject gb = Resources.Load("Prefabs/Monstar/Go_BlackBall") as GameObject;
+			GameObject gb = Resources.Load("Prefabs/Monstar/Go_RedBall") as GameObject;
 			go_ball = GameObject.Instantiate(gb) as GameObject;
 			go_ball.transform.parent = temp.transform.parent;
 			go_ball.transform.localPosition= Vector3.zero;

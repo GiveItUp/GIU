@@ -597,7 +597,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100074
 GameObject:
   m_ObjectHideFlags: 1
@@ -639,11 +639,11 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 419554}
-  - 114: {fileID: 11419546}
   - 33: {fileID: 3319554}
   - 23: {fileID: 2319554}
   - 114: {fileID: 11419548}
   - 114: {fileID: 11419556}
+  - 114: {fileID: 11410644}
   m_Layer: 0
   m_Name: Octopus
   m_TagString: Untagged
@@ -659,10 +659,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 419556}
-  - 114: {fileID: 11419550}
   - 33: {fileID: 3319556}
   - 23: {fileID: 2319556}
   - 114: {fileID: 11419552}
+  - 114: {fileID: 11410654}
   m_Layer: 0
   m_Name: Eye
   m_TagString: Untagged
@@ -694,10 +694,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 421600}
-  - 114: {fileID: 11421606}
   - 33: {fileID: 3321600}
   - 23: {fileID: 2321600}
   - 114: {fileID: 11497246}
+  - 114: {fileID: 11443992}
   m_Layer: 0
   m_Name: Successful
   m_TagString: Untagged
@@ -729,10 +729,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 473262}
-  - 114: {fileID: 11473270}
   - 33: {fileID: 3373260}
   - 23: {fileID: 2373260}
   - 114: {fileID: 11473268}
+  - 114: {fileID: 11481766}
   m_Layer: 0
   m_Name: Die_1
   m_TagString: Untagged
@@ -806,9 +806,9 @@ Transform:
   m_LocalScale: {x: .800000012, y: .800000012, z: 1}
   m_Children:
   - {fileID: 400070}
-  - {fileID: 485612}
   - {fileID: 400072}
   - {fileID: 400008}
+  - {fileID: 485612}
   m_Father: {fileID: 400000}
   m_RootOrder: 3
 --- !u!4 &400004
@@ -847,7 +847,7 @@ Transform:
   m_Children:
   - {fileID: 400010}
   m_Father: {fileID: 400002}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!4 &400010
 Transform:
   m_ObjectHideFlags: 1
@@ -1255,7 +1255,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: .00999999978}
   m_Children: []
   m_Father: {fileID: 400002}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!4 &400074
 Transform:
   m_ObjectHideFlags: 1
@@ -1288,12 +1288,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 119554}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: .540000021}
+  m_LocalPosition: {x: 0, y: 0, z: .539999962}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 419556}
   m_Father: {fileID: 485612}
-  m_RootOrder: 0
+  m_RootOrder: 2
 --- !u!4 &419556
 Transform:
   m_ObjectHideFlags: 1
@@ -1329,7 +1329,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 485612}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!4 &473260
 Transform:
   m_ObjectHideFlags: 1
@@ -1342,7 +1342,7 @@ Transform:
   m_Children:
   - {fileID: 473262}
   m_Father: {fileID: 485612}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!4 &473262
 Transform:
   m_ObjectHideFlags: 1
@@ -1365,11 +1365,11 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 419554}
   - {fileID: 421600}
   - {fileID: 473260}
+  - {fileID: 419554}
   m_Father: {fileID: 400002}
-  m_RootOrder: 1
+  m_RootOrder: 3
 --- !u!4 &485864
 Transform:
   m_ObjectHideFlags: 1
@@ -1383,7 +1383,7 @@ Transform:
   m_Father: {fileID: 400000}
   m_RootOrder: 0
 --- !u!23 &2300000
-Renderer:
+MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -1391,19 +1391,23 @@ Renderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 2ad4e3b3f052e5e4885a1c5850d41119, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
 --- !u!23 &2300002
-Renderer:
+MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -1411,19 +1415,23 @@ Renderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 1e99bd30c7bb5804597e968e067e58e1, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
 --- !u!23 &2300004
-Renderer:
+MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -1431,19 +1439,23 @@ Renderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 9e29adbf5f35b1b4b96df33388822c52, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
 --- !u!23 &2319554
-Renderer:
+MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -1451,19 +1463,23 @@ Renderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 54df0aaabdf0942c88babfbb074f43af, type: 2}
+  - {fileID: 2100000, guid: 901cd148a6adf724f81fe3aaf4e89ce0, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
-  m_LightProbeAnchor: {fileID: 0}
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
 --- !u!23 &2319556
-Renderer:
+MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -1471,19 +1487,23 @@ Renderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 54df0aaabdf0942c88babfbb074f43af, type: 2}
+  - {fileID: 2100000, guid: 901cd148a6adf724f81fe3aaf4e89ce0, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
-  m_LightProbeAnchor: {fileID: 0}
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
 --- !u!23 &2321600
-Renderer:
+MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -1491,19 +1511,23 @@ Renderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 54df0aaabdf0942c88babfbb074f43af, type: 2}
+  - {fileID: 2100000, guid: 901cd148a6adf724f81fe3aaf4e89ce0, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
-  m_LightProbeAnchor: {fileID: 0}
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
 --- !u!23 &2373260
-Renderer:
+MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -1511,15 +1535,19 @@ Renderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 54df0aaabdf0942c88babfbb074f43af, type: 2}
+  - {fileID: 2100000, guid: 901cd148a6adf724f81fe3aaf4e89ce0, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
-  m_LightProbeAnchor: {fileID: 0}
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
 --- !u!33 &3300000
@@ -1595,8 +1623,10 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
   m_Radius: .5
-  m_Center: {x: 0, y: 0}
 --- !u!82 &8200000
 AudioSource:
   m_ObjectHideFlags: 1
@@ -1604,7 +1634,8 @@ AudioSource:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 7715fc7870ed2a64aaeed8922bb92f61, type: 3}
   m_PlayOnAwake: 0
   m_Volume: .699999988
@@ -1704,13 +1735,23 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
     - time: 0
@@ -1727,7 +1768,8 @@ AudioSource:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100012}
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6a1e9e67a42dec54190ee169fd8f094f, type: 3}
   m_PlayOnAwake: 0
   m_Volume: .699999988
@@ -1827,13 +1869,23 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
     - time: 0
@@ -1850,7 +1902,8 @@ AudioSource:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100014}
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 35f41b8dc94ed4f038d7f50055c79a7c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -1950,13 +2003,23 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
     - time: 0
@@ -1973,7 +2036,8 @@ AudioSource:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100016}
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1a46d52d605cc1d46a59725b166fc354, type: 3}
   m_PlayOnAwake: 0
   m_Volume: .699999988
@@ -2073,13 +2137,23 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
     - time: 0
@@ -2096,7 +2170,8 @@ AudioSource:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100018}
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 3ac7c3509cd03e74b9472211387ff513, type: 3}
   m_PlayOnAwake: 0
   m_Volume: .699999988
@@ -2196,13 +2271,23 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
     - time: 0
@@ -2219,7 +2304,8 @@ AudioSource:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100022}
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ea6a31d069080ce409371bae6a3fe726, type: 3}
   m_PlayOnAwake: 0
   m_Volume: .699999988
@@ -2319,13 +2405,23 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
     - time: 0
@@ -2342,7 +2438,8 @@ AudioSource:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100024}
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5739e10997f78e34fb1cee10c0fcab1e, type: 3}
   m_PlayOnAwake: 0
   m_Volume: .699999988
@@ -2442,13 +2539,23 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
     - time: 0
@@ -2465,7 +2572,8 @@ AudioSource:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100030}
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 73edd511772f92a44bd0a34c34eb6cec, type: 3}
   m_PlayOnAwake: 0
   m_Volume: .699999988
@@ -2565,13 +2673,23 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
     - time: 0
@@ -2588,7 +2706,8 @@ AudioSource:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100032}
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e91c3f0621c2be34783145a82bc6cbb6, type: 3}
   m_PlayOnAwake: 0
   m_Volume: .699999988
@@ -2688,13 +2807,23 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
     - time: 0
@@ -2711,7 +2840,8 @@ AudioSource:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100034}
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 2463601b8c0e5dd4b8b5ec56d2d132de, type: 3}
   m_PlayOnAwake: 0
   m_Volume: .699999988
@@ -2811,13 +2941,23 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
     - time: 0
@@ -2834,7 +2974,8 @@ AudioSource:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100036}
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 559fa349b440a8c409d1526587e6e874, type: 3}
   m_PlayOnAwake: 0
   m_Volume: .699999988
@@ -2934,13 +3075,23 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
     - time: 0
@@ -2957,7 +3108,8 @@ AudioSource:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100038}
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5100c7889efc3844e9a6bfadba8ad726, type: 3}
   m_PlayOnAwake: 0
   m_Volume: .699999988
@@ -3057,13 +3209,23 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
     - time: 0
@@ -3080,7 +3242,8 @@ AudioSource:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100040}
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b061ef53e326cc04fa47ff443183b1e7, type: 3}
   m_PlayOnAwake: 0
   m_Volume: .699999988
@@ -3180,13 +3343,23 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
     - time: 0
@@ -3203,7 +3376,8 @@ AudioSource:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100044}
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5b378de5357d03d4aac4561364c77a0b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: .699999988
@@ -3303,13 +3477,23 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
     - time: 0
@@ -3326,7 +3510,8 @@ AudioSource:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100046}
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 28d1990ea8b352a40bbc51f8887a608e, type: 3}
   m_PlayOnAwake: 0
   m_Volume: .699999988
@@ -3426,13 +3611,23 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
     - time: 0
@@ -3449,7 +3644,8 @@ AudioSource:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100048}
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c51368c1b8fec554496c0a521a7fff73, type: 3}
   m_PlayOnAwake: 0
   m_Volume: .699999988
@@ -3549,13 +3745,23 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
     - time: 0
@@ -3572,7 +3778,8 @@ AudioSource:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100050}
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 99cb4e01868f364439f19b00303360a6, type: 3}
   m_PlayOnAwake: 0
   m_Volume: .699999988
@@ -3672,13 +3879,23 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
     - time: 0
@@ -3695,7 +3912,8 @@ AudioSource:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100052}
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 3b521ece7ff453a4cab8cc9aca680da8, type: 3}
   m_PlayOnAwake: 0
   m_Volume: .699999988
@@ -3795,13 +4013,23 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
     - time: 0
@@ -3818,7 +4046,8 @@ AudioSource:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100054}
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 65be1d178fa3b0b44a0363c38a1d782e, type: 3}
   m_PlayOnAwake: 0
   m_Volume: .699999988
@@ -3918,13 +4147,23 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
     - time: 0
@@ -3941,7 +4180,8 @@ AudioSource:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100056}
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 82b5238e7b9eda944ad3a72bcd6f25d6, type: 3}
   m_PlayOnAwake: 0
   m_Volume: .699999988
@@ -4041,13 +4281,23 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
     - time: 0
@@ -4064,7 +4314,8 @@ AudioSource:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100058}
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ea59cc345be1cf24f837efc16b6037ff, type: 3}
   m_PlayOnAwake: 0
   m_Volume: .699999988
@@ -4164,13 +4415,23 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
     - time: 0
@@ -4187,7 +4448,8 @@ AudioSource:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100060}
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: eff929e82a62f3345ab2f726c41d7727, type: 3}
   m_PlayOnAwake: 0
   m_Volume: .699999988
@@ -4287,13 +4549,23 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
     - time: 0
@@ -4310,7 +4582,8 @@ AudioSource:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100062}
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5a3a7e6a8cec2914fa870b4ea4a615fd, type: 3}
   m_PlayOnAwake: 0
   m_Volume: .699999988
@@ -4410,13 +4683,23 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
     - time: 0
@@ -4433,7 +4716,8 @@ AudioSource:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100064}
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c19055a4a6d17ee49a49dec19558016d, type: 3}
   m_PlayOnAwake: 0
   m_Volume: .699999988
@@ -4533,13 +4817,23 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
     - time: 0
@@ -4556,7 +4850,8 @@ AudioSource:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100068}
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 07cf5a77869dc08408d7fc4509df009a, type: 3}
   m_PlayOnAwake: 0
   m_Volume: .699999988
@@ -4656,13 +4951,23 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
     - time: 0
@@ -4679,7 +4984,8 @@ AudioSource:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 120314}
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 3d3af3be5b7fba94ba63ab9542ba2c1c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -4779,13 +5085,23 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
     - time: 0
@@ -4802,7 +5118,8 @@ AudioSource:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 185864}
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 08324c00c13e80b4c9214cc5586ec894, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -4902,13 +5219,23 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
     - time: 0
@@ -5099,7 +5426,7 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 0
-      width: .21484375
+      width: .4296875
       height: .21484375
     scaleFactor: {x: .5, y: .5}
     topLeftOffset: {x: -1, y: 1}
@@ -5134,27 +5461,27 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .431640625
+        x: .86328125
         y: 0
-        width: .0625
+        width: .125
         height: .0625
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
-        x: .431640625
+        x: .86328125
         y: 0
-        width: .0625
+        width: .125
         height: .0625
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
-        x: .431640625
+        x: .86328125
         y: 0
-        width: .0625
+        width: .125
         height: .0625
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
@@ -5163,16 +5490,16 @@ MonoBehaviour:
         serializedVersion: 2
         x: 0
         y: 0
-        width: .21484375
+        width: .4296875
         height: .21484375
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
-        x: .215820312
+        x: .431640625
         y: 0
-        width: .21484375
+        width: .4296875
         height: .21484375
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
@@ -5181,25 +5508,25 @@ MonoBehaviour:
         serializedVersion: 2
         x: 0
         y: .215820312
-        width: .21484375
+        width: .4296875
         height: .21484375
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
-        x: .215820312
+        x: .431640625
         y: .215820312
-        width: .21484375
+        width: .4296875
         height: .21484375
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
-        x: .215820312
+        x: .431640625
         y: .215820312
-        width: .21484375
+        width: .4296875
         height: .21484375
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
@@ -5208,7 +5535,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 0
         y: .431640625
-        width: .21484375
+        width: .4296875
         height: .21484375
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
@@ -5486,8 +5813,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   packedSprites:
-  - {fileID: 11473270}
---- !u!114 &11419546
+  - {fileID: 11481766}
+--- !u!114 &11410644
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -5522,10 +5849,10 @@ MonoBehaviour:
   defaultAnim: 0
   doNotTrimImages: 0
   animations:
-  - name: Jump
+  - name: Jump_body
     loopCycles: 0
-    loopReverse: 0
-    framerate: 40
+    loopReverse: 1
+    framerate: 30
     index: 0
     onAnimEnd: 2
   staticTexPath: 
@@ -5551,109 +5878,28 @@ MonoBehaviour:
     topLeftOffset: {x: -1, y: 1}
     bottomRightOffset: {x: 1, y: -1}
   textureAnimations:
-  - name: Jump
+  - name: Jump_body
     loopCycles: 0
-    loopReverse: 0
-    framerate: 40
+    loopReverse: 1
+    framerate: 30
     onAnimEnd: 2
     framePaths: []
     frameGUIDs:
-    - b9ddbb8f3da264d4b86d78bb2d253150
-    - cb4b1500f97d843b3abde995a26d2d3c
-    - 33f7d76d54cb54791b5e82272dcfc8ab
-    - 49ec8ce71d4714f1896f2f6328263466
-    - 58d97adbd16e54075a794d8d6fa19a13
-    - b5f20e023d72c4b8daddfca63e53c12d
-    - c22b1fa896068409cb47c2a1de0456dc
-    - fa188447dfbe94f9c927561a6b1d6225
-    - 5c95eb64e907840af8ab37a892f82a08
-    - 51033b209011c40659458fb926c78c18
-    - f5fe1e327cf2a4e638c15284949c7351
-    - 855c087e09418497b89360e8ba93468c
-    - 6dd0f669e239f4ac5a1507ba03683df3
-    - 38d8356a9d12a46b782b25d3190ea7e1
+    - 7df04199d99977347a8fbb0d43c26d81
+    - c04ac2d2f7e9cc0449f77ce0a342ca93
+    - b5cf0e0fa7476704f9bb59c27390a75b
+    - c9c375b4178e79647a6d2b2e0c96cd77
+    - b1e87af021c2521459b4bdec10beceaa
+    - efbcb8dad15ba7d449ba0faf800bad63
+    - 5a103769d7ffe8846be9ab4741414e9f
+    - f804b8831a348984bb3e81b0df4f6d40
+    - ab112c0014fd3a840831123171c3cd5e
+    - 67e9ed79e5f6a3142a3e33fb3b651580
+    - a16717effc474dc4a95696431580d38f
+    - 201d8941304b31f4ca624ac774a08b12
+    - 73ef215a4d0ea0945822c4bbe9da59c5
+    - bc78e7425bd699048ba5f0badcf6e2ed
     spriteFrames:
-    - uvs:
-        serializedVersion: 2
-        x: .331054688
-        y: .44140625
-        width: .109375
-        height: .109375
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .331054688
-        y: .551757812
-        width: .109375
-        height: .109375
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .331054688
-        y: .662109375
-        width: .109375
-        height: .109375
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .331054688
-        y: .772460938
-        width: .109375
-        height: .109375
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .331054688
-        y: .8828125
-        width: .109375
-        height: .109375
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .44140625
-        y: .44140625
-        width: .109375
-        height: .109375
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: .109375
-        height: .109375
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .110351562
-        y: 0
-        width: .109375
-        height: .109375
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .220703125
-        y: 0
-        width: .109375
-        height: .109375
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
         x: .331054688
@@ -5699,20 +5945,88 @@ MonoBehaviour:
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
---- !u!114 &11419548
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 119554}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f95c99923cb2934ea8115d360c325a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 11419546}
-  isMenu: 0
---- !u!114 &11419550
+    - uvs:
+        serializedVersion: 2
+        x: .8828125
+        y: 0
+        width: .109375
+        height: .109375
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: 0
+        y: .110351562
+        width: .109375
+        height: .109375
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: 0
+        y: .220703125
+        width: .109375
+        height: .109375
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: 0
+        y: .331054688
+        width: .109375
+        height: .109375
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: 0
+        y: .44140625
+        width: .109375
+        height: .109375
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: 0
+        y: .551757812
+        width: .109375
+        height: .109375
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: 0
+        y: .662109375
+        width: .109375
+        height: .109375
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: 0
+        y: .772460938
+        width: .109375
+        height: .109375
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: 0
+        y: .8828125
+        width: .109375
+        height: .109375
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+--- !u!114 &11410654
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -5747,7 +6061,7 @@ MonoBehaviour:
   defaultAnim: 0
   doNotTrimImages: 0
   animations:
-  - name: eye
+  - name: Jump_eye
     loopCycles: 0
     loopReverse: 1
     framerate: 25
@@ -5776,29 +6090,20 @@ MonoBehaviour:
     topLeftOffset: {x: -1, y: 1}
     bottomRightOffset: {x: 1, y: -1}
   textureAnimations:
-  - name: eye
+  - name: Jump_eye
     loopCycles: 0
     loopReverse: 1
     framerate: 25
     onAnimEnd: 0
     framePaths: []
     frameGUIDs:
-    - cfa723d3c334a43f790827467b7d4c1c
-    - 1189fd9daa5084fe2abf417956df4fb7
-    - d7fe37fc4941f484cb4d70701cde59de
+    - f600c4a0033899b4188a81de7119ba70
+    - da21a4473a75f1342b3481d377aac510
+    - e3409747c1d570f4798ed2ff9007e0ce
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .8828125
-        y: 0
-        width: .109375
-        height: .109375
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: 0
+        x: .110351562
         y: .110351562
         width: .109375
         height: .109375
@@ -5807,13 +6112,35 @@ MonoBehaviour:
       bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
-        x: 0
-        y: .220703125
+        x: .220703125
+        y: .110351562
         width: .109375
         height: .109375
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .331054688
+        y: .110351562
+        width: .109375
+        height: .109375
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+--- !u!114 &11419548
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 119554}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f95c99923cb2934ea8115d360c325a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 0}
+  isMenu: 0
 --- !u!114 &11419552
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5825,7 +6152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f95c99923cb2934ea8115d360c325a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 11419550}
+  sprite: {fileID: 11410654}
   isMenu: 0
 --- !u!114 &11419556
 MonoBehaviour:
@@ -5840,7 +6167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpAnim: {fileID: 11419548}
   eyeAnim: {fileID: 11419552}
---- !u!114 &11421606
+--- !u!114 &11443992
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -5867,7 +6194,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   color: {r: 1, g: 1, b: 1, a: 1}
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 1024, y: 512}
+  pixelsPerUV: {x: 1024, y: 1024}
   hideAtStart: 0
   ignoreClipping: 0
   playAnimOnStart: 1
@@ -5875,54 +6202,36 @@ MonoBehaviour:
   defaultAnim: 0
   doNotTrimImages: 0
   animations:
-  - name: Jump
+  - name: Die
     loopCycles: 0
-    loopReverse: 1
-    framerate: 30
+    loopReverse: 0
+    framerate: 29.9999981
     index: 0
     onAnimEnd: 2
-  - name: eye
-    loopCycles: 1
-    loopReverse: 1
-    framerate: 20
-    index: 1
-    onAnimEnd: 0
-  - name: SelectStageState
-    loopCycles: 0
-    loopReverse: 1
-    framerate: 60
-    index: 2
-    onAnimEnd: 0
-  - name: Die_1
+  - name: Jump_body
     loopCycles: 0
     loopReverse: 0
-    framerate: 10
-    index: 3
-    onAnimEnd: 0
-  - name: Die_2
-    loopCycles: 0
-    loopReverse: 1
-    framerate: 10
-    index: 4
-    onAnimEnd: 0
-  - name: Die_3
-    loopCycles: 0
-    loopReverse: 0
-    framerate: 10
-    index: 5
-    onAnimEnd: 0
-  - name: Die_4
-    loopCycles: 0
-    loopReverse: 0
-    framerate: 10
-    index: 6
-    onAnimEnd: 0
-  - name: Successful
-    loopCycles: 0
-    loopReverse: 1
     framerate: 30
-    index: 7
-    onAnimEnd: 0
+    index: 1
+    onAnimEnd: 2
+  - name: Jump_eye
+    loopCycles: 0
+    loopReverse: 0
+    framerate: 30
+    index: 2
+    onAnimEnd: 2
+  - name: SelectStage
+    loopCycles: 0
+    loopReverse: 0
+    framerate: 30
+    index: 3
+    onAnimEnd: 2
+  - name: successful
+    loopCycles: 0
+    loopReverse: 0
+    framerate: 30
+    index: 4
+    onAnimEnd: 2
   staticTexPath: 
   staticTexGUID: 
   _ser_stat_frame_info:
@@ -5938,75 +6247,39 @@ MonoBehaviour:
   staticFrameInfo:
     uvs:
       serializedVersion: 2
-      x: .588867188
-      y: .392578125
-      width: .09765625
-      height: .1953125
+      x: 0
+      y: 0
+      width: 0
+      height: 0
     scaleFactor: {x: .5, y: .5}
     topLeftOffset: {x: -1, y: 1}
     bottomRightOffset: {x: 1, y: -1}
   textureAnimations:
-  - name: Successful
+  - name: successful
     loopCycles: 0
     loopReverse: 0
     framerate: 25
     onAnimEnd: 2
     framePaths: []
     frameGUIDs:
-    - ac5332788fe954e42978b46c86c7ebcf
-    - 85b71f0fb70524d6b8930b1059f4bc54
-    - 7b50ac262d7db4daeb88eed18b4ad403
-    - 4921f110ce08e4018992c7a45b806905
-    - 7dfaa8143a70546d19897e09eec0ec43
-    - d0339b70c1836404f9e559277a51c405
-    - a49ad23dce46e439fa18142c37ba689f
-    - e0dd4f384af0a467da51664b618a83cc
-    - 1002e43c05fd34239a5cb57e177d1838
-    - 83a2a9e6830db401dafb6d94d80cc0c5
-    - 10602d7dc59b54655bd42a6830c86551
-    - b483997a33b69472d92cafc1a2d83aef
-    - e6f7d449ca51b46428a352d90ee2646e
-    - d23d4e4d706c64ded9d758daf73943bf
+    - 0e773ae95f6399d4c9b9dfbec3ecd9f7
+    - 5a3cc51356ef299479cd28333e4748d8
+    - 662f3bef982f68d43a4bab97106132af
+    - 9bcdb7dca04bd394c85318deea19532d
+    - 9aaf26b711cd1e54e870b3f9c7fc03c1
+    - 397a7d70f6daee64dbcc71c76195c1fc
+    - 8d0227ba2b13c2d44be354bbdaa58c0c
+    - 2688520461a4072459bf5978cd7a9ab4
+    - a2a76e3e1f3b555458f4574366a8bcb7
+    - 105e8f6e05da6834aab133a75ac62cf6
+    - 480c9d613f73ee2419adbb965ae37ad6
+    - de013747c2b05904d9797c45691de506
+    - 73c4eeca7532c804aab4e3bc96cd31ba
+    - 9f4aeca042a09f24e9cece1f9f4f399d
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: 0
-        y: .331054688
-        width: .109375
-        height: .109375
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: 0
-        y: .44140625
-        width: .109375
-        height: .109375
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: 0
-        y: .551757812
-        width: .109375
-        height: .109375
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: 0
-        y: .662109375
-        width: .109375
-        height: .109375
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: 0
+        x: .220703125
         y: .772460938
         width: .109375
         height: .109375
@@ -6015,7 +6288,7 @@ MonoBehaviour:
       bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
-        x: 0
+        x: .220703125
         y: .8828125
         width: .109375
         height: .109375
@@ -6024,26 +6297,8 @@ MonoBehaviour:
       bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
-        x: .110351562
-        y: .110351562
-        width: .109375
-        height: .109375
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .220703125
-        y: .110351562
-        width: .109375
-        height: .109375
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
         x: .331054688
-        y: .110351562
+        y: .331054688
         width: .109375
         height: .109375
       scaleFactor: {x: .5, y: .5}
@@ -6052,7 +6307,7 @@ MonoBehaviour:
     - uvs:
         serializedVersion: 2
         x: .44140625
-        y: .110351562
+        y: .331054688
         width: .109375
         height: .109375
       scaleFactor: {x: .5, y: .5}
@@ -6061,7 +6316,7 @@ MonoBehaviour:
     - uvs:
         serializedVersion: 2
         x: .551757812
-        y: .110351562
+        y: .331054688
         width: .109375
         height: .109375
       scaleFactor: {x: .5, y: .5}
@@ -6070,7 +6325,7 @@ MonoBehaviour:
     - uvs:
         serializedVersion: 2
         x: .662109375
-        y: .110351562
+        y: .331054688
         width: .109375
         height: .109375
       scaleFactor: {x: .5, y: .5}
@@ -6079,7 +6334,7 @@ MonoBehaviour:
     - uvs:
         serializedVersion: 2
         x: .772460938
-        y: .110351562
+        y: .331054688
         width: .109375
         height: .109375
       scaleFactor: {x: .5, y: .5}
@@ -6088,7 +6343,61 @@ MonoBehaviour:
     - uvs:
         serializedVersion: 2
         x: .8828125
-        y: .110351562
+        y: .331054688
+        width: .109375
+        height: .109375
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .331054688
+        y: .44140625
+        width: .109375
+        height: .109375
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .331054688
+        y: .551757812
+        width: .109375
+        height: .109375
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .331054688
+        y: .662109375
+        width: .109375
+        height: .109375
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .331054688
+        y: .772460938
+        width: .109375
+        height: .109375
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .331054688
+        y: .8828125
+        width: .109375
+        height: .109375
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .44140625
+        y: .44140625
         width: .109375
         height: .109375
       scaleFactor: {x: .5, y: .5}
@@ -6105,9 +6414,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f95c99923cb2934ea8115d360c325a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 11473270}
+  sprite: {fileID: 11481766}
   isMenu: 0
---- !u!114 &11473270
+--- !u!114 &11481766
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -6134,7 +6443,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   color: {r: 1, g: 1, b: 1, a: 1}
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 1024, y: 512}
+  pixelsPerUV: {x: 1024, y: 1024}
   hideAtStart: 0
   ignoreClipping: 0
   playAnimOnStart: 1
@@ -6142,48 +6451,36 @@ MonoBehaviour:
   defaultAnim: 0
   doNotTrimImages: 0
   animations:
-  - name: Jump
+  - name: Die
     loopCycles: 0
-    loopReverse: 1
-    framerate: 30
+    loopReverse: 0
+    framerate: 29.9999981
     index: 0
     onAnimEnd: 2
-  - name: eye
-    loopCycles: 1
-    loopReverse: 1
-    framerate: 20
+  - name: Jump_body
+    loopCycles: 0
+    loopReverse: 0
+    framerate: 30
     index: 1
-    onAnimEnd: 0
-  - name: SelectStageState
+    onAnimEnd: 2
+  - name: Jump_eye
     loopCycles: 0
-    loopReverse: 1
-    framerate: 60
+    loopReverse: 0
+    framerate: 30
     index: 2
-    onAnimEnd: 0
-  - name: Die_1
+    onAnimEnd: 2
+  - name: SelectStage
     loopCycles: 0
     loopReverse: 0
-    framerate: 10
+    framerate: 30
     index: 3
-    onAnimEnd: 0
-  - name: Die_2
+    onAnimEnd: 2
+  - name: successful
     loopCycles: 0
-    loopReverse: 1
-    framerate: 10
+    loopReverse: 0
+    framerate: 30
     index: 4
-    onAnimEnd: 0
-  - name: Die_3
-    loopCycles: 0
-    loopReverse: 0
-    framerate: 10
-    index: 5
-    onAnimEnd: 0
-  - name: Die_4
-    loopCycles: 0
-    loopReverse: 0
-    framerate: 10
-    index: 6
-    onAnimEnd: 0
+    onAnimEnd: 2
   staticTexPath: 
   staticTexGUID: 
   _ser_stat_frame_info:
@@ -6199,29 +6496,29 @@ MonoBehaviour:
   staticFrameInfo:
     uvs:
       serializedVersion: 2
-      x: .687011719
+      x: 0
       y: 0
-      width: .09765625
-      height: .1953125
+      width: 0
+      height: 0
     scaleFactor: {x: .5, y: .5}
     topLeftOffset: {x: -1, y: 1}
     bottomRightOffset: {x: 1, y: -1}
   textureAnimations:
-  - name: Die_1
+  - name: Die
     loopCycles: 0
     loopReverse: 0
     framerate: 4
     onAnimEnd: 0
     framePaths: []
     frameGUIDs:
-    - 2253d333823b346f68e4b46b6d321bec
-    - 957cc1c7c44f94bf196cd2f77697ccd5
-    - ad78e5909cd984269b3ca9320b03d22a
+    - a8cd809e3aec76144a4975102e7ac43f
+    - cf2ad72e23e3c7047b2f5b5a29e650b6
+    - 6cac6884b64eb884788cdd5e297acb07
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .110351562
-        y: .220703125
+        x: 0
+        y: 0
         width: .109375
         height: .109375
       scaleFactor: {x: .5, y: .5}
@@ -6230,7 +6527,7 @@ MonoBehaviour:
     - uvs:
         serializedVersion: 2
         x: .110351562
-        y: .331054688
+        y: 0
         width: .109375
         height: .109375
       scaleFactor: {x: .5, y: .5}
@@ -6238,8 +6535,8 @@ MonoBehaviour:
       bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
-        x: .110351562
-        y: .44140625
+        x: .220703125
+        y: 0
         width: .109375
         height: .109375
       scaleFactor: {x: .5, y: .5}
@@ -6525,6 +6822,7 @@ ParticleSystem:
     boxX: .109999999
     boxY: .109999999
     boxZ: 1
+    arc: 360
     placementMode: 0
     m_Mesh: {fileID: 0}
     randomDirection: 0
@@ -7562,6 +7860,7 @@ ParticleSystem:
     boxX: .109999999
     boxY: .109999999
     boxZ: 1
+    arc: 360
     placementMode: 0
     m_Mesh: {fileID: 0}
     randomDirection: 0
@@ -8353,15 +8652,19 @@ ParticleSystemRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 1efb5068e96e8ce489fcfdc3bf21d8bc, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_RenderMode: 0
@@ -8385,15 +8688,19 @@ ParticleSystemRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 1efb5068e96e8ce489fcfdc3bf21d8bc, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_RenderMode: 0
@@ -8419,4 +8726,3 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}
   m_IsPrefabParent: 1
-  m_IsExploded: 1

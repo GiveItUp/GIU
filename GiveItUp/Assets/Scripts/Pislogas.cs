@@ -14,10 +14,10 @@ public class Pislogas : MonoBehaviour
     IEnumerator Pislog()
     {
         yield return new WaitForSeconds(Random.RandomRange(1f, 3f));
-        if (sprite.CurAnimIndex != 1 && sprite.CurAnimIndex != 2)
+        if (sprite.CurAnimIndex != 1)
 		{
 			//Debug.Log ("pislog");
-            sprite.PlayAnim(0);
+            sprite.PlayAnim(2);
 			if(CGame.gamelogic != null && (CGame.gamelogic.state == Gamelogic.eState.results_fail))
 				SoundManager.Instance.Play(SoundManager.eSoundClip.GUI_Blink_01, 1);
 		}

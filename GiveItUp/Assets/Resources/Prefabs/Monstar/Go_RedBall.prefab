@@ -153,7 +153,7 @@ Transform:
   m_Father: {fileID: 432234}
   m_RootOrder: 3
 --- !u!23 &2332238
-Renderer:
+MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -161,19 +161,23 @@ Renderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 54df0aaabdf0942c88babfbb074f43af, type: 2}
+  - {fileID: 2100000, guid: 901cd148a6adf724f81fe3aaf4e89ce0, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
 --- !u!23 &2332240
-Renderer:
+MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -181,19 +185,23 @@ Renderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 2ad4e3b3f052e5e4885a1c5850d41119, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
 --- !u!23 &2332242
-Renderer:
+MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -201,15 +209,19 @@ Renderer:
   m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 20ec6e8961359214287bf45d94cbeefe, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
 --- !u!33 &3332238
@@ -335,7 +347,7 @@ MonoBehaviour:
         x: 0
         y: 0
         width: .290039062
-        height: .245117188
+        height: .490234375
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
@@ -351,9 +363,9 @@ MonoBehaviour:
     - uvs:
         serializedVersion: 2
         x: 0
-        y: .24609375
+        y: .4921875
         width: .290039062
-        height: .245117188
+        height: .490234375
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
@@ -369,9 +381,9 @@ MonoBehaviour:
     - uvs:
         serializedVersion: 2
         x: 0
-        y: .24609375
+        y: .4921875
         width: .290039062
-        height: .245117188
+        height: .490234375
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
@@ -506,37 +518,109 @@ MonoBehaviour:
     topLeftOffset: {x: -1, y: 1}
     bottomRightOffset: {x: 1, y: -1}
   textureAnimations:
-  - name: stage
+  - name: SelectStage
     loopCycles: 0
     loopReverse: 0
     framerate: 30
     onAnimEnd: 2
     framePaths: []
     frameGUIDs:
-    - 55390156a729d4c859cc3d29724cc75c
-    - fa1cc565a1d4442adae2a94797831eaf
-    - a550b72304d8d420b85519f0aac2b28e
-    - 49a7c2899ea7e4f47ae833ce7c5c56e1
-    - 1616110ceb4614b069973e08679ad5aa
-    - 3258e2d984dd34f1686d8956c6bc8c41
-    - f20c64587090541e9a7210c76e2bc5ee
-    - e32d9ae63c4c44144b998d6633de9a81
-    - 205dbd524bcb348eba5fc132d492672d
-    - 7946bb177c2084699ab73a8bca10b36f
-    - 0f797ee804979439583f48697fdc2f30
-    - 72042df9777a543b3b3daabf57167311
-    - 464523f30d6c54c27ac7bfe06a1a7bcb
-    - 9abebc79d6db341ce81b1352c4879adb
-    - eacf74676908e407c882d87d934cd807
-    - 39f9fb9b95cdb4f85a1b23a14e0b3755
-    - 803cd34f7c6ed47abadd7684e95566de
-    - 94f577fddd2674e88b266fd87f39c7bd
-    - 26924962773134baea93574777a2b4a2
-    - b872be1d1cd5e4be7af1996480c356e3
-    - cf0d5faa1b14141c0b7d77f557b7b49d
-    - af08d5afa03164562845c9e4c9f5b0c5
-    - 339eccf21b2254511b15c0f963b6e3e5
+    - f32e9207860bfce43ae9f01522c7d178
+    - cad7136a45fd622488d103bfaba4bd04
+    - f32f99d6c3a6e70449f50ff57d2d0075
+    - 10d51c4f3eb10f24196bdf366cc5c981
+    - 53109c86bc7403c47b426e5edaf9ea83
+    - ae88efa2351b4d542894e9a90253e4d5
+    - b3d8852199a9c1f45a625053c47acc21
+    - d807ad8217a8b5e4faa46fac5f81fc07
+    - 408f0b9a899f56f4c860f975414ea774
+    - 5be52d61c95bb44499913b9056ac5d65
+    - 34ab537b2df7b0c49bc8fd0d462f2de9
+    - 1c4ca0795007a2a4b952b878a64126fe
+    - d766f461be1c22f42b53a96e385e8423
+    - d5dc8aed57f250244be166500c009580
+    - 7f64466d943dc484e910e13480cb5d21
+    - 9e77baa34c00e78439d28da892c22e48
+    - 4761698c984170649a38ace22f3eb689
+    - afbde26d230773f4397734d2e8c170de
+    - 7edbd1f04d3624b47b09995b567eda7b
+    - c336181cc5710164c9277a80046494af
+    - 1419fdb39530e334a8b430836e7373c1
+    - 19ef9a4308b8a3b4e8cd4cb30f9d797a
+    - f414b8fb80491ec4d92005776d3fd4a5
     spriteFrames:
+    - uvs:
+        serializedVersion: 2
+        x: .44140625
+        y: .110351562
+        width: .109375
+        height: .109375
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .551757812
+        y: .110351562
+        width: .109375
+        height: .109375
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .662109375
+        y: .110351562
+        width: .109375
+        height: .109375
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .772460938
+        y: .110351562
+        width: .109375
+        height: .109375
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .8828125
+        y: .110351562
+        width: .109375
+        height: .109375
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .110351562
+        y: .220703125
+        width: .109375
+        height: .109375
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .110351562
+        y: .331054688
+        width: .109375
+        height: .109375
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .110351562
+        y: .44140625
+        width: .109375
+        height: .109375
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
         x: .110351562
@@ -667,78 +751,6 @@ MonoBehaviour:
         serializedVersion: 2
         x: .220703125
         y: .662109375
-        width: .109375
-        height: .109375
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .220703125
-        y: .772460938
-        width: .109375
-        height: .109375
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .220703125
-        y: .8828125
-        width: .109375
-        height: .109375
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .331054688
-        y: .331054688
-        width: .109375
-        height: .109375
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .44140625
-        y: .331054688
-        width: .109375
-        height: .109375
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .551757812
-        y: .331054688
-        width: .109375
-        height: .109375
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .662109375
-        y: .331054688
-        width: .109375
-        height: .109375
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .772460938
-        y: .331054688
-        width: .109375
-        height: .109375
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .8828125
-        y: .331054688
         width: .109375
         height: .109375
       scaleFactor: {x: .5, y: .5}
@@ -1104,6 +1116,7 @@ ParticleSystem:
     boxX: .109999999
     boxY: .109999999
     boxZ: 1
+    arc: 360
     placementMode: 0
     m_Mesh: {fileID: 0}
     randomDirection: 0
@@ -1895,15 +1908,19 @@ ParticleSystemRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 1efb5068e96e8ce489fcfdc3bf21d8bc, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_RenderMode: 0
@@ -1929,4 +1946,3 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 132236}
   m_IsPrefabParent: 1
-  m_IsExploded: 1
