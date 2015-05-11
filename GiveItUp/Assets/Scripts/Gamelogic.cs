@@ -35,6 +35,7 @@ public class Gamelogic : MonoBehaviour
 	public AudioSource music;
 	public AudioSource music1;
 	public AudioSource music2;
+	public AudioSource music3;
 	private int challengeMusic;
 	
 	public int currentUpSoundPack = 0;
@@ -304,8 +305,11 @@ public class Gamelogic : MonoBehaviour
 					{
 						music.Stop();
 					}
-					
-					if ( (_stageIndex == -1 && challengeMusic == 1) || _stageIndex > 8 )
+					if(_stageIndex > 17)
+					{
+						music = music3;
+					}
+					else if ( (_stageIndex == -1 && challengeMusic == 1) || _stageIndex > 8 )
 					{
 						music = music2;
 					}

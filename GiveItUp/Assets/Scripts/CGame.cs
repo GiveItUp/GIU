@@ -6,7 +6,7 @@ using System;
 public class CGame : MonoBehaviour 
 {
 	public const string VERSION = "v1.0.3";
-	public const int LEVEL_COUNT = 18;
+	public const int LEVEL_COUNT = 21;
 
 	public static CGame Instance;
 	public static PopupLayer popupLayer;

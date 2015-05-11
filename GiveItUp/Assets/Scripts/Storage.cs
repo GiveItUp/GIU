@@ -10,6 +10,7 @@ public class Storage : MonoBehaviour
 	public List<Stage> _easyChunks = new List<Stage>();
 	public List<Stage> _normalChunks = new List<Stage>();
 	public List<Stage> _hardChunks = new List<Stage>();
+	public List<Stage> _newWorlds = new List<Stage>();
 
 	public AnimationClip animShowGUI;
 	public AnimationClip animHideGUI;
@@ -21,6 +22,10 @@ public class Storage : MonoBehaviour
 
 	public Stage GetValidStage(int stageIndex)
 	{
+//		if (stageIndex < CGame.LEVEL_COUNT && stageIndex < Storage.Instance._easyChunks.Count)
+//			return _easyChunks [stageIndex];
+//		return null;
+
 		if (stageIndex < CGame.LEVEL_COUNT && stageIndex < Storage.Instance._worlds.Count)
 			return _worlds [stageIndex];
 		return null;

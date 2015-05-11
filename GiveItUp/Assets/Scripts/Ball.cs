@@ -335,7 +335,11 @@ public class Ball : MonoBehaviour
 			vTo = Vector3.down * 3;
 		}
 
-		pFrom += Vector3.up * radius + anims.jumpOffset;
+		if (isActive) {
+			pFrom += Vector3.up * radius + anims.jumpOffset;
+		} else {
+			pFrom += Vector3.up * radius;
+		}
 		pTo += Vector3.up * radius;
 
 		isJumpNeed = false;

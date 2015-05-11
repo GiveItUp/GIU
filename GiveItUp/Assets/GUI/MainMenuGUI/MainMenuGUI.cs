@@ -23,6 +23,7 @@ public class MainMenuGUI : GUIMenu
 	public GameObject go_ball;
 	public GameObject go_levels_1;
 	public GameObject go_levels_2;
+	public GameObject go_levels_3;
 	public JoyStickMenu joyMainMenu;
 	public LevelItemGUI p_LevelItemGUI;
 	public GameObject bgGameObject;
@@ -31,7 +32,14 @@ public class MainMenuGUI : GUIMenu
 	private Stage _selectedStage;
 	private LevelItemGUI _selectedLevelItemGUI;
 	public static MainMenuGUI inst;
-	
+	private int page;
+
+	void Awake()
+	{
+		GameObject gb = Resources.Load("Prefabs/Monstar/Go_BlackBall") as GameObject;
+		go_ball = GameObject.Instantiate(gb) as GameObject;
+		btn_start = go_ball.transform.Find("btn_start").GetComponent<UIButton>();
+	}
 
 	#region Init
 	public void Init ()
@@ -55,7 +63,7 @@ public class MainMenuGUI : GUIMenu
 		ChangeLevel (User.LastPlayedStage);
 		//Debug.Log ("act = " + User.LastPlayedStage);
 		actualPage = User.LastPlayedStage < 9 ? 0 : 1;
-		ShowLevels ();
+		ShowLevels (0);
 
 		StartCoroutine (PlayShowAnim ());
 	}
@@ -143,7 +151,7 @@ public class MainMenuGUI : GUIMenu
 
 		//SoundManager.Instance.Play(SoundManager.eSoundClip.GUI_PopupShowComponent, 1);
 
-		yield return StartCoroutine (ShowLevels ());
+		yield return StartCoroutine (ShowLevels (page));
 		
 		yield return StartCoroutine (ComponentAnimation_Show (go_ball.transform, 0.15f));
 
@@ -178,7 +186,7 @@ public class MainMenuGUI : GUIMenu
 		
 		SoundManager.Instance.Play (SoundManager.eSoundClip.GUI_Button_back, 1);
 		
-		yield return StartCoroutine (HideLevels ());
+		yield return StartCoroutine (HideLevels (page));
 		
 		//yield return StartCoroutine(ComponentAnimation_Hide (btn_moregames.transform, 0.11f, false ));
 		//if (User.HasIAP_UnlockAll) {
@@ -263,8 +271,10 @@ public class MainMenuGUI : GUIMenu
 			LevelItemGUI lit = GameObject.Instantiate (p_LevelItemGUI) as LevelItemGUI;
 			if (i < 9)
 				lit.transform.parent = go_levels_1.transform;
-			else
+			else if (i < 18)
 				lit.transform.parent = go_levels_2.transform;
+			else
+				lit.transform.parent = go_levels_3.transform;
 			lit.transform.localPosition = new Vector3 (-430 + (i % 9) * 110, 0, -1);
 			lit.Init (i, Storage.Instance._worlds [i], ChangeLevel);
 			levelItemGUIs.Add (lit);
@@ -287,22 +297,23 @@ public class MainMenuGUI : GUIMenu
 
 	private IEnumerator ChangeLevels (int page)
 	{
-		yield return StartCoroutine (HideLevels ());
+		yield return StartCoroutine (HideLevels (actualPage));
 
 		actualPage = page;
 
 		go_levels_1.gameObject.SetActive (actualPage == 0);
-		go_levels_2.gameObject.SetActive (actualPage != 0);
+		go_levels_2.gameObject.SetActive (actualPage == 0);
+		go_levels_3.gameObject.SetActive (actualPage == 1);
 
-		yield return StartCoroutine (ShowLevels ());
+		yield return StartCoroutine (ShowLevels (actualPage));
 	}
 
-	private IEnumerator ShowLevels ()
+	private IEnumerator ShowLevels (int showPage)
 	{
-		int startIndex = 0;//actualPage == 0 ? 0 : 9;
-		int endIndex = 18;//actualPage == 0 ? 9 : 18;
+		int startIndex = showPage*18;//actualPage == 0 ? 0 : 9;
+		int endIndex = (showPage+1)*18;//actualPage == 0 ? 9 : 18;
 		//foreach (var lit in levelItemGUIs)
-		for (int i = startIndex; i < endIndex; i++)
+		for (int i = startIndex; i < levelItemGUIs.Count && i < endIndex; i++)
 			yield return StartCoroutine (ComponentAnimation_Show (levelItemGUIs [i].transform, 0.07f));
 		
 //		if(actualPage == 0)
@@ -311,15 +322,15 @@ public class MainMenuGUI : GUIMenu
 //			yield return StartCoroutine(ComponentAnimation_Show (btn_prevpage.transform, 0.12f));
 	}
 
-	private IEnumerator HideLevels ()
+	private IEnumerator HideLevels (int showPage)
 	{
 //		if(actualPage == 0)
 //			yield return StartCoroutine(ComponentAnimation_Hide (btn_nextpage.transform, 0.1f));
 //		else
 //			yield return StartCoroutine(ComponentAnimation_Hide (btn_prevpage.transform, 0.1f));
 
-		int startIndex = 17;//actualPage == 0 ? 8 : 17;
-		int endIndex = 0;//actualPage == 0 ? 0 : 9;
+		int startIndex = ((actualPage+1*18) > levelItemGUIs.Count ? levelItemGUIs.Count : (actualPage+1*18))-1;//actualPage == 0 ? 8 : 17;
+		int endIndex = actualPage*18;//actualPage == 0 ? 0 : 9;
 		for (int i = startIndex; i >= endIndex; i--)
 			yield return StartCoroutine (ComponentAnimation_Hide (levelItemGUIs [i].transform, 0.07f, false));
 	}
@@ -630,8 +641,14 @@ public class MainMenuGUI : GUIMenu
 		if (_inputEnabled) {
 			//_inputEnabled = false;
 			SoundManager.PlayButtonTapSound ();
-			
-			yield return StartCoroutine (ChangeLevels (0));
+			page--;
+			if(page<0)
+			{
+				page = 0;
+			}else
+			{
+				yield return StartCoroutine (ChangeLevels (0));
+			}
 		}
 	}
 	
@@ -654,8 +671,14 @@ public class MainMenuGUI : GUIMenu
 		if (_inputEnabled) {
 			//_inputEnabled = false;
 			SoundManager.PlayButtonTapSound ();
-			
-			yield return StartCoroutine (ChangeLevels (1));
+			page++;
+			if(page>1)
+			{
+				page = 1;
+			}else
+			{
+				yield return StartCoroutine (ChangeLevels (page));
+			}
 		}
 	}
 	#endregion
@@ -663,5 +686,43 @@ public class MainMenuGUI : GUIMenu
 	public void OnPlayBtn ()
 	{
 		StartCoroutine (OnStart ());
+	}
+
+	private void OnGUI()
+	{
+		if(GUILayout.Button("BlackBall"))
+		{
+			GameObject temp = go_ball;
+			GameObject gb = Resources.Load("Prefabs/Monstar/Go_BlackBall") as GameObject;
+			go_ball = GameObject.Instantiate(gb) as GameObject;
+			go_ball.transform.parent = temp.transform.parent;
+			go_ball.transform.localPosition= Vector3.zero;
+			btn_start = go_ball.transform.Find("btn_start").GetComponent<UIButton>();
+			GameObject.Destroy(temp);
+			Debug.Log("BlackBall");
+		}
+		if(GUILayout.Button("RedBall"))
+		{
+			GameObject temp = go_ball;
+			GameObject gb = Resources.Load("Prefabs/Monstar/Go_RedBall") as GameObject;
+			go_ball = GameObject.Instantiate(gb) as GameObject;
+			go_ball.transform.parent = temp.transform.parent;
+			go_ball.transform.localPosition= Vector3.zero;
+			btn_start = go_ball.transform.Find("btn_start").GetComponent<UIButton>();
+			GameObject.Destroy(temp);
+			Debug.Log("Go_RedBall");
+		}
+	}
+
+	public void ChangeBall(string ballName)
+	{
+		GameObject temp = go_ball;
+		GameObject gb = Resources.Load("Prefabs/Monstar/"+ballName) as GameObject;
+		go_ball = GameObject.Instantiate(gb) as GameObject;
+		go_ball.transform.parent = temp.transform.parent;
+		go_ball.transform.localPosition= Vector3.zero;
+		btn_start = go_ball.transform.Find("btn_start").GetComponent<UIButton>();
+		GameObject.Destroy(temp);
+		Debug.Log(ballName);
 	}
 }
