@@ -65,11 +65,11 @@ public class Gamelogic : MonoBehaviour
 
 	private void Awake()
 	{
-//		GameObject go = Resources.Load("Prefabs/Monstar/"+CGame.ballName) as GameObject;
-//		go = GameObject.Instantiate(go) as GameObject;
-//		go.transform.parent = this.transform;
-//		ball = go.GetComponent<Ball>();
-//		Debug.LogError(CGame.ballName);
+		GameObject go = Resources.Load("Prefabs/Monstar/"+CGame.ballName) as GameObject;
+		go = GameObject.Instantiate(go) as GameObject;
+		go.transform.parent = this.transform;
+		ball = go.GetComponent<Ball>();
+		Debug.LogError(CGame.ballName);
 	}
 	
 	public void InitRandom()
