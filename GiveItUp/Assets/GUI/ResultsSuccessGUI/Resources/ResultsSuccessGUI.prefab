@@ -927,7 +927,7 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .22265625
+        x: .404296875
         y: 0
         width: .180664062
         height: .1484375
@@ -945,8 +945,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: 0
-        y: .766601562
+        x: .22265625
+        y: 0
         width: .180664062
         height: .1484375
       scaleFactor: {x: .5, y: .5}
@@ -963,8 +963,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: 0
-        y: .766601562
+        x: .22265625
+        y: 0
         width: .180664062
         height: .1484375
       scaleFactor: {x: .5, y: .5}
@@ -1605,7 +1605,7 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .22265625
+        x: .387695312
         y: .149414062
         width: .1640625
         height: .161132812
@@ -1623,7 +1623,7 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .387695312
+        x: .552734375
         y: .149414062
         width: .1640625
         height: .161132812
@@ -1641,7 +1641,7 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .387695312
+        x: .552734375
         y: .149414062
         width: .1640625
         height: .161132812
@@ -1799,7 +1799,7 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .654296875
+        x: .8359375
         y: 0
         width: .142578125
         height: .1171875
@@ -1817,8 +1817,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .797851562
-        y: 0
+        x: .3828125
+        y: .462890625
         width: .142578125
         height: .1171875
       scaleFactor: {x: .5, y: .5}
@@ -1835,8 +1835,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .797851562
-        y: 0
+        x: .3828125
+        y: .462890625
         width: .142578125
         height: .1171875
       scaleFactor: {x: .5, y: .5}
@@ -1949,8 +1949,8 @@ MonoBehaviour:
   _ser_stat_frame_info:
     uvs:
       serializedVersion: 2
-      x: .181640625
-      y: .766601562
+      x: .8828125
+      y: .26171875
       width: .0400390625
       height: .041015625
     scaleFactor: {x: .5, y: .5}
