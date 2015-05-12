@@ -26,17 +26,14 @@ public class SelectBallContrl : MonoBehaviour {
 		switch (ptr.evt) {
 		case POINTER_INFO.INPUT_EVENT.DRAG:
 			y += ptr.inputDelta.y;
-			//Debug.LogError("DRAG"+ptr.inputDelta+"   "+y);
 			ChangeSacle();
 			break;
 		case POINTER_INFO.INPUT_EVENT.RELEASE_OFF:
 		case POINTER_INFO.INPUT_EVENT.RELEASE:
 			y = 0;
 			ResetOrderbyBalls();
-			Debug.Log("RELEASE");
 			break;
 		}
-		Debug.Log(ptr.evt);
 	}
 
 	void ChangeSacle()
