@@ -13,7 +13,7 @@ public class CGame : MonoBehaviour
 	public static MenuLayer menuLayer;	
 	public static Gamelogic gamelogic;
 	public static CameraLogic cameraLogic;
-
+	public static string ballName;
 	public PopupLayer p_PopupLayer;
 	public MenuLayer p_MenuLayer;
 	public Gamelogic p_Gamelogic;

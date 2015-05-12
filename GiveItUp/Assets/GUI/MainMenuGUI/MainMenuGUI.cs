@@ -716,6 +716,7 @@ public class MainMenuGUI : GUIMenu
 
 	public void ChangeBall(string ballName)
 	{
+		CGame.ballName = ballName.Split(new char[]{'_'})[1];
 		GameObject temp = go_ball;
 		GameObject gb = Resources.Load("Prefabs/Monstar/"+ballName) as GameObject;
 		go_ball = GameObject.Instantiate(gb) as GameObject;
