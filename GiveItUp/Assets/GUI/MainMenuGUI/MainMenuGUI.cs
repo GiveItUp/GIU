@@ -33,18 +33,14 @@ public class MainMenuGUI : GUIMenu
 	private LevelItemGUI _selectedLevelItemGUI;
 	public static MainMenuGUI inst;
 	private int page;
-
-	void Awake()
+	private void Awake()
 	{
-		GameObject gb = Resources.Load("Prefabs/Monstar/Go_RedBall") as GameObject;
-		go_ball = GameObject.Instantiate(gb) as GameObject;
-		btn_start = go_ball.transform.Find("btn_start").GetComponent<UIButton>();
+		inst = this;
 	}
 
 	#region Init
 	public void Init ()
 	{
-		inst = this;
 		_inputEnabled = false;
 		int width = GfxSettings.Instance ().GetScreenWidth () + 1;
 		int height = GfxSettings.Instance ().GetScreenHeight () + 1;
@@ -688,42 +684,26 @@ public class MainMenuGUI : GUIMenu
 		StartCoroutine (OnStart ());
 	}
 
-	private void OnGUI()
-	{
-		if(GUILayout.Button("BlackBall"))
-		{
-			GameObject temp = go_ball;
-			GameObject gb = Resources.Load("Prefabs/Monstar/Go_RedBall") as GameObject;
-			go_ball = GameObject.Instantiate(gb) as GameObject;
-			go_ball.transform.parent = temp.transform.parent;
-			go_ball.transform.localPosition= Vector3.zero;
-			btn_start = go_ball.transform.Find("btn_start").GetComponent<UIButton>();
-			GameObject.Destroy(temp);
-			Debug.Log("BlackBall");
-		}
-		if(GUILayout.Button("RedBall"))
-		{
-			GameObject temp = go_ball;
-			GameObject gb = Resources.Load("Prefabs/Monstar/Go_RedBall") as GameObject;
-			go_ball = GameObject.Instantiate(gb) as GameObject;
-			go_ball.transform.parent = temp.transform.parent;
-			go_ball.transform.localPosition= Vector3.zero;
-			btn_start = go_ball.transform.Find("btn_start").GetComponent<UIButton>();
-			GameObject.Destroy(temp);
-			Debug.Log("Go_RedBall");
-		}
-	}
-
 	public void ChangeBall(string ballName)
 	{
+		PlayerPrefs.SetString("ballName",ballName);
+		PlayerPrefs.Save();
 		CGame.ballName = ballName.Split(new char[]{'_'})[1];
 		GameObject temp = go_ball;
 		GameObject gb = Resources.Load("Prefabs/Monstar/"+ballName) as GameObject;
 		go_ball = GameObject.Instantiate(gb) as GameObject;
-		go_ball.transform.parent = temp.transform.parent;
+		if(temp!=null)
+		{
+			go_ball.transform.parent = temp.transform.parent;
+			GameObject.Destroy(temp);
+		}
+		else
+		{
+			go_ball.transform.parent = this.transform;
+		}
 		go_ball.transform.localPosition= Vector3.zero;
 		btn_start = go_ball.transform.Find("btn_start").GetComponent<UIButton>();
-		GameObject.Destroy(temp);
+		btn_start.SetInputDelegate (OnBtn_Start_Input);
 		Debug.Log(ballName);
 	}
 }

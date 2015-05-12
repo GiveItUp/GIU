@@ -71,9 +71,14 @@ public class GUILayer : MonoBehaviour {
 	protected IEnumerator ComponentAnimation_Hide(Transform t, float wait, bool needSound)
 	{
 		t.gameObject.SetActive(true);
-		if (!forceShow && t.GetComponent<Animation>() != null)
-			t.GetComponent<Animation>().Play("HideAnimBubble");
-
+		Animation animation = t.GetComponent<Animation>();
+		if (!forceShow && animation != null)
+		{
+			if(animation.GetClip("HideAnimBubble")!=null)
+			{
+				animation.Play("HideAnimBubble");
+			}
+		}
 		if(needSound)
 			SoundManager.Instance.Play(SoundManager.eSoundClip.GUI_Button_back, 1);
 		

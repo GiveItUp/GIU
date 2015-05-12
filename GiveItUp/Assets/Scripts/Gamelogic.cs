@@ -69,7 +69,6 @@ public class Gamelogic : MonoBehaviour
 		go = GameObject.Instantiate(go) as GameObject;
 		go.transform.parent = this.transform;
 		ball = go.GetComponent<Ball>();
-		Debug.LogError(CGame.ballName);
 	}
 	
 	public void InitRandom()
