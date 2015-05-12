@@ -2823,7 +2823,7 @@ MonoBehaviour:
     onAnimEnd: 0
     framePaths: []
     frameGUIDs:
-    - 55390156a729d4c859cc3d29724cc75c
+    - f32e9207860bfce43ae9f01522c7d178
     spriteFrames:
     - uvs:
         serializedVersion: 2
