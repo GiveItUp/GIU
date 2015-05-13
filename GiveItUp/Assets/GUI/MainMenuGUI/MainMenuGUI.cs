@@ -58,8 +58,9 @@ public class MainMenuGUI : GUIMenu
 		//ChangeLevel(User.ActualStage >= User.LastPlayedStage ? User.LastPlayedStage : User.ActualStage);
 		ChangeLevel (User.LastPlayedStage);
 		//Debug.Log ("act = " + User.LastPlayedStage);
-		actualPage = User.LastPlayedStage < 9 ? 0 : 1;
-		ShowLevels (0);
+		actualPage = User.LastPlayedStage < 18 ? 0 : 1;
+		page = PlayerPrefs.GetInt("page",0);
+		ChangeLevels (page);
 
 		StartCoroutine (PlayShowAnim ());
 	}
@@ -296,6 +297,8 @@ public class MainMenuGUI : GUIMenu
 		yield return StartCoroutine (HideLevels (actualPage));
 
 		actualPage = page;
+		PlayerPrefs.SetInt("page",page);
+		PlayerPrefs.Save();
 
 		go_levels_1.gameObject.SetActive (actualPage == 0);
 		go_levels_2.gameObject.SetActive (actualPage == 0);

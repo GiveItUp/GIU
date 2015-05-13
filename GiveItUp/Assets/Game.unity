@@ -3335,7 +3335,7 @@ MonoBehaviour:
       serializedVersion: 2
       m_Bits: 512
     rayDepth: Infinity
-  rayCamera: {fileID: 0}
+  rayCamera: {fileID: 2042019398}
   blockInput: 0
   defaultDragOffset: 1
   cancelDragEasing: 22
