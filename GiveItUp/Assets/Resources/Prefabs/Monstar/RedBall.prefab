@@ -90,7 +90,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &165250
 GameObject:
   m_ObjectHideFlags: 0
@@ -3164,10 +3164,10 @@ ParticleSystem:
       maxGradient:
         key0:
           serializedVersion: 2
-          rgba: 4278190080
+          rgba: 4289626093
         key1:
           serializedVersion: 2
-          rgba: 4278190080
+          rgba: 4289626093
         key2:
           serializedVersion: 2
           rgba: 0
@@ -3837,7 +3837,7 @@ ParticleSystemRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 1efb5068e96e8ce489fcfdc3bf21d8bc, type: 2}
+  - {fileID: 2100000, guid: 6b7b772aea711524cb8a9cf724cb90b8, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
