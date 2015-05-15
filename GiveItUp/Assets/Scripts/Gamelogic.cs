@@ -473,9 +473,8 @@ public class Gamelogic : MonoBehaviour
 //								EtceteraAndroid.showAlert ("解锁全部关卡", TextManager.Get ("Unlock all info"), "好的", "取消");
 //								#endif
 								PluginManager.iap.PurchaseProduct(eIAP.UnlockAll);
-							}else{
-								User.CompleteStage(_stageIndex);
 							}
+							User.CompleteStage(_stageIndex);
 						}
 					}
 //                    if (User.PlayCount % 5 == 1)

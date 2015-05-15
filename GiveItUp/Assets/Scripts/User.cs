@@ -241,7 +241,7 @@ public class User
 	{
 		//Debug.Log("userload");
 		string str_UserData = PlayerPrefs.GetString("saveData", "nodata");
-		//Debug.Log("str_UserData = " + str_UserData);
+//		Debug.Log("str_UserData = " + str_UserData);
 
 		Hashtable ht_userData = null;
 		if (str_UserData == "nodata")
