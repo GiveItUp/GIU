@@ -14,7 +14,7 @@ public class SelectBallContrl : MonoBehaviour {
 			ballName = PlayerPrefs.GetString("ballName");
 		}
 
-		while (balls[0].name!=ballName) {
+		while (balls[balls.Count-1].name!=ballName) {
 			UIButton temp = balls[0];
 			balls.Remove(temp);
 			balls.Add(temp);
@@ -26,7 +26,7 @@ public class SelectBallContrl : MonoBehaviour {
 		foreach (UIButton item in balls) {
 			item.SetInputDelegate (OnBtn_Start_Input);	
 		}
-		uiButton.SetInputDelegate(OnBtn_Start_Input);
+		//uiButton.SetInputDelegate(OnBtn_Start_Input);
 	}
 	
 	// Update is called once per frame
@@ -50,16 +50,20 @@ public class SelectBallContrl : MonoBehaviour {
 	void ChangeSacle(UIButton temp)
 	{
 		balls.Remove(temp);
-		balls.Insert(0,temp);
+		balls.Add(temp);
 		ResetOrderbyBalls();
 	}
 
 	void ResetOrderbyBalls()
 	{
 		for (int i = 0; i < balls.Count; i++) {
-			balls[i].transform.parent.localScale = Vector3.one -  new Vector3(0.25f,0.25f,0) * i;
-			balls[i].transform.parent.localPosition = posList[i];
+			balls[i].gameObject.SetActive(false);
+			if(i==0)
+			{
+				balls[i].gameObject.SetActive(true);
+			}
 		}
-		MainMenuGUI.inst.ChangeBall(balls[0].name);
+		Debug.Log(balls[balls.Count-1].name);
+		MainMenuGUI.inst.ChangeBall(balls[balls.Count-1].name);
 	}
 }
