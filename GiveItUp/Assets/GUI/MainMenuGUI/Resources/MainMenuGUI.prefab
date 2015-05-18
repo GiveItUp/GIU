@@ -1429,8 +1429,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .526367188
-        y: .581054688
+        x: .666992188
+        y: .487304688
         width: .11328125
         height: .111328125
       scaleFactor: {x: .5, y: .5}
@@ -1448,7 +1448,7 @@ MonoBehaviour:
     - uvs:
         serializedVersion: 2
         x: .8828125
-        y: .149414062
+        y: 0
         width: .11328125
         height: .111328125
       scaleFactor: {x: .5, y: .5}
@@ -1466,7 +1466,7 @@ MonoBehaviour:
     - uvs:
         serializedVersion: 2
         x: .8828125
-        y: .149414062
+        y: 0
         width: .11328125
         height: .111328125
       scaleFactor: {x: .5, y: .5}
@@ -1657,7 +1657,7 @@ MonoBehaviour:
     - uvs:
         serializedVersion: 2
         x: .22265625
-        y: .149414062
+        y: 0
         width: .1640625
         height: .161132812
       scaleFactor: {x: .5, y: .5}
@@ -1675,7 +1675,7 @@ MonoBehaviour:
     - uvs:
         serializedVersion: 2
         x: .717773438
-        y: .149414062
+        y: 0
         width: .1640625
         height: .161132812
       scaleFactor: {x: .5, y: .5}
@@ -1693,7 +1693,7 @@ MonoBehaviour:
     - uvs:
         serializedVersion: 2
         x: .717773438
-        y: .149414062
+        y: 0
         width: .1640625
         height: .161132812
       scaleFactor: {x: .5, y: .5}
@@ -1850,8 +1850,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .3828125
-        y: .817382812
+        x: .369140625
+        y: .638671875
         width: .142578125
         height: .1171875
       scaleFactor: {x: .5, y: .5}
@@ -1868,8 +1868,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .526367188
-        y: .462890625
+        x: .369140625
+        y: .756835938
         width: .142578125
         height: .1171875
       scaleFactor: {x: .5, y: .5}
@@ -1886,8 +1886,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .526367188
-        y: .462890625
+        x: .369140625
+        y: .756835938
         width: .142578125
         height: .1171875
       scaleFactor: {x: .5, y: .5}
@@ -2044,8 +2044,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .640625
-        y: .740234375
+        x: .143554688
+        y: .869140625
         width: .0751953125
         height: .0849609375
       scaleFactor: {x: .5, y: .5}
@@ -2062,8 +2062,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .640625
-        y: .826171875
+        x: .5234375
+        y: .881835938
         width: .0751953125
         height: .0849609375
       scaleFactor: {x: .5, y: .5}
@@ -2080,8 +2080,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .640625
-        y: .826171875
+        x: .5234375
+        y: .881835938
         width: .0751953125
         height: .0849609375
       scaleFactor: {x: .5, y: .5}
@@ -2274,8 +2274,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .669921875
-        y: .462890625
+        x: .369140625
+        y: .875
         width: .142578125
         height: .112304688
       scaleFactor: {x: .5, y: .5}
@@ -2292,8 +2292,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .813476562
-        y: .462890625
+        x: .5234375
+        y: .487304688
         width: .142578125
         height: .112304688
       scaleFactor: {x: .5, y: .5}
@@ -2310,8 +2310,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .813476562
-        y: .462890625
+        x: .5234375
+        y: .487304688
         width: .142578125
         height: .112304688
       scaleFactor: {x: .5, y: .5}
@@ -2426,10 +2426,10 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 0
-      width: .5859375
-      height: .69140625
-    scaleFactor: {x: .5, y: .5}
-    topLeftOffset: {x: -1, y: 1}
+      width: .572265625
+      height: .61328125
+    scaleFactor: {x: .511945367, y: .563694239}
+    topLeftOffset: {x: -.953333318, y: .774011314}
     bottomRightOffset: {x: 1, y: -1}
   staticFrameInfo:
     uvs:
@@ -2705,8 +2705,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .3828125
-        y: .69921875
+        x: .22265625
+        y: .873046875
         width: .142578125
         height: .1171875
       scaleFactor: {x: .5, y: .5}
@@ -2723,8 +2723,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .3828125
-        y: .581054688
+        x: .22265625
+        y: .754882812
         width: .142578125
         height: .1171875
       scaleFactor: {x: .5, y: .5}
@@ -2741,8 +2741,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .3828125
-        y: .581054688
+        x: .22265625
+        y: .754882812
         width: .142578125
         height: .1171875
       scaleFactor: {x: .5, y: .5}
@@ -2899,13 +2899,13 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: 0
-        y: .420898438
-        width: .1953125
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
+        x: .369140625
+        y: .3203125
+        width: .146484375
+        height: .166015625
+      scaleFactor: {x: .666666687, y: .588235319}
+      topLeftOffset: {x: -.850000024, y: .800000012}
+      bottomRightOffset: {x: .649999976, y: -.899999976}
   - name: Over
     loopCycles: 0
     loopReverse: 0
@@ -2917,13 +2917,13 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: 0
-        y: .420898438
-        width: .1953125
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
+        x: .369140625
+        y: .3203125
+        width: .146484375
+        height: .166015625
+      scaleFactor: {x: .666666687, y: .588235319}
+      topLeftOffset: {x: -.850000024, y: .800000012}
+      bottomRightOffset: {x: .649999976, y: -.899999976}
   - name: Active
     loopCycles: 0
     loopReverse: 0
@@ -2935,13 +2935,13 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: 0
-        y: .420898438
-        width: .1953125
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
+        x: .369140625
+        y: .3203125
+        width: .146484375
+        height: .166015625
+      scaleFactor: {x: .666666687, y: .588235319}
+      topLeftOffset: {x: -.850000024, y: .800000012}
+      bottomRightOffset: {x: .649999976, y: -.899999976}
   - name: Disabled
     loopCycles: 0
     loopReverse: 0
@@ -3133,13 +3133,13 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: 0
-        y: .224609375
-        width: .1953125
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
+        x: .22265625
+        y: .3203125
+        width: .145507812
+        height: .170898438
+      scaleFactor: {x: .671140969, y: .571428597}
+      topLeftOffset: {x: -.839999974, y: .850000024}
+      bottomRightOffset: {x: .649999976, y: -.899999976}
   - name: Over
     loopCycles: 0
     loopReverse: 0
@@ -3151,13 +3151,13 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: 0
-        y: .224609375
-        width: .1953125
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
+        x: .22265625
+        y: .3203125
+        width: .145507812
+        height: .170898438
+      scaleFactor: {x: .671140969, y: .571428597}
+      topLeftOffset: {x: -.839999974, y: .850000024}
+      bottomRightOffset: {x: .649999976, y: -.899999976}
   - name: Active
     loopCycles: 0
     loopReverse: 0
@@ -3169,13 +3169,13 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: 0
-        y: .224609375
-        width: .1953125
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
+        x: .22265625
+        y: .3203125
+        width: .145507812
+        height: .170898438
+      scaleFactor: {x: .671140969, y: .571428597}
+      topLeftOffset: {x: -.839999974, y: .850000024}
+      bottomRightOffset: {x: .649999976, y: -.899999976}
   - name: Disabled
     loopCycles: 0
     loopReverse: 0
@@ -3357,8 +3357,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .640625
-        y: .740234375
+        x: .143554688
+        y: .869140625
         width: .0751953125
         height: .0849609375
       scaleFactor: {x: .5, y: .5}
@@ -3375,8 +3375,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .640625
-        y: .826171875
+        x: .5234375
+        y: .881835938
         width: .0751953125
         height: .0849609375
       scaleFactor: {x: .5, y: .5}
@@ -3393,8 +3393,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .640625
-        y: .826171875
+        x: .5234375
+        y: .881835938
         width: .0751953125
         height: .0849609375
       scaleFactor: {x: .5, y: .5}
@@ -3552,7 +3552,7 @@ MonoBehaviour:
     - uvs:
         serializedVersion: 2
         x: 0
-        y: .6171875
+        y: .224609375
         width: .203125
         height: .171875
       scaleFactor: {x: .5, y: .5}
@@ -3570,7 +3570,7 @@ MonoBehaviour:
     - uvs:
         serializedVersion: 2
         x: 0
-        y: .790039062
+        y: .397460938
         width: .203125
         height: .171875
       scaleFactor: {x: .5, y: .5}
@@ -3588,7 +3588,7 @@ MonoBehaviour:
     - uvs:
         serializedVersion: 2
         x: 0
-        y: .790039062
+        y: .397460938
         width: .203125
         height: .171875
       scaleFactor: {x: .5, y: .5}
