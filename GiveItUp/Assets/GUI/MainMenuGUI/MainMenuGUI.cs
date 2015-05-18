@@ -20,6 +20,8 @@ public class MainMenuGUI : GUIMenu
 	public SpriteText lbl_title;
 	public SpriteText lbl_dailychallenge_progress;
 	public SpriteText lbl_dailychallenge_time;
+	public GameObject playerGroupTitle;
+	public GameObject playerGroupTitleBG;
 	public GameObject go_ball;
 	public GameObject go_levels_1;
 	public GameObject go_levels_2;
@@ -33,6 +35,7 @@ public class MainMenuGUI : GUIMenu
 	private LevelItemGUI _selectedLevelItemGUI;
 	public static MainMenuGUI inst;
 	private int page;
+	private int pageSize = 9;
 	private void Awake()
 	{
 		inst = this;
@@ -266,13 +269,13 @@ public class MainMenuGUI : GUIMenu
 		*/
 		for (int i = 0; i < Storage.Instance._worlds.Count && i < CGame.LEVEL_COUNT; i++) {
 			LevelItemGUI lit = GameObject.Instantiate (p_LevelItemGUI) as LevelItemGUI;
-			if (i < 9)
+			if (i < pageSize)
 				lit.transform.parent = go_levels_1.transform;
-			else if (i < 18)
+			else if (i < 2*pageSize)
 				lit.transform.parent = go_levels_2.transform;
 			else
 				lit.transform.parent = go_levels_3.transform;
-			lit.transform.localPosition = new Vector3 (-430 + (i % 9) * 110, 0, -1);
+			lit.transform.localPosition = new Vector3 (-430 + (i % pageSize) * 110, 0, -1);
 			lit.Init (i, Storage.Instance._worlds [i], ChangeLevel);
 			levelItemGUIs.Add (lit);
 			if ((User.GetLevelScore(User.ActualStage)>=100 && User.ActualStage - lit._index ==-1)|| User.ActualStage - lit._index >=0 || User.HasIAP_UnlockAll) {
@@ -294,6 +297,8 @@ public class MainMenuGUI : GUIMenu
 
 	private IEnumerator ChangeLevels (int page)
 	{
+		btn_prevpage.gameObject.SetActive(false);
+		btn_nextpage.gameObject.SetActive(false);
 		yield return StartCoroutine (HideLevels (actualPage));
 
 		actualPage = page;
@@ -301,16 +306,25 @@ public class MainMenuGUI : GUIMenu
 		PlayerPrefs.Save();
 
 		go_levels_1.gameObject.SetActive (actualPage == 0);
-		go_levels_2.gameObject.SetActive (actualPage == 0);
-		go_levels_3.gameObject.SetActive (actualPage == 1);
+		go_levels_2.gameObject.SetActive (actualPage == 1);
+		go_levels_3.gameObject.SetActive (actualPage == 2);
 
 		yield return StartCoroutine (ShowLevels (actualPage));
+
+		if(actualPage!=0)
+		{
+			btn_prevpage.gameObject.SetActive(true);
+		}
+		if(actualPage!=2)
+		{
+			btn_nextpage.gameObject.SetActive(true);
+		}
 	}
 
 	private IEnumerator ShowLevels (int showPage)
 	{
-		int startIndex = showPage*18;//actualPage == 0 ? 0 : 9;
-		int endIndex = (showPage+1)*18;//actualPage == 0 ? 9 : 18;
+		int startIndex = showPage*pageSize;//actualPage == 0 ? 0 : 9;
+		int endIndex = (showPage+1)*pageSize;//actualPage == 0 ? 9 : 18;
 		//foreach (var lit in levelItemGUIs)
 		for (int i = startIndex; i < levelItemGUIs.Count && i < endIndex; i++)
 			yield return StartCoroutine (ComponentAnimation_Show (levelItemGUIs [i].transform, 0.07f));
@@ -328,8 +342,8 @@ public class MainMenuGUI : GUIMenu
 //		else
 //			yield return StartCoroutine(ComponentAnimation_Hide (btn_prevpage.transform, 0.1f));
 
-		int startIndex = ((actualPage+1*18) > levelItemGUIs.Count ? levelItemGUIs.Count : (actualPage+1*18))-1;//actualPage == 0 ? 8 : 17;
-		int endIndex = actualPage*18;//actualPage == 0 ? 0 : 9;
+		int startIndex = ((actualPage+1)*pageSize > levelItemGUIs.Count ? levelItemGUIs.Count : (actualPage+1)*pageSize)-1;//actualPage == 0 ? 8 : 17;
+		int endIndex = actualPage*pageSize;//actualPage == 0 ? 0 : 9;
 		for (int i = startIndex; i >= endIndex; i--)
 			yield return StartCoroutine (ComponentAnimation_Hide (levelItemGUIs [i].transform, 0.07f, false));
 	}
@@ -411,10 +425,12 @@ public class MainMenuGUI : GUIMenu
 		btn_remove_ads.transform.localPosition = new Vector3 (w - 75, h - 70, -1);
 		btn_unlock_all.transform.localPosition = new Vector3 (w - 80, User.HasIAP_RemoveAds || User.IsPremium ? h - 70 : h - 180, -1);
 
-		btn_options.transform.localPosition = new Vector3 (-w + 80, h - 65, -1);
+		btn_options.transform.localPosition = new Vector3 (w - 80, h - 65, -1);
 		
 		btn_prevpage.transform.localPosition = new Vector3 (-w + 70, -h + 40, -1);
 		btn_nextpage.transform.localPosition = new Vector3 (w - 70, -h + 40, -1);
+		playerGroupTitle.transform.localPosition = new Vector3 (0, -h + 30, -1);
+		playerGroupTitleBG.transform.localScale = new Vector3(2*w-60,45,1);
 	}
 	#endregion
 	
@@ -646,7 +662,7 @@ public class MainMenuGUI : GUIMenu
 				page = 0;
 			}else
 			{
-				yield return StartCoroutine (ChangeLevels (0));
+				yield return StartCoroutine (ChangeLevels (page));
 			}
 		}
 	}
@@ -671,9 +687,9 @@ public class MainMenuGUI : GUIMenu
 			//_inputEnabled = false;
 			SoundManager.PlayButtonTapSound ();
 			page++;
-			if(page>1)
+			if(page>2)
 			{
-				page = 1;
+				page = 2;
 			}else
 			{
 				yield return StartCoroutine (ChangeLevels (page));

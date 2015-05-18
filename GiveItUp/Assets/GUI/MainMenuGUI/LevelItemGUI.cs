@@ -48,7 +48,7 @@ public class LevelItemGUI : MonoBehaviour
 		btn_completed.SetInputDelegate (OnBtn_Start_Input);
 
 		bool isenabled = User.ActualStage == _index;
-		bool completed = User.GetLevelScore (_index) >= 100 || User.HasIAP_UnlockAll;
+		bool completed = true;//User.GetLevelScore (_index) >= 100 || User.HasIAP_UnlockAll;
 		
 		btn_active.gameObject.SetActive (false);
 		btn_inactive.gameObject.SetActive (!completed && !isenabled);

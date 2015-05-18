@@ -6,11 +6,11 @@ Please check your internet connection!#请检查网络！
 Purchase success!#支付成功！
 Purchase failed!#支付失败！
 Purchase cancelled!#支付取消！
-Settings#设置
+Settings#关于
 ****** Give It Up! ******#****** 永不言弃! ******
 Developed by#出品
-INVICTUS-GAMES Ltd#INVICTUS-GAMES Ltd
-EAST2WEST GAMES Ltd#东品西尚网络科技
+INVICTUS-GAMES Ltd#东品游戏
+EAST2WEST GAMES Ltd#巨果文化
 Producer#出品人
 Akos Divianszky#Akos Divianszky
 QiangQiang#强强
@@ -47,7 +47,7 @@ Come on!_Watch TV instead!#这点分还是看电视算了
 Are you kiddin'?#开玩笑呢？
 I see you're getting intuitive.# 你好像开始找到感觉了.
 Neither bad nor good.#马马虎虎，还可以吧.
-What a progress!#进步很大！
+What a progress!#进步很大！更新
 I'm glad you still hold on.#很佩服你还在坚持。
 Go ahead!_You can do much better!#继续前进！_你可以做得更好！
 At last!#又挂了！
@@ -74,9 +74,12 @@ Tap now!#现在点！
 GOOD LUCK#祝你好运
 TAP#点击屏幕
 Waiting for purchase...#等待支付...
-Update notes:#更新内容：
-** 9 new levels of varied difficulty#新增了9个新关卡
-** Daily challenge: complete daily challenge levels the higher percent to increase your scores on the Leaderboard#新增“每日挑战”：完成“每日挑战”来进行排名
-** New crazy music#新曲目！
+Update notes:#《章鱼!永不言弃!!》
+Update notes1:# 是iOS付费排行榜第1的，《永不言弃》
+Update notes2:# 特别版，包括如下新增内容：
+** 9 new levels of varied difficulty#全新设计的关卡
+** Daily challenge: complete daily challenge levels the higher percent to increase your scores on the Leaderboard#全新制作的章鱼角色
+** New crazy music#全新谱写的日式摇滚
 NEW#新纪录！
 Unlock all info#12元解锁全部关卡以及每日挑战！
+Player group#关注微信公众号"east2westgames"或加入官方QQ群"459362383"有惊喜!
