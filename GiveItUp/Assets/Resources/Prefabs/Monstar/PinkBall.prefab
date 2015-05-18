@@ -30,24 +30,24 @@ GameObject:
   - 58: {fileID: 5849152}
   - 111: {fileID: 11167696}
   m_Layer: 0
-  m_Name: RedBall
+  m_Name: PinkBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &126100
+--- !u!1 &138398
 GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 416774}
-  - 33: {fileID: 3338692}
-  - 23: {fileID: 2312006}
-  - 114: {fileID: 11443714}
-  - 114: {fileID: 11462756}
+  - 4: {fileID: 463572}
+  - 114: {fileID: 11425172}
+  - 33: {fileID: 3307516}
+  - 23: {fileID: 2325764}
+  - 114: {fileID: 11498492}
   m_Layer: 0
   m_Name: Eye
   m_TagString: Untagged
@@ -136,7 +136,7 @@ GameObject:
   - 33: {fileID: 3304728}
   - 23: {fileID: 2385850}
   - 114: {fileID: 11497370}
-  - 114: {fileID: 11480428}
+  - 114: {fileID: 11478572}
   m_Layer: 0
   m_Name: Successful
   m_TagString: Untagged
@@ -155,7 +155,7 @@ GameObject:
   - 33: {fileID: 3372174}
   - 23: {fileID: 2300630}
   - 114: {fileID: 11461664}
-  - 114: {fileID: 11420312}
+  - 114: {fileID: 11404154}
   m_Layer: 0
   m_Name: Die_1
   m_TagString: Untagged
@@ -191,7 +191,7 @@ GameObject:
   - 23: {fileID: 2340946}
   - 114: {fileID: 11456666}
   - 114: {fileID: 11432372}
-  - 114: {fileID: 11431878}
+  - 114: {fileID: 11401082}
   m_Layer: 0
   m_Name: Octopus
   m_TagString: Untagged
@@ -227,18 +227,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 437242}
   m_RootOrder: 0
---- !u!4 &416774
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 126100}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 425352}
-  m_RootOrder: 0
 --- !u!4 &425352
 Transform:
   m_ObjectHideFlags: 1
@@ -249,7 +237,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: .539999962}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 416774}
+  - {fileID: 463572}
   m_Father: {fileID: 454178}
   m_RootOrder: 2
 --- !u!4 &436146
@@ -316,6 +304,18 @@ Transform:
   - {fileID: 425352}
   m_Father: {fileID: 410912}
   m_RootOrder: 3
+--- !u!4 &463572
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138398}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 425352}
+  m_RootOrder: 0
 --- !u!4 &485068
 Transform:
   m_ObjectHideFlags: 1
@@ -351,7 +351,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 901cd148a6adf724f81fe3aaf4e89ce0, type: 2}
+  - {fileID: 2100000, guid: 0a85e7aa65bdeb544bee6283e776b435, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -365,17 +365,17 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!23 &2312006
+--- !u!23 &2325764
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 126100}
+  m_GameObject: {fileID: 138398}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 901cd148a6adf724f81fe3aaf4e89ce0, type: 2}
+  - {fileID: 2100000, guid: 0a85e7aa65bdeb544bee6283e776b435, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -399,7 +399,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 901cd148a6adf724f81fe3aaf4e89ce0, type: 2}
+  - {fileID: 2100000, guid: 0a85e7aa65bdeb544bee6283e776b435, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -471,7 +471,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 901cd148a6adf724f81fe3aaf4e89ce0, type: 2}
+  - {fileID: 2100000, guid: 0a85e7aa65bdeb544bee6283e776b435, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -492,12 +492,12 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 174460}
   m_Mesh: {fileID: 0}
---- !u!33 &3338692
+--- !u!33 &3307516
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 126100}
+  m_GameObject: {fileID: 138398}
   m_Mesh: {fileID: 0}
 --- !u!33 &3362648
 MeshFilter:
@@ -571,26 +571,12 @@ Animation:
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!114 &11415660
+--- !u!114 &11401082
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 165250}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54a24ec033a4d4ff4af38062a27d635f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpAnimation: {fileID: 11432372}
-  dieAnimation: {fileID: 11481442}
-  successfulAnimation: {fileID: 11497370}
---- !u!114 &11420312
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 182398}
+  m_GameObject: {fileID: 191346}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b5f05aedb1f504e319c9bcf67302925c, type: 3}
@@ -620,36 +606,248 @@ MonoBehaviour:
   defaultAnim: 0
   doNotTrimImages: 0
   animations:
+  - name: Jump_body
+    loopCycles: 0
+    loopReverse: 1
+    framerate: 30
+    index: 0
+    onAnimEnd: 2
+  staticTexPath: 
+  staticTexGUID: 
+  _ser_stat_frame_info:
+    uvs:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    scaleFactor: {x: .5, y: .5}
+    topLeftOffset: {x: -1, y: 1}
+    bottomRightOffset: {x: 1, y: -1}
+  staticFrameInfo:
+    uvs:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    scaleFactor: {x: .5, y: .5}
+    topLeftOffset: {x: -1, y: 1}
+    bottomRightOffset: {x: 1, y: -1}
+  textureAnimations:
+  - name: Jump_body
+    loopCycles: 0
+    loopReverse: 1
+    framerate: 30
+    onAnimEnd: 2
+    framePaths: []
+    frameGUIDs:
+    - 055c4e2fd2d4b664f9a20700ab710be0
+    - ab04d86c9d40ae34aaafc5f0900c9e86
+    - 1092f41b3b510014cb7e4b85f586e07c
+    - 5776ee4e2eece784381a3203f1dac9c6
+    - bb659cac878451047a5f9c0a98c92f76
+    - e3d20aad2e4a5854eb833a26dc207495
+    - 6d676db2d1c0d454db059b27d5cbff59
+    - 12251dff3ef60f1439187f675dc7a81b
+    - dde9f27976f9a364e84de2a64cc5135f
+    - 5db5a8bca15448249927686c56c8902d
+    - 59e604f929d60744e90a339f2fe06de3
+    - b1cbf0dd87770414799e6108e15e5dcc
+    - 5c0c97ac744001346b243a3bed534b8f
+    - 380278e391ad367459879d39396fb358
+    spriteFrames:
+    - uvs:
+        serializedVersion: 2
+        x: 0
+        y: .662109375
+        width: .109375
+        height: .109375
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: 0
+        y: .772460938
+        width: .109375
+        height: .109375
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: 0
+        y: .8828125
+        width: .109375
+        height: .109375
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .110351562
+        y: .110351562
+        width: .109375
+        height: .109375
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .220703125
+        y: .110351562
+        width: .109375
+        height: .109375
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .331054688
+        y: .110351562
+        width: .109375
+        height: .109375
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .44140625
+        y: .110351562
+        width: .109375
+        height: .109375
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .551757812
+        y: .110351562
+        width: .109375
+        height: .109375
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .662109375
+        y: .110351562
+        width: .109375
+        height: .109375
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .772460938
+        y: .110351562
+        width: .109375
+        height: .109375
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .8828125
+        y: .110351562
+        width: .109375
+        height: .109375
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .110351562
+        y: .220703125
+        width: .109375
+        height: .109375
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .110351562
+        y: .331054688
+        width: .109375
+        height: .109375
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .110351562
+        y: .44140625
+        width: .109375
+        height: .109375
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+--- !u!114 &11404154
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 182398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5f05aedb1f504e319c9bcf67302925c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  managed: 0
+  manager: {fileID: 0}
+  drawLayer: 0
+  persistent: 0
+  plane: 0
+  winding: 1
+  width: 1
+  height: 1
+  bleedCompensation: {x: 0, y: 0}
+  anchor: 9
+  pixelPerfect: 0
+  autoResize: 0
+  billboarded: 0
+  offset: {x: 0, y: 0, z: 0}
+  color: {r: 1, g: 1, b: 1, a: 1}
+  renderCamera: {fileID: 0}
+  pixelsPerUV: {x: 2048, y: 2048}
+  hideAtStart: 0
+  ignoreClipping: 0
+  playAnimOnStart: 1
+  crossfadeFrames: 0
+  defaultAnim: 0
+  doNotTrimImages: 0
+  animations:
   - name: Die
     loopCycles: 0
     loopReverse: 0
-    framerate: 29.9999981
+    framerate: 30
     index: 0
-    onAnimEnd: 2
+    onAnimEnd: 0
   - name: Jump_body
     loopCycles: 0
     loopReverse: 0
     framerate: 30
     index: 1
-    onAnimEnd: 2
+    onAnimEnd: 0
   - name: Jump_eye
     loopCycles: 0
     loopReverse: 0
     framerate: 30
     index: 2
-    onAnimEnd: 2
+    onAnimEnd: 0
   - name: SelectStage
     loopCycles: 0
     loopReverse: 0
     framerate: 30
     index: 3
-    onAnimEnd: 2
+    onAnimEnd: 0
   - name: successful
     loopCycles: 0
     loopReverse: 0
     framerate: 30
     index: 4
-    onAnimEnd: 2
+    onAnimEnd: 0
   staticTexPath: 
   staticTexGUID: 
   _ser_stat_frame_info:
@@ -680,37 +878,51 @@ MonoBehaviour:
     onAnimEnd: 0
     framePaths: []
     frameGUIDs:
-    - a8cd809e3aec76144a4975102e7ac43f
-    - cf2ad72e23e3c7047b2f5b5a29e650b6
-    - 6cac6884b64eb884788cdd5e297acb07
+    - 30f1f2ddca67f074ea0ab529567b56ef
+    - d6c88d97ea755284a8562f6634f25fd6
+    - ad865be1704fad34fa9c3025bbb0190a
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .772460938
-        y: .220703125
-        width: .109375
-        height: .109375
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .8828125
-        y: .220703125
-        width: .109375
-        height: .109375
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .220703125
+        x: 0
         y: .331054688
         width: .109375
         height: .109375
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: 0
+        y: .44140625
+        width: .109375
+        height: .109375
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: 0
+        y: .551757812
+        width: .109375
+        height: .109375
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+--- !u!114 &11415660
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 165250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54a24ec033a4d4ff4af38062a27d635f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpAnimation: {fileID: 11432372}
+  dieAnimation: {fileID: 11481442}
+  successfulAnimation: {fileID: 11497370}
 --- !u!114 &11421682
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -759,7 +971,7 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 0
-      width: .4296875
+      width: .21484375
       height: .21484375
     scaleFactor: {x: .5, y: .5}
     topLeftOffset: {x: -1, y: 1}
@@ -794,27 +1006,27 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .86328125
+        x: .431640625
         y: 0
-        width: .125
+        width: .0625
         height: .0625
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
-        x: .86328125
+        x: .431640625
         y: 0
-        width: .125
+        width: .0625
         height: .0625
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
-        x: .86328125
+        x: .431640625
         y: 0
-        width: .125
+        width: .0625
         height: .0625
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
@@ -823,16 +1035,16 @@ MonoBehaviour:
         serializedVersion: 2
         x: 0
         y: 0
-        width: .4296875
+        width: .21484375
         height: .21484375
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
-        x: .431640625
+        x: .215820312
         y: 0
-        width: .4296875
+        width: .21484375
         height: .21484375
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
@@ -841,25 +1053,25 @@ MonoBehaviour:
         serializedVersion: 2
         x: 0
         y: .215820312
-        width: .4296875
+        width: .21484375
         height: .21484375
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
-        x: .431640625
+        x: .215820312
         y: .215820312
-        width: .4296875
+        width: .21484375
         height: .21484375
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
-        x: .431640625
+        x: .215820312
         y: .215820312
-        width: .4296875
+        width: .21484375
         height: .21484375
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
@@ -868,17 +1080,17 @@ MonoBehaviour:
         serializedVersion: 2
         x: 0
         y: .431640625
-        width: .4296875
+        width: .21484375
         height: .21484375
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
---- !u!114 &11431878
+--- !u!114 &11425172
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 191346}
+  m_GameObject: {fileID: 138398}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b5f05aedb1f504e319c9bcf67302925c, type: 3}
@@ -908,12 +1120,12 @@ MonoBehaviour:
   defaultAnim: 0
   doNotTrimImages: 0
   animations:
-  - name: Jump_body
+  - name: Jump_eye
     loopCycles: 0
     loopReverse: 1
-    framerate: 30
+    framerate: 25
     index: 0
-    onAnimEnd: 2
+    onAnimEnd: 0
   staticTexPath: 
   staticTexGUID: 
   _ser_stat_frame_info:
@@ -937,122 +1149,21 @@ MonoBehaviour:
     topLeftOffset: {x: -1, y: 1}
     bottomRightOffset: {x: 1, y: -1}
   textureAnimations:
-  - name: Jump_body
+  - name: Jump_eye
     loopCycles: 0
     loopReverse: 1
-    framerate: 30
-    onAnimEnd: 2
+    framerate: 25
+    onAnimEnd: 0
     framePaths: []
     frameGUIDs:
-    - 7df04199d99977347a8fbb0d43c26d81
-    - c04ac2d2f7e9cc0449f77ce0a342ca93
-    - b5cf0e0fa7476704f9bb59c27390a75b
-    - c9c375b4178e79647a6d2b2e0c96cd77
-    - b1e87af021c2521459b4bdec10beceaa
-    - efbcb8dad15ba7d449ba0faf800bad63
-    - 5a103769d7ffe8846be9ab4741414e9f
-    - f804b8831a348984bb3e81b0df4f6d40
-    - ab112c0014fd3a840831123171c3cd5e
-    - 67e9ed79e5f6a3142a3e33fb3b651580
-    - a16717effc474dc4a95696431580d38f
-    - 201d8941304b31f4ca624ac774a08b12
-    - 73ef215a4d0ea0945822c4bbe9da59c5
-    - bc78e7425bd699048ba5f0badcf6e2ed
+    - 20b9e5094f488844d8944f4c1cd03b41
+    - 6c43d39c8d60d1f44a9e0f4c13988bb2
+    - 25daa9edd88e55d4eaafd467587c4163
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .220703125
-        y: .44140625
-        width: .109375
-        height: .109375
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .220703125
-        y: .551757812
-        width: .109375
-        height: .109375
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .220703125
-        y: .662109375
-        width: .109375
-        height: .109375
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .220703125
-        y: .772460938
-        width: .109375
-        height: .109375
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .220703125
-        y: .8828125
-        width: .109375
-        height: .109375
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .331054688
-        y: .331054688
-        width: .109375
-        height: .109375
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .44140625
-        y: .331054688
-        width: .109375
-        height: .109375
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .551757812
-        y: .331054688
-        width: .109375
-        height: .109375
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .662109375
-        y: .331054688
-        width: .109375
-        height: .109375
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .772460938
-        y: .331054688
-        width: .109375
-        height: .109375
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
         x: .8828125
-        y: .331054688
+        y: 0
         width: .109375
         height: .109375
       scaleFactor: {x: .5, y: .5}
@@ -1060,8 +1171,8 @@ MonoBehaviour:
       bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
-        x: .331054688
-        y: .44140625
+        x: 0
+        y: .110351562
         width: .109375
         height: .109375
       scaleFactor: {x: .5, y: .5}
@@ -1069,17 +1180,8 @@ MonoBehaviour:
       bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
-        x: .331054688
-        y: .551757812
-        width: .109375
-        height: .109375
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .331054688
-        y: .662109375
+        x: 0
+        y: .220703125
         width: .109375
         height: .109375
       scaleFactor: {x: .5, y: .5}
@@ -1097,20 +1199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpAnim: {fileID: 11456666}
-  eyeAnim: {fileID: 11443714}
---- !u!114 &11443714
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 126100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f95c99923cb2934ea8115d360c325a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 11462756}
-  isMenu: 0
+  eyeAnim: {fileID: 11498492}
 --- !u!114 &11456666
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1135,110 +1224,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f95c99923cb2934ea8115d360c325a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 11420312}
+  sprite: {fileID: 11404154}
   isMenu: 0
---- !u!114 &11462756
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 126100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5f05aedb1f504e319c9bcf67302925c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  managed: 0
-  manager: {fileID: 0}
-  drawLayer: 0
-  persistent: 0
-  plane: 0
-  winding: 1
-  width: 1
-  height: 1
-  bleedCompensation: {x: 0, y: 0}
-  anchor: 9
-  pixelPerfect: 0
-  autoResize: 0
-  billboarded: 0
-  offset: {x: 0, y: 0, z: 0}
-  color: {r: 1, g: 1, b: 1, a: 1}
-  renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 1024, y: 1024}
-  hideAtStart: 0
-  ignoreClipping: 0
-  playAnimOnStart: 1
-  crossfadeFrames: 0
-  defaultAnim: 0
-  doNotTrimImages: 0
-  animations:
-  - name: Jump_eye
-    loopCycles: 0
-    loopReverse: 1
-    framerate: 25
-    index: 0
-    onAnimEnd: 0
-  staticTexPath: 
-  staticTexGUID: 
-  _ser_stat_frame_info:
-    uvs:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-    scaleFactor: {x: .5, y: .5}
-    topLeftOffset: {x: -1, y: 1}
-    bottomRightOffset: {x: 1, y: -1}
-  staticFrameInfo:
-    uvs:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-    scaleFactor: {x: .5, y: .5}
-    topLeftOffset: {x: -1, y: 1}
-    bottomRightOffset: {x: 1, y: -1}
-  textureAnimations:
-  - name: Jump_eye
-    loopCycles: 0
-    loopReverse: 1
-    framerate: 25
-    onAnimEnd: 0
-    framePaths: []
-    frameGUIDs:
-    - f600c4a0033899b4188a81de7119ba70
-    - da21a4473a75f1342b3481d377aac510
-    - e3409747c1d570f4798ed2ff9007e0ce
-    spriteFrames:
-    - uvs:
-        serializedVersion: 2
-        x: .331054688
-        y: .772460938
-        width: .109375
-        height: .109375
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .331054688
-        y: .8828125
-        width: .109375
-        height: .109375
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .44140625
-        y: .44140625
-        width: .109375
-        height: .109375
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
 --- !u!114 &11467794
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1258,20 +1245,7 @@ MonoBehaviour:
   particleSystem: {fileID: 156438}
   updateRunning: 1
   prevMusicTimeDouble: 0
---- !u!114 &11479770
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 154660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f95c99923cb2934ea8115d360c325a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 11495606}
-  isMenu: 0
---- !u!114 &11480428
+--- !u!114 &11478572
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1298,7 +1272,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   color: {r: 1, g: 1, b: 1, a: 1}
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 1024, y: 1024}
+  pixelsPerUV: {x: 2048, y: 2048}
   hideAtStart: 0
   ignoreClipping: 0
   playAnimOnStart: 1
@@ -1309,33 +1283,33 @@ MonoBehaviour:
   - name: Die
     loopCycles: 0
     loopReverse: 0
-    framerate: 29.9999981
+    framerate: 30
     index: 0
-    onAnimEnd: 2
+    onAnimEnd: 0
   - name: Jump_body
     loopCycles: 0
     loopReverse: 0
     framerate: 30
     index: 1
-    onAnimEnd: 2
+    onAnimEnd: 0
   - name: Jump_eye
     loopCycles: 0
     loopReverse: 0
     framerate: 30
     index: 2
-    onAnimEnd: 2
+    onAnimEnd: 0
   - name: SelectStage
     loopCycles: 0
     loopReverse: 0
     framerate: 30
     index: 3
-    onAnimEnd: 2
+    onAnimEnd: 0
   - name: successful
     loopCycles: 0
     loopReverse: 0
     framerate: 30
     index: 4
-    onAnimEnd: 2
+    onAnimEnd: 0
   staticTexPath: 
   staticTexGUID: 
   _ser_stat_frame_info:
@@ -1366,60 +1340,24 @@ MonoBehaviour:
     onAnimEnd: 2
     framePaths: []
     frameGUIDs:
-    - 0e773ae95f6399d4c9b9dfbec3ecd9f7
-    - 5a3cc51356ef299479cd28333e4748d8
-    - 662f3bef982f68d43a4bab97106132af
-    - 9bcdb7dca04bd394c85318deea19532d
-    - 9aaf26b711cd1e54e870b3f9c7fc03c1
-    - 397a7d70f6daee64dbcc71c76195c1fc
-    - 8d0227ba2b13c2d44be354bbdaa58c0c
-    - 2688520461a4072459bf5978cd7a9ab4
-    - a2a76e3e1f3b555458f4574366a8bcb7
-    - 105e8f6e05da6834aab133a75ac62cf6
-    - 480c9d613f73ee2419adbb965ae37ad6
-    - de013747c2b05904d9797c45691de506
-    - 73c4eeca7532c804aab4e3bc96cd31ba
-    - 9f4aeca042a09f24e9cece1f9f4f399d
+    - 6d421aa2a19ae4a459610fdfb4bda36e
+    - 7e4e6cae985f37346a57f2dc4fb4d820
+    - 93c92494c9aa2094da0326ef0ccd9296
+    - cfb8104d06df9d544b6acfe56552e7c2
+    - aae0dbefc03def14da8a56cb8fd1a71e
+    - 432b951ce24a1c8419a6274ccc201f93
+    - 260a803b078967744850639e56814fac
+    - 80d4ebfe9f88b1244a0629affab31082
+    - b80f73480bba5424a9c7f184f9b2e192
+    - 9686d108a6c7b5642a60393857c5d180
+    - 1bfbe80b45032894191440799d8c37b5
+    - cfb80433d36acbd48a9216ff108f0595
+    - 0fdc7e19aa0e3a74b99b33bc7a79afe5
+    - b382acd2bfc6f9349b643fc4494db292
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .772460938
-        y: .110351562
-        width: .109375
-        height: .109375
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .8828125
-        y: .110351562
-        width: .109375
-        height: .109375
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .110351562
-        y: .220703125
-        width: .109375
-        height: .109375
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .110351562
-        y: .331054688
-        width: .109375
-        height: .109375
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .110351562
+        x: .331054688
         y: .44140625
         width: .109375
         height: .109375
@@ -1428,7 +1366,7 @@ MonoBehaviour:
       bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
-        x: .110351562
+        x: .331054688
         y: .551757812
         width: .109375
         height: .109375
@@ -1437,7 +1375,7 @@ MonoBehaviour:
       bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
-        x: .110351562
+        x: .331054688
         y: .662109375
         width: .109375
         height: .109375
@@ -1446,7 +1384,7 @@ MonoBehaviour:
       bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
-        x: .110351562
+        x: .331054688
         y: .772460938
         width: .109375
         height: .109375
@@ -1455,7 +1393,7 @@ MonoBehaviour:
       bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
-        x: .110351562
+        x: .331054688
         y: .8828125
         width: .109375
         height: .109375
@@ -1464,8 +1402,35 @@ MonoBehaviour:
       bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
+        x: .44140625
+        y: .44140625
+        width: .109375
+        height: .109375
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: .109375
+        height: .109375
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .110351562
+        y: 0
+        width: .109375
+        height: .109375
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
         x: .220703125
-        y: .220703125
+        y: 0
         width: .109375
         height: .109375
       scaleFactor: {x: .5, y: .5}
@@ -1474,7 +1439,7 @@ MonoBehaviour:
     - uvs:
         serializedVersion: 2
         x: .331054688
-        y: .220703125
+        y: 0
         width: .109375
         height: .109375
       scaleFactor: {x: .5, y: .5}
@@ -1483,7 +1448,7 @@ MonoBehaviour:
     - uvs:
         serializedVersion: 2
         x: .44140625
-        y: .220703125
+        y: 0
         width: .109375
         height: .109375
       scaleFactor: {x: .5, y: .5}
@@ -1492,7 +1457,7 @@ MonoBehaviour:
     - uvs:
         serializedVersion: 2
         x: .551757812
-        y: .220703125
+        y: 0
         width: .109375
         height: .109375
       scaleFactor: {x: .5, y: .5}
@@ -1501,12 +1466,34 @@ MonoBehaviour:
     - uvs:
         serializedVersion: 2
         x: .662109375
-        y: .220703125
+        y: 0
         width: .109375
         height: .109375
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .772460938
+        y: 0
+        width: .109375
+        height: .109375
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+--- !u!114 &11479770
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 154660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f95c99923cb2934ea8115d360c325a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 11495606}
+  isMenu: 0
 --- !u!114 &11481442
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1519,7 +1506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   packedSprites:
-  - {fileID: 11420312}
+  - {fileID: 11404154}
 --- !u!114 &11495606
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1751,6 +1738,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad6b8e2e35a164db29d5cbe586bf0035, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11498492
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f95c99923cb2934ea8115d360c325a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 11425172}
+  isMenu: 0
 --- !u!198 &19861264
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -3164,10 +3164,10 @@ ParticleSystem:
       maxGradient:
         key0:
           serializedVersion: 2
-          rgba: 4289626093
+          rgba: 4285333759
         key1:
           serializedVersion: 2
-          rgba: 4289626093
+          rgba: 4283302070
         key2:
           serializedVersion: 2
           rgba: 0
