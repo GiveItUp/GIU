@@ -606,35 +606,11 @@ MonoBehaviour:
   defaultAnim: 0
   doNotTrimImages: 0
   animations:
-  - name: Die
-    loopCycles: 0
-    loopReverse: 0
-    framerate: 30
-    index: 0
-    onAnimEnd: 0
   - name: Jump_body
     loopCycles: 0
-    loopReverse: 0
+    loopReverse: 1
     framerate: 30
-    index: 1
-    onAnimEnd: 0
-  - name: Jump_eye
-    loopCycles: 0
-    loopReverse: 0
-    framerate: 30
-    index: 2
-    onAnimEnd: 0
-  - name: SelectStage
-    loopCycles: 0
-    loopReverse: 0
-    framerate: 30
-    index: 3
-    onAnimEnd: 0
-  - name: successful
-    loopCycles: 0
-    loopReverse: 0
-    framerate: 30
-    index: 4
+    index: 0
     onAnimEnd: 0
   staticTexPath: 
   staticTexGUID: 
@@ -1144,35 +1120,11 @@ MonoBehaviour:
   defaultAnim: 0
   doNotTrimImages: 0
   animations:
-  - name: Die
-    loopCycles: 0
-    loopReverse: 0
-    framerate: 30
-    index: 0
-    onAnimEnd: 0
-  - name: Jump_body
-    loopCycles: 0
-    loopReverse: 0
-    framerate: 30
-    index: 1
-    onAnimEnd: 0
   - name: Jump_eye
     loopCycles: 0
-    loopReverse: 0
-    framerate: 30
-    index: 2
-    onAnimEnd: 0
-  - name: SelectStage
-    loopCycles: 0
-    loopReverse: 0
-    framerate: 30
-    index: 3
-    onAnimEnd: 0
-  - name: successful
-    loopCycles: 0
-    loopReverse: 0
-    framerate: 30
-    index: 4
+    loopReverse: 1
+    framerate: 25
+    index: 0
     onAnimEnd: 0
   staticTexPath: 
   staticTexGUID: 
@@ -3212,10 +3164,10 @@ ParticleSystem:
       maxGradient:
         key0:
           serializedVersion: 2
-          rgba: 4289626093
+          rgba: 4285333759
         key1:
           serializedVersion: 2
-          rgba: 4289626093
+          rgba: 4283302070
         key2:
           serializedVersion: 2
           rgba: 0
