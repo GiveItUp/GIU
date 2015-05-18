@@ -162,7 +162,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 093dd558ddb4a214196bb34afc558c0a, type: 2}
+  - {fileID: 2100000, guid: 0a85e7aa65bdeb544bee6283e776b435, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -346,7 +346,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 0
         y: 0
-        width: .580078125
+        width: .290039062
         height: .490234375
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
@@ -364,7 +364,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 0
         y: .4921875
-        width: .580078125
+        width: .290039062
         height: .490234375
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
@@ -382,7 +382,7 @@ MonoBehaviour:
         serializedVersion: 2
         x: 0
         y: .4921875
-        width: .580078125
+        width: .290039062
         height: .490234375
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
@@ -551,82 +551,145 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: .1953125
-        height: .1953125
+        x: .196289062
+        y: .0981445312
+        width: .09765625
+        height: .09765625
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
-        x: .196289062
-        y: 0
-        width: .1953125
-        height: .1953125
+        x: .294433594
+        y: .0981445312
+        width: .09765625
+        height: .09765625
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
         x: .392578125
-        y: 0
-        width: .1953125
-        height: .1953125
+        y: .0981445312
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .490722656
+        y: .0981445312
+        width: .09765625
+        height: .09765625
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
         x: .588867188
-        y: 0
-        width: .1953125
-        height: .1953125
+        y: .0981445312
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .687011719
+        y: .0981445312
+        width: .09765625
+        height: .09765625
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
         x: .78515625
-        y: 0
-        width: .1953125
-        height: .1953125
+        y: .0981445312
+        width: .09765625
+        height: .09765625
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
-        x: 0
+        x: .883300781
+        y: .0981445312
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .0981445312
         y: .196289062
-        width: .1953125
-        height: .1953125
+        width: .09765625
+        height: .09765625
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
-        x: 0
+        x: .0981445312
+        y: .294433594
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .0981445312
         y: .392578125
-        width: .1953125
-        height: .1953125
+        width: .09765625
+        height: .09765625
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
-        x: 0
+        x: .0981445312
+        y: .490722656
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .0981445312
         y: .588867188
-        width: .1953125
-        height: .1953125
+        width: .09765625
+        height: .09765625
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
-        x: 0
+        x: .0981445312
+        y: .687011719
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .0981445312
         y: .78515625
-        width: .1953125
-        height: .1953125
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .0981445312
+        y: .883300781
+        width: .09765625
+        height: .09765625
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
@@ -634,8 +697,17 @@ MonoBehaviour:
         serializedVersion: 2
         x: .196289062
         y: .196289062
-        width: .1953125
-        height: .1953125
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .294433594
+        y: .196289062
+        width: .09765625
+        height: .09765625
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
@@ -643,8 +715,17 @@ MonoBehaviour:
         serializedVersion: 2
         x: .392578125
         y: .196289062
-        width: .1953125
-        height: .1953125
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .490722656
+        y: .196289062
+        width: .09765625
+        height: .09765625
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
@@ -652,8 +733,17 @@ MonoBehaviour:
         serializedVersion: 2
         x: .588867188
         y: .196289062
-        width: .1953125
-        height: .1953125
+        width: .09765625
+        height: .09765625
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
+    - uvs:
+        serializedVersion: 2
+        x: .687011719
+        y: .196289062
+        width: .09765625
+        height: .09765625
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
@@ -661,98 +751,8 @@ MonoBehaviour:
         serializedVersion: 2
         x: .78515625
         y: .196289062
-        width: .1953125
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .196289062
-        y: .392578125
-        width: .1953125
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .196289062
-        y: .588867188
-        width: .1953125
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .196289062
-        y: .78515625
-        width: .1953125
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .392578125
-        y: .392578125
-        width: .1953125
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .588867188
-        y: .392578125
-        width: .1953125
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .78515625
-        y: .392578125
-        width: .1953125
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .392578125
-        y: .588867188
-        width: .1953125
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .392578125
-        y: .78515625
-        width: .1953125
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .588867188
-        y: .588867188
-        width: .1953125
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-    - uvs:
-        serializedVersion: 2
-        x: .78515625
-        y: .588867188
-        width: .1953125
-        height: .1953125
+        width: .09765625
+        height: .09765625
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
@@ -802,9 +802,9 @@ MonoBehaviour:
   _ser_stat_frame_info:
     uvs:
       serializedVersion: 2
-      x: 0
-      y: .2890625
-      width: .5703125
+      x: .2890625
+      y: 0
+      width: .28515625
       height: .28515625
     scaleFactor: {x: .5, y: .5}
     topLeftOffset: {x: -1, y: 1}
@@ -834,16 +834,16 @@ MonoBehaviour:
         serializedVersion: 2
         x: 0
         y: 0
-        width: .5703125
+        width: .28515625
         height: .28515625
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
     - uvs:
         serializedVersion: 2
-        x: 0
-        y: .2890625
-        width: .5703125
+        x: .2890625
+        y: 0
+        width: .28515625
         height: .28515625
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
