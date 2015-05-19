@@ -31,7 +31,8 @@ public class GameCredits {
 
 		ret.Add(new GameCredits("Developed by", new List<string>() { 
 			"INVICTUS-GAMES Ltd" ,
-			"EAST2WEST GAMES Ltd"
+			"EAST2WEST GAMES Ltd",
+			"MONSTAR-LAB GAMES Ltd"
 		}));
         ret.Add(new GameCredits("Producer", new List<string>() { 
 			"Akos Divianszky" ,
@@ -60,6 +61,12 @@ public class GameCredits {
 			"Kaika",
 			"Wang Ke",
 			"Dong Fenfen",
+		}));
+
+		ret.Add(new GameCredits("Customer service Title", new List<string>() { 
+			"Customer service Email",
+			"Customer service NO.",
+			"Customer service WWW"
 		}));
 
 		ret.Add(new GameCredits("", new List<string>() { "" }));

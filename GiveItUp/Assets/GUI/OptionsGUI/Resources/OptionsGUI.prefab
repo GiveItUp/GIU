@@ -379,7 +379,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 4d19a9d62a8853b478a77ca1f5648e7e, type: 2}
+  - {fileID: 2100000, guid: 73e587684aa614eb0a6647c6d5594dae, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -733,14 +733,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: Hello World
   offsetZ: 0
-  characterSize: 75
+  characterSize: 50
   characterSpacing: 1
   lineSpacing: 1.10000002
   anchor: 4
   alignment: 1
   tabSize: 4
-  font: {fileID: 4900000, guid: e8fdd4527bf2a0f4384faff08005fbcd, type: 3}
-  color: {r: .573529422, g: .573529422, b: .573529422, a: 1}
+  font: {fileID: 4900000, guid: 591a003aec8b348448ceaab04af079b5, type: 3}
+  color: {r: 0, g: 0, b: 0, a: 1}
   pixelPerfect: 0
   maxWidth: 0
   maxWidthInPixels: 0
@@ -752,7 +752,7 @@ MonoBehaviour:
   maskingCharacter: '*'
   isClone: 0
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 2048, y: 1024}
+  pixelsPerUV: {x: 1024, y: 1024}
   hideAtStart: 0
   persistent: 0
   ignoreClipping: 0
@@ -1776,10 +1776,10 @@ MonoBehaviour:
   staticFrameInfo:
     uvs:
       serializedVersion: 2
-      x: 1
-      y: 1
-      width: 1
-      height: 1
+      x: 0
+      y: 0
+      width: 0
+      height: 0
     scaleFactor: {x: .5, y: .5}
     topLeftOffset: {x: -1, y: 1}
     bottomRightOffset: {x: 1, y: -1}

@@ -1,16 +1,17 @@
 ﻿#
-Daily challenge#每日挑战
+Daily challenge#不服来战
 Stage #关卡
 and your {0}. try...#你的第{0}次挑战
-Please check your internet connection!#请检查网络！
-Purchase success!#支付成功！
-Purchase failed!#支付失败！
-Purchase cancelled!#支付取消！
+Please check your internet connection!#村里没网？
+Purchase success!#支付成功，你是真爱！
+Purchase failed!#支付失败，从头再来？
+Purchase cancelled!#支付取消！累觉不爱…
 Settings#关于
 ****** Give It Up! ******#****** 永不言弃! ******
 Developed by#出品
 INVICTUS-GAMES Ltd#东品游戏
-EAST2WEST GAMES Ltd#巨果文化
+EAST2WEST GAMES Ltd#北京巨果文化
+MONSTAR-LAB GAMES Ltd#梦士达科技
 Producer#出品人
 Akos Divianszky#Akos Divianszky
 QiangQiang#强强
@@ -35,51 +36,53 @@ Krisztina Batonyi#Krisztina Batonyi
 Kaika#葛佳
 Wang Ke#王珂
 Dong Fenfen#董芬芬
+Customer service Title#客服
+Customer service Email#客服邮箱：KF@EAST2WEST.CN
+Customer service NO.#电话：029-89298317
+Customer service WWW#网站：www.east2west.cn
 Copyright © 2014 Invictus Games Ltd. All rights reserved.#版权 © 2014 东品西尚网络科技（北京）有限公司，保留所有权利.
 Best: #最高分： 
 Download Give It Up! For Free!#免费下载《永不言弃！》
 I just reached {0}% on stage {1}#我刚刚完成了第{1}关的{0}%！
-I just completed stage {0}#我刚刚通过了第{1}关！
-You'd better play something else.#你还是玩点其他容易的游戏吧！
-You call it a result?#就这点分数？
-I'm bored to be splashed.#对你这点分我很无语。
-Come on!_Watch TV instead!#这点分还是看电视算了
-Are you kiddin'?#开玩笑呢？
-I see you're getting intuitive.# 你好像开始找到感觉了.
-Neither bad nor good.#马马虎虎，还可以吧.
-What a progress!#进步很大！更新
-I'm glad you still hold on.#很佩服你还在坚持。
-Go ahead!_You can do much better!#继续前进！_你可以做得更好！
-At last!#又挂了！
-You seem to be a gamer...#有点玩家的意思了...
-I see you keep practicing.#我知道你在不断地练习.
-Not so hard,_is it?#也没那么难，_对吧？
-Just a little practice and you can finish it.#只要再练习练习，我相信你能完成的.
-Whoo, it's almost done!#╮(╯▽╰)╭Wow，差点就完成了！
-You must be angry._Try again!#你肯定很不爽，好吧再试一次！
-Just a little more and it's done!#只要再前进一点就可以完成了！
-You don't give up,_do you.#我相信你不会轻言放弃的.
-Not just try,_do it!#不只是尝试，而是要去实现！
-That's it!#就这样！
-Good job!#太棒了！
-At last!_Someone got this far!#终于有人通过这关了!
-One hundred percent!!_Believe it?#100%完成！！不可思议！
-That's the way it's done!#这得这么办！
-Tap at touchdown to make Blob jump. The rhythm of the music may help.#下落时点屏幕，跟着节奏！
-Tap to jump up. Blob knows what to do.#点屏幕跳上去！
-It's slightly harder: tap three times in a row to the rhythm of the jump.#这里有点难了：跟着节奏连点三次.
-Blob is jumping down by itself.#小墨点会自己跳下去.
-You don't always have to jump: take care of spikes hanging down.#你不能一直跳：当心上面的刺.
+I just completed stage {0}#首战告捷！感觉棒棒哒！
+You'd better play something else.#你输给了全国99%的人
+You call it a result?#呵呵，战五渣…
+I'm bored to be splashed.#走开！我想静静
+Come on!_Watch TV instead!#此刻我的内心是崩溃的…
+Are you kiddin'?#阿油K叮？
+I see you're getting intuitive.# 哎呦，不错哦
+Neither bad nor good.#就是这个Feel~
+What a progress!#黎明就在眼前！
+I'm glad you still hold on.#真想给你点个赞！
+Go ahead!_You can do much better!#向前跑！迎着冷眼和嘲笑！
+At last!#心若在梦就在！
+You seem to be a gamer...#燕雀安知鸿鹄之志哉？
+I see you keep practicing.#哪里跌倒，就在哪里躺着
+Not so hard,_is it?#你的能量超乎你想象
+Just a little practice and you can finish it.#Only you，带我取经带我飞！
+Whoo, it's almost done!#Wow，就差一丢丢！
+You must be angry._Try again!#别低头皇冠会掉！别流泪他人会笑！
+Just a little more and it's done!#壮士，喝了这碗鸡汤！
+You don't give up,_do you.#卡其马，不要走！
+Not just try,_do it!#梦想还是要有的，万一实现了呢
+That's it!#刚八代！
+Good job!#鹅妹子婴!
+At last!_Someone got this far!#我看你骨骼惊奇，必成大器！
+One hundred percent!!_Believe it?#大神，请收下我的膝盖！
+That's the way it's done!#霸气侧漏！
+Tap at touchdown to make Blob jump. The rhythm of the music may help.#下落时，跟着节奏戳屏幕！
+Tap to jump up. Blob knows what to do.#猛戳屏幕！跳上去！
+It's slightly harder: tap three times in a row to the rhythm of the jump.#别怕！连戳三次就好了
+Blob is jumping down by itself.#小章鱼自己会蹦下去哒~
+You don't always have to jump: take care of spikes hanging down.#当心上面的刺！他们是坏人
 Tap now!#现在点！
 GOOD LUCK#祝你好运
 TAP#点击屏幕
-Waiting for purchase...#等待支付...
-Update notes:#《章鱼!永不言弃!!》
-Update notes1:# 是iOS付费排行榜第1的，《永不言弃》
-Update notes2:# 特别版，包括如下新增内容：
+Waiting for purchase...#等待支付…
+Update notes:#《章鱼!永不言弃!!》 是iOS付费排行榜第1的，《永不言弃》特别版，包括如下新增内容：
 ** 9 new levels of varied difficulty#全新设计的关卡
 ** Daily challenge: complete daily challenge levels the higher percent to increase your scores on the Leaderboard#全新制作的章鱼角色
 ** New crazy music#全新谱写的日式摇滚
 NEW#新纪录！
-Unlock all info#12元解锁全部关卡以及每日挑战！
+Unlock all info#12元立刻解锁全部关卡！
 Player group#关注微信公众号"east2westgames"或加入官方QQ群"459362383"有惊喜!
