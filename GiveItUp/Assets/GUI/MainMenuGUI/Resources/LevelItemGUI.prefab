@@ -753,7 +753,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   color: {r: 1, g: 1, b: 1, a: 1}
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 1024, y: 1024}
+  pixelsPerUV: {x: 256, y: 256}
   hideAtStart: 0
   ignoreClipping: 0
   playAnimOnStart: 0
@@ -810,8 +810,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .811523438
-        y: .149414062
+        x: .764648438
+        y: .599609375
         width: .123046875
         height: .056640625
       scaleFactor: {x: .5, y: .5}
@@ -963,7 +963,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   color: {r: 1, g: 1, b: 1, a: 1}
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 1024, y: 1024}
+  pixelsPerUV: {x: 256, y: 256}
   hideAtStart: 0
   ignoreClipping: 0
   playAnimOnStart: 0
@@ -1020,8 +1020,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .287109375
-        y: .829101562
+        x: .640625
+        y: .599609375
         width: .123046875
         height: .099609375
       scaleFactor: {x: .5, y: .5}
@@ -1137,7 +1137,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   color: {r: 1, g: 1, b: 1, a: 1}
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 1024, y: 1024}
+  pixelsPerUV: {x: 256, y: 256}
   hideAtStart: 0
   ignoreClipping: 0
   playAnimOnStart: 0
@@ -1194,8 +1194,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .790039062
-        y: .829101562
+        x: .640625
+        y: .700195312
         width: .123046875
         height: .056640625
       scaleFactor: {x: .5, y: .5}
@@ -1311,7 +1311,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   color: {r: 1, g: 1, b: 1, a: 1}
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 1024, y: 1024}
+  pixelsPerUV: {x: 256, y: 256}
   hideAtStart: 0
   ignoreClipping: 0
   playAnimOnStart: 0
@@ -1369,7 +1369,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   color: {r: 1, g: 1, b: 1, a: 1}
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 1024, y: 1024}
+  pixelsPerUV: {x: 256, y: 256}
   hideAtStart: 0
   ignoreClipping: 0
   playAnimOnStart: 0

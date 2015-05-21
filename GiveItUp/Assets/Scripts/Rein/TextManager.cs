@@ -34,7 +34,7 @@ public class TextManager : ScriptableObject
 		public static TextAsset Language {
 				set {
 						_asset = value;
-						Debug.Log (_asset);
+						//Debug.Log (_asset);
 						if (_asset == null) {
 								Debug.LogError (String.Format ("No valid asset file."));
 						} else {
@@ -45,7 +45,7 @@ public class TextManager : ScriptableObject
  
 		public  static void Init ()
 		{
-				Debug.Log (Application.systemLanguage.ToString ());
+			//	Debug.Log (Application.systemLanguage.ToString ());
 				String language = Application.systemLanguage.ToString ();
 				if (language != "English" && language != "French" && language != "German" && language != "Spanish" && language != "Portuguese" && language != "Chinese")
 						language = "English";
@@ -70,7 +70,7 @@ public class TextManager : ScriptableObject
 		private static void LoadLanguage (TextAsset asset)
 		{
 				TextTable.Clear ();
-				Debug.Log ("Language reading");
+				//Debug.Log ("Language reading");
 				int lineNumber = 1;
 		try{
 				using (StringReader reader = new StringReader(asset.text)) {
@@ -103,7 +103,7 @@ public class TextManager : ScriptableObject
 		{
 			Debug.Log(ex.Message);
 		}
-		Debug.Log ("Language reading end");
+		//Debug.Log ("Language reading end");
 		}
  
 		public static string Get (string key)

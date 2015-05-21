@@ -5,7 +5,7 @@ public class Test : MonoBehaviour {
 
 	void Awake()
 	{
-		PlayerPrefs.DeleteAll();
+
 	}
 	// Use this for initialization
 	void Start () {
@@ -18,6 +18,9 @@ public class Test : MonoBehaviour {
 	}
 	void OnGUI()
 	{
-
+		if(GUI.Button(new Rect(0,0,100,100),"Reset"))
+		{
+			PlayerPrefs.DeleteAll();
+		}
 	}
 }

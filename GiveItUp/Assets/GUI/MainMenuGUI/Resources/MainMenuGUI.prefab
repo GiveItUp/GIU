@@ -18,24 +18,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &100002
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 400002}
-  - 114: {fileID: 11439904}
-  - 33: {fileID: 3379712}
-  - 23: {fileID: 2379712}
-  m_Layer: 9
-  m_Name: ps_bgr
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &100004
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,24 +160,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &107120
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 455784}
-  - 114: {fileID: 11403858}
-  - 33: {fileID: 3353224}
-  - 23: {fileID: 2384976}
-  m_Layer: 9
-  m_Name: Go_RedBall
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &115922
 GameObject:
   m_ObjectHideFlags: 1
@@ -280,21 +244,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &129096
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 429096}
-  m_Layer: 9
-  m_Name: ball_2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &129098
 GameObject:
   m_ObjectHideFlags: 1
@@ -361,6 +310,24 @@ GameObject:
   - 23: {fileID: 2328240}
   m_Layer: 9
   m_Name: btn_start_random
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &139590
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 439590}
+  - 114: {fileID: 11439590}
+  - 33: {fileID: 3339590}
+  - 23: {fileID: 2339590}
+  m_Layer: 9
+  m_Name: ps_bgr
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -454,7 +421,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &169312
 GameObject:
   m_ObjectHideFlags: 1
@@ -483,7 +450,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 446676}
   m_Layer: 9
-  m_Name: ball_3
+  m_Name: ball_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -499,37 +466,8 @@ Transform:
   m_LocalPosition: {x: 400, y: 297, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400002}
+  m_Father: {fileID: 439590}
   m_RootOrder: 9
---- !u!4 &400002
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 468854}
-  - {fileID: 462658}
-  - {fileID: 444420}
-  - {fileID: 428242}
-  - {fileID: 400006}
-  - {fileID: 400020}
-  - {fileID: 400022}
-  - {fileID: 400008}
-  - {fileID: 400026}
-  - {fileID: 400000}
-  - {fileID: 432970}
-  - {fileID: 415922}
-  - {fileID: 406946}
-  - {fileID: 415924}
-  - {fileID: 432968}
-  - {fileID: 400010}
-  - {fileID: 428240}
-  m_Father: {fileID: 400004}
-  m_RootOrder: 0
 --- !u!4 &400004
 Transform:
   m_ObjectHideFlags: 1
@@ -540,7 +478,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 400002}
+  - {fileID: 439590}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &400006
@@ -553,7 +491,7 @@ Transform:
   m_LocalPosition: {x: 270, y: 12, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400002}
+  m_Father: {fileID: 439590}
   m_RootOrder: 4
 --- !u!4 &400008
 Transform:
@@ -565,7 +503,7 @@ Transform:
   m_LocalPosition: {x: -416.422974, y: 287.920776, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400002}
+  m_Father: {fileID: 439590}
   m_RootOrder: 7
 --- !u!4 &400010
 Transform:
@@ -577,7 +515,7 @@ Transform:
   m_LocalPosition: {x: 389, y: -333, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400002}
+  m_Father: {fileID: 439590}
   m_RootOrder: 15
 --- !u!4 &400020
 Transform:
@@ -589,7 +527,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 284.380737, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400002}
+  m_Father: {fileID: 439590}
   m_RootOrder: 5
 --- !u!4 &400022
 Transform:
@@ -601,7 +539,7 @@ Transform:
   m_LocalPosition: {x: 391, y: 169, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400002}
+  m_Father: {fileID: 439590}
   m_RootOrder: 6
 --- !u!4 &400026
 Transform:
@@ -613,7 +551,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 276.612976, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400002}
+  m_Father: {fileID: 439590}
   m_RootOrder: 8
 --- !u!4 &406946
 Transform:
@@ -625,7 +563,7 @@ Transform:
   m_LocalPosition: {x: 0, y: -270, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400002}
+  m_Father: {fileID: 439590}
   m_RootOrder: 12
 --- !u!4 &415922
 Transform:
@@ -637,7 +575,7 @@ Transform:
   m_LocalPosition: {x: 0, y: -270, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400002}
+  m_Father: {fileID: 439590}
   m_RootOrder: 11
 --- !u!4 &415924
 Transform:
@@ -649,7 +587,7 @@ Transform:
   m_LocalPosition: {x: 0, y: -270, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400002}
+  m_Father: {fileID: 439590}
   m_RootOrder: 13
 --- !u!4 &428240
 Transform:
@@ -662,9 +600,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 429098}
-  - {fileID: 429096}
   - {fileID: 446676}
-  m_Father: {fileID: 400002}
+  m_Father: {fileID: 439590}
   m_RootOrder: 16
 --- !u!4 &428242
 Transform:
@@ -676,7 +613,7 @@ Transform:
   m_LocalPosition: {x: -222, y: -90, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400002}
+  m_Father: {fileID: 439590}
   m_RootOrder: 3
 --- !u!4 &429094
 Transform:
@@ -690,19 +627,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 446676}
   m_RootOrder: 0
---- !u!4 &429096
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 129096}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 455784}
-  m_Father: {fileID: 428240}
-  m_RootOrder: 1
 --- !u!4 &429098
 Transform:
   m_ObjectHideFlags: 1
@@ -738,7 +662,7 @@ Transform:
   m_LocalPosition: {x: -398, y: -333, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400002}
+  m_Father: {fileID: 439590}
   m_RootOrder: 14
 --- !u!4 &432970
 Transform:
@@ -752,8 +676,37 @@ Transform:
   m_Children:
   - {fileID: 469312}
   - {fileID: 466064}
-  m_Father: {fileID: 400002}
+  m_Father: {fileID: 439590}
   m_RootOrder: 10
+--- !u!4 &439590
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 139590}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 468854}
+  - {fileID: 462658}
+  - {fileID: 444420}
+  - {fileID: 428242}
+  - {fileID: 400006}
+  - {fileID: 400020}
+  - {fileID: 400022}
+  - {fileID: 400008}
+  - {fileID: 400026}
+  - {fileID: 400000}
+  - {fileID: 432970}
+  - {fileID: 415922}
+  - {fileID: 406946}
+  - {fileID: 415924}
+  - {fileID: 432968}
+  - {fileID: 400010}
+  - {fileID: 428240}
+  m_Father: {fileID: 400004}
+  m_RootOrder: 0
 --- !u!4 &439904
 Transform:
   m_ObjectHideFlags: 1
@@ -777,7 +730,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 439904}
-  m_Father: {fileID: 400002}
+  m_Father: {fileID: 439590}
   m_RootOrder: 2
 --- !u!4 &446676
 Transform:
@@ -791,19 +744,7 @@ Transform:
   m_Children:
   - {fileID: 429094}
   m_Father: {fileID: 428240}
-  m_RootOrder: 2
---- !u!4 &455784
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 107120}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 429096}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!4 &462658
 Transform:
   m_ObjectHideFlags: 1
@@ -814,7 +755,7 @@ Transform:
   m_LocalPosition: {x: -2, y: 3, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 400002}
+  m_Father: {fileID: 439590}
   m_RootOrder: 1
 --- !u!4 &466064
 Transform:
@@ -838,7 +779,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1024, y: 769, z: 1}
   m_Children: []
-  m_Father: {fileID: 400002}
+  m_Father: {fileID: 439590}
   m_RootOrder: 0
 --- !u!4 &469312
 Transform:
@@ -1140,6 +1081,30 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!23 &2339590
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 139590}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 8f78c086ce5df4b4fa22cfadb6b4db30, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
 --- !u!23 &2339904
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -1308,54 +1273,6 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!23 &2379712
-MeshRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 2100000, guid: 8f78c086ce5df4b4fa22cfadb6b4db30, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!23 &2384976
-MeshRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 107120}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 2100000, guid: 98b0cf514d1fbcb4fbaa88ca436ef4d1, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
 --- !u!33 &3300000
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -1440,6 +1357,13 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 132968}
   m_Mesh: {fileID: 0}
+--- !u!33 &3339590
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 139590}
+  m_Mesh: {fileID: 0}
 --- !u!33 &3339904
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -1460,13 +1384,6 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 128240}
-  m_Mesh: {fileID: 0}
---- !u!33 &3353224
-MeshFilter:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 107120}
   m_Mesh: {fileID: 0}
 --- !u!33 &3362658
 MeshFilter:
@@ -1495,13 +1412,6 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 169312}
-  m_Mesh: {fileID: 0}
---- !u!33 &3379712
-MeshFilter:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
   m_Mesh: {fileID: 0}
 --- !u!65 &6503036
 BoxCollider:
@@ -1662,8 +1572,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .8671875
-        y: .559570312
+        x: .813476562
+        y: .486328125
         width: .11328125
         height: .111328125
       scaleFactor: {x: .5, y: .5}
@@ -1680,8 +1590,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .861328125
-        y: .7109375
+        x: .526367188
+        y: .599609375
         width: .11328125
         height: .111328125
       scaleFactor: {x: .5, y: .5}
@@ -1698,8 +1608,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .861328125
-        y: .7109375
+        x: .526367188
+        y: .599609375
         width: .11328125
         height: .111328125
       scaleFactor: {x: .5, y: .5}
@@ -1783,7 +1693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 574f309179b4de745a57caf6d5716317, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ps_bgr: {fileID: 11439904}
+  ps_bgr: {fileID: 11439590}
   ps_logo: {fileID: 11400024}
   ps_info: {fileID: 11462658}
   btn_start: {fileID: 0}
@@ -1806,7 +1716,6 @@ MonoBehaviour:
   go_levels_3: {fileID: 115924}
   joyMainMenu: {fileID: 11456216}
   p_LevelItemGUI: {fileID: 11400000, guid: 0bc51023041911648a39dca49a6313bf, type: 2}
-  bgGameObject: {fileID: 168854}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1891,8 +1800,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .165039062
-        y: .397460938
+        x: .426757812
+        y: 0
         width: .1640625
         height: .161132812
       scaleFactor: {x: .5, y: .5}
@@ -1909,8 +1818,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .58984375
-        y: .224609375
+        x: .591796875
+        y: 0
         width: .1640625
         height: .161132812
       scaleFactor: {x: .5, y: .5}
@@ -1927,8 +1836,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .58984375
-        y: .224609375
+        x: .591796875
+        y: 0
         width: .1640625
         height: .161132812
       scaleFactor: {x: .5, y: .5}
@@ -2085,8 +1994,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .287109375
-        y: .7109375
+        x: .3828125
+        y: .604492188
         width: .142578125
         height: .1171875
       scaleFactor: {x: .5, y: .5}
@@ -2103,8 +2012,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .430664062
-        y: .7109375
+        x: .3828125
+        y: .72265625
         width: .142578125
         height: .1171875
       scaleFactor: {x: .5, y: .5}
@@ -2121,8 +2030,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .430664062
-        y: .7109375
+        x: .3828125
+        y: .72265625
         width: .142578125
         height: .1171875
       scaleFactor: {x: .5, y: .5}
@@ -2279,8 +2188,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .919921875
-        y: .224609375
+        x: .921875
+        y: .0859375
         width: .0751953125
         height: .0849609375
       scaleFactor: {x: .5, y: .5}
@@ -2297,8 +2206,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .919921875
-        y: .310546875
+        x: .921875
+        y: 0
         width: .0751953125
         height: .0849609375
       scaleFactor: {x: .5, y: .5}
@@ -2315,8 +2224,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .919921875
-        y: .310546875
+        x: .921875
+        y: 0
         width: .0751953125
         height: .0849609375
       scaleFactor: {x: .5, y: .5}
@@ -2509,8 +2418,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: 0
-        y: .829101562
+        x: .526367188
+        y: .486328125
         width: .142578125
         height: .112304688
       scaleFactor: {x: .5, y: .5}
@@ -2527,8 +2436,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .143554688
-        y: .829101562
+        x: .669921875
+        y: .486328125
         width: .142578125
         height: .112304688
       scaleFactor: {x: .5, y: .5}
@@ -2545,8 +2454,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .143554688
-        y: .829101562
+        x: .669921875
+        y: .486328125
         width: .142578125
         height: .112304688
       scaleFactor: {x: .5, y: .5}
@@ -2661,8 +2570,8 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 0
-      width: 1
-      height: 1.125
+      width: .75
+      height: .421875
     scaleFactor: {x: .5, y: .5}
     topLeftOffset: {x: -1, y: 1}
     bottomRightOffset: {x: 1, y: -1}
@@ -2677,240 +2586,6 @@ MonoBehaviour:
     topLeftOffset: {x: -1, y: 1}
     bottomRightOffset: {x: 1, y: -1}
   textureAnimations: []
---- !u!114 &11403858
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 107120}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7f54df2f3b80428e95cff7e9286559b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  managed: 0
-  manager: {fileID: 0}
-  drawLayer: 0
-  persistent: 0
-  plane: 0
-  winding: 1
-  width: 150
-  height: 150
-  bleedCompensation: {x: 0, y: 0}
-  anchor: 9
-  pixelPerfect: 0
-  autoResize: 0
-  billboarded: 0
-  offset: {x: 0, y: 0, z: 0}
-  color: {r: 1, g: 1, b: 1, a: 1}
-  renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 1024, y: 1024}
-  hideAtStart: 0
-  ignoreClipping: 0
-  playAnimOnStart: 0
-  crossfadeFrames: 0
-  defaultAnim: 0
-  doNotTrimImages: 0
-  animations:
-  - name: Normal
-    loopCycles: 0
-    loopReverse: 0
-    framerate: 14.999999
-    index: 0
-    onAnimEnd: 0
-  - name: Over
-    loopCycles: 0
-    loopReverse: 0
-    framerate: 14.999999
-    index: 1
-    onAnimEnd: 0
-  - name: Active
-    loopCycles: 0
-    loopReverse: 0
-    framerate: 14.999999
-    index: 2
-    onAnimEnd: 0
-  - name: Disabled
-    loopCycles: 0
-    loopReverse: 0
-    framerate: 15
-    index: 3
-    onAnimEnd: 0
-  text: 
-  spriteText: {fileID: 0}
-  textOffsetZ: -.100000001
-  includeTextInAutoCollider: 1
-  detargetOnDisable: 0
-  isDraggable: 0
-  dropMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  dragOffset: NaN
-  cancelDragEasing: -1
-  cancelDragDuration: -1
-  IsReleaseEnabled: 0
-  states:
-  - name: Normal
-    loopCycles: 0
-    loopReverse: 0
-    framerate: 14.999999
-    onAnimEnd: 0
-    framePaths: []
-    frameGUIDs:
-    - f32e9207860bfce43ae9f01522c7d178
-    spriteFrames:
-    - uvs:
-        serializedVersion: 2
-        x: .615234375
-        y: 0
-        width: .1953125
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-  - name: Over
-    loopCycles: 0
-    loopReverse: 0
-    framerate: 14.999999
-    onAnimEnd: 0
-    framePaths: []
-    frameGUIDs:
-    - f32e9207860bfce43ae9f01522c7d178
-    spriteFrames:
-    - uvs:
-        serializedVersion: 2
-        x: .615234375
-        y: 0
-        width: .1953125
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-  - name: Active
-    loopCycles: 0
-    loopReverse: 0
-    framerate: 14.999999
-    onAnimEnd: 0
-    framePaths: []
-    frameGUIDs:
-    - f32e9207860bfce43ae9f01522c7d178
-    spriteFrames:
-    - uvs:
-        serializedVersion: 2
-        x: .615234375
-        y: 0
-        width: .1953125
-        height: .1953125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-  - name: Disabled
-    loopCycles: 0
-    loopReverse: 0
-    framerate: 15
-    onAnimEnd: 0
-    framePaths: []
-    frameGUIDs:
-    - 
-    spriteFrames:
-    - uvs:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
-  transitions:
-  - list:
-    - name: From Over
-      animationTypes: 
-      animParams: []
-      initialized: 1
-    - name: From Active
-      animationTypes: 04000000
-      animParams:
-      - mode: 1
-        delay: 0
-        duration: 0
-        pingPong: 0
-        restartOnRepeat: 0
-        repeatDelay: 0
-        easing: 0
-        color: {r: 1, g: 1, b: 1, a: 1}
-        color2: {r: 1, g: 1, b: 1, a: 1}
-        vec: {x: 0, y: 0, z: 0}
-        vec2: {x: 0, y: 0, z: 0}
-        axis: {x: 0, y: 0, z: 0}
-        floatVal: 0
-        floatVal2: 0
-        strVal: 
-      initialized: 0
-    - name: From Disabled
-      animationTypes: 04000000
-      animParams:
-      - mode: 1
-        delay: 0
-        duration: 0
-        pingPong: 0
-        restartOnRepeat: 0
-        repeatDelay: 0
-        easing: 0
-        color: {r: 1, g: 1, b: 1, a: 1}
-        color2: {r: 1, g: 1, b: 1, a: 1}
-        vec: {x: 0, y: 0, z: 0}
-        vec2: {x: 0, y: 0, z: 0}
-        axis: {x: 0, y: 0, z: 0}
-        floatVal: 0
-        floatVal2: 0
-        strVal: 
-      initialized: 0
-  - list:
-    - name: From Normal
-      animationTypes: 
-      animParams: []
-      initialized: 0
-    - name: From Active
-      animationTypes: 
-      animParams: []
-      initialized: 0
-  - list:
-    - name: From Normal
-      animationTypes: 
-      animParams: []
-      initialized: 0
-    - name: From Over
-      animationTypes: 
-      animParams: []
-      initialized: 0
-  - list:
-    - name: From Normal
-      animationTypes: 
-      animParams: []
-      initialized: 0
-    - name: From Over
-      animationTypes: 
-      animParams: []
-      initialized: 0
-    - name: From Active
-      animationTypes: 
-      animParams: []
-      initialized: 0
-  stateLabels:
-  - '["]'
-  - '["]'
-  - '["]'
-  - '["]'
-  layers: []
-  scriptWithMethodToInvoke: {fileID: 0}
-  methodToInvoke: 
-  whenToInvoke: 3
-  delay: 0
-  soundOnOver: {fileID: 0}
-  soundOnClick: {fileID: 0}
-  repeat: 0
-  alwaysFinishActiveTransition: 0
 --- !u!114 &11410136
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2924,9 +2599,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   balls:
   - {fileID: 11429094}
-  - {fileID: 11403858}
   - {fileID: 11429092}
-  uiButton: {fileID: 0}
 --- !u!114 &11428240
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3011,8 +2684,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: 0
-        y: .7109375
+        x: .3828125
+        y: .840820312
         width: .142578125
         height: .1171875
       scaleFactor: {x: .5, y: .5}
@@ -3029,8 +2702,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .143554688
-        y: .7109375
+        x: .3828125
+        y: .486328125
         width: .142578125
         height: .1171875
       scaleFactor: {x: .5, y: .5}
@@ -3047,8 +2720,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .143554688
-        y: .7109375
+        x: .3828125
+        y: .486328125
         width: .142578125
         height: .1171875
       scaleFactor: {x: .5, y: .5}
@@ -3205,8 +2878,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .22265625
-        y: 0
+        x: 0
+        y: .6171875
         width: .1953125
         height: .1953125
       scaleFactor: {x: .5, y: .5}
@@ -3223,8 +2896,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .22265625
-        y: 0
+        x: 0
+        y: .6171875
         width: .1953125
         height: .1953125
       scaleFactor: {x: .5, y: .5}
@@ -3241,8 +2914,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .22265625
-        y: 0
+        x: 0
+        y: .6171875
         width: .1953125
         height: .1953125
       scaleFactor: {x: .5, y: .5}
@@ -3439,8 +3112,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .418945312
-        y: 0
+        x: 0
+        y: .224609375
         width: .1953125
         height: .1953125
       scaleFactor: {x: .5, y: .5}
@@ -3457,8 +3130,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .418945312
-        y: 0
+        x: 0
+        y: .224609375
         width: .1953125
         height: .1953125
       scaleFactor: {x: .5, y: .5}
@@ -3475,8 +3148,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .418945312
-        y: 0
+        x: 0
+        y: .224609375
         width: .1953125
         height: .1953125
       scaleFactor: {x: .5, y: .5}
@@ -3663,8 +3336,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .919921875
-        y: .224609375
+        x: .921875
+        y: .0859375
         width: .0751953125
         height: .0849609375
       scaleFactor: {x: .5, y: .5}
@@ -3681,8 +3354,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .919921875
-        y: .310546875
+        x: .921875
+        y: 0
         width: .0751953125
         height: .0849609375
       scaleFactor: {x: .5, y: .5}
@@ -3699,8 +3372,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .919921875
-        y: .310546875
+        x: .921875
+        y: 0
         width: .0751953125
         height: .0849609375
       scaleFactor: {x: .5, y: .5}
@@ -3858,7 +3531,7 @@ MonoBehaviour:
     - uvs:
         serializedVersion: 2
         x: 0
-        y: .224609375
+        y: .813476562
         width: .203125
         height: .171875
       scaleFactor: {x: .5, y: .5}
@@ -3875,8 +3548,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .204101562
-        y: .224609375
+        x: .22265625
+        y: 0
         width: .203125
         height: .171875
       scaleFactor: {x: .5, y: .5}
@@ -3893,8 +3566,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .204101562
-        y: .224609375
+        x: .22265625
+        y: 0
         width: .203125
         height: .171875
       scaleFactor: {x: .5, y: .5}
@@ -3993,12 +3666,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   q: 0
   shared: 1
---- !u!114 &11439904
+--- !u!114 &11439590
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
+  m_GameObject: {fileID: 139590}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b5f05aedb1f504e319c9bcf67302925c, type: 3}
@@ -4010,8 +3683,8 @@ MonoBehaviour:
   persistent: 0
   plane: 0
   winding: 1
-  width: 0
-  height: 0
+  width: 1024
+  height: 768
   bleedCompensation: {x: 0, y: 0}
   anchor: 9
   pixelPerfect: 0
@@ -4020,7 +3693,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   color: {r: 1, g: 1, b: 1, a: 1}
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 1024, y: 512}
+  pixelsPerUV: {x: 1024, y: 1024}
   hideAtStart: 0
   ignoreClipping: 0
   playAnimOnStart: 0
@@ -4028,15 +3701,15 @@ MonoBehaviour:
   defaultAnim: 0
   doNotTrimImages: 0
   animations: []
-  staticTexPath: 
-  staticTexGUID: 
+  staticTexPath: Assets/Textures/Game/background/impossiball_background_alap.png
+  staticTexGUID: ad49fa8bdc944cb499f091aeb5bd2d0f
   _ser_stat_frame_info:
     uvs:
       serializedVersion: 2
       x: 0
       y: 0
-      width: 0
-      height: 0
+      width: .75
+      height: .421875
     scaleFactor: {x: .5, y: .5}
     topLeftOffset: {x: -1, y: 1}
     bottomRightOffset: {x: 1, y: -1}
@@ -4045,8 +3718,8 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 0
-      width: 0
-      height: 0
+      width: .75
+      height: .421875
     scaleFactor: {x: .5, y: .5}
     topLeftOffset: {x: -1, y: 1}
     bottomRightOffset: {x: 1, y: -1}
@@ -4111,8 +3784,8 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 0
-      width: 1
-      height: .84375
+      width: .5
+      height: .421875
     scaleFactor: {x: .5, y: .5}
     topLeftOffset: {x: -1, y: 1}
     bottomRightOffset: {x: 1, y: -1}

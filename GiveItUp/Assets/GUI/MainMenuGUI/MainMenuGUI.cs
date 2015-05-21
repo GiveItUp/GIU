@@ -28,7 +28,7 @@ public class MainMenuGUI : GUIMenu
 	public GameObject go_levels_3;
 	public JoyStickMenu joyMainMenu;
 	public LevelItemGUI p_LevelItemGUI;
-	public GameObject bgGameObject;
+	//public PackedSprite bgGameObject;
 	private List<LevelItemGUI> levelItemGUIs = new List<LevelItemGUI> ();
 	private int _selectedStageIndex = 0;
 	private Stage _selectedStage;
@@ -44,11 +44,14 @@ public class MainMenuGUI : GUIMenu
 	#region Init
 	public void Init ()
 	{
+		btn_prevpage.gameObject.SetActive(false);
+		btn_nextpage.gameObject.SetActive(false);
+
 		_inputEnabled = false;
 		int width = GfxSettings.Instance ().GetScreenWidth () + 1;
 		int height = GfxSettings.Instance ().GetScreenHeight () + 1;
 		ps_bgr.SetSize (width, height);
-		bgGameObject.transform.localScale = new Vector3(width , height , 1);
+		//bgGameObject.transform.localScale = new Vector3(width , height , 1);
 		InitLabels ();
 		InitButtons ();
 		joyMainMenu.btns.Add (btn_unlock_all.gameObject);
@@ -63,7 +66,7 @@ public class MainMenuGUI : GUIMenu
 		//Debug.Log ("act = " + User.LastPlayedStage);
 		actualPage = User.LastPlayedStage < 18 ? 0 : 1;
 		page = PlayerPrefs.GetInt("page",0);
-		ChangeLevels (page);
+		//ChangeLevels (page);
 
 		StartCoroutine (PlayShowAnim ());
 	}
@@ -310,15 +313,6 @@ public class MainMenuGUI : GUIMenu
 		go_levels_3.gameObject.SetActive (actualPage == 2);
 
 		yield return StartCoroutine (ShowLevels (actualPage));
-
-		if(actualPage!=0)
-		{
-			btn_prevpage.gameObject.SetActive(true);
-		}
-		if(actualPage!=2)
-		{
-			btn_nextpage.gameObject.SetActive(true);
-		}
 	}
 
 	private IEnumerator ShowLevels (int showPage)
@@ -328,11 +322,14 @@ public class MainMenuGUI : GUIMenu
 		//foreach (var lit in levelItemGUIs)
 		for (int i = startIndex; i < levelItemGUIs.Count && i < endIndex; i++)
 			yield return StartCoroutine (ComponentAnimation_Show (levelItemGUIs [i].transform, 0.07f));
-		
-//		if(actualPage == 0)
-//			yield return StartCoroutine(ComponentAnimation_Show (btn_nextpage.transform, 0.12f));
-//		else
-//			yield return StartCoroutine(ComponentAnimation_Show (btn_prevpage.transform, 0.12f));
+		if(actualPage!=0)
+		{
+			btn_prevpage.gameObject.SetActive(true);
+		}
+		if(actualPage!=2)
+		{
+			btn_nextpage.gameObject.SetActive(true);
+		}
 	}
 
 	private IEnumerator HideLevels (int showPage)
@@ -723,6 +720,5 @@ public class MainMenuGUI : GUIMenu
 		go_ball.transform.localPosition= Vector3.zero;
 		btn_start = go_ball.transform.Find("btn_start").GetComponent<UIButton>();
 		btn_start.SetInputDelegate (OnBtn_Start_Input);
-		Debug.Log(ballName);
 	}
 }

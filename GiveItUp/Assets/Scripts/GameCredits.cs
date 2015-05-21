@@ -46,6 +46,11 @@ public class GameCredits {
 			"Laszlo Palfi",
 			"Karoly Molnar",
 			"Rein Lv",
+			"Long Hui",
+			"Cheng Fei",
+			"Wei Shao Hua",
+			"Zeng Fei",
+			"Luo Jia"
 		}));
 		ret.Add(new GameCredits("QA", new List<string>() { 
 			"Peter Hagen", 

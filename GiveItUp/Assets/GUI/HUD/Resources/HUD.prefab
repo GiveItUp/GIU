@@ -191,7 +191,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 4d19a9d62a8853b478a77ca1f5648e7e, type: 2}
+  - {fileID: 2100000, guid: 73e587684aa614eb0a6647c6d5594dae, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -263,7 +263,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 4d19a9d62a8853b478a77ca1f5648e7e, type: 2}
+  - {fileID: 2100000, guid: 73e587684aa614eb0a6647c6d5594dae, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -355,8 +355,8 @@ MonoBehaviour:
   anchor: 4
   alignment: 1
   tabSize: 4
-  font: {fileID: 4900000, guid: e8fdd4527bf2a0f4384faff08005fbcd, type: 3}
-  color: {r: .573529422, g: .573529422, b: .573529422, a: 1}
+  font: {fileID: 4900000, guid: 591a003aec8b348448ceaab04af079b5, type: 3}
+  color: {r: .139705896, g: .139705896, b: .139705896, a: 1}
   pixelPerfect: 0
   maxWidth: 0
   maxWidthInPixels: 0
@@ -368,7 +368,7 @@ MonoBehaviour:
   maskingCharacter: '*'
   isClone: 0
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 2048, y: 1024}
+  pixelsPerUV: {x: 1024, y: 1024}
   hideAtStart: 0
   persistent: 0
   ignoreClipping: 0
@@ -456,8 +456,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .600585938
-        y: .829101562
+        x: .5234375
+        y: .717773438
         width: .09375
         height: .0927734375
       scaleFactor: {x: .5, y: .5}
@@ -474,8 +474,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .6953125
-        y: .829101562
+        x: .5234375
+        y: .811523438
         width: .09375
         height: .0927734375
       scaleFactor: {x: .5, y: .5}
@@ -492,8 +492,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .6953125
-        y: .829101562
+        x: .5234375
+        y: .811523438
         width: .09375
         height: .0927734375
       scaleFactor: {x: .5, y: .5}
@@ -638,8 +638,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: 0
-        y: .942382812
+        x: .637695312
+        y: .706054688
         width: .255859375
         height: .0283203125
       scaleFactor: {x: .5, y: .5}
@@ -656,13 +656,13 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .256835938
-        y: .942382812
+        x: .713867188
+        y: .735351562
         width: .255859375
-        height: .0283203125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
+        height: .0234375
+      scaleFactor: {x: .5, y: .604166687}
+      topLeftOffset: {x: -1, y: .724137902}
+      bottomRightOffset: {x: 1, y: -.931034505}
   filledLayers: []
   emptyLayers: []
 --- !u!114 &11400008
@@ -684,8 +684,8 @@ MonoBehaviour:
   anchor: 4
   alignment: 1
   tabSize: 4
-  font: {fileID: 4900000, guid: e8fdd4527bf2a0f4384faff08005fbcd, type: 3}
-  color: {r: .573529422, g: .573529422, b: .573529422, a: 1}
+  font: {fileID: 4900000, guid: 591a003aec8b348448ceaab04af079b5, type: 3}
+  color: {r: .125, g: .125, b: .125, a: 1}
   pixelPerfect: 0
   maxWidth: 0
   maxWidthInPixels: 0
@@ -697,7 +697,7 @@ MonoBehaviour:
   maskingCharacter: '*'
   isClone: 0
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 2048, y: 1024}
+  pixelsPerUV: {x: 1024, y: 1024}
   hideAtStart: 0
   persistent: 0
   ignoreClipping: 0

@@ -341,7 +341,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   color: {r: 1, g: 1, b: 1, a: 1}
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 1024, y: 1024}
+  pixelsPerUV: {x: 256, y: 256}
   hideAtStart: 0
   ignoreClipping: 0
   playAnimOnStart: 0
@@ -398,8 +398,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .505859375
-        y: .829101562
+        x: .526367188
+        y: .711914062
         width: .09375
         height: .0927734375
       scaleFactor: {x: .5, y: .5}
@@ -416,8 +416,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .411132812
-        y: .829101562
+        x: .526367188
+        y: .805664062
         width: .09375
         height: .0927734375
       scaleFactor: {x: .5, y: .5}
@@ -434,8 +434,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .411132812
-        y: .829101562
+        x: .526367188
+        y: .805664062
         width: .09375
         height: .0927734375
       scaleFactor: {x: .5, y: .5}

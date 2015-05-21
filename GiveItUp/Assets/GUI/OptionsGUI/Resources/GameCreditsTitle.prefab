@@ -104,7 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: Hello World
   offsetZ: 0
-  characterSize: 25
+  characterSize: 45
   characterSpacing: 1.04999995
   lineSpacing: 1.10000002
   anchor: 4
@@ -113,7 +113,7 @@ MonoBehaviour:
   font: {fileID: 4900000, guid: 591a003aec8b348448ceaab04af079b5, type: 3}
   color: {r: .882352948, g: .0454152152, b: .0454152152, a: 1}
   pixelPerfect: 0
-  maxWidth: 550
+  maxWidth: 800
   maxWidthInPixels: 0
   multiline: 1
   dynamicLength: 0

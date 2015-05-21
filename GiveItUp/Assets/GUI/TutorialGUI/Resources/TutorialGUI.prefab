@@ -202,7 +202,7 @@ MonoBehaviour:
   font: {fileID: 4900000, guid: 591a003aec8b348448ceaab04af079b5, type: 3}
   color: {r: .0882353187, g: .0882353187, b: .0882353187, a: 1}
   pixelPerfect: 0
-  maxWidth: 400
+  maxWidth: 800
   maxWidthInPixels: 0
   multiline: 1
   dynamicLength: 0

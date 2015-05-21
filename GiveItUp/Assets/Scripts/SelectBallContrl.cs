@@ -4,7 +4,6 @@ using System.Collections.Generic;
 
 public class SelectBallContrl : MonoBehaviour {
 	public List<UIButton> balls = new List<UIButton>();
-	public UIButton uiButton;
 	private Vector3[] posList = {Vector3.zero,new Vector3(-115,0,0),new Vector3(-200,0,0)};
 	void Awake()
 	{
@@ -63,7 +62,6 @@ public class SelectBallContrl : MonoBehaviour {
 				balls[i].gameObject.SetActive(true);
 			}
 		}
-		Debug.Log(balls[balls.Count-1].name);
 		MainMenuGUI.inst.ChangeBall(balls[balls.Count-1].name);
 	}
 }

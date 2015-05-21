@@ -37,7 +37,7 @@ public class World : MonoBehaviour
             columns.Add(c);
         }
 
-        Debug.Log("World size: " + (columns.Count - 10));
+       // Debug.Log("World size: " + (columns.Count - 10));
 
         ClearColumnColor();
     }
