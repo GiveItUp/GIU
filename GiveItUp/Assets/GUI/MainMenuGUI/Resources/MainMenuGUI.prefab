@@ -548,7 +548,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100026}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 276.612976, z: -1}
+  m_LocalPosition: {x: 0, y: 296, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 439590}
@@ -2545,8 +2545,8 @@ MonoBehaviour:
   persistent: 0
   plane: 0
   winding: 1
-  width: 512
-  height: 288
+  width: 768
+  height: 432
   bleedCompensation: {x: 0, y: 0}
   anchor: 9
   pixelPerfect: 0
@@ -2555,7 +2555,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   color: {r: 1, g: 1, b: 1, a: 1}
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 1024, y: 1024}
+  pixelsPerUV: {x: 1024, y: 512}
   hideAtStart: 0
   ignoreClipping: 0
   playAnimOnStart: 0
@@ -2580,11 +2580,11 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 0
-      width: .75
-      height: .421875
-    scaleFactor: {x: .5, y: .5}
-    topLeftOffset: {x: -1, y: 1}
-    bottomRightOffset: {x: 1, y: -1}
+      width: .94140625
+      height: .96484375
+    scaleFactor: {x: .53112036, y: 1.1659919}
+    topLeftOffset: {x: -.94140625, y: .416666657}
+    bottomRightOffset: {x: .94140625, y: -.440972209}
   textureAnimations: []
 --- !u!114 &11410136
 MonoBehaviour:
@@ -3718,8 +3718,8 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 0
-      width: .75
-      height: .421875
+      width: 1
+      height: .563476562
     scaleFactor: {x: .5, y: .5}
     topLeftOffset: {x: -1, y: 1}
     bottomRightOffset: {x: 1, y: -1}
@@ -3769,7 +3769,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   color: {r: 1, g: 1, b: 1, a: 1}
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 512, y: 512}
+  pixelsPerUV: {x: 256, y: 256}
   hideAtStart: 0
   ignoreClipping: 0
   playAnimOnStart: 0
@@ -3794,8 +3794,8 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 0
-      width: .5
-      height: .421875
+      width: 1
+      height: .84375
     scaleFactor: {x: .5, y: .5}
     topLeftOffset: {x: -1, y: 1}
     bottomRightOffset: {x: 1, y: -1}
