@@ -129,9 +129,9 @@ MonoBehaviour:
       y: 0
       width: .25
       height: .25
-    scaleFactor: {x: .25, y: .25}
-    topLeftOffset: {x: -2, y: 2}
-    bottomRightOffset: {x: 2, y: -2}
+    scaleFactor: {x: .5, y: .5}
+    topLeftOffset: {x: -1, y: 1}
+    bottomRightOffset: {x: 1, y: -1}
   staticFrameInfo:
     uvs:
       serializedVersion: 2

@@ -306,7 +306,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100008}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 64.9400024, y: 53.0117493, z: -.899999976}
+  m_LocalPosition: {x: 64.9400024, y: 25, z: -.899999976}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400014}
@@ -318,7 +318,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 218.783234, y: -114.282593, z: -1}
+  m_LocalPosition: {x: 218.783234, y: -180, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400014}
@@ -425,7 +425,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100026}
   m_LocalRotation: {x: 0, y: 0, z: .087155737, w: .99619472}
-  m_LocalPosition: {x: -2.5999999, y: 42, z: -1}
+  m_LocalPosition: {x: -30, y: 42, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400018}
@@ -989,8 +989,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .3828125
-        y: .162109375
+        x: .22265625
+        y: .469726562
         width: .159179688
         height: .157226562
       scaleFactor: {x: .5, y: .5}
@@ -1007,8 +1007,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .54296875
-        y: .162109375
+        x: .22265625
+        y: .627929688
         width: .159179688
         height: .157226562
       scaleFactor: {x: .5, y: .5}
@@ -1025,8 +1025,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .54296875
-        y: .162109375
+        x: .22265625
+        y: .627929688
         width: .159179688
         height: .157226562
       scaleFactor: {x: .5, y: .5}
@@ -1184,7 +1184,7 @@ MonoBehaviour:
     - uvs:
         serializedVersion: 2
         x: .387695312
-        y: 0
+        y: .149414062
         width: .1640625
         height: .161132812
       scaleFactor: {x: .5, y: .5}
@@ -1202,7 +1202,7 @@ MonoBehaviour:
     - uvs:
         serializedVersion: 2
         x: .552734375
-        y: 0
+        y: .149414062
         width: .1640625
         height: .161132812
       scaleFactor: {x: .5, y: .5}
@@ -1220,7 +1220,7 @@ MonoBehaviour:
     - uvs:
         serializedVersion: 2
         x: .552734375
-        y: 0
+        y: .149414062
         width: .1640625
         height: .161132812
       scaleFactor: {x: .5, y: .5}
@@ -1320,7 +1320,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   color: {r: 1, g: 1, b: 1, a: 1}
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 512, y: 512}
+  pixelsPerUV: {x: 1024, y: 512}
   hideAtStart: 0
   ignoreClipping: 0
   playAnimOnStart: 0
@@ -1519,7 +1519,7 @@ MonoBehaviour:
   maskingCharacter: '*'
   isClone: 0
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 1024, y: 1024}
+  pixelsPerUV: {x: 2048, y: 1024}
   hideAtStart: 0
   persistent: 0
   ignoreClipping: 0
@@ -1614,7 +1614,7 @@ MonoBehaviour:
   maskingCharacter: '*'
   isClone: 0
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 1024, y: 1024}
+  pixelsPerUV: {x: 2048, y: 1024}
   hideAtStart: 0
   persistent: 0
   ignoreClipping: 0
@@ -1702,8 +1702,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: 0
-        y: .869140625
+        x: .8359375
+        y: 0
         width: .142578125
         height: .1171875
       scaleFactor: {x: .5, y: .5}
@@ -1720,8 +1720,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .22265625
-        y: .63671875
+        x: .3828125
+        y: .462890625
         width: .142578125
         height: .1171875
       scaleFactor: {x: .5, y: .5}
@@ -1738,8 +1738,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .22265625
-        y: .63671875
+        x: .3828125
+        y: .462890625
         width: .142578125
         height: .1171875
       scaleFactor: {x: .5, y: .5}
@@ -1852,8 +1852,8 @@ MonoBehaviour:
   _ser_stat_frame_info:
     uvs:
       serializedVersion: 2
-      x: .181640625
-      y: .5703125
+      x: .8828125
+      y: .26171875
       width: .0400390625
       height: .041015625
     scaleFactor: {x: .5, y: .5}
@@ -1883,7 +1883,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: Not bad!
   offsetZ: 0
-  characterSize: 45
+  characterSize: 80
   characterSpacing: 1
   lineSpacing: 1
   anchor: 4
@@ -1902,7 +1902,7 @@ MonoBehaviour:
   maskingCharacter: '*'
   isClone: 0
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 1024, y: 1024}
+  pixelsPerUV: {x: 2048, y: 1024}
   hideAtStart: 0
   persistent: 0
   ignoreClipping: 0
@@ -1938,7 +1938,7 @@ MonoBehaviour:
   maskingCharacter: '*'
   isClone: 0
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 1024, y: 1024}
+  pixelsPerUV: {x: 2048, y: 1024}
   hideAtStart: 0
   persistent: 0
   ignoreClipping: 0

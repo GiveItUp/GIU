@@ -695,13 +695,13 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: 0
-        y: .8984375
-        width: .00390625
-        height: .0078125
-      scaleFactor: {x: 16, y: 16}
-      topLeftOffset: {x: -.03125, y: .03125}
-      bottomRightOffset: {x: .03125, y: -.03125}
+        x: .4453125
+        y: .48046875
+        width: .125
+        height: .25
+      scaleFactor: {x: .5, y: .5}
+      topLeftOffset: {x: -1, y: 1}
+      bottomRightOffset: {x: 1, y: -1}
   - name: New Animation
     loopCycles: 0
     loopReverse: 0
