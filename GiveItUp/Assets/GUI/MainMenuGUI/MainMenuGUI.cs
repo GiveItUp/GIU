@@ -8,6 +8,8 @@ public class MainMenuGUI : GUIMenu
 	public PackedSprite ps_bgr;
 	public PackedSprite ps_logo;
 	public PackedSprite ps_info;
+	public Transform selectBall;
+	public PackedSprite selectBall_bg;
 	public UIButton btn_start;
 	public UIButton btn_start_random;
 	public UIButton btn_gamecenter;
@@ -115,6 +117,8 @@ public class MainMenuGUI : GUIMenu
 		ComponentAnimation_Prepare (ps_logo.transform);
 		ComponentAnimation_Prepare (ps_info.transform);
 		ComponentAnimation_Prepare (btn_start.transform);
+		ComponentAnimation_Prepare (selectBall.transform);
+		ComponentAnimation_Prepare (selectBall_bg.transform);
 		//if (User.HasIAP_UnlockAll) {
 			ComponentAnimation_Prepare (btn_start_random.transform);
 		//}
@@ -155,6 +159,9 @@ public class MainMenuGUI : GUIMenu
 		//SoundManager.Instance.Play(SoundManager.eSoundClip.GUI_PopupShowComponent, 1);
 
 		yield return StartCoroutine (ShowLevels (page));
+
+		yield return StartCoroutine (ComponentAnimation_Show (selectBall_bg.transform, 0.2f));
+		yield return StartCoroutine (ComponentAnimation_Show (selectBall.transform, 0.2f));
 		
 		yield return StartCoroutine (ComponentAnimation_Show (go_ball.transform, 0.15f));
 
@@ -168,15 +175,16 @@ public class MainMenuGUI : GUIMenu
 		if (PlayerPrefs.GetInt ("TVMode", 0) != 1) {
 			btn_start.GetComponent<Animation>().Play ("ButtonAnim");
 		}
-		float timer = 0;
-		while (timer<5f && _inputEnabled == true) {
-			if (Input.touchCount == 0 && !Input.anyKey) {
-				timer += Time.deltaTime;
-			} else {
-				timer = 0;
-			}
-			yield return new WaitForSeconds (Time.deltaTime);
-		}
+
+//		float timer = 0;
+//		while (timer<5f && _inputEnabled == true) {
+//			if (Input.touchCount == 0 && !Input.anyKey) {
+//				timer += Time.deltaTime;
+//			} else {
+//				timer = 0;
+//			}
+//			yield return new WaitForSeconds (Time.deltaTime);
+//		}
 		yield return StartCoroutine (ComponentAnimation_Show (ps_info.transform, 0.2f));
 		joyMainMenu.enabled = true;
 	}
@@ -212,6 +220,8 @@ public class MainMenuGUI : GUIMenu
 			yield return StartCoroutine (ComponentAnimation_Hide (ps_info.transform, 0.03f));
 		}
 
+		yield return StartCoroutine (ComponentAnimation_Hide (selectBall.transform, 0.15f));
+		yield return StartCoroutine (ComponentAnimation_Hide (selectBall_bg.transform, 0.15f));
 		yield return new WaitForSeconds (0.3f);
 	}
 
