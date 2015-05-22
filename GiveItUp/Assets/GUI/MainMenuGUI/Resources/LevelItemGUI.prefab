@@ -810,8 +810,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .764648438
-        y: .599609375
+        x: .618164062
+        y: .629882812
         width: .123046875
         height: .056640625
       scaleFactor: {x: .5, y: .5}
@@ -1020,8 +1020,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .640625
-        y: .599609375
+        x: .78125
+        y: .487304688
         width: .123046875
         height: .099609375
       scaleFactor: {x: .5, y: .5}
@@ -1194,8 +1194,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .640625
-        y: .700195312
+        x: .7421875
+        y: .629882812
         width: .123046875
         height: .056640625
       scaleFactor: {x: .5, y: .5}
