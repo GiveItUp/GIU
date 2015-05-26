@@ -45,9 +45,9 @@ public class UpdatePopupGUI : GUIPopup {
 		string text = TextManager.Get("Update notes:")+"\n\n";
 
 		text += "";
-		text += TextManager.Get("** 9 new levels of varied difficulty")+"\n\n";
 		text += TextManager.Get("** Daily challenge: complete daily challenge levels the higher percent to increase your scores on the Leaderboard")+"\n\n";
-		text += TextManager.Get("** New crazy music");
+		text += TextManager.Get("** New crazy music")+"\n\n";
+		text += TextManager.Get("** 9 new levels of varied difficulty");
 
 		lbl_text.Text = text;
 	}

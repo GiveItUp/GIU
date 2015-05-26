@@ -37,6 +37,7 @@ public class GameCredits {
         ret.Add(new GameCredits("Producer", new List<string>() { 
 			"Akos Divianszky" ,
 			"QiangQiang",
+			"Long Hui",
 		}));
 		ret.Add(new GameCredits("Development", new List<string>() { 
 			"Zoltan Kovacs",
@@ -49,6 +50,7 @@ public class GameCredits {
 			"Long Hui",
 			"Cheng Fei",
 			"Wei Shao Hua",
+			"Li Kai",
 			"Zeng Fei",
 			"Luo Jia"
 		}));

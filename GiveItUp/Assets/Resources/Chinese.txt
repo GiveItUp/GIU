@@ -10,11 +10,11 @@ Settings#关于
 ****** Give It Up! ******#****** 永不言弃! ******
 Developed by#出品
 INVICTUS-GAMES Ltd#东品游戏
-EAST2WEST GAMES Ltd#北京巨果文化
+EAST2WEST GAMES Ltd#巨果文化
 MONSTAR-LAB GAMES Ltd#梦士达科技
 Producer#出品人
 Akos Divianszky#Akos Divianszky
-QiangQiang#强强
+QiangQiang#强    强
 Development#开发
 Zoltan Kovacs#Zoltan Kovacs
 Janos Barkoczi#Janos Barkoczi
@@ -26,6 +26,7 @@ Rein Lv#吕雄一
 Long Hui#龙    辉
 Cheng Fei#程    飞
 Wei Shao Hua#魏少华
+Li Kai#李    锴
 Zeng Fei#曾    飞
 Luo Jia#罗    佳
 
@@ -85,10 +86,10 @@ Tap now!#现在点！
 GOOD LUCK#祝你好运
 TAP#点击屏幕
 Waiting for purchase...#等待支付…
-Update notes:#《章鱼!永不言弃!!》 是iOS付费排行榜第1的，《永不言弃》特别版，包括如下新增内容：
+Update notes:#《章鱼!永不言弃!!》 是iOS付费排行榜第1的《永不言弃》官方特别版，包括如下新增内容：
 ** 9 new levels of varied difficulty#全新设计的关卡
 ** Daily challenge: complete daily challenge levels the higher percent to increase your scores on the Leaderboard#全新制作的章鱼角色
 ** New crazy music#全新谱写的日式摇滚
 NEW#新纪录！
 Unlock all info#12元立刻解锁全部关卡！
-Player group#关注微信公众号"east2westgames"或加入官方QQ群"459362383"有惊喜!
+Player group#关注微信公众号"章鱼小镇"或加入官方QQ群"459362383"有惊喜!

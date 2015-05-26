@@ -61,7 +61,7 @@ Transform:
   m_Father: {fileID: 400000}
   m_RootOrder: 0
 --- !u!23 &2300000
-MeshRenderer:
+Renderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -69,19 +69,15 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 73e587684aa614eb0a6647c6d5594dae, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
 --- !u!33 &3300000
@@ -102,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7188474b6efb48f48824ae74d1f456c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Hello World
+  text: "\u7248\u6743 \xA9 2014 \u4E1C\u54C1\u897F\u5C1A\u7F51\u7EDC\u79D1\u6280\uFF08\u5317\u4EAC\uFF09\u6709\u9650\u516C\u53F8\uFF0C\u4FDD\u7559\u6240\u6709\u6743\u5229."
   offsetZ: 0
   characterSize: 40
   characterSpacing: 1.04999995
@@ -113,7 +109,7 @@ MonoBehaviour:
   font: {fileID: 4900000, guid: 591a003aec8b348448ceaab04af079b5, type: 3}
   color: {r: 0, g: 0, b: 0, a: 1}
   pixelPerfect: 0
-  maxWidth: 800
+  maxWidth: 720
   maxWidthInPixels: 0
   multiline: 1
   dynamicLength: 0
@@ -123,7 +119,7 @@ MonoBehaviour:
   maskingCharacter: '*'
   isClone: 0
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 1024, y: 1024}
+  pixelsPerUV: {x: 2048, y: 1024}
   hideAtStart: 0
   persistent: 0
   ignoreClipping: 0
@@ -173,3 +169,4 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}
   m_IsPrefabParent: 1
+  m_IsExploded: 1

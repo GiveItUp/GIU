@@ -125,7 +125,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!23 &2359830
-MeshRenderer:
+Renderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -133,23 +133,19 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 73e587684aa614eb0a6647c6d5594dae, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
 --- !u!23 &2359832
-MeshRenderer:
+Renderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -157,23 +153,19 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 98b0cf514d1fbcb4fbaa88ca436ef4d1, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
 --- !u!23 &2359834
-MeshRenderer:
+Renderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -181,19 +173,15 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 411185bbd1ed68546b0ba080f809616b, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
 --- !u!33 &3359830
@@ -341,7 +329,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   color: {r: 1, g: 1, b: 1, a: 1}
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 256, y: 256}
+  pixelsPerUV: {x: 1024, y: 1024}
   hideAtStart: 0
   ignoreClipping: 0
   playAnimOnStart: 0
@@ -398,10 +386,10 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .506347656
-        y: .118164062
-        width: .046875
-        height: .0927734375
+        x: .244140625
+        y: .7890625
+        width: .0703125
+        height: .0693359375
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
@@ -416,10 +404,10 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .506347656
-        y: .211914062
-        width: .046875
-        height: .0927734375
+        x: .244140625
+        y: .71875
+        width: .0703125
+        height: .0693359375
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
@@ -434,10 +422,10 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .506347656
-        y: .211914062
-        width: .046875
-        height: .0927734375
+        x: .244140625
+        y: .71875
+        width: .0703125
+        height: .0693359375
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
@@ -540,7 +528,7 @@ MonoBehaviour:
   maskingCharacter: '*'
   isClone: 0
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 1024, y: 1024}
+  pixelsPerUV: {x: 2048, y: 1024}
   hideAtStart: 0
   persistent: 0
   ignoreClipping: 0
@@ -571,3 +559,4 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 159836}
   m_IsPrefabParent: 1
+  m_IsExploded: 1
