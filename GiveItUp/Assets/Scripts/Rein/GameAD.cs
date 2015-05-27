@@ -2,7 +2,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Umeng;
 
 public enum East2WestGames
 {
@@ -125,7 +124,7 @@ public class GameAD : MonoBehaviour
 	void OnLinkBtn ()
 	{
 		Application.OpenURL (site);
-		GA.Event (eventKey);
+//		GA.Event (eventKey);
 		index++;
 		if (index >= gameAds.Length) {
 			index=0;

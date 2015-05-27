@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using Umeng;
 
 public class UmengInitializer : MonoBehaviour
 {
@@ -12,7 +11,7 @@ public class UmengInitializer : MonoBehaviour
 	void Start ()
 	{
 		umengIdDict.Add (East2WestGames.GiveItUp, "5503ffc6fd98c58388000b77");
-		GA.StartWithAppKeyAndChannelId (umengIdDict [East2WestGames.GiveItUp], channel.ToString());
+//		GA.StartWithAppKeyAndChannelId (umengIdDict [East2WestGames.GiveItUp], channel.ToString());
 //		ad.channel = channel;
 //		if (PlayerPrefs.GetInt ("TVMode", 0) == 0) {
 //			GA.UpdateOnlineConfig ();

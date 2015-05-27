@@ -4,7 +4,6 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using Umeng;
 
 public class Gamelogic : MonoBehaviour
 {
@@ -339,7 +338,7 @@ public class Gamelogic : MonoBehaviour
 #endif
 					music.PlayScheduled(AudioSettings.dspTime + 0.333f + antiDelay);
 					ball.prevMusicTimeDouble=AudioSettings.dspTime;
-					GA.StartLevel((GetStageIndex()+1).ToString());
+//					GA.StartLevel((GetStageIndex()+1).ToString());
 				} break;
             case eState.results_fail:
 				{
@@ -397,7 +396,7 @@ public class Gamelogic : MonoBehaviour
 //                    }
                     User.SaveAData();
 
-					GA.FailLevel((GetStageIndex()+1).ToString());
+//					GA.FailLevel((GetStageIndex()+1).ToString());
                 } break;
             case eState.results_success:
 				{
@@ -489,7 +488,7 @@ public class Gamelogic : MonoBehaviour
 //						CGame.Instance.AskForReview();
 //                    }
                     User.SaveAData();
-					GA.FinishLevel((GetStageIndex()+1).ToString());
+//					GA.FinishLevel((GetStageIndex()+1).ToString());
                 } break;
         }
     }

@@ -8,12 +8,13 @@ public class Wechat : MonoBehaviour
 {
 	void Start ()
 	{
-		ShareSDK.setCallbackObjectName (this.name);
+		ShareSDK.setCallbackObjectName ("Main Camera");
 		ShareSDK.open ("api20");
 	}
 
 	public void Share ()
 	{
+		Debug.Log ("share");
 		Hashtable content = new Hashtable ();
 		content ["content"] = "章鱼！永不言弃！！";
 		content ["image"] = "http://i-2.yxdown.com/2014/12/18/KHgyNjAp/8cf68b4c-96bf-4d44-89ef-ce84c3b287b6.jpeg";
@@ -25,7 +26,7 @@ public class Wechat : MonoBehaviour
 	{
 		if (state == ResponseState.Success) {
 			print ("share result :");
-			print (MiniJSON.jsonEncode (shareInfo));
+			print (com.monstar.MiniJSON.jsonEncode (shareInfo));
 		} else if (state == ResponseState.Fail) {
 			print ("fail! error code = " + error ["error_code"] + "; error msg = " + error ["error_msg"]);
 		}

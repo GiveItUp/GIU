@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using Umeng;
 
 public class ReinPluginManager : MonoBehaviour
 {

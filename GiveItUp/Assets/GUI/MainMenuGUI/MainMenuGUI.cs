@@ -74,7 +74,7 @@ public class MainMenuGUI : GUIMenu
 
 		StartCoroutine (PlayShowAnim ());
 
-		wechat = btn_share.gameObject.AddComponent<Wechat> ();
+		wechat = Camera.main.gameObject.AddComponent<Wechat> ();
 	}
 	#endregion
 
