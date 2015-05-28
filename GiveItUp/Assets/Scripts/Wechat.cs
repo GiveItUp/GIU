@@ -24,10 +24,10 @@ public class Wechat : MonoBehaviour
 	public void Share ()
 	{
 		Hashtable content = new Hashtable ();
-		content ["content"] = "章鱼！章鱼！章鱼！永不言弃！！永不言弃！！永不言弃！！";
+		content ["content"] = "关注微信公众号“章鱼小镇”，加入官方QQ群“459362383”，惊喜等着你!";
 		content ["image"] = "http://i-2.yxdown.com/2014/12/18/KHgyNjAp/8cf68b4c-96bf-4d44-89ef-ce84c3b287b6.jpeg";
 		content["title"] = "章鱼！永不言弃！！";
-		content["description"] = "章鱼！永不言弃！！章鱼！永不言弃！！章鱼！永不言弃！！";
+		content["description"] = "章鱼！永不言弃！！";
 		content["url"] = "http://www.monstar-lab.com";
 		content ["type"] = Convert.ToString ((int)ContentType.News);
 		ShareResultEvent evt = new ShareResultEvent (ShareResultHandler);
