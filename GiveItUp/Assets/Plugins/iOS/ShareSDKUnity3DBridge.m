@@ -566,11 +566,11 @@ extern "C" {
                 NSString *message = __parseStringField([value objectForKey:@"message"]);
                 id<ISSCAttachment> image = __parseImageField ([value objectForKey:@"image"]);
                 
-                if ([ShareSDK getClientWithType:ShareTypeSohuWeibo])
-                {
-                    [contentObj addSohuWeiboUnitWithContent:message
-                                                      image:image];
-                }
+                //if ([ShareSDK getClientWithType:ShareTypeSohuWeibo])
+                //{
+                //    [contentObj addSohuWeiboUnitWithContent:message
+                //                                      image:image];
+                //}
             }
             
             //网易微博
@@ -580,10 +580,10 @@ extern "C" {
                 NSString *message = __parseStringField([value objectForKey:@"message"]);
                 id<ISSCAttachment> image = __parseImageField ([value objectForKey:@"image"]);
                 
-                if ([ShareSDK getClientWithType:ShareType163Weibo])
-                {
-                    [contentObj add163WeiboUnitWithContent:message image:image];
-                }
+                //if ([ShareSDK getClientWithType:ShareType163Weibo])
+                //{
+                //    [contentObj add163WeiboUnitWithContent:message image:image];
+                //}
             }
             
             //豆瓣
