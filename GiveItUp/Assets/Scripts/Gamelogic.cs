@@ -1,6 +1,4 @@
 ﻿//#define USE_PROGRESS_BASED_CHALLENGE
-
-
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -13,58 +11,58 @@ public class Gamelogic : MonoBehaviour
 		public List<AudioSource> sounds;
 	}
 
-
-    public enum eState
-    {
-        menu,
-        ingame,
-        results_success,
-        results_fail
-    }
+	public enum eState
+	{
+		menu,
+		ingame,
+		results_success,
+		results_fail
+	}
 
 	public Transform recordMarker;
-
 	public HUD p_HUD;
 	public IngameBgr p_IngameBgr;
-
 	public World world;
 	public Ball ball;
-	
+	public GameObject Petal;
 	[HideInInspector]
-	public AudioSource music;
+	public AudioSource
+		music;
 	public AudioSource music1;
 	public AudioSource music2;
 	public AudioSource music3;
 	private int challengeMusic;
-	
 	public int currentUpSoundPack = 0;
 	public int currentScratchSoundPack = 0;
 	public int currentScratchSound = 0;
 	public List<SoundList> upSounds;
 	public List<SoundList> scratchSounds;
-
 	[System.NonSerialized]
-	public HUD hud;
-
+	public HUD
+		hud;
 	[System.NonSerialized]
-	public IngameBgr ingameBgr;
-
+	public IngameBgr
+		ingameBgr;
 	[System.NonSerialized]
-    public eState state;
-    float progress;
+	public eState
+		state;
+	float progress;
     
-    public delegate void OnJumpedDelegate();
-    public OnJumpedDelegate OnJumped;
+	public delegate void OnJumpedDelegate();
 
+	public OnJumpedDelegate OnJumped;
 	private int _stageIndex = 0;
 	private Stage _stage;
 
-	public int GetStageIndex() { return _stageIndex; }
+	public int GetStageIndex()
+	{
+		return _stageIndex;
+	}
 	#region Methods
 
 	private void Awake()
 	{
-		GameObject go = Resources.Load("Prefabs/Monstar/"+CGame.ballName) as GameObject;
+		GameObject go = Resources.Load("Prefabs/Monstar/" + CGame.ballName) as GameObject;
 		go = GameObject.Instantiate(go) as GameObject;
 		go.transform.parent = this.transform;
 		ball = go.GetComponent<Ball>();
@@ -74,17 +72,17 @@ public class Gamelogic : MonoBehaviour
 	{
 		Stage stage = new Stage();
 		
-		challengeMusic = PlayerPrefs.GetInt("ChallengeMusic", Random.Range(0,2));
+		challengeMusic = PlayerPrefs.GetInt("ChallengeMusic", Random.Range(0, 2));
 		
 		#if USE_PROGRESS_BASED_CHALLENGE
 		float progress = User.actualRandomLevelScore;
 		if (progress >= 100)
 		#else
-		if ( User.lastRandomLevelDate.CompareTo(System.DateTime.Now.Date) != 0 )
+		if (User.lastRandomLevelDate.CompareTo(System.DateTime.Now.Date) != 0)
 		#endif
 		{
-			stage.GenerateFromChunks( 200, 300);
-			stage.Save( "STG_RND" );
+			stage.GenerateFromChunks(200, 300);
+			stage.Save("STG_RND");
 			
 			User.actualRandomLevelScore = 0;
 			User.actualRandomLevelRecord = 0;
@@ -94,58 +92,53 @@ public class Gamelogic : MonoBehaviour
 			if (PlayerPrefs.GetInt("ChallengeMusic", -1) == -1)
 			{
 				challengeMusic = 1;
-			}
-			else
+			} else
 			{
-				challengeMusic = Random.Range(0,2);
+				challengeMusic = Random.Range(0, 2);
 			}
 			PlayerPrefs.SetInt("ChallengeMusic", challengeMusic);
-		}
-		else
+		} else
 		{
-			stage.Load( "STG_RND" );
+			stage.Load("STG_RND");
 		}
 		
 		
-		recordMarker.gameObject.SetActive (false);
+		recordMarker.gameObject.SetActive(false);
 		_stageIndex = -1;
 		_stage = stage;
 		world.Init(_stage);
 		
-		User.AddLevelTries (_stageIndex);
+		User.AddLevelTries(_stageIndex);
 		
-		InitHUD ();
-		InitIngameBgr ();
-		ChangeState (eState.menu);
+		InitHUD();
+		InitIngameBgr();
+		ChangeState(eState.menu);
 
 		CGame.cameraLogic.ball = ball.transform;
 		
-		if (!LevelEditor.testmode && (int)User.GetLevelRecord (_stageIndex) > 2)
+		if (!LevelEditor.testmode && (int)User.GetLevelRecord(_stageIndex) > 2)
 		{
 			Column c;
 			if (User.GetLevelScore(_stageIndex) == 100)
 			{
-				c = world.GetNextColumn (0, (int)User.GetLevelRecord (_stageIndex) + 1);
-			}
-			else
+				c = world.GetNextColumn(0, (int)User.GetLevelRecord(_stageIndex) + 1);
+			} else
 			{
-				c = world.GetNextColumn (0, (int)User.GetLevelRecord (_stageIndex));
+				c = world.GetNextColumn(0, (int)User.GetLevelRecord(_stageIndex));
 			}
 			if (c == null)
 			{
 				Destroy(recordMarker.gameObject);
-			}
-			else
+			} else
 			{
-				recordMarker.gameObject.SetActive (true);
+				recordMarker.gameObject.SetActive(true);
 				recordMarker.transform.parent = c.sprite.transform;
-				recordMarker.transform.localPosition = new Vector3 (0, -0.18f, -1);
+				recordMarker.transform.localPosition = new Vector3(0, -0.18f, -1);
 				
-				if(recordMarker.transform.position.x <= 2)
+				if (recordMarker.transform.position.x <= 2)
 					Destroy(recordMarker.gameObject);
 			}
-		}
-		else
+		} else
 		{
 			Destroy(recordMarker.gameObject);
 		}
@@ -156,44 +149,50 @@ public class Gamelogic : MonoBehaviour
 	public void Init(int stageIndex, Stage stage)
 	{
 		CGame.cameraLogic.ball = ball.transform;
-		recordMarker.gameObject.SetActive (false);
+		recordMarker.gameObject.SetActive(false);
 		_stageIndex = stageIndex;
 		_stage = stage;
-        world.Init(_stage);
+		world.Init(_stage);
 		User.LastPlayedStage = _stageIndex;
-		User.AddLevelTries (_stageIndex);
-		InitHUD ();
-		InitIngameBgr ();
-		ChangeState (eState.menu);
+		User.AddLevelTries(_stageIndex);
+		InitHUD();
+		InitIngameBgr();
+		if (_stageIndex == 18 || _stageIndex == 19 || _stageIndex == 20)
+		{
+			Petal.SetActive(true);
+			ingameBgr.gameObject.transform.FindChild("bgr_1").gameObject.SetActive(true);
+		} else
+		{
+			Petal.SetActive(false);
+			ingameBgr.gameObject.transform.FindChild("bgr_1").gameObject.SetActive(false);
+		}
 
+		ChangeState(eState.menu);
 
-		if (!LevelEditor.testmode && (int)User.GetLevelRecord (_stageIndex) > 2)
+		if (!LevelEditor.testmode && (int)User.GetLevelRecord(_stageIndex) > 2)
 		{
 			Column c;
 			if (User.GetLevelScore(_stageIndex) == 100)
 			{
-				c = world.GetNextColumn (0, (int)User.GetLevelRecord (_stageIndex) + 1);
-			}
-			else
+				c = world.GetNextColumn(0, (int)User.GetLevelRecord(_stageIndex) + 1);
+			} else
 			{
-				c = world.GetNextColumn (0, (int)User.GetLevelRecord (_stageIndex));
+				c = world.GetNextColumn(0, (int)User.GetLevelRecord(_stageIndex));
 			}
 			if (c == null)
 			{
 				Destroy(recordMarker.gameObject);
-			}
-			else
+			} else
 			{
-				recordMarker.gameObject.SetActive (true);
-                if (c != null && c.sprite != null)
-				    recordMarker.transform.parent = c.sprite.transform;
-				recordMarker.transform.localPosition = new Vector3 (0, -0.18f, -1);
+				recordMarker.gameObject.SetActive(true);
+				if (c != null && c.sprite != null)
+					recordMarker.transform.parent = c.sprite.transform;
+				recordMarker.transform.localPosition = new Vector3(0, -0.18f, -1);
 
-				if(recordMarker.transform.position.x <= 2)
+				if (recordMarker.transform.position.x <= 2)
 					Destroy(recordMarker.gameObject);
 			}
-		}
-		else
+		} else
 		{
 			Destroy(recordMarker.gameObject);
 		}
@@ -201,47 +200,47 @@ public class Gamelogic : MonoBehaviour
 	
 	private void InitHUD()
 	{
-		hud = GameObject.Instantiate (p_HUD) as HUD;
+		hud = GameObject.Instantiate(p_HUD) as HUD;
 		hud.transform.parent = this.transform;
-		hud.transform.localPosition = new Vector3 (0,0,-1);
-		hud.Init ();
+		hud.transform.localPosition = new Vector3(0, 0, -1);
+		hud.Init();
 	}
 	
 	private void InitIngameBgr()
 	{
-		ingameBgr = GameObject.Instantiate (p_IngameBgr) as IngameBgr;
+		ingameBgr = GameObject.Instantiate(p_IngameBgr) as IngameBgr;
 		ingameBgr.transform.parent = Camera.main.transform;
-		ingameBgr.transform.localPosition = new Vector3 (0,0,-1);
+		ingameBgr.transform.localPosition = new Vector3(0, 0, -1);
 		//ingameBgr.Init ();
 	}
 	#endregion
 
-    void Update()
-    {
-		if (Input.GetKeyDown(KeyCode.Return) || Input.GetMouseButtonDown(0)|| Input.GetKeyDown(KeyCode.UpArrow)|| Input.GetKeyDown(JoyStickConfig.a))
-        {
+	void Update()
+	{
+		if (Input.GetKeyDown(KeyCode.Return) || Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(JoyStickConfig.a))
+		{
 			if (state == eState.menu)
-            {
-                ChangeState(eState.ingame);
-            }
-        }
+			{
+				ChangeState(eState.ingame);
+			}
+		}
 
-		if(state != eState.results_fail && state != eState.results_success)
-        	progress = CGame.gamelogic.world.GetProgress(ball.transform.position.x);
+		if (state != eState.results_fail && state != eState.results_success)
+			progress = CGame.gamelogic.world.GetProgress(ball.transform.position.x);
 
-		if(hud != null)
+		if (hud != null)
 		{
 			hud.SetProgress(progress);
 		}
-		if(ingameBgr != null)
+		if (ingameBgr != null)
 		{
 			ingameBgr.SetProgress(progress);
 		}
-    }
+	}
 
 	private void OnDestroy()
 	{
-		if(ingameBgr != null)
+		if (ingameBgr != null)
 		{
 			GameObject.Destroy(ingameBgr.gameObject);
 			ingameBgr = null;
@@ -261,7 +260,7 @@ public class Gamelogic : MonoBehaviour
 
 	public IEnumerator ZoomFinish(Transform ballParent)
 	{
-		Column c = world.GetCurrentColumn (ball.transform.position.x);
+		Column c = world.GetCurrentColumn(ball.transform.position.x);
 
 		ballParent.transform.parent = c.transform;
 
@@ -274,8 +273,8 @@ public class Gamelogic : MonoBehaviour
 
 		while (t <= 1)
 		{
-			c.transform.localScale = Vector3.Lerp( oldScale, newScale, t);
-			c.transform.localPosition = Vector3.Lerp( oldPos, newPos, t);
+			c.transform.localScale = Vector3.Lerp(oldScale, newScale, t);
+			c.transform.localPosition = Vector3.Lerp(oldPos, newPos, t);
 
 			t += Time.deltaTime;
 			yield return 0;
@@ -285,11 +284,11 @@ public class Gamelogic : MonoBehaviour
 		c.transform.localPosition = newPos;
 	}
 
-    public void ChangeState(eState st)
-    {
-        state = st;
+	public void ChangeState(eState st)
+	{
+		state = st;
 
-        switch (state)
+		switch (state)
 		{
 			case eState.menu:
 				{
@@ -302,25 +301,24 @@ public class Gamelogic : MonoBehaviour
 					ball.Init();
 					CGame.gamelogic.world.ClearColumnColor();
 					music.Stop();
-				} break;
+				}
+				break;
 			case eState.ingame:
 				{
 					hud.PlayTriesAnimHide();
 					ball.SetActive(true);
 					
-					if ( music != null && music.isPlaying)
+					if (music != null && music.isPlaying)
 					{
 						music.Stop();
 					}
-					if(_stageIndex > 17)
+					if (_stageIndex > 17)
 					{
 						music = music3;
-					}
-					else if ( (_stageIndex == -1 && challengeMusic == 1) || _stageIndex > 8 )
+					} else if ((_stageIndex == -1 && challengeMusic == 1) || _stageIndex > 8)
 					{
 						music = music2;
-					}
-					else
+					} else
 					{
 						music = music1;
 					}
@@ -332,15 +330,16 @@ public class Gamelogic : MonoBehaviour
 					//HTC: -0.23..-0.08  +0.1...0.25  m1:-0.155 m2=0.18 (rengeteg hasonló delayű készülékünk van)
 					//NX5 -0.14..0.01  m=-0.074 (kevés hasonló delayű készülékünk van)
 					//választott anti-delay: -0.12 (majdnem a HTC medianja, kicsit a NX5 tartományába betolva)
-					float antiDelay=0.0f;
+					float antiDelay = 0.0f;
 #if UNITY_ANDROID && !UNITY_EDITOR
 					antiDelay=-0.12f;
 #endif
 					music.PlayScheduled(AudioSettings.dspTime + 0.333f + antiDelay);
-					ball.prevMusicTimeDouble=AudioSettings.dspTime;
+					ball.prevMusicTimeDouble = AudioSettings.dspTime;
 //					GA.StartLevel((GetStageIndex()+1).ToString());
-				} break;
-            case eState.results_fail:
+				}
+				break;
+			case eState.results_fail:
 				{
 					ReportAchievements();
 				
@@ -348,8 +347,8 @@ public class Gamelogic : MonoBehaviour
 					ingameBgr.SetBgr(true);
 					ingameBgr.PlayFadeAnim(false);
 					hud.gameObject.SetActive(false);
-                    ball.SetActive(false);
-                    music.Stop();
+					ball.SetActive(false);
+					music.Stop();
 
 					SoundManager.Instance.Play(SoundManager.eSoundClip.Game_End_Splat_01, 1);
 
@@ -359,7 +358,7 @@ public class Gamelogic : MonoBehaviour
 					r.Score = Mathf.RoundToInt(progress * 100f);
 					int userBest = User.GetLevelScore(_stageIndex);
 					r.BestScore = userBest;
-					if(r.Score > r.BestScore)
+					if (r.Score > r.BestScore)
 					{
 						if (_stageIndex == -1)
 						{
@@ -374,8 +373,9 @@ public class Gamelogic : MonoBehaviour
 					}
 					User.SetLevelScore(_stageIndex, r.Score);
 					User.SetLevelRecord(_stageIndex, ball.transform.position.x);
-                    world.FallPlatforms(false);
-                    Util.CallWithDelay(() => { CGame.popupLayer.ShowResultsGUI(r); }, 0.5f);
+					world.FallPlatforms(false);
+					Util.CallWithDelay(() => {
+						CGame.popupLayer.ShowResultsGUI(r); }, 0.5f);
 
 					//PluginManager.analytics.TrackEvent(eEvent.playOnLevel, new Dictionary<string, string> { { "percent", ((int)(r.Score / 10) * 10).ToString() } });
 
@@ -394,11 +394,12 @@ public class Gamelogic : MonoBehaviour
 //							CGame.Instance.AskForReview();
 //                        }
 //                    }
-                    User.SaveAData();
+					User.SaveAData();
 
 //					GA.FailLevel((GetStageIndex()+1).ToString());
-                } break;
-            case eState.results_success:
+				}
+				break;
+			case eState.results_success:
 				{
 					ReportAchievements();
 			
@@ -406,8 +407,8 @@ public class Gamelogic : MonoBehaviour
 					ball.SetActive(false);
 					music.Stop();
 					
-					SoundManager.Instance.Play (SoundManager.eSoundClip.End_Success, 1);
-                    ingameBgr.PlayFadeAnim(true);
+					SoundManager.Instance.Play(SoundManager.eSoundClip.End_Success, 1);
+					ingameBgr.PlayFadeAnim(true);
 
 					if (recordMarker != null)
 						Destroy(recordMarker.gameObject);
@@ -423,7 +424,7 @@ public class Gamelogic : MonoBehaviour
 					int userBest = User.GetLevelScore(_stageIndex);
 
 					r.BestScore = userBest;
-					if(r.Score > r.BestScore)
+					if (r.Score > r.BestScore)
 					{
 						if (_stageIndex == -1)
 						{
@@ -441,32 +442,36 @@ public class Gamelogic : MonoBehaviour
 					
 					if (_stageIndex >= 0)
 					{
-						PluginManager.social.ReportAchievement( (eAchievement)((int)(eAchievement.stage1) + _stageIndex), 100);
+						PluginManager.social.ReportAchievement((eAchievement)((int)(eAchievement.stage1) + _stageIndex), 100);
 						PluginManager.social.SubmitScore(eLeaderboard.CompletedLevels, _stageIndex + 1);
 					}
 					
-                    world.FallPlatforms(true);
+					world.FallPlatforms(true);
 
-					GameObject go = new GameObject ("BallParent");
+					GameObject go = new GameObject("BallParent");
 					go.transform.position = CGame.gamelogic.ball.transform.position;
 					go.transform.parent = CGame.gamelogic.transform;
 					CGame.gamelogic.ball.transform.parent = go.transform;
 					CGame.gamelogic.ball.transform.localPosition = Vector3.zero;
 					CGame.gamelogic.ball.GetComponent<Animation>().clip = CGame.gamelogic.ball.GetComponent<Animation>() ["ball_poing"].clip;
-					CGame.gamelogic.ball.GetComponent<Animation>().Play ();
+					CGame.gamelogic.ball.GetComponent<Animation>().Play();
 
 					StartCoroutine(ZoomFinish(go.transform));
 
 
-                    //PluginManager.analytics.TrackEvent(eEvent.playOnLevel, new Dictionary<string, string> { { "percent", ((int)(r.Score / 10) * 10).ToString() } });
-                    Util.CallWithDelay(() => { CGame.popupLayer.ShowResultsSuccessGUI(r); }, 0.5f);
+					//PluginManager.analytics.TrackEvent(eEvent.playOnLevel, new Dictionary<string, string> { { "percent", ((int)(r.Score / 10) * 10).ToString() } });
+					Util.CallWithDelay(() => {
+						CGame.popupLayer.ShowResultsSuccessGUI(r); }, 0.5f);
 
 					if (_stageIndex != -1)
 					{
-						if (PlayerPrefs.GetInt ("TVMode", 0) != 1 && _stageIndex<1) {
+						if (PlayerPrefs.GetInt("TVMode", 0) != 1 && _stageIndex < 1)
+						{
 							User.CompleteStage(_stageIndex);
-						}else{
-							if (!User.HasIAP_UnlockAll) {
+						} else
+						{
+							if (!User.HasIAP_UnlockAll)
+							{
 //								#if UNITY_ANDROID
 //								EtceteraAndroidManager.alertButtonClickedEvent += UnlockAll;
 //								EtceteraAndroid.showAlert ("解锁全部关卡", TextManager.Get ("Unlock all info"), "好的", "取消");
@@ -487,26 +492,30 @@ public class Gamelogic : MonoBehaviour
 //					{
 //						CGame.Instance.AskForReview();
 //                    }
-                    User.SaveAData();
+					User.SaveAData();
 //					GA.FinishLevel((GetStageIndex()+1).ToString());
-                } break;
-        }
-    }
+				}
+				break;
+		}
+	}
     
-	void UnlockAll (string s)
+	void UnlockAll(string s)
 	{
-		if (s == "好的") {
-			if (PlayerPrefs.GetInt ("DebugMode", 0) != 1) {
-				CGame.popupLayer.ShowPurchaseLoadingGUI ();
-				ReinPluginManager.Purchase ("UnlockAll");
-			} else {
-				CGame.Instance.gameObject.SendMessage ("OnPurchaseSuccess");
+		if (s == "好的")
+		{
+			if (PlayerPrefs.GetInt("DebugMode", 0) != 1)
+			{
+				CGame.popupLayer.ShowPurchaseLoadingGUI();
+				ReinPluginManager.Purchase("UnlockAll");
+			} else
+			{
+				CGame.Instance.gameObject.SendMessage("OnPurchaseSuccess");
 			}
 		}
 	}
 
-    void ReportAchievements()
-    {
+	void ReportAchievements()
+	{
 		PluginManager.social.ReportAchievement(eAchievement.jump_up_100, (float)User.JumpUpCount / 100f * 100f);
 		PluginManager.social.ReportAchievement(eAchievement.jump_up_200, (float)User.JumpUpCount / 200f * 100f);
 		PluginManager.social.ReportAchievement(eAchievement.jump_up_500, (float)User.JumpUpCount / 500f * 100f);

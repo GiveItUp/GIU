@@ -443,8 +443,8 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 0
-      width: 1
-      height: .281738281
+      width: .75
+      height: .421875
     scaleFactor: {x: .5, y: .5}
     topLeftOffset: {x: -1, y: 1}
     bottomRightOffset: {x: 1, y: -1}
@@ -500,9 +500,9 @@ MonoBehaviour:
     uvs:
       serializedVersion: 2
       x: 0
-      y: .282226562
-      width: 1
-      height: .281738281
+      y: .422851562
+      width: .75
+      height: .421875
     scaleFactor: {x: .5, y: .5}
     topLeftOffset: {x: -1, y: 1}
     bottomRightOffset: {x: 1, y: -1}
@@ -558,9 +558,9 @@ MonoBehaviour:
     uvs:
       serializedVersion: 2
       x: 0
-      y: .282226562
-      width: 1
-      height: .281738281
+      y: .422851562
+      width: .75
+      height: .421875
     scaleFactor: {x: .5, y: .5}
     topLeftOffset: {x: -1, y: 1}
     bottomRightOffset: {x: 1, y: -1}
