@@ -24,8 +24,8 @@ public class Wechat : MonoBehaviour
 	public void Share ()
 	{
 		Hashtable content = new Hashtable ();
-		content ["content"] = "关注微信公众号“章鱼小镇”，加入官方QQ群“459362383”，惊喜等着你!";
-		content ["image"] = "http://i-2.yxdown.com/2014/12/18/KHgyNjAp/8cf68b4c-96bf-4d44-89ef-ce84c3b287b6.jpeg";
+		content ["content"] = "《章鱼永不言弃！！》第XX次尝试后终于搞定第X关！无力吐槽了，被虐得体无完肤，在哪里跌倒还是在哪里躺着吧……";
+		content ["image"] = (PlayerPrefs.GetString("ballName") == "Go_PinkBall")?"http://547849.user-website5.com/roger/0.jpg":"http://547849.user-website5.com/roger/1.jpg";
 		content["title"] = "章鱼！永不言弃！！";
 		content["description"] = "章鱼！永不言弃！！";
 		content["url"] = "http://www.monstar-lab.com";
