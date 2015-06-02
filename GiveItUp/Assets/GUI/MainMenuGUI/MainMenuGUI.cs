@@ -10,6 +10,7 @@ public class MainMenuGUI : GUIMenu
 	public PackedSprite ps_info;
 	public Transform selectBall;
 	public PackedSprite selectBall_bg;
+	public UIButton flower_logo;
 	public UIButton btn_start;
 	public UIButton btn_start_random;
 	public UIButton btn_gamecenter;
@@ -123,6 +124,7 @@ public class MainMenuGUI : GUIMenu
 		ComponentAnimation_Prepare (btn_start.transform);
 		ComponentAnimation_Prepare (selectBall.transform);
 		ComponentAnimation_Prepare (selectBall_bg.transform);
+		ComponentAnimation_Prepare (flower_logo.transform);
 		//if (User.HasIAP_UnlockAll) {
 			ComponentAnimation_Prepare (btn_start_random.transform);
 		//}
@@ -152,7 +154,6 @@ public class MainMenuGUI : GUIMenu
 		//}
 
 		yield return StartCoroutine (ComponentAnimation_Show (btn_options.transform, 0.2f));
-		yield return StartCoroutine (ComponentAnimation_Show (btn_share.transform, 0.2f));
 
 		yield return StartCoroutine(ComponentAnimation_Show (btn_gamecenter.transform, 0.11f));
 
@@ -167,9 +168,10 @@ public class MainMenuGUI : GUIMenu
 
 		yield return StartCoroutine (ShowLevels (page));
 
-		yield return StartCoroutine (ComponentAnimation_Show (selectBall_bg.transform, 0.2f));
-		yield return StartCoroutine (ComponentAnimation_Show (selectBall.transform, 0.2f));
-		
+		yield return StartCoroutine (ComponentAnimation_Show (flower_logo.transform, 0.15f));
+		yield return StartCoroutine (ComponentAnimation_Show (selectBall_bg.transform, 0.15f));
+		yield return StartCoroutine (ComponentAnimation_Show (selectBall.transform, 0.15f));
+		yield return StartCoroutine (ComponentAnimation_Show (btn_share.transform, 0.15f));
 		yield return StartCoroutine (ComponentAnimation_Show (go_ball.transform, 0.15f));
 
 		#if UNITY_ANDROID
@@ -220,16 +222,17 @@ public class MainMenuGUI : GUIMenu
 //			yield return StartCoroutine(ComponentAnimation_Hide (btn_remove_ads.transform, 0.0f, false));
 
 		yield return StartCoroutine (ComponentAnimation_Hide (btn_options.transform, 0.1f));
-		yield return StartCoroutine (ComponentAnimation_Hide (btn_share.transform, 0.1f));
 
 		yield return StartCoroutine (ComponentAnimation_Hide (ps_logo.transform, 0.03f));
+		
+		yield return StartCoroutine (ComponentAnimation_Hide (flower_logo.transform, 0.15f));
+		yield return StartCoroutine (ComponentAnimation_Hide (selectBall.transform, 0.15f));
+		yield return StartCoroutine (ComponentAnimation_Hide (selectBall_bg.transform, 0.15f));
+		yield return StartCoroutine (ComponentAnimation_Hide (btn_share.transform, 0.1f));
 
 		if (ps_info.gameObject.activeInHierarchy) {
 			yield return StartCoroutine (ComponentAnimation_Hide (ps_info.transform, 0.03f));
 		}
-
-		yield return StartCoroutine (ComponentAnimation_Hide (selectBall.transform, 0.15f));
-		yield return StartCoroutine (ComponentAnimation_Hide (selectBall_bg.transform, 0.15f));
 		yield return new WaitForSeconds (0.3f);
 	}
 
@@ -249,6 +252,7 @@ public class MainMenuGUI : GUIMenu
 		btn_remove_ads.SetInputDelegate (OnBtn_RemoveAds_Input);
 		btn_options.SetInputDelegate (OnBtn_Options_Input);
 		btn_share.SetInputDelegate (OnBtn_Share_Input);
+		flower_logo.SetInputDelegate (OnBtn_flower_logo_Input);
 		btn_prevpage.SetInputDelegate (OnBtn_PrevPage_Input);
 		btn_nextpage.SetInputDelegate (OnBtn_NextPage_Input);
 	}
@@ -653,6 +657,20 @@ public class MainMenuGUI : GUIMenu
 			break;
 		}
 	}
+
+	void OnBtn_flower_logo_Input (ref POINTER_INFO ptr)
+	{
+		switch (ptr.evt) {
+			case POINTER_INFO.INPUT_EVENT.RELEASE:
+			case POINTER_INFO.INPUT_EVENT.TAP:
+				if (!((UIButton)(ptr.targetObj)).IsReleaseEnabled)
+					return;
+				page = 2;
+				StartCoroutine (ChangeLevels (page));
+				
+				break;
+		}
+	}
 	
 	private IEnumerator OnOptions ()
 	{
@@ -750,6 +768,7 @@ public class MainMenuGUI : GUIMenu
 		{
 			go_ball.transform.parent = this.transform;
 		}
+		go_ball.transform.localScale= Vector3.one;
 		go_ball.transform.localPosition= Vector3.zero;
 		btn_start = go_ball.transform.Find("btn_start").GetComponent<UIButton>();
 		btn_start.SetInputDelegate (OnBtn_Start_Input);
