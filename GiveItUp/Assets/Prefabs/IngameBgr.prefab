@@ -110,7 +110,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -158,7 +158,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 107286}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .0500000007, y: -.0500000007, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 483366}
@@ -189,7 +189,7 @@ Transform:
   m_Father: {fileID: 400000}
   m_RootOrder: 1
 --- !u!23 &2300000
-MeshRenderer:
+Renderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -197,23 +197,19 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 6c3cd0cb58ef593438143385e53aff6e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
 --- !u!23 &2300004
-MeshRenderer:
+Renderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -221,23 +217,19 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 8f78c086ce5df4b4fa22cfadb6b4db30, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
 --- !u!23 &2382446
-MeshRenderer:
+Renderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -245,23 +237,19 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 8f78c086ce5df4b4fa22cfadb6b4db30, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
 --- !u!23 &2383366
-MeshRenderer:
+Renderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -269,23 +257,19 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 8f78c086ce5df4b4fa22cfadb6b4db30, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
 --- !u!23 &2392428
-MeshRenderer:
+Renderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -293,19 +277,15 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
   - {fileID: 2100000, guid: 8f78c086ce5df4b4fa22cfadb6b4db30, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
 --- !u!33 &3300000
@@ -400,6 +380,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   go_bgr: {fileID: 192428}
+  go_bgr_1: {fileID: 183366}
   lbl_progress: {fileID: 11400002}
 --- !u!114 &11400002
 MonoBehaviour:
@@ -480,8 +461,8 @@ MonoBehaviour:
   persistent: 0
   plane: 0
   winding: 1
-  width: 1.12
-  height: 1.12
+  width: 1
+  height: 1
   bleedCompensation: {x: 0, y: 0}
   anchor: 9
   pixelPerfect: 0
@@ -490,7 +471,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   color: {r: 1, g: 1, b: 1, a: 1}
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 512, y: 1024}
+  pixelsPerUV: {x: 1024, y: 1024}
   hideAtStart: 0
   ignoreClipping: 0
   playAnimOnStart: 0
@@ -504,9 +485,9 @@ MonoBehaviour:
     uvs:
       serializedVersion: 2
       x: 0
-      y: 0
-      width: 1.109375
-      height: .3125
+      y: .317382812
+      width: .5625
+      height: .31640625
     scaleFactor: {x: .5, y: .5}
     topLeftOffset: {x: -1, y: 1}
     bottomRightOffset: {x: 1, y: -1}
@@ -514,9 +495,9 @@ MonoBehaviour:
     uvs:
       serializedVersion: 2
       x: 0
-      y: 0
-      width: 1.109375
-      height: .3125
+      y: .317382812
+      width: .5625
+      height: .31640625
     scaleFactor: {x: .5, y: .5}
     topLeftOffset: {x: -1, y: 1}
     bottomRightOffset: {x: 1, y: -1}
@@ -548,7 +529,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   color: {r: 1, g: 1, b: 1, a: 1}
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 512, y: 1024}
+  pixelsPerUV: {x: 1024, y: 1024}
   hideAtStart: 0
   ignoreClipping: 0
   playAnimOnStart: 0
@@ -562,9 +543,9 @@ MonoBehaviour:
     uvs:
       serializedVersion: 2
       x: 0
-      y: .312988281
-      width: 1
-      height: .281738281
+      y: .634765625
+      width: .5625
+      height: .31640625
     scaleFactor: {x: .5, y: .5}
     topLeftOffset: {x: -1, y: 1}
     bottomRightOffset: {x: 1, y: -1}
@@ -572,9 +553,9 @@ MonoBehaviour:
     uvs:
       serializedVersion: 2
       x: 0
-      y: .312988281
-      width: 1
-      height: .281738281
+      y: .634765625
+      width: .5625
+      height: .31640625
     scaleFactor: {x: .5, y: .5}
     topLeftOffset: {x: -1, y: 1}
     bottomRightOffset: {x: 1, y: -1}
@@ -620,9 +601,9 @@ MonoBehaviour:
     uvs:
       serializedVersion: 2
       x: 0
-      y: .595214844
-      width: 1
-      height: .281738281
+      y: 0
+      width: .5625
+      height: .31640625
     scaleFactor: {x: .5, y: .5}
     topLeftOffset: {x: -1, y: 1}
     bottomRightOffset: {x: 1, y: -1}
@@ -678,9 +659,9 @@ MonoBehaviour:
     uvs:
       serializedVersion: 2
       x: 0
-      y: .595214844
-      width: 1
-      height: .281738281
+      y: 0
+      width: .5625
+      height: .31640625
     scaleFactor: {x: .5, y: .5}
     topLeftOffset: {x: -1, y: 1}
     bottomRightOffset: {x: 1, y: -1}
@@ -706,3 +687,4 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}
   m_IsPrefabParent: 1
+  m_IsExploded: 1

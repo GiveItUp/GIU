@@ -160,11 +160,11 @@ public class Gamelogic : MonoBehaviour
 		if (_stageIndex == 18 || _stageIndex == 19 || _stageIndex == 20)
 		{
 			Petal.SetActive(true);
-			ingameBgr.gameObject.transform.FindChild("bgr_1").gameObject.SetActive(true);
+			ingameBgr.ChangeBg(1);
 		} else
 		{
 			Petal.SetActive(false);
-			ingameBgr.gameObject.transform.FindChild("bgr_1").gameObject.SetActive(false);
+			ingameBgr.ChangeBg(0);
 		}
 
 		ChangeState(eState.menu);

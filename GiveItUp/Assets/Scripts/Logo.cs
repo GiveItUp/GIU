@@ -8,16 +8,15 @@ public class Logo : MonoBehaviour
 	IEnumerator Start ()
 	{
 		go = GameObject.Instantiate (Resources.Load ("Prefabs/Monstar/logo1")) as GameObject;
-		yield return new WaitForSeconds (2);
+		yield return new WaitForSeconds (1);
 		Destroy (go);
 		go = GameObject.Instantiate (Resources.Load ("Prefabs/Monstar/logo2")) as GameObject;
-		yield return new WaitForSeconds (2);
+		yield return new WaitForSeconds (1);
 		Destroy (go);
 		go = GameObject.Instantiate (Resources.Load ("Prefabs/Monstar/logo3")) as GameObject;
-		yield return new WaitForSeconds (2);
+		yield return new WaitForSeconds (1);
 		Destroy (go);
 		go = GameObject.Instantiate (Resources.Load ("Prefabs/Monstar/logo4")) as GameObject;
-		yield return new WaitForSeconds (1);
 		Application.LoadLevel (1);
 	}
 	

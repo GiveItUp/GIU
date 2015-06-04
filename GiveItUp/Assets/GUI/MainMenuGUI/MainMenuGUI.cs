@@ -69,8 +69,9 @@ public class MainMenuGUI : GUIMenu
 		//ChangeLevel(User.ActualStage >= User.LastPlayedStage ? User.LastPlayedStage : User.ActualStage);
 		ChangeLevel (User.LastPlayedStage);
 		//Debug.Log ("act = " + User.LastPlayedStage);
-		actualPage = User.LastPlayedStage < 18 ? 0 : 1;
+	//	actualPage = User.LastPlayedStage < 18 ? 0 : 1;
 		page = PlayerPrefs.GetInt("page",0);
+		actualPage = page;
 		//ChangeLevels (page);
 
 		StartCoroutine (PlayShowAnim ());
@@ -318,8 +319,18 @@ public class MainMenuGUI : GUIMenu
 				return lit;
 		return null;
 	}
+	int a=0;
+	int actualPage {
+		get{return a;}
+		set{
+			if(a != 1 && value == 1)
+			{
+				a = 1; 
+			}
+			a = value;
 
-	int actualPage = 0;
+		}
+	}
 
 	private IEnumerator ChangeLevels (int page)
 	{
@@ -345,11 +356,11 @@ public class MainMenuGUI : GUIMenu
 		//foreach (var lit in levelItemGUIs)
 		for (int i = startIndex; i < levelItemGUIs.Count && i < endIndex; i++)
 			yield return StartCoroutine (ComponentAnimation_Show (levelItemGUIs [i].transform, 0.07f));
-		if(actualPage!=0)
+		if(actualPage!=0 && actualPage != 2)
 		{
 			btn_prevpage.gameObject.SetActive(true);
 		}
-		if(actualPage!=2)
+		if(actualPage!= 1 && actualPage != 2)
 		{
 			btn_nextpage.gameObject.SetActive(true);
 		}
@@ -665,9 +676,20 @@ public class MainMenuGUI : GUIMenu
 			case POINTER_INFO.INPUT_EVENT.TAP:
 				if (!((UIButton)(ptr.targetObj)).IsReleaseEnabled)
 					return;
-				page = 2;
-				StartCoroutine (ChangeLevels (page));
+				if(!PlayerPrefs.HasKey("flower"))
+				{
+					PlayerPrefs.SetInt("flower",page);
+					PlayerPrefs.Save();
+					page = 2;
+				}else
+				{
+					page = PlayerPrefs.GetInt("flower");
+					PlayerPrefs.DeleteKey("flower");
+				}
 				
+				
+				StartCoroutine (ChangeLevels (page));
+
 				break;
 		}
 	}

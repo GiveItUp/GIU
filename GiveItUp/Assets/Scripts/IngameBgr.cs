@@ -4,6 +4,9 @@ using System.Collections;
 public class IngameBgr : MonoBehaviour {
 
 	public GameObject go_bgr;
+	public GameObject go_bgr_1;
+	private GameObject go_bgr_temp;
+	private bool m_failed;
 	//public GameObject go_bgr_failed;
 	public SpriteText lbl_progress;
 	
@@ -19,8 +22,25 @@ public class IngameBgr : MonoBehaviour {
 
 	public void SetBgr(bool failed)
 	{
-		go_bgr.GetComponent<Renderer>().material.color = failed ? new Color(0.5f, 0f, 0f) : new Color (0.5f, 0.5f, 0.5f);
-		go_bgr.transform.localScale = new Vector3 ((7f * (float)Screen.width) / (float)Screen.height, 7, 1);
+		m_failed = failed;
+		go_bgr_temp.GetComponent<Renderer>().material.color = failed ? new Color(0.5f, 0f, 0f) : new Color (0.5f, 0.5f, 0.5f);
+		go_bgr_temp.transform.localScale = new Vector3 ((7f * (float)Screen.width) / (float)Screen.height, 7, 1);
+	}
+
+	public void ChangeBg(int index)
+	{
+		if(index == 1)
+		{
+			go_bgr.SetActive(false);
+			go_bgr_1.SetActive(true);
+			go_bgr_temp = go_bgr_1;
+		}else
+		{
+			go_bgr.SetActive(true);
+			go_bgr_1.SetActive(false);
+			go_bgr_temp = go_bgr;
+		}
+
 	}
 
 	private float animProgress = -1;
@@ -38,7 +58,7 @@ public class IngameBgr : MonoBehaviour {
 			if(animProgress > 1)
 				animProgress = 1;
 
-			go_bgr.GetComponent<Renderer>().material.color = Color.Lerp(_success ? new Color(0f, 0.5f, 0f) : new Color(0.5f, 0f, 0f), new Color (0.5f, 0.5f, 0.5f), animProgress);
+			go_bgr_temp.GetComponent<Renderer>().material.color = Color.Lerp(_success ? new Color(0f, 0.5f, 0f) : new Color(0.5f, 0f, 0f), new Color (0.5f, 0.5f, 0.5f), animProgress);
 
 			if(animProgress == 1)
 				animProgress = -1;
