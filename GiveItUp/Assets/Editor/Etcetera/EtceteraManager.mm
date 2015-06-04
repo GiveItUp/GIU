@@ -22,6 +22,7 @@ void UnitySendMessage( const char * className, const char * methodName, const ch
 
 UIViewController *UnityGetGLViewController();
 
+void UnityPause( bool pause ){}
 
 UIColor * ColorFromHex( int hexcolor )
 {
