@@ -1,4 +1,4 @@
-﻿#
+#
 Daily challenge#不服来战
 Stage #关卡
 and your {0}. try...#你的第{0}次挑战
@@ -92,4 +92,4 @@ Update notes:#《章鱼!永不言弃!!》 是iOS付费排行榜第1的《永不�
 ** New crazy music#全新谱写的日式摇滚
 NEW#新纪录！
 Unlock all info#12元立刻解锁全部关卡！
-Player group#关注微信公众号"章鱼小镇"或加入官方QQ群"459362383"有惊喜!
+Player group#关注微信公众号"章鱼小镇”，加入官方QQ群"459362383"惊喜等着你!
