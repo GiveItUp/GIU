@@ -16,6 +16,7 @@ public class PopupLayer : MonoBehaviour {
 	public ResultsSuccessGUI p_ResultsSuccessGUI;
 	public InfoPopupGUI p_InfoPopupGUI;
 	public UpdatePopupGUI p_UpdatePopupGUI;
+	public GiftBagPopupGUI p_GiftBagPopupGUI;
 	public PurchaseLoadingGUI p_PurchaseLoadingGUI;
 	public OptionsGUI p_OptionsGUI;
 	public TutorialGUI p_TutorialGUI;
@@ -196,6 +197,31 @@ public class PopupLayer : MonoBehaviour {
 			GameObject.Destroy(optionsGUI.gameObject);
 		}
 		optionsGUI = null;
+	}
+	#endregion
+
+	#region GiftBagPopupGUI
+	private GiftBagPopupGUI giftBagPopupGUI;
+	
+	public void ShowGiftBagPopupGUI()
+	{
+		CloseGiftBagPopupGUI();
+		
+		ACTUAL_Z -= DISTANCE_Z;
+		giftBagPopupGUI = GameObject.Instantiate(p_GiftBagPopupGUI) as GiftBagPopupGUI;
+		giftBagPopupGUI.transform.parent = transform;
+		giftBagPopupGUI.transform.localPosition = new Vector3(0, 0, ACTUAL_Z);
+		giftBagPopupGUI.Init();
+	}
+	
+	public void CloseGiftBagPopupGUI()
+	{
+		if (giftBagPopupGUI != null)
+		{
+			ACTUAL_Z += DISTANCE_Z;
+			GameObject.Destroy(giftBagPopupGUI.gameObject);
+		}
+		giftBagPopupGUI = null;
 	}
 	#endregion
 

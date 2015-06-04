@@ -10,13 +10,16 @@ public class MainMenuGUI : GUIMenu
 	//	public PackedSprite ps_info;
 	public Transform selectBall;
 	public PackedSprite selectBall_bg;
-	public UIButton flower_logo;
+	public UIButton[] flower_logos;
+	private int flowerFlg = 0;
+	public UIButton btn_GiftBag;
 	public UIButton btn_start;
 	private UIButton btn_ballStart;
 	public UIButton btn_start_random;
 	public UIButton btn_gamecenter;
 	public UIButton btn_moregames;
 	public UIButton btn_unlock_all;
+	public UIButton btn_EliminateAds;
 	public UIButton btn_remove_ads;
 	public UIButton btn_options;
 	public UIButton btn_share;
@@ -73,6 +76,8 @@ public class MainMenuGUI : GUIMenu
 	//	actualPage = User.LastPlayedStage < 18 ? 0 : 1;
 		page = PlayerPrefs.GetInt("page",0);
 		actualPage = page;
+
+		PlayerPrefs.DeleteKey("flower");
 		//ChangeLevels (page);
 
 		StartCoroutine (PlayShowAnim ());
@@ -126,13 +131,15 @@ public class MainMenuGUI : GUIMenu
 		ComponentAnimation_Prepare (btn_start.transform);
 		ComponentAnimation_Prepare (selectBall.transform);
 		ComponentAnimation_Prepare (selectBall_bg.transform);
-		ComponentAnimation_Prepare (flower_logo.transform);
+		ComponentAnimation_Prepare (flower_logos[flowerFlg].transform);
 		//if (User.HasIAP_UnlockAll) {
 			ComponentAnimation_Prepare (btn_start_random.transform);
 		//}
 		ComponentAnimation_Prepare (btn_gamecenter.transform);
 		//ComponentAnimation_Prepare (btn_moregames.transform);
 		ComponentAnimation_Prepare (btn_unlock_all.transform);
+		ComponentAnimation_Prepare (btn_GiftBag.transform);
+		ComponentAnimation_Prepare (btn_EliminateAds.transform);
 		//ComponentAnimation_Prepare (btn_remove_ads.transform);
 		ComponentAnimation_Prepare (btn_options.transform);
 		ComponentAnimation_Prepare (btn_share.transform);
@@ -165,12 +172,13 @@ public class MainMenuGUI : GUIMenu
 		//			yield return StartCoroutine(ComponentAnimation_Show (btn_remove_ads.transform, 0.0f, false));
 		if (!User.HasIAP_UnlockAll)
 			yield return StartCoroutine (ComponentAnimation_Show (btn_unlock_all.transform, 0.1f, false));
-
+		yield return StartCoroutine (ComponentAnimation_Show (btn_GiftBag.transform, 0.1f, false));
+		yield return StartCoroutine (ComponentAnimation_Show (btn_EliminateAds.transform, 0.1f, false));
 		//SoundManager.Instance.Play(SoundManager.eSoundClip.GUI_PopupShowComponent, 1);
 
 		yield return StartCoroutine (ShowLevels (page));
 
-		yield return StartCoroutine (ComponentAnimation_Show (flower_logo.transform, 0.15f));
+		yield return StartCoroutine (ComponentAnimation_Show (flower_logos[flowerFlg].transform, 0.15f));
 		yield return StartCoroutine (ComponentAnimation_Show (selectBall_bg.transform, 0.15f));
 		yield return StartCoroutine (ComponentAnimation_Show (selectBall.transform, 0.15f));
 		yield return StartCoroutine (ComponentAnimation_Show (btn_share.transform, 0.15f));
@@ -219,6 +227,8 @@ public class MainMenuGUI : GUIMenu
 		
 		if (!User.HasIAP_UnlockAll)
 			yield return StartCoroutine (ComponentAnimation_Hide (btn_unlock_all.transform, 0.1f, false));
+		yield return StartCoroutine (ComponentAnimation_Hide (btn_GiftBag.transform, 0.1f, false));
+		yield return StartCoroutine (ComponentAnimation_Hide (btn_EliminateAds.transform, 0.1f, false));
 		
 //		if(!User.HasIAP_RemoveAds && !User.IsPremium)
 //			yield return StartCoroutine(ComponentAnimation_Hide (btn_remove_ads.transform, 0.0f, false));
@@ -227,7 +237,7 @@ public class MainMenuGUI : GUIMenu
 
 		yield return StartCoroutine (ComponentAnimation_Hide (ps_logo.transform, 0.03f));
 		
-		yield return StartCoroutine (ComponentAnimation_Hide (flower_logo.transform, 0.15f));
+		yield return StartCoroutine (ComponentAnimation_Hide (flower_logos[flowerFlg].transform, 0.15f));
 		yield return StartCoroutine (ComponentAnimation_Hide (selectBall.transform, 0.15f));
 		yield return StartCoroutine (ComponentAnimation_Hide (selectBall_bg.transform, 0.15f));
 		yield return StartCoroutine (ComponentAnimation_Hide (btn_share.transform, 0.1f));
@@ -251,10 +261,12 @@ public class MainMenuGUI : GUIMenu
 		btn_gamecenter.SetInputDelegate (OnBtn_GameCenter_Input);
 		btn_moregames.SetInputDelegate (OnBtn_MoreGames_Input);
 		btn_unlock_all.SetInputDelegate (OnBtn_UnlockAll_Input);
+		btn_GiftBag.SetInputDelegate (OnBtn_GiftBag_Input);
+		btn_EliminateAds.SetInputDelegate (OnBtn_EliminateAds_Input);
 		btn_remove_ads.SetInputDelegate (OnBtn_RemoveAds_Input);
 		btn_options.SetInputDelegate (OnBtn_Options_Input);
 		btn_share.SetInputDelegate (OnBtn_Share_Input);
-		flower_logo.SetInputDelegate (OnBtn_flower_logo_Input);
+		flower_logos[flowerFlg].SetInputDelegate (OnBtn_flower_logo_Input);
 		btn_prevpage.SetInputDelegate (OnBtn_PrevPage_Input);
 		btn_nextpage.SetInputDelegate (OnBtn_NextPage_Input);
 	}
@@ -340,8 +352,11 @@ public class MainMenuGUI : GUIMenu
 		yield return StartCoroutine (HideLevels (actualPage));
 
 		actualPage = page;
-		PlayerPrefs.SetInt("page",page);
-		PlayerPrefs.Save();
+		if(page<2)
+		{
+			PlayerPrefs.SetInt("page",page);
+			PlayerPrefs.Save();
+		}
 
 		go_levels_1.gameObject.SetActive (actualPage == 0);
 		go_levels_2.gameObject.SetActive (actualPage == 1);
@@ -456,6 +471,8 @@ public class MainMenuGUI : GUIMenu
 
 		btn_remove_ads.transform.localPosition = new Vector3 (w - 75, h - 70, -1);
 		btn_unlock_all.transform.localPosition = new Vector3 (w - 80, User.HasIAP_RemoveAds || User.IsPremium ? h - 70 : h - 180, -1);
+		btn_GiftBag.transform.localPosition = btn_unlock_all.transform.localPosition-new Vector3(0,120,0);
+		btn_EliminateAds.transform.localPosition = btn_GiftBag.transform.localPosition-new Vector3(-20,130,0);
 
 		btn_options.transform.localPosition = new Vector3 (w - 80, h - 65, -1);
 		
@@ -565,6 +582,30 @@ public class MainMenuGUI : GUIMenu
 		if (_inputEnabled) {
 			SoundManager.PlayButtonTapSound ();
 			//Upsight.sendContentRequest ("more_games", true, false);
+		}
+	}
+
+	void OnBtn_EliminateAds_Input (ref POINTER_INFO ptr)
+	{
+		switch (ptr.evt) {
+		case POINTER_INFO.INPUT_EVENT.RELEASE:
+		case POINTER_INFO.INPUT_EVENT.TAP:
+			if (!((UIButton)(ptr.targetObj)).IsReleaseEnabled)
+				return;
+			
+			break;
+		}
+	}
+
+	void OnBtn_GiftBag_Input (ref POINTER_INFO ptr)
+	{
+		switch (ptr.evt) {
+		case POINTER_INFO.INPUT_EVENT.RELEASE:
+		case POINTER_INFO.INPUT_EVENT.TAP:
+			if (!((UIButton)(ptr.targetObj)).IsReleaseEnabled)
+				return;
+			CGame.popupLayer.ShowGiftBagPopupGUI();
+			break;
 		}
 	}
 	
@@ -677,22 +718,29 @@ public class MainMenuGUI : GUIMenu
 			case POINTER_INFO.INPUT_EVENT.TAP:
 				if (!((UIButton)(ptr.targetObj)).IsReleaseEnabled)
 					return;
-				if(!PlayerPrefs.HasKey("flower"))
-				{
-					PlayerPrefs.SetInt("flower",page);
-					PlayerPrefs.Save();
-					page = 2;
-				}else
-				{
-					page = PlayerPrefs.GetInt("flower");
-					PlayerPrefs.DeleteKey("flower");
-				}
-				
-				
-				StartCoroutine (ChangeLevels (page));
-
+				ChangeFlower();
 				break;
 		}
+	}
+
+	private void ChangeFlower()
+	{
+		flower_logos[flowerFlg].gameObject.SetActive(false);
+		if(!PlayerPrefs.HasKey("flower"))
+		{
+			PlayerPrefs.SetInt("flower",page);
+			PlayerPrefs.Save();
+			page = 2;
+			flowerFlg = 1;
+		}else
+		{
+			page = PlayerPrefs.GetInt("flower");
+			PlayerPrefs.DeleteKey("flower");
+			flowerFlg = 0;
+		}
+		flower_logos[flowerFlg].gameObject.SetActive(true);
+		flower_logos[flowerFlg].SetInputDelegate (OnBtn_flower_logo_Input);
+		StartCoroutine (ChangeLevels (page));
 	}
 	
 	private IEnumerator OnOptions ()

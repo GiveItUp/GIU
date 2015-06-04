@@ -44,6 +44,7 @@ MonoBehaviour:
     type: 2}
   p_InfoPopupGUI: {fileID: 11400006, guid: a695d2d201484dc43ae9022eebe08066, type: 2}
   p_UpdatePopupGUI: {fileID: 11459836, guid: 854580ea4aa3c804ab3f484545fd9bbb, type: 2}
+  p_GiftBagPopupGUI: {fileID: 11425034, guid: 846846acd643943288880cbda653c5f9, type: 2}
   p_PurchaseLoadingGUI: {fileID: 11400000, guid: acdd2e4a9e79946459f055f96fbbaa66,
     type: 2}
   p_OptionsGUI: {fileID: 11400000, guid: f6878fa987dab7c4da3fa8250b7bd62a, type: 2}
@@ -59,3 +60,4 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}
   m_IsPrefabParent: 1
+  m_IsExploded: 1
