@@ -7,11 +7,12 @@ public class MainMenuGUI : GUIMenu
 	
 	public PackedSprite ps_bgr;
 	public PackedSprite ps_logo;
-	public PackedSprite ps_info;
+	//	public PackedSprite ps_info;
 	public Transform selectBall;
 	public PackedSprite selectBall_bg;
 	public UIButton flower_logo;
 	public UIButton btn_start;
+	private UIButton btn_ballStart;
 	public UIButton btn_start_random;
 	public UIButton btn_gamecenter;
 	public UIButton btn_moregames;
@@ -121,7 +122,7 @@ public class MainMenuGUI : GUIMenu
 	private IEnumerator PlayShowAnim ()
 	{
 		ComponentAnimation_Prepare (ps_logo.transform);
-		ComponentAnimation_Prepare (ps_info.transform);
+//		ComponentAnimation_Prepare (ps_info.transform);
 		ComponentAnimation_Prepare (btn_start.transform);
 		ComponentAnimation_Prepare (selectBall.transform);
 		ComponentAnimation_Prepare (selectBall_bg.transform);
@@ -183,7 +184,7 @@ public class MainMenuGUI : GUIMenu
 		_inputEnabled = true;
 
 		if (PlayerPrefs.GetInt ("TVMode", 0) != 1) {
-			btn_start.GetComponent<Animation>().Play ("ButtonAnim");
+			btn_ballStart.GetComponent<Animation>().Play ("ButtonAnim");
 		}
 
 //		float timer = 0;
@@ -195,7 +196,7 @@ public class MainMenuGUI : GUIMenu
 //			}
 //			yield return new WaitForSeconds (Time.deltaTime);
 //		}
-		yield return StartCoroutine (ComponentAnimation_Show (ps_info.transform, 0.2f));
+//		yield return StartCoroutine (ComponentAnimation_Show (ps_info.transform, 0.2f));
 		joyMainMenu.enabled = true;
 	}
 
@@ -231,9 +232,9 @@ public class MainMenuGUI : GUIMenu
 		yield return StartCoroutine (ComponentAnimation_Hide (selectBall_bg.transform, 0.15f));
 		yield return StartCoroutine (ComponentAnimation_Hide (btn_share.transform, 0.1f));
 
-		if (ps_info.gameObject.activeInHierarchy) {
-			yield return StartCoroutine (ComponentAnimation_Hide (ps_info.transform, 0.03f));
-		}
+//		if (ps_info.gameObject.activeInHierarchy) {
+//			yield return StartCoroutine (ComponentAnimation_Hide (ps_info.transform, 0.03f));
+//		}
 		yield return new WaitForSeconds (0.3f);
 	}
 
@@ -792,7 +793,7 @@ public class MainMenuGUI : GUIMenu
 		}
 		go_ball.transform.localScale= Vector3.one;
 		go_ball.transform.localPosition= Vector3.zero;
-		btn_start = go_ball.transform.Find("btn_start").GetComponent<UIButton>();
-		btn_start.SetInputDelegate (OnBtn_Start_Input);
+		btn_ballStart = go_ball.transform.Find("btn_start").GetComponent<UIButton>();
+		btn_ballStart.SetInputDelegate (OnBtn_Start_Input);
 	}
 }

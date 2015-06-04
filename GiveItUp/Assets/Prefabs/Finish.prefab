@@ -475,7 +475,7 @@ MonoBehaviour:
       x: .4453125
       y: 0
       width: .203125
-      height: .23828125
+      height: .4765625
     scaleFactor: {x: .5, y: .5}
     topLeftOffset: {x: -1, y: 1}
     bottomRightOffset: {x: 1, y: -1}
@@ -545,7 +545,7 @@ MonoBehaviour:
       x: .650390625
       y: 0
       width: .24609375
-      height: .11328125
+      height: .2265625
     scaleFactor: {x: .5, y: .5}
     topLeftOffset: {x: -1, y: 1}
     bottomRightOffset: {x: 1, y: -1}
@@ -574,7 +574,7 @@ MonoBehaviour:
         x: .650390625
         y: 0
         width: .24609375
-        height: .11328125
+        height: .2265625
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
@@ -590,9 +590,9 @@ MonoBehaviour:
     - uvs:
         serializedVersion: 2
         x: .650390625
-        y: .115234375
+        y: .23046875
         width: .24609375
-        height: .11328125
+        height: .2265625
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
@@ -651,7 +651,7 @@ MonoBehaviour:
       x: 0
       y: 0
       width: .443359375
-      height: .447265625
+      height: .89453125
     scaleFactor: {x: .5, y: .5}
     topLeftOffset: {x: -1, y: 1}
     bottomRightOffset: {x: 1, y: -1}
@@ -677,13 +677,13 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .4453125
-        y: .240234375
-        width: .125
-        height: .125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
+        x: 0
+        y: .8984375
+        width: .00390625
+        height: .0078125
+      scaleFactor: {x: 16, y: 16}
+      topLeftOffset: {x: -.03125, y: .03125}
+      bottomRightOffset: {x: .03125, y: -.03125}
   - name: New Animation
     loopCycles: 0
     loopReverse: 0
@@ -698,7 +698,7 @@ MonoBehaviour:
         x: 0
         y: 0
         width: .443359375
-        height: .447265625
+        height: .89453125
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
