@@ -25,6 +25,8 @@ public class ResultsSuccessGUI : GUIPopup {
 
 	private AudioSource audio_results = null;
 
+	private Wechat wechat;
+
 	#region Init
 	public void Init(Results result)
 	{
@@ -40,6 +42,8 @@ public class ResultsSuccessGUI : GUIPopup {
 		StartCoroutine (PlayShowAnim ());
 		
 		StartCoroutine (PlayFirework());
+
+		wechat = Camera.main.gameObject.AddComponent<Wechat>();
 
 //        if (result.StageIndex == 8)
 //            PluginManager.social.ReportAchievement(eAchievement.stage9, 100f);
@@ -78,7 +82,7 @@ public class ResultsSuccessGUI : GUIPopup {
 	
 	private IEnumerator PlayShowAnim()
 	{
-		//ComponentAnimation_Prepare (btn_share.transform);
+		ComponentAnimation_Prepare (btn_share.transform);
 		ComponentAnimation_Prepare (btn_menu.transform);
 		ComponentAnimation_Prepare (btn_next.transform);
 		ComponentAnimation_Prepare (lbl_not_bad.transform);
@@ -92,7 +96,7 @@ public class ResultsSuccessGUI : GUIPopup {
 		yield return StartCoroutine(ComponentAnimation_Show (lbl_score.transform, 0f));
 		yield return StartCoroutine(ComponentAnimation_Show (lbl_score_outline.transform, 0.1f));
 		yield return StartCoroutine(ComponentAnimation_Show (lbl_bestscore.transform, 0.1f));
-		//yield return StartCoroutine(ComponentAnimation_Show (btn_share.transform, 0.1f));
+		yield return StartCoroutine(ComponentAnimation_Show (btn_share.transform, 0.1f));
 		if(_nextStage != null)
 			yield return StartCoroutine(ComponentAnimation_Show (btn_next.transform, 0.1f));
 		else
@@ -122,7 +126,7 @@ public class ResultsSuccessGUI : GUIPopup {
 		else
 			yield return StartCoroutine(ComponentAnimation_Hide (btn_restart.transform, 0.1f));
 		
-		//yield return StartCoroutine(ComponentAnimation_Hide (btn_share.transform, 0.1f));
+		yield return StartCoroutine(ComponentAnimation_Hide (btn_share.transform, 0.1f));
 		yield return StartCoroutine(ComponentAnimation_Hide (lbl_bestscore.transform, 0.1f));
 		yield return StartCoroutine(ComponentAnimation_Hide (lbl_score_outline.transform, 0f, false));
 		yield return StartCoroutine(ComponentAnimation_Hide (lbl_score.transform, 0.1f));
@@ -169,7 +173,8 @@ public class ResultsSuccessGUI : GUIPopup {
 		case POINTER_INFO.INPUT_EVENT.TAP:
 			if (!((UIButton)(ptr.targetObj)).IsReleaseEnabled) return;
 			
-			OnShare();
+			int stageIndex = CGame.gamelogic.GetStageIndex();
+			wechat.Share(_results.Score, stageIndex, User.GetLevelTries(stageIndex));
 			
 			break;
 		}

@@ -22,7 +22,6 @@ public class MainMenuGUI : GUIMenu
 	public UIButton btn_EliminateAds;
 	public UIButton btn_remove_ads;
 	public UIButton btn_options;
-	public UIButton btn_share;
 	public UIButton btn_prevpage;
 	public UIButton btn_nextpage;
 	public SpriteText lbl_title;
@@ -44,7 +43,6 @@ public class MainMenuGUI : GUIMenu
 	public static MainMenuGUI inst;
 	private int page;
 	private int pageSize = 9;
-	private Wechat wechat;
 	private void Awake()
 	{
 		inst = this;
@@ -81,8 +79,6 @@ public class MainMenuGUI : GUIMenu
 		//ChangeLevels (page);
 
 		StartCoroutine (PlayShowAnim ());
-
-		wechat = Camera.main.gameObject.AddComponent<Wechat> ();
 	}
 	#endregion
 
@@ -142,7 +138,6 @@ public class MainMenuGUI : GUIMenu
 		ComponentAnimation_Prepare (btn_EliminateAds.transform);
 		//ComponentAnimation_Prepare (btn_remove_ads.transform);
 		ComponentAnimation_Prepare (btn_options.transform);
-		ComponentAnimation_Prepare (btn_share.transform);
 
 		//ComponentAnimation_Prepare (btn_prevpage.transform);
 		//ComponentAnimation_Prepare (btn_nextpage.transform);
@@ -181,7 +176,6 @@ public class MainMenuGUI : GUIMenu
 		yield return StartCoroutine (ComponentAnimation_Show (flower_logos[flowerFlg].transform, 0.15f));
 		yield return StartCoroutine (ComponentAnimation_Show (selectBall_bg.transform, 0.15f));
 		yield return StartCoroutine (ComponentAnimation_Show (selectBall.transform, 0.15f));
-		yield return StartCoroutine (ComponentAnimation_Show (btn_share.transform, 0.15f));
 		yield return StartCoroutine (ComponentAnimation_Show (go_ball.transform, 0.15f));
 
 		#if UNITY_ANDROID
@@ -240,7 +234,6 @@ public class MainMenuGUI : GUIMenu
 		yield return StartCoroutine (ComponentAnimation_Hide (flower_logos[flowerFlg].transform, 0.15f));
 		yield return StartCoroutine (ComponentAnimation_Hide (selectBall.transform, 0.15f));
 		yield return StartCoroutine (ComponentAnimation_Hide (selectBall_bg.transform, 0.15f));
-		yield return StartCoroutine (ComponentAnimation_Hide (btn_share.transform, 0.1f));
 
 //		if (ps_info.gameObject.activeInHierarchy) {
 //			yield return StartCoroutine (ComponentAnimation_Hide (ps_info.transform, 0.03f));
@@ -265,7 +258,6 @@ public class MainMenuGUI : GUIMenu
 		btn_EliminateAds.SetInputDelegate (OnBtn_EliminateAds_Input);
 		btn_remove_ads.SetInputDelegate (OnBtn_RemoveAds_Input);
 		btn_options.SetInputDelegate (OnBtn_Options_Input);
-		btn_share.SetInputDelegate (OnBtn_Share_Input);
 		flower_logos[flowerFlg].SetInputDelegate (OnBtn_flower_logo_Input);
 		btn_prevpage.SetInputDelegate (OnBtn_PrevPage_Input);
 		btn_nextpage.SetInputDelegate (OnBtn_NextPage_Input);
@@ -704,8 +696,6 @@ public class MainMenuGUI : GUIMenu
 		case POINTER_INFO.INPUT_EVENT.TAP:
 			if (!((UIButton)(ptr.targetObj)).IsReleaseEnabled)
 				return;
-			
-			wechat.Share ();
 			
 			break;
 		}
