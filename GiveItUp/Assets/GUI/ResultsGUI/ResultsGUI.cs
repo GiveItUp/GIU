@@ -2,23 +2,21 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class ResultsGUI : GUIPopup {
+public class ResultsGUI : GUIPopup
+{
 	
 	public UIButton btn_restart;
 	public UIButton btn_menu;
 	public UIButton btn_share;
 	public UIButton btn_rate;
-
 	public PackedSprite ps_rate_notification;
-	
 	public SpriteText lbl_title;
 	public SpriteText lbl_score;
 	public SpriteText lbl_score_outline;
 	public SpriteText lbl_bestscore;
-	
 	public SpriteText lbl_newbest;
-
 	private Results _results;
+	private Wechat wechat;
 
 	#region Init
 	public void Init(Results result)
@@ -26,19 +24,21 @@ public class ResultsGUI : GUIPopup {
 		_inputEnabled = false;
 		_results = result;
 
-		InitButtons ();
-		InitLabels ();
+		InitButtons();
+		InitLabels();
 
-		ps_rate_notification.gameObject.SetActive (User.NeedRateNotififaction);
+		ps_rate_notification.gameObject.SetActive(User.NeedRateNotififaction);
 
-		StartCoroutine (PlayShowAnim ());
+		StartCoroutine(PlayShowAnim());
+
+		wechat = Camera.main.gameObject.AddComponent<Wechat>();
 	}
 	#endregion
 
 	#region Unity Methods
 	protected override void Update()
 	{
-		base.Update ();
+		base.Update();
 
 		if (Input.GetKeyDown(KeyCode.Return))
 		{
@@ -51,53 +51,55 @@ public class ResultsGUI : GUIPopup {
 
 	private IEnumerator PlayShowAnim()
 	{
-		ComponentAnimation_Prepare (btn_restart.transform);
-		ComponentAnimation_Prepare (btn_menu.transform);
-		ComponentAnimation_Prepare (lbl_score.transform);
-		ComponentAnimation_Prepare (lbl_score_outline.transform);
-		ComponentAnimation_Prepare (lbl_bestscore.transform);
-		ComponentAnimation_Prepare (lbl_title.transform);
-		//ComponentAnimation_Prepare (btn_share.transform);
-		ComponentAnimation_Prepare (lbl_newbest.transform);
+		ComponentAnimation_Prepare(btn_restart.transform);
+		ComponentAnimation_Prepare(btn_menu.transform);
+		ComponentAnimation_Prepare(lbl_score.transform);
+		ComponentAnimation_Prepare(lbl_score_outline.transform);
+		ComponentAnimation_Prepare(lbl_bestscore.transform);
+		ComponentAnimation_Prepare(lbl_title.transform);
+		ComponentAnimation_Prepare(btn_share.transform);
+		ComponentAnimation_Prepare(lbl_newbest.transform);
 		//ComponentAnimation_Prepare (btn_rate.transform);
 		
-		yield return StartCoroutine(ComponentAnimation_Show (lbl_title.transform, 0.1f));
-		yield return StartCoroutine(ComponentAnimation_Show (lbl_score.transform, 0f));
-		yield return StartCoroutine(ComponentAnimation_Show (lbl_score_outline.transform, 0.1f));
-		if(_results.IsNewBest)
-			yield return StartCoroutine(ComponentAnimation_Show (lbl_newbest.transform, 0.1f));
-		yield return StartCoroutine(ComponentAnimation_Show (lbl_bestscore.transform, 0.1f));
-		//yield return StartCoroutine(ComponentAnimation_Show (btn_share.transform, 0.1f));
-		yield return StartCoroutine(ComponentAnimation_Show (btn_restart.transform, 0.1f));
+		yield return StartCoroutine(ComponentAnimation_Show(lbl_title.transform, 0.1f));
+		yield return StartCoroutine(ComponentAnimation_Show(lbl_score.transform, 0f));
+		yield return StartCoroutine(ComponentAnimation_Show(lbl_score_outline.transform, 0.1f));
+		if (_results.IsNewBest)
+			yield return StartCoroutine(ComponentAnimation_Show(lbl_newbest.transform, 0.1f));
+		yield return StartCoroutine(ComponentAnimation_Show(lbl_bestscore.transform, 0.1f));
+		yield return StartCoroutine(ComponentAnimation_Show(btn_share.transform, 0.1f));
+		yield return StartCoroutine(ComponentAnimation_Show(btn_restart.transform, 0.1f));
 		//yield return StartCoroutine(ComponentAnimation_Show (btn_rate.transform, 0.1f));
-		yield return StartCoroutine(ComponentAnimation_Show (btn_menu.transform, 0.1f));
+		yield return StartCoroutine(ComponentAnimation_Show(btn_menu.transform, 0.1f));
 		
-		InitBackButton (() => { StartCoroutine(OnMenu()); } );
+		InitBackButton(() => {
+			StartCoroutine(OnMenu()); });
 
 		_inputEnabled = true;
 
-		if(_results.IsNewBest)
+		if (_results.IsNewBest)
 			lbl_newbest.GetComponent<Animation>().Play("NewAnim");
 
-		if (PlayerPrefs.GetInt ("TVMode", 0) != 1) {
-			btn_restart.GetComponent<Animation>().Play ("ButtonAnim");
+		if (PlayerPrefs.GetInt("TVMode", 0) != 1)
+		{
+			btn_restart.GetComponent<Animation>().Play("ButtonAnim");
 		}
 	}
 
 	private IEnumerator PlayHideAnim()
 	{
-		yield return StartCoroutine(ComponentAnimation_Hide (btn_menu.transform, 0.1f));
+		yield return StartCoroutine(ComponentAnimation_Hide(btn_menu.transform, 0.1f));
 		//yield return StartCoroutine(ComponentAnimation_Hide (btn_rate.transform, 0.1f));
-		yield return StartCoroutine(ComponentAnimation_Hide (btn_restart.transform, 0.1f));
-		//yield return StartCoroutine(ComponentAnimation_Hide (btn_share.transform, 0.15f));
-		yield return StartCoroutine(ComponentAnimation_Hide (lbl_bestscore.transform, 0.1f));
-		if(_results.IsNewBest)
-			yield return StartCoroutine(ComponentAnimation_Hide (lbl_newbest.transform, 0f));
-		yield return StartCoroutine(ComponentAnimation_Hide (lbl_score_outline.transform, 0f, false));
-		yield return StartCoroutine(ComponentAnimation_Hide (lbl_score.transform, 0.12f));
-		yield return StartCoroutine(ComponentAnimation_Hide (lbl_title.transform, 0.1f));
+		yield return StartCoroutine(ComponentAnimation_Hide(btn_restart.transform, 0.1f));
+		yield return StartCoroutine(ComponentAnimation_Hide(btn_share.transform, 0.15f));
+		yield return StartCoroutine(ComponentAnimation_Hide(lbl_bestscore.transform, 0.1f));
+		if (_results.IsNewBest)
+			yield return StartCoroutine(ComponentAnimation_Hide(lbl_newbest.transform, 0f));
+		yield return StartCoroutine(ComponentAnimation_Hide(lbl_score_outline.transform, 0f, false));
+		yield return StartCoroutine(ComponentAnimation_Hide(lbl_score.transform, 0.12f));
+		yield return StartCoroutine(ComponentAnimation_Hide(lbl_title.transform, 0.1f));
 
-		yield return new WaitForSeconds (0.3f);
+		yield return new WaitForSeconds(0.3f);
 	}
 
 	private void InitLabels()
@@ -105,15 +107,15 @@ public class ResultsGUI : GUIPopup {
 		lbl_score.Text = "" + _results.Score + "%";
 		lbl_score_outline.Text = "" + _results.Score + "%";
 		lbl_bestscore.Text = TextManager.Get("Best: ") + _results.BestScore + "%";
-		lbl_title.Text = TextManager.Get(Results.GetResultString (_results.Score));
+		lbl_title.Text = TextManager.Get(Results.GetResultString(_results.Score));
 	}
 
 	private void InitButtons()
 	{
-		btn_restart.SetInputDelegate (OnBtn_Restart_Input);
-		btn_menu.SetInputDelegate (OnBtn_Menu_Input);
-		btn_rate.SetInputDelegate (OnBtn_Rate_Input);
-		btn_share.SetInputDelegate (OnBtn_Share_Input);
+		btn_restart.SetInputDelegate(OnBtn_Restart_Input);
+		btn_menu.SetInputDelegate(OnBtn_Menu_Input);
+		btn_rate.SetInputDelegate(OnBtn_Rate_Input);
+		btn_share.SetInputDelegate(OnBtn_Share_Input);
 	}
 	#endregion
 	
@@ -122,19 +124,20 @@ public class ResultsGUI : GUIPopup {
 	{
 		switch (ptr.evt)
 		{
-		case POINTER_INFO.INPUT_EVENT.RELEASE:
-		case POINTER_INFO.INPUT_EVENT.TAP:
-			if (!((UIButton)(ptr.targetObj)).IsReleaseEnabled) return;
+			case POINTER_INFO.INPUT_EVENT.RELEASE:
+			case POINTER_INFO.INPUT_EVENT.TAP:
+				if (!((UIButton)(ptr.targetObj)).IsReleaseEnabled)
+					return;
 			
-			StartCoroutine(OnRestart());
+				StartCoroutine(OnRestart());
 			
-			break;
+				break;
 		}
 	}
 	
 	private IEnumerator OnRestart()
 	{
-		if(_inputEnabled)
+		if (_inputEnabled)
 		{
 			_inputEnabled = false;
 			SoundManager.PlayButtonTapSound();
@@ -143,13 +146,12 @@ public class ResultsGUI : GUIPopup {
 
 			CGame.popupLayer.CloseResultsGUI();
 			
-			if ( _results.StageIndex == -1 )
+			if (_results.StageIndex == -1)
 			{
 				CGame.Instance.InitGamelogicRandom();
-			}
-			else
+			} else
 			{
-				CGame.Instance.InitGamelogic (_results.StageIndex, _results.Stage);
+				CGame.Instance.InitGamelogic(_results.StageIndex, _results.Stage);
 			}
 		}
 	}
@@ -158,28 +160,29 @@ public class ResultsGUI : GUIPopup {
 	{
 		switch (ptr.evt)
 		{
-		case POINTER_INFO.INPUT_EVENT.RELEASE:
-		case POINTER_INFO.INPUT_EVENT.TAP:
-			if (!((UIButton)(ptr.targetObj)).IsReleaseEnabled) return;
+			case POINTER_INFO.INPUT_EVENT.RELEASE:
+			case POINTER_INFO.INPUT_EVENT.TAP:
+				if (!((UIButton)(ptr.targetObj)).IsReleaseEnabled)
+					return;
 			
-			StartCoroutine(OnMenu());
+				StartCoroutine(OnMenu());
 			
-			break;
+				break;
 		}
 	}
 	
 	private IEnumerator OnMenu()
 	{
-		if(_inputEnabled)
+		if (_inputEnabled)
 		{
 			_inputEnabled = false;
 			SoundManager.PlayButtonBackSound();
 
 			yield return StartCoroutine(PlayHideAnim());
 
-			CGame.Instance.DestroyGamelogic ();
-			CGame.popupLayer.CloseResultsGUI ();
-			CGame.menuLayer.ShowMainMenuGUI ();
+			CGame.Instance.DestroyGamelogic();
+			CGame.popupLayer.CloseResultsGUI();
+			CGame.menuLayer.ShowMainMenuGUI();
 		}
 	}
 	
@@ -187,19 +190,20 @@ public class ResultsGUI : GUIPopup {
 	{
 		switch (ptr.evt)
 		{
-		case POINTER_INFO.INPUT_EVENT.RELEASE:
-		case POINTER_INFO.INPUT_EVENT.TAP:
-			if (!((UIButton)(ptr.targetObj)).IsReleaseEnabled) return;
+			case POINTER_INFO.INPUT_EVENT.RELEASE:
+			case POINTER_INFO.INPUT_EVENT.TAP:
+				if (!((UIButton)(ptr.targetObj)).IsReleaseEnabled)
+					return;
 			
-			OnRate();
+				OnRate();
 			
-			break;
+				break;
 		}
 	}
 	
 	private void OnRate()
 	{
-		if(_inputEnabled)
+		if (_inputEnabled)
 		{
 			SoundManager.PlayButtonTapSound();
 			
@@ -213,26 +217,28 @@ public class ResultsGUI : GUIPopup {
 	{
 		switch (ptr.evt)
 		{
-		case POINTER_INFO.INPUT_EVENT.RELEASE:
-		case POINTER_INFO.INPUT_EVENT.TAP:
-			if (!((UIButton)(ptr.targetObj)).IsReleaseEnabled) return;
+			case POINTER_INFO.INPUT_EVENT.RELEASE:
+			case POINTER_INFO.INPUT_EVENT.TAP:
+				if (!((UIButton)(ptr.targetObj)).IsReleaseEnabled)
+					return;
 			
-			OnShare();
+				int stageIndex = CGame.gamelogic.GetStageIndex();
+				wechat.Share(_results.Score, stageIndex, User.GetLevelTries(stageIndex));
 			
-			break;
+				break;
 		}
 	}
 	
 	private void OnShare()
 	{
-		if(_inputEnabled)
+		if (_inputEnabled)
 		{
 			SoundManager.PlayButtonTapSound();
 			
 			#if !UNITY_EDITOR
-			if(Application.internetReachability == NetworkReachability.NotReachable)
+			if (Application.internetReachability == NetworkReachability.NotReachable)
 			{
-				CGame.popupLayer.ShowInfoPopupGUI (TextManager.Get("Please check your internet connection!"));
+				CGame.popupLayer.ShowInfoPopupGUI(TextManager.Get("Please check your internet connection!"));
 				return;
 			}
 			#endif
@@ -258,7 +264,7 @@ public class ResultsGUI : GUIPopup {
            // FacebookBinding.showDialog("stream.publish", parameters);
 
 #endif
-        }
+		}
 	}
 	#endregion
 }

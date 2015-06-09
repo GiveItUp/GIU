@@ -198,10 +198,6 @@ MonoBehaviour:
   cancelDragDuration: 1
   defaultFont: {fileID: 0}
   defaultFontMaterial: {fileID: 0}
-  autoRotateKeyboardPortrait: 1
-  autoRotateKeyboardPortraitUpsideDown: 1
-  autoRotateKeyboardLandscapeLeft: 1
-  autoRotateKeyboardLandscapeRight: 1
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -365,7 +361,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8293a0f48c82bec4cbaffa1f7cf69e66, type: 3}
   - {fileID: 8300000, guid: e4efc3ecf774c2246933b30e13c82eca, type: 3}
   - {fileID: 8300000, guid: 532ebbe723db6c945a25977ce84e6a6e, type: 3}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 41cb6687969a94fcba31fc4fe320ca49, type: 3}
   - {fileID: 8300000, guid: 44c4133d7efd88d44a0cedf37190a622, type: 3}
   - {fileID: 8300000, guid: 222e4b8a70131c247b88ed2766d6d02b, type: 3}
   - {fileID: 8300000, guid: fb698ae4b12c4fd47999c58ce38e1adb, type: 3}
@@ -385,3 +381,4 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}
   m_IsPrefabParent: 1
+  m_IsExploded: 1

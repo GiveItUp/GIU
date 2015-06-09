@@ -354,7 +354,6 @@ public class Ball : MonoBehaviour
 
 	void OnCollisionEnter2D (Collision2D c)
 	{
-		return;
 //		if (PlayerPrefs.GetInt ("DebugMode", 0) != 1) {
 			if (c.collider.gameObject.layer == 8) {
 				Die ();

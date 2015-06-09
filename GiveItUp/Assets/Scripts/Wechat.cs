@@ -21,10 +21,17 @@ public class Wechat : MonoBehaviour
 #endif
 	}
 
-	public void Share ()
+	public void Share (int score, int stageIndex, int tryCount)
 	{
+		string str = "";
+		if(score != 100){
+			str = "第" + tryCount + "次尝试仍然还在第" + (stageIndex + 1) + "关被虐，必须砸手机！";
+		}else{
+			str = "第" + tryCount + "次尝试总算搞定了第" + (stageIndex + 1) + "关，不服来战！";
+		}
+
 		Hashtable content = new Hashtable ();
-		content ["content"] = "《章鱼永不言弃！！》第XX次尝试后终于搞定第X关！无力吐槽了，被虐得体无完肤，在哪里跌倒还是在哪里躺着吧……";
+		content ["content"] = str;
 		content ["image"] = (PlayerPrefs.GetString("ballName") == "Go_PinkBall")?"http://547849.user-website5.com/roger/0.jpg":"http://547849.user-website5.com/roger/1.jpg";
 		content["title"] = "章鱼！永不言弃！！";
 		content["description"] = "章鱼！永不言弃！！";
