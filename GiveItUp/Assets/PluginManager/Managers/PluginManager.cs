@@ -242,20 +242,19 @@ public class PluginManager : MonoBehaviour
         //DontDestroyOnLoad(this.gameObject);
         Instance = this;
 
-	//	#if UNITY_EDITOR || UNITY_WEBPLAYER || UNITY_STANDALONE
+		#if UNITY_EDITOR || UNITY_WEBPLAYER || UNITY_STANDALONE
         social = new SocialManager(new Dictionary<eSocialAdapter, ISocialAdapter> { {eSocialAdapter.Test, new SocialAdapterEditor()} });
         iap = new IAPManager(new IAPAdapterEditor());
         ads = new AdManager(new Dictionary<eAdNetwork, IADAdapter> { { eAdNetwork.Test, new AdAdapterEditor() } });
         analytics = new AnalyticsManager(new Dictionary<eAnalytics, IAnalyticsAdapter> { {eAnalytics.Test, new AnalyticsAdapterEditor() } });
         
-//		#elif UNITY_IPHONE
-//        social = new SocialManager(new Dictionary<eSocialAdapter, ISocialAdapter> { {eSocialAdapter.GameCenter, new SocialAdapterGameCenter()} });
-//		iap = new IAPManager(new IAPAdapterIOS());
-//		//ads = new AdManager(new Dictionary<eAdNetwork, IADAdapter> { { eAdNetwork.Playhaven, new AdAdapterUpsights() } });
-//       	//analytics = new AnalyticsManager(new Dictionary<eAnalytics, IAnalyticsAdapter> {  {eAnalytics.Flurry, new AnalyticsAdapterFlurry() } });
-//		social.SetDefaultAdapter(eSocialAdapter.GameCenter);
-//		//FacebookAndroid.init (true);
-//
+		#elif UNITY_IPHONE
+        social = new SocialManager(new Dictionary<eSocialAdapter, ISocialAdapter> { {eSocialAdapter.GameCenter, new SocialAdapterGameCenter()} });
+		iap = new IAPManager(new IAPAdapterIOS());
+		//ads = new AdManager(new Dictionary<eAdNetwork, IADAdapter> { { eAdNetwork.Playhaven, new AdAdapterUpsights() } });
+       	//analytics = new AnalyticsManager(new Dictionary<eAnalytics, IAnalyticsAdapter> {  {eAnalytics.Flurry, new AnalyticsAdapterFlurry() } });
+		social.SetDefaultAdapter(eSocialAdapter.GameCenter);
+
 //		#elif UNITY_ANDROID && GOOGLEPLAY
 //        social = new SocialManager(new Dictionary<eSocialAdapter, ISocialAdapter> { { eSocialAdapter.GooglePlayServices, new SocialAdapterPlayServices() } });
 //        iap = new IAPManager(new IAPAdapterGP());
@@ -264,7 +263,7 @@ public class PluginManager : MonoBehaviour
 //        social.SetDefaultAdapter(eSocialAdapter.GooglePlayServices);
 //		//FacebookAndroid.init (true);
 //
-	//	#endif
+		#endif
 	    StopAllCoroutines ();
 		lastReachability = Application.internetReachability;
 		OnConnection ();
