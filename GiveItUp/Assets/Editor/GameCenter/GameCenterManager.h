@@ -13,8 +13,8 @@
 #define USING_UNITY_3_5 1
 
 @interface GameCenterManager : NSObject<GKGameCenterControllerDelegate> {
-    UIViewController* uiViewController;
-    UIViewController* auiViewController;
+    UIViewController* __unsafe_unretained uiViewController;
+    UIViewController* __unsafe_unretained auiViewController;
 
 }
 

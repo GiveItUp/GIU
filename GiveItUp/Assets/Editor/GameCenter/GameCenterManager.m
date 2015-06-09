@@ -176,7 +176,7 @@ BOOL isGameCenterAvailable(void){
     [player loadPhotoForSize:GKPhotoSizeSmall withCompletionHandler:^(UIImage *photo, NSError *error) {
         if (photo != nil)
         {
-            [self storePhoto: photo forPlayer: player];
+           // [self storePhoto: photo forPlayer: player];
         }
         if (error != nil)
         {

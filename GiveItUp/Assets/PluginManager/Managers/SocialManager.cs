@@ -23,7 +23,7 @@ public class SocialManager
     public Action<eSocialAdapter, string> OnShareFailed;
     public Action<eSocialAdapter, string> OnNotification;
 
-    private eSocialAdapter defaultAdapter = eSocialAdapter.Test;
+    private eSocialAdapter defaultAdapter = eSocialAdapter.GameCenter;
 
 
     public SocialManager(Dictionary<eSocialAdapter, ISocialAdapter> adapters)

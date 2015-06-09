@@ -19,8 +19,8 @@
 void UnitySendMessage( const char * className, const char * methodName, const char * param );
 
 UIViewController *UnityGetGLViewController();
-
-//void UnityPause( bool pause ){}
+void UnityPause( bool pause );
+void UnityPause( bool pause ){}
 
 UIColor * ColorFromHex( int hexcolor )
 {
@@ -173,7 +173,8 @@ UIColor * ColorFromHex( int hexcolor )
 - (void)showViewControllerModallyInWrapper:(UIViewController*)viewController
 {
 	// pause the game
-	//UnityPause( true );
+	
+    UnityPause( true );
 	
 	// cancel the previous delayed call to dismiss the view controller if it exists
 	[NSObject cancelPreviousPerformRequestsWithTarget:self];
@@ -191,7 +192,7 @@ UIColor * ColorFromHex( int hexcolor )
 
 - (void)dismissWrappedController
 {
-//	UnityPause( false );
+	UnityPause( false );
 
 	UIViewController *vc = UnityGetGLViewController();
 	
@@ -256,7 +257,7 @@ UIColor * ColorFromHex( int hexcolor )
 // UIAlertView
 - (void)showAlertWithTitle:(NSString*)title message:(NSString*)message buttons:(NSArray*)buttons
 {
-//	UnityPause( true );
+    UnityPause( true );
 	UIAlertView *alert = [[[UIAlertView alloc] init] autorelease];
 	alert.delegate = self;
 	alert.title = title;
@@ -272,7 +273,7 @@ UIColor * ColorFromHex( int hexcolor )
 
 - (void)showPromptWithTitle:(NSString*)title message:(NSString*)message placeHolder:(NSString*)placeHolder autocorrect:(BOOL)autocorrect
 {
-//	UnityPause( true );
+    UnityPause( true );
 	
 	// we can use the fancy new Alertview if we are on iOS 5+
 	UIAlertView *alertView = [[[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:NSLocalizedString( @"Cancel", nil ) otherButtonTitles:NSLocalizedString( @"OK", nil ), nil] autorelease];
@@ -291,7 +292,7 @@ UIColor * ColorFromHex( int hexcolor )
 
 - (void)showPromptWithTitle:(NSString*)title message:(NSString*)message placeHolder1:(NSString*)placeHolder1 placeHolder2:(NSString*)placeHolder2 autocorrect:(BOOL)autocorrect
 {
-//	UnityPause( true );
+    UnityPause( true );
 	
 	// we can use the fancy new Alertview if we are on iOS 5+
 	UIAlertView *alertView = [[[UIAlertView alloc] initWithTitle:title
@@ -561,7 +562,7 @@ UIColor * ColorFromHex( int hexcolor )
 	picker.maximumNumberOfSelection = maxNumberOfPhotos;
 	picker.assetsFilter = [ALAssetsFilter allAssets];
 	
-	//UnityPause( true );
+	UnityPause( true );
 	[UnityGetGLViewController() presentModalViewController:picker animated:YES];
 }
 
@@ -569,7 +570,7 @@ UIColor * ColorFromHex( int hexcolor )
 - (void)popoverControllerDidDismissPopover:(UIPopoverController*)popoverController
 {
 	self.popoverViewController = nil;
-	//UnityPause( false );
+	UnityPause( false );
 	
 	UnitySendMessage( "EtceteraManager", "imagePickerDidCancel", "" );
 }
@@ -577,7 +578,7 @@ UIColor * ColorFromHex( int hexcolor )
 
 - (void)promptForPhotoWithType:(PhotoType)type
 {
-	//UnityPause( true );
+	UnityPause( true );
 
 	// No need to give a choice for devices with no camera
 	if( ![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera] )
@@ -669,7 +670,7 @@ UIColor * ColorFromHex( int hexcolor )
 	}
 	else // Cancelled
 	{
-		//UnityPause( false );
+		UnityPause( false );
 		UnitySendMessage( "EtceteraManager", "imagePickerDidCancel", "" );
 	}
 }
@@ -743,7 +744,7 @@ UIColor * ColorFromHex( int hexcolor )
 {
 	// dismiss the wrapper, unpause and notifiy Unity what happened
 	[self dismissWrappedController];
-	//UnityPause( false );
+	UnityPause( false );
 	UnitySendMessage( "EtceteraManager", "imagePickerDidCancel", "" );
 }
 
@@ -754,7 +755,7 @@ UIColor * ColorFromHex( int hexcolor )
 
 - (void)alertView:(UIAlertView*)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-	//UnityPause( false );
+	UnityPause( false );
 
 	// always dump the button clicked
 	NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
@@ -909,7 +910,7 @@ UIColor * ColorFromHex( int hexcolor )
 		UnitySendMessage( "EtceteraManager", "imageSavedToDocuments", filePath.UTF8String );
 	}
 	
-	//UnityPause( false );
+	UnityPause( false );
 }
 
 
@@ -917,7 +918,7 @@ UIColor * ColorFromHex( int hexcolor )
 {
 	// dismiss the wrapper, unpause and notifiy Unity what happened
 	[self dismissWrappedController];
-	//UnityPause( false );
+	UnityPause( false );
 	UnitySendMessage( "EtceteraManager", "imagePickerDidCancel", "" );
 }
 

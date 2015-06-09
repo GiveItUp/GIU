@@ -78,7 +78,7 @@ public class SocialAdapterGameCenter : ISocialAdapter
     
 	public override void ShowLeaderboards()
 	{
-		if (GameCenterBinding.isPlayerAuthenticated())
+		//if (GameCenterBinding.isPlayerAuthenticated())
 			GameCenterBinding.showGameCenterViewController(GameCenterViewControllerState.Leaderboards);
 	}
 

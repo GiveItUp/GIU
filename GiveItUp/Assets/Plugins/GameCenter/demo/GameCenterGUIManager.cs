@@ -96,15 +96,19 @@ public partial class GameCenterGUIManager : MonoBehaviourGUI
 		}
 
 
-		if( GUILayout.Button( "Show GC Leaderboards (iOS 6+)" ) )
+		if( GUILayout.Button( "Show GC Leaderboards (iOS 6+)"+GameCenterBinding.isPlayerAuthenticated() ) )
 		{
 			GameCenterBinding.showGameCenterViewController( GameCenterViewControllerState.Leaderboards );
 		}
 
 
-		if( GUILayout.Button( "Show GC Achievements (iOS 6+)" ) )
+		if( GUILayout.Button( "Show GC Achievements (iOS 6+)"+GameCenterBinding.isPlayerAuthenticated() ) )
 		{
 			GameCenterBinding.showGameCenterViewController( GameCenterViewControllerState.Achievements );
+		}
+
+		if( GUILayout.Button( "Login"+GameCenterBinding.isPlayerAuthenticated() ) )
+		{
 		}
 
 
