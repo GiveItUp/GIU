@@ -46,7 +46,6 @@ typedef enum
 @property (nonatomic, retain) UIWebView *inlineWebView;
 @property (nonatomic, assign) BOOL handledActionSheetCallback;
 
-
 + (EtceteraManager*)sharedManager;
 
 + (NSString*)stringWithNewUUID;
