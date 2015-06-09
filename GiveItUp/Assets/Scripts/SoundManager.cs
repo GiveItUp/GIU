@@ -24,6 +24,7 @@ public class SoundManager : MonoBehaviour
 		Game_Particle_2_04,
 
 		End_Success,
+		End_Success_1,
 
 		Music_Menu,
 		Music_Ingame,

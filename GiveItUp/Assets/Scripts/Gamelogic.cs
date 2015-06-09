@@ -406,8 +406,13 @@ public class Gamelogic : MonoBehaviour
 					hud.gameObject.SetActive(false);
 					ball.SetActive(false);
 					music.Stop();
-					
-					SoundManager.Instance.Play(SoundManager.eSoundClip.End_Success, 1);
+					if(_stageIndex>=18)
+					{
+						SoundManager.Instance.Play(SoundManager.eSoundClip.End_Success_1, 1);
+					}else
+					{
+						SoundManager.Instance.Play(SoundManager.eSoundClip.End_Success, 1);
+					}
 					ingameBgr.PlayFadeAnim(true);
 
 					if (recordMarker != null)

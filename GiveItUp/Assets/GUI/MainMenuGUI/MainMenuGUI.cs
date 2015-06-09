@@ -45,6 +45,7 @@ public class MainMenuGUI : GUIMenu
 	private int page;
 	private int pageSize = 9;
 	private Wechat wechat;
+	private bool m_pauseStatus = false;
 	private void Awake()
 	{
 		inst = this;
@@ -704,8 +705,11 @@ public class MainMenuGUI : GUIMenu
 		case POINTER_INFO.INPUT_EVENT.TAP:
 			if (!((UIButton)(ptr.targetObj)).IsReleaseEnabled)
 				return;
-			
-			wechat.Share ();
+			if(!m_pauseStatus)
+			{
+				m_pauseStatus = true;
+				wechat.Share ();
+			}
 			
 			break;
 		}
@@ -843,5 +847,10 @@ public class MainMenuGUI : GUIMenu
 		go_ball.transform.localPosition= Vector3.zero;
 		btn_ballStart = go_ball.transform.Find("btn_start").GetComponent<UIButton>();
 		btn_ballStart.SetInputDelegate (OnBtn_Start_Input);
+	}
+
+	public void OnApplicationPause (bool pauseStatus)
+	{
+		m_pauseStatus = pauseStatus;
 	}
 }
