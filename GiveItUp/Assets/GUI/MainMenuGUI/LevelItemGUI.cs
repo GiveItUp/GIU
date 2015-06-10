@@ -121,7 +121,7 @@ public class LevelItemGUI : MonoBehaviour
 	}
 	#endregion
 
-	void OnClick ()
+	public void OnClick ()
 	{
 		OnStart ();
 	}

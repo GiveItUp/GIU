@@ -43,7 +43,8 @@ public class MainMenuGUI : GUIMenu
 	public static MainMenuGUI inst;
 	private int page;
 	private int pageSize = 9;
-
+	private int actualPage = 0;
+	
 	private void Awake()
 	{
 		inst = this;
@@ -70,7 +71,7 @@ public class MainMenuGUI : GUIMenu
 		PositionThis ();
 
 		//ChangeLevel(User.ActualStage >= User.LastPlayedStage ? User.LastPlayedStage : User.ActualStage);
-		ChangeLevel (User.LastPlayedStage);
+		//ChangeLevel (User.LastPlayedStage);
 		//Debug.Log ("act = " + User.LastPlayedStage);
 	//	actualPage = User.LastPlayedStage < 18 ? 0 : 1;
 		page = PlayerPrefs.GetInt("page",0);
@@ -325,18 +326,7 @@ public class MainMenuGUI : GUIMenu
 				return lit;
 		return null;
 	}
-	int a=0;
-	int actualPage {
-		get{return a;}
-		set{
-			if(a != 1 && value == 1)
-			{
-				a = 1; 
-			}
-			a = value;
 
-		}
-	}
 
 	private IEnumerator ChangeLevels (int page)
 	{
@@ -372,6 +362,14 @@ public class MainMenuGUI : GUIMenu
 		if(actualPage!= 1 && actualPage != 2)
 		{
 			btn_nextpage.gameObject.SetActive(true);
+		}
+
+		if(startIndex <= User.LastPlayedStage && User.LastPlayedStage < endIndex)
+		{
+			ChangeLevel (User.LastPlayedStage);
+		}else
+		{
+			ChangeLevel(startIndex);
 		}
 	}
 
