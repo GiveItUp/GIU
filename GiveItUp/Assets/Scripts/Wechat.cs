@@ -23,6 +23,7 @@ public class Wechat : MonoBehaviour
 
 	public void Share (int score, int stageIndex, int tryCount)
 	{
+		ShareSDK.close();
 		string str = "";
 		if(score != 100){
 			str = "第" + tryCount + "次尝试仍然还在第" + (stageIndex + 1) + "关被虐，必须砸手机！";

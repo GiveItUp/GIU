@@ -255,14 +255,18 @@ public class PluginManager : MonoBehaviour
        	//analytics = new AnalyticsManager(new Dictionary<eAnalytics, IAnalyticsAdapter> {  {eAnalytics.Flurry, new AnalyticsAdapterFlurry() } });
 		social.SetDefaultAdapter(eSocialAdapter.GameCenter);
 
-//		#elif UNITY_ANDROID && GOOGLEPLAY
+		#elif UNITY_ANDROID && GOOGLEPLAY
+		social = new SocialManager(new Dictionary<eSocialAdapter, ISocialAdapter> { {eSocialAdapter.Test, new SocialAdapterEditor()} });
+		iap = new IAPManager(new IAPAdapterEditor());
+		ads = new AdManager(new Dictionary<eAdNetwork, IADAdapter> { { eAdNetwork.Test, new AdAdapterEditor() } });
+		analytics = new AnalyticsManager(new Dictionary<eAnalytics, IAnalyticsAdapter> { {eAnalytics.Test, new AnalyticsAdapterEditor() } });
 //        social = new SocialManager(new Dictionary<eSocialAdapter, ISocialAdapter> { { eSocialAdapter.GooglePlayServices, new SocialAdapterPlayServices() } });
 //        iap = new IAPManager(new IAPAdapterGP());
 //        ads = new AdManager(new Dictionary<eAdNetwork, IADAdapter> { { eAdNetwork.AdMob, new AdAdapterAdMob() }});
 //        analytics = new AnalyticsManager(new Dictionary<eAnalytics, IAnalyticsAdapter> {  {eAnalytics.Flurry, new AnalyticsAdapterFlurry() } });
 //        social.SetDefaultAdapter(eSocialAdapter.GooglePlayServices);
 //		//FacebookAndroid.init (true);
-//
+
 		#endif
 	    StopAllCoroutines ();
 		lastReachability = Application.internetReachability;
