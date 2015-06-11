@@ -112,6 +112,8 @@ public class Gamelogic : MonoBehaviour
 		
 		InitHUD();
 		InitIngameBgr();
+		Petal.SetActive(false);
+		ingameBgr.ChangeBg(0);
 		ChangeState(eState.menu);
 
 		CGame.cameraLogic.ball = ball.transform;

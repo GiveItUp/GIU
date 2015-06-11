@@ -830,6 +830,6 @@ public class MainMenuGUI : GUIMenu
 		go_ball.transform.localScale= Vector3.one;
 		go_ball.transform.localPosition= Vector3.zero;
 		btn_ballStart = go_ball.transform.Find("btn_start").GetComponent<UIButton>();
-		btn_ballStart.SetInputDelegate (OnBtn_Start_Input);
+		//btn_ballStart.SetInputDelegate (OnBtn_Start_Input);
 	}
 }
