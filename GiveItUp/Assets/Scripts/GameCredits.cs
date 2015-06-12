@@ -47,7 +47,6 @@ public class GameCredits {
 			"Laszlo Palfi",
 			"Karoly Molnar",
 			"Rein Lv",
-			"Long Hui",
 			"Cheng Fei",
 			"Wei Shao Hua",
 			"Li Kai",

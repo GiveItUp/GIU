@@ -34,8 +34,6 @@ public class IngameBgr : MonoBehaviour {
 			go_bgr.SetActive(false);
 			go_bgr_1.SetActive(true);
 			go_bgr_temp = go_bgr_1;
-			Vector3 pos =  GameObject.Find("Main Camera").GetComponent<Camera>().ScreenToWorldPoint(new Vector3(0,Screen.height,0));
-			go_bgr_1.transform.FindChild("flower").transform.position = new Vector3(pos.x ,pos.y,2);
 		}else
 		{
 			go_bgr.SetActive(true);

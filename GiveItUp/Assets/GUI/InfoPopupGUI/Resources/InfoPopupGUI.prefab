@@ -351,7 +351,7 @@ MonoBehaviour:
     - uvs:
         serializedVersion: 2
         x: .1015625
-        y: .830078125
+        y: .9140625
         width: .052734375
         height: .0517578125
       scaleFactor: {x: .5, y: .5}
@@ -369,7 +369,7 @@ MonoBehaviour:
     - uvs:
         serializedVersion: 2
         x: .1015625
-        y: .9140625
+        y: .830078125
         width: .052734375
         height: .0517578125
       scaleFactor: {x: .5, y: .5}
@@ -387,7 +387,7 @@ MonoBehaviour:
     - uvs:
         serializedVersion: 2
         x: .1015625
-        y: .9140625
+        y: .830078125
         width: .052734375
         height: .0517578125
       scaleFactor: {x: .5, y: .5}

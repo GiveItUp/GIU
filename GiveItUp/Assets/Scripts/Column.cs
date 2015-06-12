@@ -26,7 +26,17 @@ public class Column : MonoBehaviour
     public ColumnState[] states;
     public Animation anim;
     public Animation fall_anim;
-    
+    private void Start()
+	{
+		if(MainMenuGUI.flowerFlg == 1 && greenGlows.Count>0)
+		{
+			if(greenGlows[0] != null){
+				MeshRenderer meshRenderer = greenGlows[0].GetComponent<MeshRenderer>();
+
+				meshRenderer.material = Resources.Load<Material>("Glow_1");
+			}
+		}
+	}
 
     public virtual void SetColor(int c)
     {

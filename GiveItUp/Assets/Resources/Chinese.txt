@@ -7,7 +7,7 @@ Purchase success!#支付成功，你是真爱！
 Purchase failed!#支付失败，从头再来？
 Purchase cancelled!#支付取消！累觉不爱…
 Settings#关于
-****** Give It Up! ******#****** 永不言弃! ******
+****** Give It Up! ******#****** 章鱼永不言弃！！ ******
 Developed by#出品
 INVICTUS-GAMES Ltd#东品游戏
 EAST2WEST GAMES Ltd#巨果文化

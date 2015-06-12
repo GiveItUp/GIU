@@ -11,7 +11,7 @@ public class MainMenuGUI : GUIMenu
 	public Transform selectBall;
 	public PackedSprite selectBall_bg;
 	public UIButton[] flower_logos;
-	private int flowerFlg = 0;
+	public static int flowerFlg = 0;
 	public UIButton btn_GiftBag;
 	public UIButton btn_start;
 	private UIButton btn_ballStart;
@@ -48,6 +48,7 @@ public class MainMenuGUI : GUIMenu
 	private void Awake()
 	{
 		inst = this;
+		flowerFlg = 0;
 	}
 
 	#region Init
