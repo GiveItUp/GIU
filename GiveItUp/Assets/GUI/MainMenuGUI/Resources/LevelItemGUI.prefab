@@ -810,7 +810,7 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .544921875
+        x: .475585938
         y: .341796875
         width: .068359375
         height: .03125
@@ -1194,7 +1194,7 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .475585938
+        x: .544921875
         y: .341796875
         width: .068359375
         height: .03125
