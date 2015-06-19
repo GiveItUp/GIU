@@ -35,6 +35,7 @@ public class MainMenuGUI : GUIMenu
 	public GameObject go_levels_3;
 	public JoyStickMenu joyMainMenu;
 	public LevelItemGUI p_LevelItemGUI;
+	public SelectBallContrl selectBallContrl;
 	//public PackedSprite bgGameObject;
 	private List<LevelItemGUI> levelItemGUIs = new List<LevelItemGUI> ();
 	private int _selectedStageIndex = 0;
@@ -233,7 +234,6 @@ public class MainMenuGUI : GUIMenu
 		yield return StartCoroutine (ComponentAnimation_Hide (btn_options.transform, 0.1f));
 
 		yield return StartCoroutine (ComponentAnimation_Hide (ps_logo.transform, 0.03f));
-		
 		yield return StartCoroutine (ComponentAnimation_Hide (flower_logos[flowerFlg].transform, 0.15f));
 		yield return StartCoroutine (ComponentAnimation_Hide (selectBall.transform, 0.15f));
 		yield return StartCoroutine (ComponentAnimation_Hide (selectBall_bg.transform, 0.15f));
@@ -707,12 +707,12 @@ public class MainMenuGUI : GUIMenu
 			case POINTER_INFO.INPUT_EVENT.TAP:
 				if (!((UIButton)(ptr.targetObj)).IsReleaseEnabled)
 					return;
-				ChangeFlower();
+				StartCoroutine(ChangeFlower());
 				break;
 		}
 	}
 
-	private void ChangeFlower()
+	private IEnumerator ChangeFlower()
 	{
 		flower_logos[flowerFlg].gameObject.SetActive(false);
 		if(!PlayerPrefs.HasKey("flower"))
@@ -729,7 +729,14 @@ public class MainMenuGUI : GUIMenu
 		}
 		flower_logos[flowerFlg].gameObject.SetActive(true);
 		flower_logos[flowerFlg].SetInputDelegate (OnBtn_flower_logo_Input);
-		StartCoroutine (ChangeLevels (page));
+		yield return StartCoroutine (ChangeLevels (page));
+		if(flowerFlg == 1)
+		{
+			selectBallContrl.SelectedRed();
+		}else
+		{
+			selectBallContrl.SelectedBlack();
+		}
 	}
 	
 	private IEnumerator OnOptions ()

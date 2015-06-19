@@ -928,7 +928,7 @@ MonoBehaviour:
     - uvs:
         serializedVersion: 2
         x: 0
-        y: .9140625
+        y: .830078125
         width: .100585938
         height: .0830078125
       scaleFactor: {x: .5, y: .5}
@@ -946,7 +946,7 @@ MonoBehaviour:
     - uvs:
         serializedVersion: 2
         x: 0
-        y: .830078125
+        y: .9140625
         width: .100585938
         height: .0830078125
       scaleFactor: {x: .5, y: .5}
@@ -964,7 +964,7 @@ MonoBehaviour:
     - uvs:
         serializedVersion: 2
         x: 0
-        y: .830078125
+        y: .9140625
         width: .100585938
         height: .0830078125
       scaleFactor: {x: .5, y: .5}
@@ -1376,7 +1376,7 @@ MonoBehaviour:
     - uvs:
         serializedVersion: 2
         x: .163085938
-        y: .727539062
+        y: .905273438
         width: .0888671875
         height: .087890625
       scaleFactor: {x: .5, y: .5}
@@ -1394,7 +1394,7 @@ MonoBehaviour:
     - uvs:
         serializedVersion: 2
         x: .163085938
-        y: .81640625
+        y: .638671875
         width: .0888671875
         height: .087890625
       scaleFactor: {x: .5, y: .5}
@@ -1412,7 +1412,7 @@ MonoBehaviour:
     - uvs:
         serializedVersion: 2
         x: .163085938
-        y: .81640625
+        y: .638671875
         width: .0888671875
         height: .087890625
       scaleFactor: {x: .5, y: .5}
@@ -1799,8 +1799,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .58203125
-        y: .275390625
+        x: .255859375
+        y: .91015625
         width: .0791015625
         height: .0654296875
       scaleFactor: {x: .5, y: .5}
@@ -1817,7 +1817,7 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .501953125
+        x: .341796875
         y: .275390625
         width: .0791015625
         height: .0654296875
@@ -1835,7 +1835,7 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .501953125
+        x: .341796875
         y: .275390625
         width: .0791015625
         height: .0654296875

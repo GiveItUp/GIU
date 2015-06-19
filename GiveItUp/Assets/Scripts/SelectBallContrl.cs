@@ -5,15 +5,16 @@ using System.Collections.Generic;
 public class SelectBallContrl : MonoBehaviour {
 	public List<UIButton> balls = new List<UIButton>();
 	private Vector3[] posList = {Vector3.zero,new Vector3(-115,0,0),new Vector3(-200,0,0)};
+	private string defalutBallName = "";
 	void Awake()
 	{
-		string ballName = "Go_BlackBall";
+		defalutBallName = "Go_BlackBall";
 		if(PlayerPrefs.HasKey("ballName"))
 		{
-			ballName = PlayerPrefs.GetString("ballName");
+			defalutBallName = PlayerPrefs.GetString("ballName");
 		}
 
-		while (balls[balls.Count-1].name!=ballName) {
+		while (balls[balls.Count-1].name!=defalutBallName) {
 			UIButton temp = balls[0];
 			balls.Remove(temp);
 			balls.Add(temp);
@@ -46,8 +47,30 @@ public class SelectBallContrl : MonoBehaviour {
 
 	}
 
+	public void SelectedRed()
+	{
+		string ballName = "Go_PinkBall";
+		while (balls[balls.Count-1].name!=ballName) {
+			UIButton temp = balls[0];
+			balls.Remove(temp);
+			balls.Add(temp);
+		}
+		ResetOrderbyBalls();
+	}
+
+	public void SelectedBlack()
+	{
+		while (balls[balls.Count-1].name!=defalutBallName) {
+			UIButton temp = balls[0];
+			balls.Remove(temp);
+			balls.Add(temp);
+		}
+		ResetOrderbyBalls();
+	}
+
 	void ChangeSacle(UIButton temp)
 	{
+		defalutBallName = temp.name;
 		balls.Remove(temp);
 		balls.Add(temp);
 		ResetOrderbyBalls();

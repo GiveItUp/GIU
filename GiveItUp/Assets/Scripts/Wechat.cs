@@ -37,7 +37,7 @@ public class Wechat : MonoBehaviour
 		content["title"] = "章鱼！永不言弃！！";
 		content["description"] = "章鱼！永不言弃！！";
 		content["url"] = "http://www.monstar-lab.com";
-		content ["type"] = Convert.ToString ((int)ContentType.News);
+		content ["type"] = Convert.ToString ((int)contentType);
 		ShareResultEvent evt = new ShareResultEvent (ShareResultHandler);
 		ShareSDK.shareContent (PlatformType.WeChatTimeline, content, evt);
 	}
@@ -49,6 +49,22 @@ public class Wechat : MonoBehaviour
 			print (com.monstar.MiniJSON.jsonEncode (shareInfo));
 		} else if (state == ResponseState.Fail) {
 			print ("fail! error code = " + error ["error_code"] + "; error msg = " + error ["error_msg"]);
+		}
+	}
+	ContentType contentType = ContentType.App;
+	void OnGUI()
+	{
+		if(GUI.Button(new Rect(0,0,100,100),"App"))
+		{
+			contentType = ContentType.App;
+		}
+		if(GUI.Button(new Rect(0,100,100,100),"News"))
+		{
+			contentType = ContentType.News;
+		}
+		if(GUI.Button(new Rect(0,200,100,100),"Image"))
+		{
+			contentType = ContentType.Image;
 		}
 	}
 }

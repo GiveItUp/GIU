@@ -477,7 +477,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   color: {r: 1, g: 1, b: 1, a: 1}
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 512, y: 512}
+  pixelsPerUV: {x: 512, y: 256}
   hideAtStart: 0
   ignoreClipping: 0
   playAnimOnStart: 0
@@ -493,7 +493,7 @@ MonoBehaviour:
       x: .4453125
       y: 0
       width: .203125
-      height: .4765625
+      height: .23828125
     scaleFactor: {x: .5, y: .5}
     topLeftOffset: {x: -1, y: 1}
     bottomRightOffset: {x: 1, y: -1}
@@ -503,7 +503,7 @@ MonoBehaviour:
       x: .4453125
       y: 0
       width: .203125
-      height: .23828125
+      height: .4765625
     scaleFactor: {x: .5, y: .5}
     topLeftOffset: {x: -1, y: 1}
     bottomRightOffset: {x: 1, y: -1}
@@ -535,7 +535,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   color: {r: 1, g: 1, b: 1, a: 1}
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 512, y: 512}
+  pixelsPerUV: {x: 512, y: 256}
   hideAtStart: 0
   ignoreClipping: 0
   playAnimOnStart: 0
@@ -562,18 +562,18 @@ MonoBehaviour:
       serializedVersion: 2
       x: .650390625
       y: 0
-      width: .25
-      height: .2265625
+      width: .24609375
+      height: .11328125
     scaleFactor: {x: .5, y: .5}
     topLeftOffset: {x: -1, y: 1}
     bottomRightOffset: {x: 1, y: -1}
   staticFrameInfo:
     uvs:
       serializedVersion: 2
-      x: .697265625
-      y: .369140625
-      width: .24609375
-      height: .11328125
+      x: .650390625
+      y: 0
+      width: .25
+      height: .2265625
     scaleFactor: {x: .5, y: .5}
     topLeftOffset: {x: -1, y: 1}
     bottomRightOffset: {x: 1, y: -1}
@@ -591,8 +591,8 @@ MonoBehaviour:
         serializedVersion: 2
         x: .650390625
         y: 0
-        width: .25
-        height: .2265625
+        width: .24609375
+        height: .11328125
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
@@ -608,9 +608,9 @@ MonoBehaviour:
     - uvs:
         serializedVersion: 2
         x: .650390625
-        y: .23046875
-        width: .25
-        height: .2265625
+        y: .115234375
+        width: .24609375
+        height: .11328125
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
@@ -641,7 +641,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   color: {r: 1, g: 1, b: 1, a: 1}
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 512, y: 512}
+  pixelsPerUV: {x: 512, y: 256}
   hideAtStart: 0
   ignoreClipping: 0
   playAnimOnStart: 0
@@ -669,7 +669,7 @@ MonoBehaviour:
       x: 0
       y: 0
       width: .443359375
-      height: .89453125
+      height: .447265625
     scaleFactor: {x: .5, y: .5}
     topLeftOffset: {x: -1, y: 1}
     bottomRightOffset: {x: 1, y: -1}
@@ -679,7 +679,7 @@ MonoBehaviour:
       x: 0
       y: 0
       width: .443359375
-      height: .447265625
+      height: .89453125
     scaleFactor: {x: .5, y: .5}
     topLeftOffset: {x: -1, y: 1}
     bottomRightOffset: {x: 1, y: -1}
@@ -696,9 +696,9 @@ MonoBehaviour:
     - uvs:
         serializedVersion: 2
         x: .4453125
-        y: .48046875
+        y: .240234375
         width: .125
-        height: .25
+        height: .125
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}
@@ -716,7 +716,7 @@ MonoBehaviour:
         x: 0
         y: 0
         width: .443359375
-        height: .89453125
+        height: .447265625
       scaleFactor: {x: .5, y: .5}
       topLeftOffset: {x: -1, y: 1}
       bottomRightOffset: {x: 1, y: -1}

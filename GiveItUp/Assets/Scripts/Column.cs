@@ -26,15 +26,49 @@ public class Column : MonoBehaviour
     public ColumnState[] states;
     public Animation anim;
     public Animation fall_anim;
-    private void Start()
+	private static Dictionary<string, Material> cacheMaterials = new Dictionary<string, Material>();
+    private IEnumerator Start()
 	{
 		if(MainMenuGUI.flowerFlg == 1 && greenGlows.Count>0)
 		{
 			if(greenGlows[0] != null){
 				MeshRenderer meshRenderer = greenGlows[0].GetComponent<MeshRenderer>();
 
-				meshRenderer.material = Resources.Load<Material>("Glow_1");
+				if(!cacheMaterials.ContainsKey("Glow"))
+				{
+					cacheMaterials.Add("Glow",Resources.Load<Material>("platforms/Blue/Glow"));
+				}
+				meshRenderer.material = cacheMaterials["Glow"];
 			}
+			MeshRenderer[] meshRenderers = this.GetComponentsInChildren<MeshRenderer>();
+			if(meshRenderers != null)
+			{
+				foreach (MeshRenderer item in meshRenderers) {
+					if(item.material != null)
+					{
+						string materialName = item.material.name.Trim().Split(new char[]{' '})[0];
+						if(!cacheMaterials.ContainsKey(materialName))
+						{
+							cacheMaterials.Add(materialName,Resources.Load<Material>("platforms/Blue/"+materialName));
+						}
+						Material material = cacheMaterials[materialName];
+						if(material != null)
+							item.material = material;
+						Debug.LogError("material:"+materialName+"---");
+						yield return 1;
+					}
+				}
+			}
+			if(Mat_GreenBottom != null)
+			{
+				string materialName = Mat_GreenBottom.name.Trim().Split(new char[]{' '})[0];
+				if(!cacheMaterials.ContainsKey(materialName))
+				{
+					cacheMaterials.Add(materialName,Resources.Load<Material>("platforms/Blue/"+materialName));
+				}
+				Mat_GreenBottom = cacheMaterials[materialName];
+			}
+
 		}
 	}
 

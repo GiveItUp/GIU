@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Glow_1
-  m_Shader: {fileID: 4800000, guid: fe2a7a33be3115a4fab9a5653b2d54f5, type: 3}
+  m_Name: PlatformDown
+  m_Shader: {fileID: 4800000, guid: 17104c5bb3f0b7043bbd76e34b9bb7ea, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
@@ -18,10 +18,14 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: 90127ac4a3de843dfb8fa83160d569a0, type: 3}
+          m_Texture: {fileID: 2800000, guid: e02ea61a78a554789bd1857f59f0f64f, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
+      data:
+        first:
+          name: _InvFade
+        second: 1
       data:
         first:
           name: _Sat
@@ -31,3 +35,7 @@ Material:
         first:
           name: _Color
         second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _TintColor
+        second: {r: .5, g: .5, b: .5, a: .5}

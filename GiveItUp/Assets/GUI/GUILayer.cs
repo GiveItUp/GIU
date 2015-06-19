@@ -79,6 +79,10 @@ public class GUILayer : MonoBehaviour {
 				animation.Play("HideAnimBubble");
 			}
 		}
+		else
+		{
+			t.gameObject.SetActive(false);
+		}
 		if(needSound)
 			SoundManager.Instance.Play(SoundManager.eSoundClip.GUI_Button_back, 1);
 		

@@ -2360,6 +2360,7 @@ MonoBehaviour:
   go_levels_3: {fileID: 115924}
   joyMainMenu: {fileID: 11456216}
   p_LevelItemGUI: {fileID: 11400000, guid: 0bc51023041911648a39dca49a6313bf, type: 2}
+  selectBallContrl: {fileID: 11410136}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2638,8 +2639,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .255859375
-        y: .84375
+        x: .662109375
+        y: .275390625
         width: .0791015625
         height: .0654296875
       scaleFactor: {x: .5, y: .5}
@@ -2656,8 +2657,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .255859375
-        y: .77734375
+        x: .58203125
+        y: .275390625
         width: .0791015625
         height: .0654296875
       scaleFactor: {x: .5, y: .5}
@@ -2674,8 +2675,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .255859375
-        y: .77734375
+        x: .58203125
+        y: .275390625
         width: .0791015625
         height: .0654296875
       scaleFactor: {x: .5, y: .5}
@@ -3464,7 +3465,7 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .341796875
+        x: .501953125
         y: .275390625
         width: .0791015625
         height: .0654296875
@@ -3500,7 +3501,7 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .341796875
+        x: .501953125
         y: .275390625
         width: .0791015625
         height: .0654296875
@@ -3658,8 +3659,8 @@ MonoBehaviour:
     spriteFrames:
     - uvs:
         serializedVersion: 2
-        x: .662109375
-        y: .275390625
+        x: .255859375
+        y: .84375
         width: .0791015625
         height: .0654296875
       scaleFactor: {x: .5, y: .5}
@@ -3677,7 +3678,7 @@ MonoBehaviour:
     - uvs:
         serializedVersion: 2
         x: .255859375
-        y: .91015625
+        y: .77734375
         width: .0791015625
         height: .0654296875
       scaleFactor: {x: .5, y: .5}
@@ -3695,7 +3696,7 @@ MonoBehaviour:
     - uvs:
         serializedVersion: 2
         x: .255859375
-        y: .91015625
+        y: .77734375
         width: .0791015625
         height: .0654296875
       scaleFactor: {x: .5, y: .5}
@@ -4505,7 +4506,7 @@ MonoBehaviour:
     - uvs:
         serializedVersion: 2
         x: 0
-        y: .732421875
+        y: .634765625
         width: .114257812
         height: .0966796875
       scaleFactor: {x: .5, y: .5}
@@ -4523,7 +4524,7 @@ MonoBehaviour:
     - uvs:
         serializedVersion: 2
         x: 0
-        y: .634765625
+        y: .732421875
         width: .114257812
         height: .0966796875
       scaleFactor: {x: .5, y: .5}
@@ -4541,7 +4542,7 @@ MonoBehaviour:
     - uvs:
         serializedVersion: 2
         x: 0
-        y: .634765625
+        y: .732421875
         width: .114257812
         height: .0966796875
       scaleFactor: {x: .5, y: .5}
@@ -5136,7 +5137,7 @@ MonoBehaviour:
   staticFrameInfo:
     uvs:
       serializedVersion: 2
-      x: 0
+      x: .275390625
       y: 0
       width: .274414062
       height: .274414062
