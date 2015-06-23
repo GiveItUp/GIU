@@ -479,11 +479,12 @@ public class Gamelogic : MonoBehaviour
 						{
 							if (!User.HasIAP_UnlockAll)
 							{
-//								#if UNITY_ANDROID
-//								EtceteraAndroidManager.alertButtonClickedEvent += UnlockAll;
-//								EtceteraAndroid.showAlert ("解锁全部关卡", TextManager.Get ("Unlock all info"), "好的", "取消");
-//								#endif
-								PluginManager.iap.PurchaseProduct(eIAP.UnlockAll);
+								#if UNITY_ANDROID
+								EtceteraAndroidManager.alertButtonClickedEvent += UnlockAll;
+								EtceteraAndroid.showAlert ("开启休闲模式", TextManager.Get ("Unlock all info"), "购买", "取消");
+						#elif UNITY_IPHONE
+						PluginManager.iap.PurchaseProduct(eIAP.UnlockAll);
+								#endif
 							}
 							User.CompleteStage(_stageIndex);
 						}
@@ -508,16 +509,10 @@ public class Gamelogic : MonoBehaviour
     
 	void UnlockAll(string s)
 	{
-		if (s == "好的")
+		if (s == "购买")
 		{
-			if (PlayerPrefs.GetInt("DebugMode", 0) != 1)
-			{
 				CGame.popupLayer.ShowPurchaseLoadingGUI();
-				ReinPluginManager.Purchase("UnlockAll");
-			} else
-			{
-				CGame.Instance.gameObject.SendMessage("OnPurchaseSuccess");
-			}
+				ReinPluginManager.Purchase("UnlockGame");
 		}
 	}
 

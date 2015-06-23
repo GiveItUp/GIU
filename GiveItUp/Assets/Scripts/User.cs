@@ -33,6 +33,8 @@ public class User
 	
 	public static int dailyChallengeLeaderboardScore = 0;
 	
+	public static bool _isClearance = false;
+	public static bool _isToChangePackage = false;
 	static User()
 	{
 		Load();
@@ -142,10 +144,17 @@ public class User
 	{
 		if (_stageIndex >= Storage.Instance._worlds.Count || _stageIndex >= CGame.LEVEL_COUNT || (GetLevelScore(_stageIndex) >= 100 && _stageIndex < ActualStage) || LevelEditor.testmode)
 			return;
+		
+		if (_stageIndex >= CGame.LEVEL_COUNT - 1) {
+			_isClearance = true;
+			SetLevelScore (_stageIndex, 100);
+		} else {
+			SetLevelScore (_stageIndex, 100);
+			_isClearance = false;
+			ActualStage++;
+			LastPlayedStage = ActualStage;
+		}
 
-		SetLevelScore(_stageIndex, 100);
-		ActualStage++;
-		LastPlayedStage = ActualStage;
 		Save();
 	}
 	#endregion

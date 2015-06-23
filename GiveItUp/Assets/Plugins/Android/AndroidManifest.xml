@@ -1,72 +1,289 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="cn.sharesdk.onekeyshare" android:installLocation="preferExternal" android:theme="@android:style/Theme.NoTitleBar" android:versionCode="12" android:versionName="1.0">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionName="1.0" android:versionCode="1" package="com.east2west.octopus" android:installLocation="preferExternal" android:theme="@android:style/Theme.NoTitleBar">
+  <supports-screens android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" android:xlargeScreens="true" android:anyDensity="true" />
+ 
+    <application
+        android:name=".GameSdkApplication"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name" 
+        android:screenOrientation="landscape"
+        android:configChanges="orientation|screenSize">
 
-    <uses-permission android:name="android.permission.GET_TASKS" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
-    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="com.android.vending.BILLING" />
-    
-    <!-- 蓝牙分享所需的权限 -->
-    <uses-permission android:name="android.permission.BLUETOOTH" />
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-  
-    <supports-screens
-        android:anyDensity="true"
-        android:largeScreens="true"
-        android:normalScreens="true"
-        android:resizeable="true"
-        android:smallScreens="true" />
-
-    <uses-sdk
-        android:minSdkVersion="8"
-        android:targetSdkVersion="17" />
-	<application android:allowBackup="true" android:icon="@drawable/app_icon" android:label="@string/app_name" android:debuggable="true" android:name="cn.sharesdk.unity3d.ShareSDKApplication">
+    <activity android:name=".MainActivity"
+        android:screenOrientation="landscape"
+              android:label="@string/app_name"
+              android:theme="@android:style/Theme.Light.NoTitleBar" 
+              android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity
+        android:name=".LeaderboardsActivity"
+        android:label="@string/leaderboardsTitle"
+      	android:screenOrientation="landscape" />
+<!-- sdk开始  -->
+<!--电信-->
+   <activity
+            android:name="cn.egame.terminal.paysdk.EgamePayActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" >
+        </activity>
         <activity
-            android:name="cn.sharesdk.unity3d.demo.MainActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:windowSoftInputMode="adjustPan|stateHidden" android:label="@string/app_name" android:screenOrientation="sensorLandscape" android:launchMode="singleTask">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:name="cn.play.dserv.EmpActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:exported="true" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
+        <service
+            android:name="cn.play.dserv.DService"
+            android:enabled="true"
+            android:exported="false"
+            android:label="dservice"
+            android:process=":dservice_v1" >
+        </service>
+
+        <receiver
+            android:name="cn.play.dserv.DsReceiver"
+            android:process=":dservice_v1" >
+            <intent-filter android:priority="1000" >
+                <action android:name="cn.play.dservice" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
             </intent-filter>
-			<!--
-               KakaoTalk , 分享应用的时候，可以设置打开应用的参数 excuteUrl, 用户点击分享的内容时，就会打开相应的应用，
-                如果应用不存在，可以设置 installURL参数, 打开下载应用的相关网址  (executeUrl)
-               设置后intent-filter 后，分享时，需要设置参数 setExecuteUrl("kakaoTalkTest://starActivity");
-            -->
+            <intent-filter android:priority="1000" >
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+<!--        电信-->
+<!--        微信-->
+       <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:launchMode="singleInstance"
+            android:exported="true" >
+        </activity>
+<!--        微信-->
+
+<!--        联通-->
+        <service android:name="com.unicom.wostore.unipay.paysecurity.SecurityServiceFramework" >
             <intent-filter>
-                <data android:scheme="kakaoTalkTest" android:host="starActivity"/>
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.BROWSABLE" />
+                <action android:name="com.east2west.octopus.unicom.wostore.unipay.securityserviceframework" />
+            </intent-filter>
+        </service>
+<!--        联通-->
+<!--        移动-->
+        <service
+            android:name="mm.purchasesdk.iapservice.PurchaseService"
+            android:exported="true" >
+
+            <!-- android:process="mm.iapServices" > -->
+            <intent-filter android:priority="313" >
+                <action android:name="com.east2west.octopus.purchaseservice.BIND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        <!-- android:excludeFromRecents="true" -->
+        <!-- android:launchMode="singleInstance" -->
+        <activity
+            android:name="mm.purchasesdk.iapservice.BillingLayoutActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.Translucent" >
+            <intent-filter android:priority="313" >
+                <action android:name="com.east2west.octopus.com.mmiap.activity" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.mob.tools.MobUIShell"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar"
-            android:windowSoftInputMode="stateHidden|adjustResize" />
-        <!-- 微信分享回调 -->
-        <activity
-            android:name=".wxapi.WXEntryActivity"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:exported="true" />
-        <!-- 易信分享回调 -->
-        <activity
-            android:name=".yxapi.YXEntryActivity"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:excludeFromRecents="true"
+        <!-- android:process="safiap.framework.safframeworkmanager" begin -->
+        <service
+            android:name="safiap.framework.SafFrameworkManager"
             android:exported="true"
-            android:launchMode="singleTop" />
-    </application>
+            android:process="safiap.framework" >
+            <intent-filter android:priority="633" >
+
+                <!-- ID for services declared in AIDL -->
+                <action android:name="safiap.framework.sdk.ISAFFramework" />
+            </intent-filter>
+            <intent-filter android:priority="633" >
+
+                <!-- ID for services declared in AIDL -->
+                <action android:name="safiap.framework.ACTION_START_DOWNLOAD" />
+            </intent-filter>
+            <intent-filter android:priority="633" >
+
+                <!-- ID for services declared in AIDL -->
+                <action android:name="safiap.framework.ACTION_CHECK_UPDATE" />
+            </intent-filter>
+        </service>
+        <!-- receivers -->
+        <receiver android:name="safiap.framework.CheckUpdateReceiver" >
+            <intent-filter>
+                <action android:name="safiap.framework.ACTION_CANCEL_NOTIFICATION" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="safiap.GET_SHARED_DATA" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="safiap.framework.ACTION_SET_TIMER" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="safiap.framework.ui.UpdateHintActivity"
+            android:configChanges="orientation"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <action android:name="safiap.framework.ACTION_TO_INSTALL" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="safiap.framework.ACTION_TO_INSTALL_IAP" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="safiap.framework.ACTION_NETWORK_ERROR_IAP" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="safiap.framework.ACTION_NETWORK_ERROR_FRAMEWORK" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="safiap.framework.logreport.monitor.handler.LogreportHandler"
+            android:process=":remote" />
+        <!-- android:process="safiap.framework.safframeworkmanager" end -->
+<!--        移动-->
+<!-- sdk结束  -->
+
+<!--ktplay-->
+ <activity
+            android:name="com.ktplay.activity.GetPhotoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="user"
+            android:windowSoftInputMode="adjustPan|adjustUnspecified" >
+        </activity>
+        
+        <meta-data
+            android:name="KTPLAY_CHANNELID"
+            android:value="GP"
+            />
+<!--ktplay-->
+<!--有米-->
+<!--插屏-->
+ <activity
+        android:name="net.slidingmenu.tools.AdBrowser"
+        android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+        android:theme="@android:style/Theme.Light.NoTitleBar" >
+    </activity>
+    <service
+        android:name="net.slidingmenu.tools.AdService" >
+    </service>
+    <receiver
+        android:name="net.slidingmenu.tools.AdReceiver" >
+        <intent-filter>
+            <action android:name="android.intent.action.PACKAGE_ADDED" />
+            <data android:scheme="package" />
+        </intent-filter>
+    </receiver>
+<!--    积分-->
+<activity
+    android:name="net.slidingmenu.tools.AdBrowser"
+    android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+    android:theme="@android:style/Theme.Light.NoTitleBar" >
+</activity>
+<service
+    android:name="net.slidingmenu.tools.AdService"
+    android:exported="false" >
+</service>
+<service
+    android:name="net.slidingmenu.tools.ExpService"
+    android:exported="false" >
+</service>
+<receiver
+    android:name="net.slidingmenu.tools.AdReceiver" >
+    <intent-filter>
+        <action android:name="android.intent.action.PACKAGE_ADDED" />
+        <data android:scheme="package" />
+    </intent-filter>
+</receiver>
+<!--视频-->
+<activity
+    android:name="net.slidingmenu.tools.video.VideoActivity"
+    android:configChanges="keyboard|keyboardHidden|screenSize|orientation"
+    android:screenOrientation="landscape"
+    android:theme="@android:style/Theme.NoTitleBar" >
+</activity>
+<!--有米-->
+	<meta-data
+    android:name="orientation"
+    android:value="1" />
+    <meta-data
+    android:name="animType"
+    android:value="2" />
+    
+    <meta-data android:name="EGAME_CHANNEL" android:value="10000000"  />
+	
+        <!-- 百度渠道号说明 -->
+        <meta-data
+            android:name="dksdk_appid"
+            android:value="5611806" />
+        <meta-data
+            android:name="dksdk_appkey"
+            android:value="Zb6PdN2Hi6zgku2OuTzqqmUd" />
+        <meta-data
+            android:name="dksdk_appsecret"
+            android:value="qSX538Vb4hDkQ2sFtrbANWQTkCjzckKa" />
+        <meta-data
+            android:name="dksdk_channel"
+            android:value="12999" />
+    
+    <meta-data android:name="wostore_billing_otherpay" android:value="false"/>
+	<meta-data android:name="wostore_billing_chinaunicom" android:value="true"/>
+	<meta-data android:name="wostore_billing_chinamobile"  android:value="false" />
+	<meta-data android:name="wostore_billing_chinatele"  android:value="false" />
+	
+<!-- 添加360SDK必需的meta-data：QHOPENSDK_APPID。此处value为APPID。请在360应用开放平台注册申请-->
+<meta-data
+android:name="QHOPENSDK_APPID"
+android:value="202352196">
+</meta-data>
+
+<!--添加360SDK必需的meta-data：QHOPENSDK_APPKEY。此处value为APPKEY。请在360应用开放平台注册申请-->
+<meta-data
+android:name="QHOPENSDK_APPKEY"
+android:value="4d9bb760dcddaf9f715771da143c7166">
+</meta-data>
+
+  </application>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+	<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
 
 </manifest>
