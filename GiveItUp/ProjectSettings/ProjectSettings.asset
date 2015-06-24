@@ -103,8 +103,8 @@ PlayerSettings:
   iPadHighResLandscapeSplashScreen: {fileID: 0}
   AndroidTargetDevice: 3
   AndroidSplashScreenScale: 0
-  AndroidKeystoreName: "E:/east2west\u7B7E\u540D/grannysmith.keystore"
-  AndroidKeyaliasName: android.keystore
+  AndroidKeystoreName: 
+  AndroidKeyaliasName: 
   resolutionDialogBanner: {fileID: 0}
   m_BuildTargetIcons:
   - m_BuildTarget: 
