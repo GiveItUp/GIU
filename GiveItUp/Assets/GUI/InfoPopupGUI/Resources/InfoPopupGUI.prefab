@@ -243,7 +243,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: "\u6751\u91CC\u6CA1\u7F51\uFF1F"
   offsetZ: 0
-  characterSize: 50
+  characterSize: 40
   characterSpacing: 1
   lineSpacing: 1
   anchor: 4

@@ -61,14 +61,6 @@
             </intent-filter>
         </receiver>
 <!--        电信-->
-<!--        微信-->
-       <activity
-            android:name=".wxapi.WXEntryActivity"
-            android:launchMode="singleInstance"
-            android:exported="true" >
-        </activity>
-<!--        微信-->
-
 <!--        联通-->
         <service android:name="com.unicom.wostore.unipay.paysecurity.SecurityServiceFramework" >
             <intent-filter>

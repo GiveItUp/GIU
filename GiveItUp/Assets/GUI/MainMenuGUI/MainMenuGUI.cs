@@ -503,7 +503,7 @@ public class MainMenuGUI : GUIMenu
 	private IEnumerator OnStart ()
 	{
 		#if UNITY_ANDROID
-		if (_selectedStageIndex == 0 || (!UmengInitializer._isShowIap && User.GetLevelScore (_selectedStageIndex-1) >= 100) || (User.GetLevelScore (_selectedStageIndex-1) >= 30 && User.HasIAP_UnlockAll) || User.GetLevelScore (_selectedStageIndex) > 0){//(User.HasIAP_ShareUnlockGame && _selectedStageIndex == 1)) {
+		if (_selectedStageIndex == 0 || _selectedStageIndex == 18 || (!UmengInitializer._isShowIap && User.GetLevelScore (_selectedStageIndex-1) >= 100) || (User.GetLevelScore (_selectedStageIndex-1) >= 30 && User.HasIAP_UnlockAll) || User.GetLevelScore (_selectedStageIndex) > 0){//(User.HasIAP_ShareUnlockGame && _selectedStageIndex == 1)) {
 			if (_inputEnabled) {
 				_isStage = true;
 				_inputEnabled = false;
@@ -516,10 +516,12 @@ public class MainMenuGUI : GUIMenu
 				CGame.menuLayer.CloseMainMenuGUI ();
 				CGame.Instance.InitGamelogic (_selectedStageIndex, _selectedStage);
 			}
+		} else if(User.HasIAP_UnlockAll && User.GetLevelScore (_selectedStageIndex-1) < 30){			
+				EtceteraAndroid.showAlert ("提示", "大于30%即可开启下一关", "确定");			
 		} else {
 			OnUnlockAll ();
 		}
-		#elif UNITY_IPHONE
+		#elif UNITY_IOS
 		SoundManager.PlayButtonPlaySound ();
 		
 		yield return StartCoroutine (PlayHideAnim ());
@@ -580,7 +582,7 @@ public class MainMenuGUI : GUIMenu
 			SoundManager.PlayButtonTapSound ();
 			#if UNITY_ANDROID
 			ReinPluginManager.ShowLeaderboards(User._isClearance ? "" + CGame.LEVEL_COUNT : "" + User.ActualStage);
-			#elif UNITY_IPHONE
+			#elif UNITY_IOS
 			PluginManager.social.ShowLeaderboards ();
 			#endif
 		}
@@ -656,7 +658,7 @@ public class MainMenuGUI : GUIMenu
 			EtceteraAndroidManager.alertButtonClickedEvent -= UnlockAll;
 			EtceteraAndroidManager.alertButtonClickedEvent += UnlockAll;
 			EtceteraAndroid.showAlert ("开启休闲模式", TextManager.Get ("Unlock game info"), "购买", "取消");
-			#elif UNITY_IPHONE
+			#elif UNITY_IOS
 			#if !UNITY_EDITOR
 			if ( Application.internetReachability == NetworkReachability.NotReachable ||PluginManager.iap.GetIAPProduct (eIAP.UnlockAll) == null) {//
 				CGame.popupLayer.ShowInfoPopupGUI (TextManager.Get ("Please check your internet connection!"));
@@ -698,7 +700,7 @@ public class MainMenuGUI : GUIMenu
 			EtceteraAndroidManager.alertButtonClickedEvent -= UnlockAll;
 			EtceteraAndroidManager.alertButtonClickedEvent += UnlockAll;
 			EtceteraAndroid.showAlert ("开启休闲模式", TextManager.Get ("Unlock game info ads"), "购买", "取消");
-			#elif UNITY_IPHONE
+			#elif UNITY_IOS
 			#endif
 			//			#if !UNITY_EDITOR
 			//			if (Application.internetReachability == NetworkReachability.NotReachable || PluginManager.iap.GetIAPProduct (eIAP.NoAds) == null) {
