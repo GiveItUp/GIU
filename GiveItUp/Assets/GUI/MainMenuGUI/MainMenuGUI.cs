@@ -47,10 +47,11 @@ public class MainMenuGUI : GUIMenu
 	private int actualPage = 0;
 	//检测是否进入游戏的标签
 	private bool _isStage;
-	private void Awake()
+
+	private void Awake ()
 	{
 		inst = this;
-		flowerFlg = 0;
+//		flowerFlg = 0;
 	}
 	
 	#region Init
@@ -58,8 +59,8 @@ public class MainMenuGUI : GUIMenu
 	{
 		_isStage = false;
 		
-		btn_prevpage.gameObject.SetActive(false);
-		btn_nextpage.gameObject.SetActive(false);
+		btn_prevpage.gameObject.SetActive (false);
+		btn_nextpage.gameObject.SetActive (false);
 		
 		_inputEnabled = false;
 		int width = GfxSettings.Instance ().GetScreenWidth () + 1;
@@ -79,10 +80,17 @@ public class MainMenuGUI : GUIMenu
 		//ChangeLevel (User.LastPlayedStage);
 		//Debug.Log ("act = " + User.LastPlayedStage);
 		//	actualPage = User.LastPlayedStage < 18 ? 0 : 1;
-		page = PlayerPrefs.GetInt("page",0);
+		page = PlayerPrefs.GetInt ("page", 0);
 		actualPage = page;
-		
-		PlayerPrefs.DeleteKey("flower");
+		if(flowerFlg != 1)
+		{
+			PlayerPrefs.DeleteKey ("flower");
+		}else
+		{
+			page = 2;
+			actualPage = page;
+		}
+		flower_logos [1-flowerFlg].gameObject.SetActive(false);
 		//ChangeLevels (page);
 		
 		StartCoroutine (PlayShowAnim ());
@@ -135,7 +143,7 @@ public class MainMenuGUI : GUIMenu
 		ComponentAnimation_Prepare (btn_start.transform);
 		ComponentAnimation_Prepare (selectBall.transform);
 		ComponentAnimation_Prepare (selectBall_bg.transform);
-		ComponentAnimation_Prepare (flower_logos[flowerFlg].transform);
+		ComponentAnimation_Prepare (flower_logos [flowerFlg].transform);
 		//if (User.HasIAP_UnlockAll) {
 		ComponentAnimation_Prepare (btn_start_random.transform);
 		//}
@@ -167,7 +175,7 @@ public class MainMenuGUI : GUIMenu
 		
 		yield return StartCoroutine (ComponentAnimation_Show (btn_options.transform, 0.2f));
 		
-		yield return StartCoroutine(ComponentAnimation_Show (btn_gamecenter.transform, 0.11f));
+		yield return StartCoroutine (ComponentAnimation_Show (btn_gamecenter.transform, 0.11f));
 		
 		//yield return StartCoroutine(ComponentAnimation_Show (btn_moregames.transform, 0.12f));
 		
@@ -176,13 +184,13 @@ public class MainMenuGUI : GUIMenu
 		if (!User.HasIAP_UnlockAll) {
 			yield return StartCoroutine (ComponentAnimation_Show (btn_unlock_all.transform, 0.1f, false));
 			yield return StartCoroutine (ComponentAnimation_Show (btn_EliminateAds.transform, 0.1f, false));
-				}
+		}
 		yield return StartCoroutine (ComponentAnimation_Show (btn_GiftBag.transform, 0.1f, false));
 		//SoundManager.Instance.Play(SoundManager.eSoundClip.GUI_PopupShowComponent, 1);
 		
 		yield return StartCoroutine (ShowLevels (page));
 		
-		yield return StartCoroutine (ComponentAnimation_Show (flower_logos[flowerFlg].transform, 0.15f));
+		yield return StartCoroutine (ComponentAnimation_Show (flower_logos [flowerFlg].transform, 0.15f));
 		yield return StartCoroutine (ComponentAnimation_Show (selectBall_bg.transform, 0.15f));
 		yield return StartCoroutine (ComponentAnimation_Show (selectBall.transform, 0.15f));
 		yield return StartCoroutine (ComponentAnimation_Show (go_ball.transform, 0.15f));
@@ -195,7 +203,7 @@ public class MainMenuGUI : GUIMenu
 		_inputEnabled = true;
 		
 		if (PlayerPrefs.GetInt ("TVMode", 0) != 1) {
-			btn_ballStart.GetComponent<Animation>().Play ("ButtonAnim");
+			btn_ballStart.GetComponent<Animation> ().Play ("ButtonAnim");
 		}
 		
 		//		float timer = 0;
@@ -226,12 +234,12 @@ public class MainMenuGUI : GUIMenu
 		yield return StartCoroutine (ComponentAnimation_Hide (btn_start_random.transform, 0.11f));
 		//}
 		yield return StartCoroutine (ComponentAnimation_Hide (btn_start.transform, 0.11f));
-		yield return StartCoroutine(ComponentAnimation_Hide (btn_gamecenter.transform, 0.11f));
+		yield return StartCoroutine (ComponentAnimation_Hide (btn_gamecenter.transform, 0.11f));
 		
 		if (!User.HasIAP_UnlockAll) {
-						yield return StartCoroutine (ComponentAnimation_Hide (btn_unlock_all.transform, 0.1f, false));
+			yield return StartCoroutine (ComponentAnimation_Hide (btn_unlock_all.transform, 0.1f, false));
 			yield return StartCoroutine (ComponentAnimation_Hide (btn_EliminateAds.transform, 0.1f, false));
-				}
+		}
 		yield return StartCoroutine (ComponentAnimation_Hide (btn_GiftBag.transform, 0.1f, false));
 		
 		//		if(!User.HasIAP_RemoveAds && !User.IsPremium)
@@ -240,7 +248,7 @@ public class MainMenuGUI : GUIMenu
 		yield return StartCoroutine (ComponentAnimation_Hide (btn_options.transform, 0.1f));
 		
 		yield return StartCoroutine (ComponentAnimation_Hide (ps_logo.transform, 0.03f));
-		yield return StartCoroutine (ComponentAnimation_Hide (flower_logos[flowerFlg].transform, 0.15f));
+		yield return StartCoroutine (ComponentAnimation_Hide (flower_logos [flowerFlg].transform, 0.15f));
 		yield return StartCoroutine (ComponentAnimation_Hide (selectBall.transform, 0.15f));
 		yield return StartCoroutine (ComponentAnimation_Hide (selectBall_bg.transform, 0.15f));
 		
@@ -267,7 +275,7 @@ public class MainMenuGUI : GUIMenu
 		btn_EliminateAds.SetInputDelegate (OnBtn_EliminateAds_Input);
 		btn_remove_ads.SetInputDelegate (OnBtn_RemoveAds_Input);
 		btn_options.SetInputDelegate (OnBtn_Options_Input);
-		flower_logos[flowerFlg].SetInputDelegate (OnBtn_flower_logo_Input);
+		flower_logos [flowerFlg].SetInputDelegate (OnBtn_flower_logo_Input);
 		btn_prevpage.SetInputDelegate (OnBtn_PrevPage_Input);
 		btn_nextpage.SetInputDelegate (OnBtn_NextPage_Input);
 	}
@@ -312,14 +320,14 @@ public class MainMenuGUI : GUIMenu
 			LevelItemGUI lit = GameObject.Instantiate (p_LevelItemGUI) as LevelItemGUI;
 			if (i < pageSize)
 				lit.transform.parent = go_levels_1.transform;
-			else if (i < 2*pageSize)
+			else if (i < 2 * pageSize)
 				lit.transform.parent = go_levels_2.transform;
 			else
 				lit.transform.parent = go_levels_3.transform;
 			lit.transform.localPosition = new Vector3 (-430 + (i % pageSize) * 110, 0, -1);
 			lit.Init (i, Storage.Instance._worlds [i], ChangeLevel);
 			levelItemGUIs.Add (lit);
-			if ((User.GetLevelScore(User.ActualStage)>=100 && User.ActualStage - lit._index ==-1)|| User.ActualStage - lit._index >=0 || User.HasIAP_UnlockAll) {
+			if ((User.GetLevelScore (User.ActualStage) >= 100 && User.ActualStage - lit._index == -1) || User.ActualStage - lit._index >= 0 || User.HasIAP_UnlockAll) {
 				//Debug.Log(User.ActualStage +" "+ lit._index);
 				joyMainMenu.btns.Add (lit.gameObject);
 			}
@@ -334,18 +342,16 @@ public class MainMenuGUI : GUIMenu
 		return null;
 	}
 	
-	
 	private IEnumerator ChangeLevels (int page)
 	{
-		btn_prevpage.gameObject.SetActive(false);
-		btn_nextpage.gameObject.SetActive(false);
+		btn_prevpage.gameObject.SetActive (false);
+		btn_nextpage.gameObject.SetActive (false);
 		yield return StartCoroutine (HideLevels (actualPage));
 		
 		actualPage = page;
-		if(page<2)
-		{
-			PlayerPrefs.SetInt("page",page);
-			PlayerPrefs.Save();
+		if (page < 2) {
+			PlayerPrefs.SetInt ("page", page);
+			PlayerPrefs.Save ();
 		}
 		
 		go_levels_1.gameObject.SetActive (actualPage == 0);
@@ -357,26 +363,22 @@ public class MainMenuGUI : GUIMenu
 	
 	private IEnumerator ShowLevels (int showPage)
 	{
-		int startIndex = showPage*pageSize;//actualPage == 0 ? 0 : 9;
-		int endIndex = (showPage+1)*pageSize;//actualPage == 0 ? 9 : 18;
+		int startIndex = showPage * pageSize;//actualPage == 0 ? 0 : 9;
+		int endIndex = (showPage + 1) * pageSize;//actualPage == 0 ? 9 : 18;
 		//foreach (var lit in levelItemGUIs)
 		for (int i = startIndex; i < levelItemGUIs.Count && i < endIndex; i++)
 			yield return StartCoroutine (ComponentAnimation_Show (levelItemGUIs [i].transform, 0.07f));
-		if(actualPage!=0 && actualPage != 2)
-		{
-			btn_prevpage.gameObject.SetActive(true);
+		if (actualPage != 0 && actualPage != 2) {
+			btn_prevpage.gameObject.SetActive (true);
 		}
-		if(actualPage!= 1 && actualPage != 2)
-		{
-			btn_nextpage.gameObject.SetActive(true);
+		if (actualPage != 1 && actualPage != 2) {
+			btn_nextpage.gameObject.SetActive (true);
 		}
 		
-		if(startIndex <= User.LastPlayedStage && User.LastPlayedStage < endIndex)
-		{
+		if (startIndex <= User.LastPlayedStage && User.LastPlayedStage < endIndex) {
 			ChangeLevel (User.LastPlayedStage);
-		}else
-		{
-			ChangeLevel(startIndex);
+		} else {
+			ChangeLevel (startIndex);
 		}
 	}
 	
@@ -387,8 +389,8 @@ public class MainMenuGUI : GUIMenu
 		//		else
 		//			yield return StartCoroutine(ComponentAnimation_Hide (btn_prevpage.transform, 0.1f));
 		
-		int startIndex = ((actualPage+1)*pageSize > levelItemGUIs.Count ? levelItemGUIs.Count : (actualPage+1)*pageSize)-1;//actualPage == 0 ? 8 : 17;
-		int endIndex = actualPage*pageSize;//actualPage == 0 ? 0 : 9;
+		int startIndex = ((actualPage + 1) * pageSize > levelItemGUIs.Count ? levelItemGUIs.Count : (actualPage + 1) * pageSize) - 1;//actualPage == 0 ? 8 : 17;
+		int endIndex = actualPage * pageSize;//actualPage == 0 ? 0 : 9;
 		for (int i = startIndex; i >= endIndex; i--)
 			yield return StartCoroutine (ComponentAnimation_Hide (levelItemGUIs [i].transform, 0.07f, false));
 	}
@@ -427,7 +429,7 @@ public class MainMenuGUI : GUIMenu
 					lig.SetSelected (_selectedLevelItemGUI._index == lig._index);
 				}
 			}
-			if((User.GetLevelScore(User.ActualStage)>=100 && User.ActualStage - _selectedStageIndex ==-1)|| User.ActualStage - _selectedStageIndex >=0||User.HasIAP_UnlockAll){
+			if ((User.GetLevelScore (User.ActualStage) >= 100 && User.ActualStage - _selectedStageIndex == -1) || User.ActualStage - _selectedStageIndex >= 0 || User.HasIAP_UnlockAll) {
 				StartCoroutine (OnStart ());
 			}
 		}
@@ -472,15 +474,15 @@ public class MainMenuGUI : GUIMenu
 		
 		btn_remove_ads.transform.localPosition = new Vector3 (w - 75, h - 70, -1);
 		btn_unlock_all.transform.localPosition = new Vector3 (w - 80, User.HasIAP_RemoveAds || User.IsPremium ? h - 70 : h - 180, -1);
-		btn_GiftBag.transform.localPosition = btn_unlock_all.transform.localPosition-new Vector3(0,120,0);
-		btn_EliminateAds.transform.localPosition = btn_GiftBag.transform.localPosition-new Vector3(-20,130,0);
+		btn_GiftBag.transform.localPosition = btn_unlock_all.transform.localPosition - new Vector3 (0, 120, 0);
+		btn_EliminateAds.transform.localPosition = btn_GiftBag.transform.localPosition - new Vector3 (-20, 130, 0);
 		
 		btn_options.transform.localPosition = new Vector3 (w - 80, h - 65, -1);
 		
 		btn_prevpage.transform.localPosition = new Vector3 (-w + 70, -h + 40, -1);
 		btn_nextpage.transform.localPosition = new Vector3 (w - 70, -h + 40, -1);
 		playerGroupTitle.transform.localPosition = new Vector3 (0, -h + 30, -1);
-		playerGroupTitleBG.transform.localScale = new Vector3(2*w-60,45,1);
+		playerGroupTitleBG.transform.localScale = new Vector3 (2 * w - 60, 45, 1);
 	}
 	#endregion
 	
@@ -503,7 +505,7 @@ public class MainMenuGUI : GUIMenu
 	private IEnumerator OnStart ()
 	{
 		#if UNITY_ANDROID
-		if (_selectedStageIndex == 0 || _selectedStageIndex == 18 || (!UmengInitializer._isShowIap && User.GetLevelScore (_selectedStageIndex-1) >= 100) || (User.GetLevelScore (_selectedStageIndex-1) >= 30 && User.HasIAP_UnlockAll) || User.GetLevelScore (_selectedStageIndex) > 0){//(User.HasIAP_ShareUnlockGame && _selectedStageIndex == 1)) {
+		if (_selectedStageIndex == 0 || (!UmengInitializer._isShowIap && User.GetLevelScore (_selectedStageIndex-1) >= 100) || (User.GetLevelScore (_selectedStageIndex-1) >= 30 && User.HasIAP_UnlockAll) || User.GetLevelScore (_selectedStageIndex) > 0){//(User.HasIAP_ShareUnlockGame && _selectedStageIndex == 1)) {
 			if (_inputEnabled) {
 				_isStage = true;
 				_inputEnabled = false;
@@ -516,12 +518,13 @@ public class MainMenuGUI : GUIMenu
 				CGame.menuLayer.CloseMainMenuGUI ();
 				CGame.Instance.InitGamelogic (_selectedStageIndex, _selectedStage);
 			}
-		} else if(User.HasIAP_UnlockAll && User.GetLevelScore (_selectedStageIndex-1) < 30){			
-				EtceteraAndroid.showAlert ("提示", "大于30%即可开启下一关", "确定");			
 		} else {
 			OnUnlockAll ();
 		}
-		#elif UNITY_IOS
+		#elif UNITY_IPHONE
+		if(_inputEnabled)
+		{
+		Debug.LogError("OnStart");
 		SoundManager.PlayButtonPlaySound ();
 		
 		yield return StartCoroutine (PlayHideAnim ());
@@ -531,6 +534,7 @@ public class MainMenuGUI : GUIMenu
 		CGame.Instance.DestroyMenuMusic ();
 		CGame.menuLayer.CloseMainMenuGUI ();
 		CGame.Instance.InitGamelogic (_selectedStageIndex, _selectedStage);
+	}
 		#endif
 	}
 	
@@ -582,7 +586,7 @@ public class MainMenuGUI : GUIMenu
 			SoundManager.PlayButtonTapSound ();
 			#if UNITY_ANDROID
 			ReinPluginManager.ShowLeaderboards(User._isClearance ? "" + CGame.LEVEL_COUNT : "" + User.ActualStage);
-			#elif UNITY_IOS
+			#elif UNITY_IPHONE
 			PluginManager.social.ShowLeaderboards ();
 			#endif
 		}
@@ -630,7 +634,7 @@ public class MainMenuGUI : GUIMenu
 		case POINTER_INFO.INPUT_EVENT.TAP:
 			if (!((UIButton)(ptr.targetObj)).IsReleaseEnabled)
 				return;
-			CGame.popupLayer.ShowGiftBagPopupGUI();
+			CGame.popupLayer.ShowGiftBagPopupGUI ();
 			break;
 		}
 	}
@@ -658,7 +662,7 @@ public class MainMenuGUI : GUIMenu
 			EtceteraAndroidManager.alertButtonClickedEvent -= UnlockAll;
 			EtceteraAndroidManager.alertButtonClickedEvent += UnlockAll;
 			EtceteraAndroid.showAlert ("开启休闲模式", TextManager.Get ("Unlock game info"), "购买", "取消");
-			#elif UNITY_IOS
+			#elif UNITY_IPHONE
 			#if !UNITY_EDITOR
 			if ( Application.internetReachability == NetworkReachability.NotReachable ||PluginManager.iap.GetIAPProduct (eIAP.UnlockAll) == null) {//
 				CGame.popupLayer.ShowInfoPopupGUI (TextManager.Get ("Please check your internet connection!"));
@@ -700,7 +704,7 @@ public class MainMenuGUI : GUIMenu
 			EtceteraAndroidManager.alertButtonClickedEvent -= UnlockAll;
 			EtceteraAndroidManager.alertButtonClickedEvent += UnlockAll;
 			EtceteraAndroid.showAlert ("开启休闲模式", TextManager.Get ("Unlock game info ads"), "购买", "取消");
-			#elif UNITY_IOS
+			#elif UNITY_IPHONE
 			#endif
 			//			#if !UNITY_EDITOR
 			//			if (Application.internetReachability == NetworkReachability.NotReachable || PluginManager.iap.GetIAPProduct (eIAP.NoAds) == null) {
@@ -745,35 +749,31 @@ public class MainMenuGUI : GUIMenu
 		case POINTER_INFO.INPUT_EVENT.TAP:
 			if (!((UIButton)(ptr.targetObj)).IsReleaseEnabled)
 				return;
-			StartCoroutine(ChangeFlower());
+			StartCoroutine (ChangeFlower ());
 			break;
 		}
 	}
 	
-	private IEnumerator ChangeFlower()
+	private IEnumerator ChangeFlower ()
 	{
-		flower_logos[flowerFlg].gameObject.SetActive(false);
-		if(!PlayerPrefs.HasKey("flower"))
-		{
-			PlayerPrefs.SetInt("flower",page);
-			PlayerPrefs.Save();
+		flower_logos [flowerFlg].gameObject.SetActive (false);
+		if (!PlayerPrefs.HasKey ("flower")) {
+			PlayerPrefs.SetInt ("flower", page);
+			PlayerPrefs.Save ();
 			page = 2;
 			flowerFlg = 1;
-		}else
-		{
-			page = PlayerPrefs.GetInt("flower");
-			PlayerPrefs.DeleteKey("flower");
+		} else {
+			page = PlayerPrefs.GetInt ("flower");
+			PlayerPrefs.DeleteKey ("flower");
 			flowerFlg = 0;
 		}
-		flower_logos[flowerFlg].gameObject.SetActive(true);
-		flower_logos[flowerFlg].SetInputDelegate (OnBtn_flower_logo_Input);
+		flower_logos [flowerFlg].gameObject.SetActive (true);
+		flower_logos [flowerFlg].SetInputDelegate (OnBtn_flower_logo_Input);
 		yield return StartCoroutine (ChangeLevels (page));
-		if(flowerFlg == 1)
-		{
-			selectBallContrl.SelectedRed();
-		}else
-		{
-			selectBallContrl.SelectedBlack();
+		if (flowerFlg == 1) {
+			selectBallContrl.SelectedRed ();
+		} else {
+			selectBallContrl.SelectedBlack ();
 		}
 	}
 	
@@ -810,11 +810,9 @@ public class MainMenuGUI : GUIMenu
 			//_inputEnabled = false;
 			SoundManager.PlayButtonTapSound ();
 			page--;
-			if(page<0)
-			{
+			if (page < 0) {
 				page = 0;
-			}else
-			{
+			} else {
 				yield return StartCoroutine (ChangeLevels (page));
 			}
 		}
@@ -840,11 +838,9 @@ public class MainMenuGUI : GUIMenu
 			//_inputEnabled = false;
 			SoundManager.PlayButtonTapSound ();
 			page++;
-			if(page>2)
-			{
+			if (page > 2) {
 				page = 2;
-			}else
-			{
+			} else {
 				yield return StartCoroutine (ChangeLevels (page));
 			}
 		}
@@ -856,26 +852,23 @@ public class MainMenuGUI : GUIMenu
 		StartCoroutine (OnStart ());
 	}
 	
-	public void ChangeBall(string ballName)
+	public void ChangeBall (string ballName)
 	{
-		PlayerPrefs.SetString("ballName",ballName);
-		PlayerPrefs.Save();
-		CGame.ballName = ballName.Split(new char[]{'_'})[1];
+		PlayerPrefs.SetString ("ballName", ballName);
+		PlayerPrefs.Save ();
+		CGame.ballName = ballName.Split (new char[]{'_'}) [1];
 		GameObject temp = go_ball;
-		GameObject gb = Resources.Load("Prefabs/Monstar/"+ballName) as GameObject;
-		go_ball = GameObject.Instantiate(gb) as GameObject;
-		if(temp!=null)
-		{
+		GameObject gb = Resources.Load ("Prefabs/Monstar/" + ballName) as GameObject;
+		go_ball = GameObject.Instantiate (gb) as GameObject;
+		if (temp != null) {
 			go_ball.transform.parent = temp.transform.parent;
-			GameObject.Destroy(temp);
-		}
-		else
-		{
+			GameObject.Destroy (temp);
+		} else {
 			go_ball.transform.parent = this.transform;
 		}
-		go_ball.transform.localScale= Vector3.one;
-		go_ball.transform.localPosition= Vector3.zero;
-		btn_ballStart = go_ball.transform.Find("btn_start").GetComponent<UIButton>();
+		go_ball.transform.localScale = Vector3.one;
+		go_ball.transform.localPosition = Vector3.zero;
+		btn_ballStart = go_ball.transform.Find ("btn_start").GetComponent<UIButton> ();
 		//btn_ballStart.SetInputDelegate (OnBtn_Start_Input);
 	}
 }

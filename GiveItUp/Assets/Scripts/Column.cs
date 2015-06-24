@@ -27,11 +27,11 @@ public class Column : MonoBehaviour
     public Animation anim;
     public Animation fall_anim;
 	private static Dictionary<string, Material> cacheMaterials = new Dictionary<string, Material>();
-    private IEnumerator Start()
+    private void Start()
 	{
-		if(MainMenuGUI.flowerFlg == 1 && greenGlows.Count>0)
+		if(MainMenuGUI.flowerFlg == 1)
 		{
-			if(greenGlows[0] != null){
+			if(greenGlows.Count>0 && greenGlows[0] != null){
 				MeshRenderer meshRenderer = greenGlows[0].GetComponent<MeshRenderer>();
 
 				if(!cacheMaterials.ContainsKey("Glow"))
@@ -55,7 +55,7 @@ public class Column : MonoBehaviour
 						if(material != null)
 							item.material = material;
 						Debug.LogError("material:"+materialName+"---");
-						yield return 1;
+						//yield return 1;
 					}
 				}
 			}
