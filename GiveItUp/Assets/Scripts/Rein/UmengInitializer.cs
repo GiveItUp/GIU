@@ -19,8 +19,11 @@ public class UmengInitializer : MonoBehaviour
 
 	void Start ()
 	{
-		umengIdDict.Add (East2WestGames.GiveItUp, "54eae9dbfd98c5a8770006db");
-		GA.StartWithAppKeyAndChannelId (umengIdDict [East2WestGames.GiveItUp], channel.ToString());
+//		umengIdDict.Add (East2WestGames.GiveItUp, "55713c8b67e58e5d74005592");
+//		GA.StartWithAppKeyAndChannelId (umengIdDict [East2WestGames.GiveItUp], channel.ToString());
+		GA.StartWithAppKeyAndChannelId ("55713c8b67e58e5d74005592", channel.ToString());
+		
+		Debug.Log("Umeng Start");
 //		ad.channel = channel;
 		if (PlayerPrefs.GetInt ("TVMode", 0) == 0) {
 			GA.UpdateOnlineConfig ();
@@ -34,31 +37,31 @@ public class UmengInitializer : MonoBehaviour
 			string strChanceJinli = GA.GetConfigParamForKey ("JinliAD");
 			string strChanceAnzhi = GA.GetConfigParamForKey ("AnzhiAD");
 			string strChance = GA.GetConfigParamForKey ("AD");
-			if(channel.ToString() == "Q360" && strChance360 != "" && strChance360 != "0"){	//360
+			if(channel.ToString() == "Q360" && strChance360 != null && strChance360 != "" && strChance360 != "0"){	//360
 				_showAdChance = int.Parse(strChance360);
 			}
-			else if(channel.ToString() == "MI" && strChanceXiaomi != "" && strChanceXiaomi != "0"){	//小米
+			else if(channel.ToString() == "MI" && strChanceXiaomi != null && strChanceXiaomi != "" && strChanceXiaomi != "0"){	//小米
 				_showAdChance = int.Parse(strChanceXiaomi);
 			}
-			else if(channel.ToString() == "M4399" && strChance4399 != "" && strChance4399 != "0"){	//4399
+			else if(channel.ToString() == "M4399" && strChance4399 != null && strChance4399 != "" && strChance4399 != "0"){	//4399
 				_showAdChance = int.Parse(strChance4399);
 			}
-			else if(channel.ToString() == "Huawei" && strChanceHuawei != "" && strChanceHuawei != "0"){	//华为
+			else if(channel.ToString() == "Huawei" && strChanceHuawei != null && strChanceHuawei != "" && strChanceHuawei != "0"){	//华为
 				_showAdChance = int.Parse(strChanceHuawei);
 			}
-			else if(channel.ToString() == "Oppo" && strChanceOppo != "" && strChanceOppo != "0"){	//oppo
+			else if(channel.ToString() == "Oppo" && strChanceOppo != null && strChanceOppo != "" && strChanceOppo != "0"){	//oppo
 				_showAdChance = int.Parse(strChanceOppo);
 			}
-			else if(channel.ToString() == "Youku" && strChanceYouku != "" && strChanceYouku != "0"){	//优酷
+			else if(channel.ToString() == "Youku" && strChanceYouku != null && strChanceYouku != "" && strChanceYouku != "0"){	//优酷
 				_showAdChance = int.Parse(strChanceYouku);
 			}
-			else if(channel.ToString() == "Jinli" && strChanceJinli != "" && strChanceJinli != "0"){	//金立
+			else if(channel.ToString() == "Jinli" && strChanceJinli != null && strChanceJinli != "" && strChanceJinli != "0"){	//金立
 				_showAdChance = int.Parse(strChanceJinli);
 			}
-			else if(channel.ToString() == "Anzhi" && strChanceAnzhi != "" && strChanceAnzhi != "0"){	//安智
+			else if(channel.ToString() == "Anzhi" && strChanceAnzhi != null && strChanceAnzhi != "" && strChanceAnzhi != "0"){	//安智
 				_showAdChance = int.Parse(strChanceAnzhi);
 			}
-			else if(strChance != "" && strChance != "0"){//其他有广告渠道
+			else if(strChance != null && strChance != "" && strChance != "0"){//其他有广告渠道
 				_showAdChance = int.Parse(strChance);
 			}
 			/***********************************************积分广告部分*************************************************/
@@ -76,35 +79,35 @@ public class UmengInitializer : MonoBehaviour
 				_is360 = true;
 				_showPointsAdChance = 0;
 			}
-			else if(channel.ToString() == "MI" && strPointsChanceXiaomi != "" && strPointsChanceXiaomi != "0"){	//小米
+			else if(channel.ToString() == "MI" && strPointsChanceXiaomi != null && strPointsChanceXiaomi != "" && strPointsChanceXiaomi != "0"){	//小米
 				Debug.Log("mi");
 				_showPointsAdChance = int.Parse(strPointsChanceXiaomi);
 			}
-			else if(channel.ToString() == "M4399" && strPointsChance4399 != "" && strPointsChance4399 != "0"){	//4399
+			else if(channel.ToString() == "M4399" && strPointsChance4399 != null && strPointsChance4399 != "" && strPointsChance4399 != "0"){	//4399
 				Debug.Log("4399");
 				_showPointsAdChance = int.Parse(strPointsChance4399);
 			}
-			else if(channel.ToString() == "Huawei" && strPointsChanceHuawei != "" && strPointsChanceHuawei != "0"){	//华为
+			else if(channel.ToString() == "Huawei" && strPointsChanceHuawei != null && strPointsChanceHuawei != "" && strPointsChanceHuawei != "0"){	//华为
 				Debug.Log("huawei");
 				_showPointsAdChance = int.Parse(strPointsChanceHuawei);
 			}
-			else if(channel.ToString() == "Oppo" && strPointsChanceOppo != "" && strPointsChanceOppo != "0"){	//oppo
+			else if(channel.ToString() == "Oppo" && strPointsChanceOppo != null && strPointsChanceOppo != "" && strPointsChanceOppo != "0"){	//oppo
 				Debug.Log("oppo");
 				_showPointsAdChance = int.Parse(strPointsChanceOppo);
 			}
-			else if(channel.ToString() == "Youku" && strPointsChanceYouku != "" && strPointsChanceYouku != "0"){	//优酷
+			else if(channel.ToString() == "Youku" && strPointsChanceYouku != null && strPointsChanceYouku != "" && strPointsChanceYouku != "0"){	//优酷
 				Debug.Log("youku");
 				_showPointsAdChance = int.Parse(strPointsChanceYouku);
 			}
-			else if(channel.ToString() == "Jinli" && strPointsChanceJinli != "" && strPointsChanceJinli != "0"){	//金立
+			else if(channel.ToString() == "Jinli" && strPointsChanceJinli != null && strPointsChanceJinli != "" && strPointsChanceJinli != "0"){	//金立
 				Debug.Log("jinli");
 				_showPointsAdChance = int.Parse(strPointsChanceJinli);
 			}
-			else if(channel.ToString() == "Anzhi" && strPointsChanceAnzhi != "" && strPointsChanceAnzhi != "0"){	//安智
+			else if(channel.ToString() == "Anzhi" && strPointsChanceAnzhi != null && strPointsChanceAnzhi != "" && strPointsChanceAnzhi != "0"){	//安智
 				Debug.Log("anzhi");
 				_showPointsAdChance = int.Parse(strPointsChanceAnzhi);
 			}
-			else if(strPointsChance != "" && strPointsChance != "0"){//其他有广告渠道
+			else if(strPointsChance != null && strPointsChance != "" && strPointsChance != "0"){//其他有广告渠道
 				Debug.Log("other");
 				_showPointsAdChance = int.Parse(strPointsChance);
 			}

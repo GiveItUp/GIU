@@ -69,7 +69,7 @@ public class MainMenuGUI : GUIMenu
 		InitLabels ();
 		InitButtons ();
 		joyMainMenu.btns.Add (btn_unlock_all.gameObject);
-		btn_start_random.gameObject.SetActive (true);
+//		btn_start_random.gameObject.SetActive (true);
 		InitLevels ();
 		
 		Refresh ();
@@ -144,7 +144,7 @@ public class MainMenuGUI : GUIMenu
 		ComponentAnimation_Prepare (btn_unlock_all.transform);
 		ComponentAnimation_Prepare (btn_GiftBag.transform);
 		ComponentAnimation_Prepare (btn_EliminateAds.transform);
-		//ComponentAnimation_Prepare (btn_remove_ads.transform);
+//		ComponentAnimation_Prepare (btn_remove_ads.transform);
 		ComponentAnimation_Prepare (btn_options.transform);
 		
 		//ComponentAnimation_Prepare (btn_prevpage.transform);
@@ -171,12 +171,13 @@ public class MainMenuGUI : GUIMenu
 		
 		//yield return StartCoroutine(ComponentAnimation_Show (btn_moregames.transform, 0.12f));
 		
-		//		if(!User.HasIAP_RemoveAds && !User.IsPremium)
-		//			yield return StartCoroutine(ComponentAnimation_Show (btn_remove_ads.transform, 0.0f, false));
-		if (!User.HasIAP_UnlockAll)
+//				if(!User.HasIAP_RemoveAds && !User.IsPremium)
+//					yield return StartCoroutine(ComponentAnimation_Show (btn_remove_ads.transform, 0.0f, false));
+		if (!User.HasIAP_UnlockAll) {
 			yield return StartCoroutine (ComponentAnimation_Show (btn_unlock_all.transform, 0.1f, false));
+			yield return StartCoroutine (ComponentAnimation_Show (btn_EliminateAds.transform, 0.1f, false));
+				}
 		yield return StartCoroutine (ComponentAnimation_Show (btn_GiftBag.transform, 0.1f, false));
-		yield return StartCoroutine (ComponentAnimation_Show (btn_EliminateAds.transform, 0.1f, false));
 		//SoundManager.Instance.Play(SoundManager.eSoundClip.GUI_PopupShowComponent, 1);
 		
 		yield return StartCoroutine (ShowLevels (page));
@@ -227,10 +228,11 @@ public class MainMenuGUI : GUIMenu
 		yield return StartCoroutine (ComponentAnimation_Hide (btn_start.transform, 0.11f));
 		yield return StartCoroutine(ComponentAnimation_Hide (btn_gamecenter.transform, 0.11f));
 		
-		if (!User.HasIAP_UnlockAll)
-			yield return StartCoroutine (ComponentAnimation_Hide (btn_unlock_all.transform, 0.1f, false));
+		if (!User.HasIAP_UnlockAll) {
+						yield return StartCoroutine (ComponentAnimation_Hide (btn_unlock_all.transform, 0.1f, false));
+			yield return StartCoroutine (ComponentAnimation_Hide (btn_EliminateAds.transform, 0.1f, false));
+				}
 		yield return StartCoroutine (ComponentAnimation_Hide (btn_GiftBag.transform, 0.1f, false));
-		yield return StartCoroutine (ComponentAnimation_Hide (btn_EliminateAds.transform, 0.1f, false));
 		
 		//		if(!User.HasIAP_RemoveAds && !User.IsPremium)
 		//			yield return StartCoroutine(ComponentAnimation_Hide (btn_remove_ads.transform, 0.0f, false));
@@ -450,9 +452,10 @@ public class MainMenuGUI : GUIMenu
 	
 	public void Refresh ()
 	{
-		//btn_remove_ads.gameObject.SetActive (!User.HasIAP_RemoveAds && !User.IsPremium);
+		btn_remove_ads.gameObject.SetActive (false);
+		btn_EliminateAds.gameObject.SetActive (!User.HasIAP_UnlockAll);
 		btn_unlock_all.gameObject.SetActive (!User.HasIAP_UnlockAll);
-		btn_start_random.gameObject.SetActive (User.HasIAP_UnlockAll);
+//		btn_start_random.gameObject.SetActive (User.HasIAP_UnlockAll);
 		PositionThis ();
 	}
 	
@@ -500,7 +503,7 @@ public class MainMenuGUI : GUIMenu
 	private IEnumerator OnStart ()
 	{
 		#if UNITY_ANDROID
-		if (_selectedStageIndex == 0 || (UmengInitializer._isShowIap && User.GetLevelScore (_selectedStageIndex-1) >= 100) || (User.GetLevelScore (_selectedStageIndex-1) >= 30 && User.HasIAP_UnlockAll) || User.GetLevelScore (_selectedStageIndex) > 0){//(User.HasIAP_ShareUnlockGame && _selectedStageIndex == 1)) {
+		if (_selectedStageIndex == 0 || (!UmengInitializer._isShowIap && User.GetLevelScore (_selectedStageIndex-1) >= 100) || (User.GetLevelScore (_selectedStageIndex-1) >= 30 && User.HasIAP_UnlockAll) || User.GetLevelScore (_selectedStageIndex) > 0){//(User.HasIAP_ShareUnlockGame && _selectedStageIndex == 1)) {
 			if (_inputEnabled) {
 				_isStage = true;
 				_inputEnabled = false;
@@ -613,6 +616,7 @@ public class MainMenuGUI : GUIMenu
 			if (!((UIButton)(ptr.targetObj)).IsReleaseEnabled)
 				return;
 			
+			OnRemoveAds ();
 			break;
 		}
 	}
@@ -651,7 +655,7 @@ public class MainMenuGUI : GUIMenu
 			#if UNITY_ANDROID
 			EtceteraAndroidManager.alertButtonClickedEvent -= UnlockAll;
 			EtceteraAndroidManager.alertButtonClickedEvent += UnlockAll;
-			EtceteraAndroid.showAlert ("开启休闲模式", TextManager.Get ("Unlock all info"), "购买", "取消");
+			EtceteraAndroid.showAlert ("开启休闲模式", TextManager.Get ("Unlock game info"), "购买", "取消");
 			#elif UNITY_IPHONE
 			#if !UNITY_EDITOR
 			if ( Application.internetReachability == NetworkReachability.NotReachable ||PluginManager.iap.GetIAPProduct (eIAP.UnlockAll) == null) {//
@@ -680,7 +684,7 @@ public class MainMenuGUI : GUIMenu
 			if (!((UIButton)(ptr.targetObj)).IsReleaseEnabled)
 				return;
 			
-			OnRemoveAds ();
+//			OnRemoveAds ();
 			
 			break;
 		}
@@ -690,13 +694,19 @@ public class MainMenuGUI : GUIMenu
 	{
 		if (_inputEnabled) {
 			SoundManager.PlayButtonTapSound ();
+			#if UNITY_ANDROID
+			EtceteraAndroidManager.alertButtonClickedEvent -= UnlockAll;
+			EtceteraAndroidManager.alertButtonClickedEvent += UnlockAll;
+			EtceteraAndroid.showAlert ("开启休闲模式", TextManager.Get ("Unlock game info ads"), "购买", "取消");
+			#elif UNITY_IPHONE
+			#endif
 			//			#if !UNITY_EDITOR
 			//			if (Application.internetReachability == NetworkReachability.NotReachable || PluginManager.iap.GetIAPProduct (eIAP.NoAds) == null) {
 			//				CGame.popupLayer.ShowInfoPopupGUI (TextManager.Get ("Please check your internet connection!"));
 			//				return;
 			//			}
 			//			#endif
-			CGame.popupLayer.ShowPurchaseLoadingGUI ();
+//			CGame.popupLayer.ShowPurchaseLoadingGUI ();
 			//PluginManager.iap.PurchaseProduct (eIAP.NoAds);
 		}
 	}

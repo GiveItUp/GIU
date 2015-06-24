@@ -8,12 +8,12 @@ public class Const {
 	public static final String KtplaySecret = "62d9b1de7bdbb460bf9931ee4cd824b00fe09196";
 	public static final String KtplayLeaderboardId = "octopus";
 
-	public static final String Qihoo360ID = "";
-	public static final String Qihoo360Key = "";
-	public static final String Qihoo360Scret = "";
+	public static final String Qihoo360ID = "aPkl5dCjqM";
+//	public static final String Qihoo360Key = "";
+//	public static final String Qihoo360Scret = "";
 	
-	public static final String YoumiID = "4477d6b4848836b2";
-	public static final String YoumiSecret = "60d94e7e5d98c860";
+	public static final String YoumiID = "9766de2d52787a88";
+	public static final String YoumiSecret = "031c92c413721cc0";
 	
 	public static final int ChinaNull = 0;
 	public static final int ChinaMobile = 1;

@@ -71,10 +71,10 @@ public class MainActivity extends UnityPlayerActivity {
 		instance = this;
 		context = this;
 		KTPlay.startWithAppKey(this, Const.KtplayKey, Const.KtplaySecret);
-		// 设置�?��者信�?appid, appsecret, 是否�?��测试模式)
+		// 设置appid, appsecret, 是否测试模式)
 		AdManager.getInstance(this).init(Const.YoumiID, Const.YoumiSecret,
 				false);
-		// 插屏广告初始�?
+		// 插屏广告初始
 		SpotManager.getInstance(this).loadSpotAds();
 		SpotManager.getInstance(this).setSpotOrientation(
 				SpotManager.ORIENTATION_LANDSCAPE);
