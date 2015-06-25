@@ -74,16 +74,16 @@ public class MainActivity extends UnityPlayerActivity {
 		context = this;
 		KTPlay.startWithAppKey(this, Const.KtplayKey, Const.KtplaySecret);
 		// 设置appid, appsecret, 是否测试模式)
-//		AdManager.getInstance(this).init(Const.YoumiID, Const.YoumiSecret,
-//				false);
-//		// 插屏广告初始
-//		SpotManager.getInstance(this).loadSpotAds();
-//		SpotManager.getInstance(this).setSpotOrientation(
-//				SpotManager.ORIENTATION_LANDSCAPE);
-//		SpotManager.getInstance(this)
-//				.setAnimationType(SpotManager.ANIM_ADVANCE);
-//		// 积分
-//		OffersManager.getInstance(this).onAppLaunch();
+		AdManager.getInstance(this).init(Const.YoumiID, Const.YoumiSecret,
+				false);
+		// 插屏广告初始
+		SpotManager.getInstance(this).loadSpotAds();
+		SpotManager.getInstance(this).setSpotOrientation(
+				SpotManager.ORIENTATION_LANDSCAPE);
+		SpotManager.getInstance(this)
+				.setAnimationType(SpotManager.ANIM_ADVANCE);
+		// 积分
+		OffersManager.getInstance(this).onAppLaunch();
 
 		switch (ChinaType) {
 		case Const.ChinaMobile:
@@ -214,11 +214,11 @@ public class MainActivity extends UnityPlayerActivity {
 	protected void onDestroy() {
 		super.onDestroy();
 		// 调用插屏，开屏，退屏时退出。
-//		SpotManager.getInstance(context).onDestroy();
-//		// 调用视频广告时退出。
-//		VideoAdManager.getInstance(context).onDestroy();
-//		// DynamicSdkManager.getInstance(this).onAppDestroy();
-//		OffersManager.getInstance(this).onAppExit();
+		SpotManager.getInstance(context).onDestroy();
+		// 调用视频广告时退出。
+		VideoAdManager.getInstance(context).onDestroy();
+		// DynamicSdkManager.getInstance(this).onAppDestroy();
+		OffersManager.getInstance(this).onAppExit();
 	}
 
 	private void showProgressDialog() {
@@ -380,169 +380,169 @@ public class MainActivity extends UnityPlayerActivity {
 		}
 	}
 
-//	// 请求视频广告
-//	public void RequestVideoAd() {
-//		Log.e("Unity", "Request Video Ad");
-//		UnityPlayer.currentActivity.runOnUiThread(new Runnable() {
-//			@Override
-//			public void run() {
-//				requestVideoAd();
-//			}
-//		});
-//	}
-//
-//	private void requestVideoAd() {
-//		VideoAdManager.getInstance(this).requestVideoAd();
-//	}
-//
-//	// 显示视频广告
-//	public void ShowVideoAds() {
-//		Log.e("Unity", "Show Video Ads");
-//		UnityPlayer.currentActivity.runOnUiThread(new Runnable() {
-//			@Override
-//			public void run() {
-//				showVideoAds();
-//			}
-//		});
-//	}
-//
-//	private void showVideoAds() {
-//		VideoAdManager.getInstance(this).showVideo(this, new VideoAdListener() {
-//			// 视频播放失败
-//			@Override
-//			public void onVideoPlayFail() {
-//				Log.d("unity", "failed");
-//			}
-//
-//			// 视频播放完成
-//			@Override
-//			public void onVideoPlayComplete() {
-//				Log.d("unity", "complete");
-//				UnityPlayer
-//						.UnitySendMessage("CGame", "OnVideoPlayComplete", "");
-//			}
-//
-//			// 视频播放完成的记录向服务器发送是否成功
-//			@Override
-//			public void onVideoCallback(boolean callback) {
-//				// 视屏播放记录发送是否回调成功
-//				Log.d("unity", "completeEffect:" + callback);
-//			}
-//
-//			// 视频播放中途退出
-//			@Override
-//			public void onVideoPlayInterrupt() {
-//				Log.d("unity", "interrupt");
-//				Toast.makeText(context, "视频未播放完成，无法获取奖励", Toast.LENGTH_SHORT)
-//						.show();
-//			}
-//
-//			@Override
-//			public void onDownloadComplete(String id) {
-//				Log.e("unity", "download complete: " + id);
-//			}
-//
-//			@Override
-//			public void onNewApkDownloadStart() {
-//				Log.e("unity", "开始下载");
-//			}
-//
-//			@Override
-//			public void onVideoLoadComplete() {
-//				Log.e("unity", "视频加载完成");
-//			}
-//		});
-//	}
-//
-//	// 显示积分广告
-//	public void ShowOffersAds() {
-//		Log.e("Unity", "Show Offers Ads");
-//		UnityPlayer.currentActivity.runOnUiThread(new Runnable() {
-//			@Override
-//			public void run() {
-//				showOffersAd();
-//			}
-//		});
-//	}
-//
-//	private void showOffersAd() {
-//		OffersManager.getInstance(this).showOffersWall();
-//		Log.e("Unity", "AD");
-//	}
-//
-//	// 查询积分
-//	public void QueryPoints() {
-//		Log.e("Unity", "QueryPoints");
-//		UnityPlayer.currentActivity.runOnUiThread(new Runnable() {
-//			@Override
-//			public void run() {
-//				queryPoints();
-//			}
-//		});
-//	}
-//
-//	private void queryPoints() {
-//		int myPointBalance = PointsManager.getInstance(this).queryPoints();
-//		UnityPlayer.UnitySendMessage("CGame", "QueryPoints",
-//				String.valueOf(myPointBalance));
-//		Log.e("Unity", "AD");
-//	}
-//
-//	// 扣除积分
-//	public void SpendPoints(final int amount) {
-//		Log.e("Unity", "SpendPoints" + amount);
-//		UnityPlayer.currentActivity.runOnUiThread(new Runnable() {
-//			@Override
-//			public void run() {
-//				spendPoints(amount);
-//			}
-//		});
-//	}
-//
-//	private void spendPoints(int amount) {
-//		boolean isSuccess = PointsManager.getInstance(this).spendPoints(amount);
-//		String str = "false";
-//		if (isSuccess)
-//			str = "true";
-//		UnityPlayer.UnitySendMessage("CGame", "SpendPoints", str);
-//		Log.e("Unity", "AD");
-//	}
-//
-//	// 增加积分
-//	public void AwardPoints(final int amount) {
-//		Log.e("Unity", "AwardPoints" + amount);
-//		UnityPlayer.currentActivity.runOnUiThread(new Runnable() {
-//			@Override
-//			public void run() {
-//				awardPoints(amount);
-//			}
-//		});
-//	}
-//
-//	private void awardPoints(int amount) {
-//		boolean isSuccess = PointsManager.getInstance(this).awardPoints(amount);
-//		String str = "false";
-//		if (isSuccess)
-//			str = "true";
-//		UnityPlayer.UnitySendMessage("CGame", "AwardPoints", str);
-//		Log.e("Unity", "AD");
-//	}
-//
-//	// 显示插屏广告
-//	public void ShowAds() {
-//		Log.e("Unity", "show ADs");
-//		UnityPlayer.currentActivity.runOnUiThread(new Runnable() {
-//			@Override
-//			public void run() {
-//				showAd();
-//			}
-//		});
-//	}
-//
-//	private void showAd() {
-//		SpotManager.getInstance(this).showSpotAds(this);
-//		Log.e("Unity", "AD");
-//	}
+	// 请求视频广告
+	public void RequestVideoAd() {
+		Log.e("Unity", "Request Video Ad");
+		UnityPlayer.currentActivity.runOnUiThread(new Runnable() {
+			@Override
+			public void run() {
+				requestVideoAd();
+			}
+		});
+	}
+
+	private void requestVideoAd() {
+		VideoAdManager.getInstance(this).requestVideoAd();
+	}
+
+	// 显示视频广告
+	public void ShowVideoAds() {
+		Log.e("Unity", "Show Video Ads");
+		UnityPlayer.currentActivity.runOnUiThread(new Runnable() {
+			@Override
+			public void run() {
+				showVideoAds();
+			}
+		});
+	}
+
+	private void showVideoAds() {
+		VideoAdManager.getInstance(this).showVideo(this, new VideoAdListener() {
+			// 视频播放失败
+			@Override
+			public void onVideoPlayFail() {
+				Log.d("unity", "failed");
+			}
+
+			// 视频播放完成
+			@Override
+			public void onVideoPlayComplete() {
+				Log.d("unity", "complete");
+				UnityPlayer
+						.UnitySendMessage("CGame", "OnVideoPlayComplete", "");
+			}
+
+			// 视频播放完成的记录向服务器发送是否成功
+			@Override
+			public void onVideoCallback(boolean callback) {
+				// 视屏播放记录发送是否回调成功
+				Log.d("unity", "completeEffect:" + callback);
+			}
+
+			// 视频播放中途退出
+			@Override
+			public void onVideoPlayInterrupt() {
+				Log.d("unity", "interrupt");
+				Toast.makeText(context, "视频未播放完成，无法获取奖励", Toast.LENGTH_SHORT)
+						.show();
+			}
+
+			@Override
+			public void onDownloadComplete(String id) {
+				Log.e("unity", "download complete: " + id);
+			}
+
+			@Override
+			public void onNewApkDownloadStart() {
+				Log.e("unity", "开始下载");
+			}
+
+			@Override
+			public void onVideoLoadComplete() {
+				Log.e("unity", "视频加载完成");
+			}
+		});
+	}
+
+	// 显示积分广告
+	public void ShowOffersAds() {
+		Log.e("Unity", "Show Offers Ads");
+		UnityPlayer.currentActivity.runOnUiThread(new Runnable() {
+			@Override
+			public void run() {
+				showOffersAd();
+			}
+		});
+	}
+
+	private void showOffersAd() {
+		OffersManager.getInstance(this).showOffersWall();
+		Log.e("Unity", "AD");
+	}
+
+	// 查询积分
+	public void QueryPoints() {
+		Log.e("Unity", "QueryPoints");
+		UnityPlayer.currentActivity.runOnUiThread(new Runnable() {
+			@Override
+			public void run() {
+				queryPoints();
+			}
+		});
+	}
+
+	private void queryPoints() {
+		int myPointBalance = PointsManager.getInstance(this).queryPoints();
+		UnityPlayer.UnitySendMessage("CGame", "QueryPoints",
+				String.valueOf(myPointBalance));
+		Log.e("Unity", "AD");
+	}
+
+	// 扣除积分
+	public void SpendPoints(final int amount) {
+		Log.e("Unity", "SpendPoints" + amount);
+		UnityPlayer.currentActivity.runOnUiThread(new Runnable() {
+			@Override
+			public void run() {
+				spendPoints(amount);
+			}
+		});
+	}
+
+	private void spendPoints(int amount) {
+		boolean isSuccess = PointsManager.getInstance(this).spendPoints(amount);
+		String str = "false";
+		if (isSuccess)
+			str = "true";
+		UnityPlayer.UnitySendMessage("CGame", "SpendPoints", str);
+		Log.e("Unity", "AD");
+	}
+
+	// 增加积分
+	public void AwardPoints(final int amount) {
+		Log.e("Unity", "AwardPoints" + amount);
+		UnityPlayer.currentActivity.runOnUiThread(new Runnable() {
+			@Override
+			public void run() {
+				awardPoints(amount);
+			}
+		});
+	}
+
+	private void awardPoints(int amount) {
+		boolean isSuccess = PointsManager.getInstance(this).awardPoints(amount);
+		String str = "false";
+		if (isSuccess)
+			str = "true";
+		UnityPlayer.UnitySendMessage("CGame", "AwardPoints", str);
+		Log.e("Unity", "AD");
+	}
+
+	// 显示插屏广告
+	public void ShowAds() {
+		Log.e("Unity", "show ADs");
+		UnityPlayer.currentActivity.runOnUiThread(new Runnable() {
+			@Override
+			public void run() {
+				showAd();
+			}
+		});
+	}
+
+	private void showAd() {
+		SpotManager.getInstance(this).showSpotAds(this);
+		Log.e("Unity", "AD");
+	}
 
 	public void ExitGame() {
 		UnityPlayer.currentActivity.runOnUiThread(new Runnable() {

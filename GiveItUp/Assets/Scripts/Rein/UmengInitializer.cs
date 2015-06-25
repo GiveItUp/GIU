@@ -129,6 +129,12 @@ public class UmengInitializer : MonoBehaviour
 				_isShowGameAd = true;
 			}
 		}
+		if (channel.ToString () != "MM") {
+			_showAdChance = 0;//广告数字为0关闭非0为百分比
+			_showPointsAdChance = 1;//积分广告数字为比例x：1
+			_isShowIap = false;//内购类型true硬计费false软计费
+			_isShowGameAd = false;//内推广告
+		}
 	}
 
 //	public static int GetCoinRewardValue(){

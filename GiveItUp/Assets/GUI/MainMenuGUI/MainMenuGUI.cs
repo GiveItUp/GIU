@@ -47,11 +47,11 @@ public class MainMenuGUI : GUIMenu
 	private int actualPage = 0;
 	//检测是否进入游戏的标签
 	private bool _isStage;
-
+	
 	private void Awake ()
 	{
 		inst = this;
-//		flowerFlg = 0;
+		//		flowerFlg = 0;
 	}
 	
 	#region Init
@@ -70,7 +70,7 @@ public class MainMenuGUI : GUIMenu
 		InitLabels ();
 		InitButtons ();
 		joyMainMenu.btns.Add (btn_unlock_all.gameObject);
-//		btn_start_random.gameObject.SetActive (true);
+		//		btn_start_random.gameObject.SetActive (true);
 		InitLevels ();
 		
 		Refresh ();
@@ -151,8 +151,9 @@ public class MainMenuGUI : GUIMenu
 		//ComponentAnimation_Prepare (btn_moregames.transform);
 		ComponentAnimation_Prepare (btn_unlock_all.transform);
 		ComponentAnimation_Prepare (btn_GiftBag.transform);
-		ComponentAnimation_Prepare (btn_EliminateAds.transform);
-//		ComponentAnimation_Prepare (btn_remove_ads.transform);
+		if (!User.HasIAP_UnlockAll && UmengInitializer._showAdChance != 0) 
+			ComponentAnimation_Prepare (btn_EliminateAds.transform);
+		//		ComponentAnimation_Prepare (btn_remove_ads.transform);
 		ComponentAnimation_Prepare (btn_options.transform);
 		
 		//ComponentAnimation_Prepare (btn_prevpage.transform);
@@ -179,12 +180,13 @@ public class MainMenuGUI : GUIMenu
 		
 		//yield return StartCoroutine(ComponentAnimation_Show (btn_moregames.transform, 0.12f));
 		
-//				if(!User.HasIAP_RemoveAds && !User.IsPremium)
-//					yield return StartCoroutine(ComponentAnimation_Show (btn_remove_ads.transform, 0.0f, false));
+		//				if(!User.HasIAP_RemoveAds && !User.IsPremium)
+		//					yield return StartCoroutine(ComponentAnimation_Show (btn_remove_ads.transform, 0.0f, false));
 		if (!User.HasIAP_UnlockAll) {
 			yield return StartCoroutine (ComponentAnimation_Show (btn_unlock_all.transform, 0.1f, false));
-			yield return StartCoroutine (ComponentAnimation_Show (btn_EliminateAds.transform, 0.1f, false));
 		}
+		if (!User.HasIAP_UnlockAll && UmengInitializer._showAdChance != 0) 
+			yield return StartCoroutine (ComponentAnimation_Show (btn_EliminateAds.transform, 0.1f, false));
 		yield return StartCoroutine (ComponentAnimation_Show (btn_GiftBag.transform, 0.1f, false));
 		//SoundManager.Instance.Play(SoundManager.eSoundClip.GUI_PopupShowComponent, 1);
 		
@@ -236,10 +238,11 @@ public class MainMenuGUI : GUIMenu
 		yield return StartCoroutine (ComponentAnimation_Hide (btn_start.transform, 0.11f));
 		yield return StartCoroutine (ComponentAnimation_Hide (btn_gamecenter.transform, 0.11f));
 		
-		if (!User.HasIAP_UnlockAll) {
+		if (!User.HasIAP_UnlockAll) 
 			yield return StartCoroutine (ComponentAnimation_Hide (btn_unlock_all.transform, 0.1f, false));
+		if (!User.HasIAP_UnlockAll && UmengInitializer._showAdChance != 0) 
 			yield return StartCoroutine (ComponentAnimation_Hide (btn_EliminateAds.transform, 0.1f, false));
-		}
+		
 		yield return StartCoroutine (ComponentAnimation_Hide (btn_GiftBag.transform, 0.1f, false));
 		
 		//		if(!User.HasIAP_RemoveAds && !User.IsPremium)
@@ -455,9 +458,10 @@ public class MainMenuGUI : GUIMenu
 	public void Refresh ()
 	{
 		btn_remove_ads.gameObject.SetActive (false);
-		btn_EliminateAds.gameObject.SetActive (!User.HasIAP_UnlockAll);
+		btn_EliminateAds.gameObject.SetActive (User.HasIAP_UnlockAll && UmengInitializer._showAdChance != 0);
+
 		btn_unlock_all.gameObject.SetActive (!User.HasIAP_UnlockAll);
-//		btn_start_random.gameObject.SetActive (User.HasIAP_UnlockAll);
+		//		btn_start_random.gameObject.SetActive (User.HasIAP_UnlockAll);
 		PositionThis ();
 	}
 	
@@ -505,7 +509,7 @@ public class MainMenuGUI : GUIMenu
 	private IEnumerator OnStart ()
 	{
 		#if UNITY_ANDROID
-		if (_selectedStageIndex == 0 || (!UmengInitializer._isShowIap && User.GetLevelScore (_selectedStageIndex-1) >= 100) || (User.GetLevelScore (_selectedStageIndex-1) >= 30 && User.HasIAP_UnlockAll) || User.GetLevelScore (_selectedStageIndex) > 0){//(User.HasIAP_ShareUnlockGame && _selectedStageIndex == 1)) {
+//		if (_selectedStageIndex == 0 || _selectedStageIndex == 18 || (!UmengInitializer._isShowIap && User.GetLevelScore (_selectedStageIndex-1) >= 100) || (User.GetLevelScore (_selectedStageIndex-1) >= 30 && User.HasIAP_UnlockAll) || User.GetLevelScore (_selectedStageIndex) > 0){//(User.HasIAP_ShareUnlockGame && _selectedStageIndex == 1)) {
 			if (_inputEnabled) {
 				_isStage = true;
 				_inputEnabled = false;
@@ -518,23 +522,25 @@ public class MainMenuGUI : GUIMenu
 				CGame.menuLayer.CloseMainMenuGUI ();
 				CGame.Instance.InitGamelogic (_selectedStageIndex, _selectedStage);
 			}
-		} else {
-			OnUnlockAll ();
-		}
+//		}else if(User.GetLevelScore (_selectedStageIndex-1) < 30 && User.HasIAP_UnlockAll){
+//			EtceteraAndroid.showAlert ("提示", "您已开启休闲模式，上一关达到30%即可开启本关", "确定");
+//		} else {
+//			OnUnlockAll ();
+//		}
 		#elif UNITY_IPHONE
 		if(_inputEnabled)
 		{
-		Debug.LogError("OnStart");
-		SoundManager.PlayButtonPlaySound ();
-		
-		yield return StartCoroutine (PlayHideAnim ());
-		
-		_isStage = true;
-		
-		CGame.Instance.DestroyMenuMusic ();
-		CGame.menuLayer.CloseMainMenuGUI ();
-		CGame.Instance.InitGamelogic (_selectedStageIndex, _selectedStage);
-	}
+			Debug.LogError("OnStart");
+			SoundManager.PlayButtonPlaySound ();
+			
+			yield return StartCoroutine (PlayHideAnim ());
+			
+			_isStage = true;
+			
+			CGame.Instance.DestroyMenuMusic ();
+			CGame.menuLayer.CloseMainMenuGUI ();
+			CGame.Instance.InitGamelogic (_selectedStageIndex, _selectedStage);
+		}
 		#endif
 	}
 	
@@ -690,7 +696,7 @@ public class MainMenuGUI : GUIMenu
 			if (!((UIButton)(ptr.targetObj)).IsReleaseEnabled)
 				return;
 			
-//			OnRemoveAds ();
+			//			OnRemoveAds ();
 			
 			break;
 		}
@@ -712,7 +718,7 @@ public class MainMenuGUI : GUIMenu
 			//				return;
 			//			}
 			//			#endif
-//			CGame.popupLayer.ShowPurchaseLoadingGUI ();
+			//			CGame.popupLayer.ShowPurchaseLoadingGUI ();
 			//PluginManager.iap.PurchaseProduct (eIAP.NoAds);
 		}
 	}

@@ -8125,7 +8125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c977f80a2c07c646ad5974a84ac0ce7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  channel: 1
+  channel: 3
 --- !u!114 &883505578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10537,22 +10537,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 3300002, guid: a695d2d201484dc43ae9022eebe08066, type: 2}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 1515337180}
-    - target: {fileID: 11400002, guid: a695d2d201484dc43ae9022eebe08066, type: 2}
-      propertyPath: renderCamera
-      value: 
-      objectReference: {fileID: 825164538}
-    - target: {fileID: 11400004, guid: a695d2d201484dc43ae9022eebe08066, type: 2}
-      propertyPath: renderCamera
-      value: 
-      objectReference: {fileID: 825164538}
-    - target: {fileID: 3300004, guid: a695d2d201484dc43ae9022eebe08066, type: 2}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 588163276}
     - target: {fileID: 11400008, guid: a695d2d201484dc43ae9022eebe08066, type: 2}
       propertyPath: renderCamera
       value: 
@@ -10561,6 +10545,22 @@ Prefab:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 675512220}
+    - target: {fileID: 11400002, guid: a695d2d201484dc43ae9022eebe08066, type: 2}
+      propertyPath: renderCamera
+      value: 
+      objectReference: {fileID: 825164538}
+    - target: {fileID: 3300002, guid: a695d2d201484dc43ae9022eebe08066, type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1515337180}
+    - target: {fileID: 3300004, guid: a695d2d201484dc43ae9022eebe08066, type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 588163276}
+    - target: {fileID: 11400004, guid: a695d2d201484dc43ae9022eebe08066, type: 2}
+      propertyPath: renderCamera
+      value: 
+      objectReference: {fileID: 825164538}
     - target: {fileID: 100008, guid: a695d2d201484dc43ae9022eebe08066, type: 2}
       propertyPath: m_IsActive
       value: 0
