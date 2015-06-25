@@ -561,6 +561,7 @@ public class MainMenuGUI : GUIMenu
 	private IEnumerator OnStartRandom ()
 	{
 		if (_inputEnabled) {
+
 			_inputEnabled = false;
 			SoundManager.PlayButtonPlaySound ();
 			
@@ -568,6 +569,7 @@ public class MainMenuGUI : GUIMenu
 			
 			CGame.Instance.DestroyMenuMusic ();
 			CGame.menuLayer.CloseMainMenuGUI ();
+			flowerFlg = 0;
 			CGame.Instance.InitGamelogicRandom ();
 		}
 	}
