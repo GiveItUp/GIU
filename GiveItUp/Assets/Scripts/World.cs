@@ -7,7 +7,7 @@ public class World : MonoBehaviour
     public Column[] p_columns;
     List<Column> columns = new List<Column>();
     public int mapId = 0;
-
+	public static Dictionary<string, Material> cacheMaterials = new Dictionary<string, Material>();
 
     public void Init(Stage stage)
     {

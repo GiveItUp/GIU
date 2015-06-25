@@ -18,6 +18,26 @@ public class GrowingColumn : Column
 
 	void Start()
 	{
+		MeshRenderer[] meshRenderers = this.GetComponentsInChildren<MeshRenderer>();
+		if(meshRenderers != null)
+		{
+			foreach (MeshRenderer item in meshRenderers) {
+				if(item.material != null)
+				{
+					string materialName = item.material.name.Trim().Split(new char[]{' '})[0];
+					if(!World.cacheMaterials.ContainsKey(materialName))
+					{
+						World.cacheMaterials.Add(materialName,Resources.Load<Material>("platforms/Blue/"+materialName));
+					}
+					Material material = World.cacheMaterials[materialName];
+					if(material != null)
+						item.material = material;
+					Debug.LogError("material:"+materialName+"---");
+					//yield return 1;
+				}
+			}
+		}
+
 		if (isReverse)
 		{
 			grower.localScale = new Vector3 (1, 1, 1);

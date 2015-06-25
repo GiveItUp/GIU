@@ -477,7 +477,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   color: {r: 1, g: 1, b: 1, a: 1}
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 512, y: 256}
+  pixelsPerUV: {x: 512, y: 512}
   hideAtStart: 0
   ignoreClipping: 0
   playAnimOnStart: 0
@@ -503,7 +503,7 @@ MonoBehaviour:
       x: .4453125
       y: 0
       width: .203125
-      height: .4765625
+      height: .23828125
     scaleFactor: {x: .5, y: .5}
     topLeftOffset: {x: -1, y: 1}
     bottomRightOffset: {x: 1, y: -1}
@@ -535,7 +535,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   color: {r: 1, g: 1, b: 1, a: 1}
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 512, y: 256}
+  pixelsPerUV: {x: 512, y: 512}
   hideAtStart: 0
   ignoreClipping: 0
   playAnimOnStart: 0
@@ -555,8 +555,8 @@ MonoBehaviour:
     framerate: 29.9999981
     index: 1
     onAnimEnd: 0
-  staticTexPath: Assets/Textures/Game/platforms/impossiball_platform_v01_grey.png
-  staticTexGUID: a8f0fe475423ccc4cb76cdf11dcda8ea
+  staticTexPath: Assets/Textures/Game/platforms/impossiball_platform_v01_green.png
+  staticTexGUID: 7b4bc10003cae3d4ba72624de4637b5a
   _ser_stat_frame_info:
     uvs:
       serializedVersion: 2
@@ -572,8 +572,8 @@ MonoBehaviour:
       serializedVersion: 2
       x: .650390625
       y: 0
-      width: .25
-      height: .2265625
+      width: .24609375
+      height: .11328125
     scaleFactor: {x: .5, y: .5}
     topLeftOffset: {x: -1, y: 1}
     bottomRightOffset: {x: 1, y: -1}
@@ -584,36 +584,16 @@ MonoBehaviour:
     framerate: 29.9999981
     onAnimEnd: 0
     framePaths: []
-    frameGUIDs:
-    - a8f0fe475423ccc4cb76cdf11dcda8ea
-    spriteFrames:
-    - uvs:
-        serializedVersion: 2
-        x: .650390625
-        y: 0
-        width: .24609375
-        height: .11328125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
+    frameGUIDs: []
+    spriteFrames: []
   - name: New Animation
     loopCycles: 0
     loopReverse: 0
     framerate: 29.9999981
     onAnimEnd: 0
     framePaths: []
-    frameGUIDs:
-    - 7b4bc10003cae3d4ba72624de4637b5a
-    spriteFrames:
-    - uvs:
-        serializedVersion: 2
-        x: .650390625
-        y: .115234375
-        width: .24609375
-        height: .11328125
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
+    frameGUIDs: []
+    spriteFrames: []
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -639,9 +619,9 @@ MonoBehaviour:
   autoResize: 0
   billboarded: 0
   offset: {x: 0, y: 0, z: 0}
-  color: {r: 1, g: 1, b: 1, a: 1}
+  color: {r: 0, g: 0, b: 0, a: 1}
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 512, y: 256}
+  pixelsPerUV: {x: 512, y: 512}
   hideAtStart: 0
   ignoreClipping: 0
   playAnimOnStart: 0
@@ -679,7 +659,7 @@ MonoBehaviour:
       x: 0
       y: 0
       width: .443359375
-      height: .89453125
+      height: .447265625
     scaleFactor: {x: .5, y: .5}
     topLeftOffset: {x: -1, y: 1}
     bottomRightOffset: {x: 1, y: -1}
@@ -708,18 +688,8 @@ MonoBehaviour:
     framerate: 29.9999981
     onAnimEnd: 0
     framePaths: []
-    frameGUIDs:
-    - 3b1850ad212abdf41b2511e51c7ba718
-    spriteFrames:
-    - uvs:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: .443359375
-        height: .447265625
-      scaleFactor: {x: .5, y: .5}
-      topLeftOffset: {x: -1, y: 1}
-      bottomRightOffset: {x: 1, y: -1}
+    frameGUIDs: []
+    spriteFrames: []
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1

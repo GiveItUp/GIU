@@ -26,7 +26,7 @@ public class Column : MonoBehaviour
     public ColumnState[] states;
     public Animation anim;
     public Animation fall_anim;
-	private static Dictionary<string, Material> cacheMaterials = new Dictionary<string, Material>();
+
     private void Start()
 	{
 		if(MainMenuGUI.flowerFlg == 1)
@@ -34,11 +34,11 @@ public class Column : MonoBehaviour
 			if(greenGlows.Count>0 && greenGlows[0] != null){
 				MeshRenderer meshRenderer = greenGlows[0].GetComponent<MeshRenderer>();
 
-				if(!cacheMaterials.ContainsKey("Glow"))
+				if(!World.cacheMaterials.ContainsKey("Glow"))
 				{
-					cacheMaterials.Add("Glow",Resources.Load<Material>("platforms/Blue/Glow"));
+					World.cacheMaterials.Add("Glow",Resources.Load<Material>("platforms/Blue/Glow"));
 				}
-				meshRenderer.material = cacheMaterials["Glow"];
+				meshRenderer.material = World.cacheMaterials["Glow"];
 			}
 			MeshRenderer[] meshRenderers = this.GetComponentsInChildren<MeshRenderer>();
 			if(meshRenderers != null)
@@ -47,11 +47,11 @@ public class Column : MonoBehaviour
 					if(item.material != null)
 					{
 						string materialName = item.material.name.Trim().Split(new char[]{' '})[0];
-						if(!cacheMaterials.ContainsKey(materialName))
+						if(!World.cacheMaterials.ContainsKey(materialName))
 						{
-							cacheMaterials.Add(materialName,Resources.Load<Material>("platforms/Blue/"+materialName));
+							World.cacheMaterials.Add(materialName,Resources.Load<Material>("platforms/Blue/"+materialName));
 						}
-						Material material = cacheMaterials[materialName];
+						Material material = World.cacheMaterials[materialName];
 						if(material != null)
 							item.material = material;
 						Debug.LogError("material:"+materialName+"---");
@@ -62,11 +62,11 @@ public class Column : MonoBehaviour
 			if(Mat_GreenBottom != null)
 			{
 				string materialName = Mat_GreenBottom.name.Trim().Split(new char[]{' '})[0];
-				if(!cacheMaterials.ContainsKey(materialName))
+				if(!World.cacheMaterials.ContainsKey(materialName))
 				{
-					cacheMaterials.Add(materialName,Resources.Load<Material>("platforms/Blue/"+materialName));
+					World.cacheMaterials.Add(materialName,Resources.Load<Material>("platforms/Blue/"+materialName));
 				}
-				Mat_GreenBottom = cacheMaterials[materialName];
+				Mat_GreenBottom = World.cacheMaterials[materialName];
 			}
 
 		}
