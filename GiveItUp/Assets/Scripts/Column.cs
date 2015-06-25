@@ -27,7 +27,7 @@ public class Column : MonoBehaviour
     public Animation anim;
     public Animation fall_anim;
 
-    private void Start()
+    protected void Start()
 	{
 		if(MainMenuGUI.flowerFlg == 1)
 		{
