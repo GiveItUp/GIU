@@ -89,8 +89,9 @@ public class ReinPluginManager : MonoBehaviour
 						}
 					}
 				}
-			}
 			#endif
+			}
+			
 	}
 
 	public static void Purchase (string pid)
