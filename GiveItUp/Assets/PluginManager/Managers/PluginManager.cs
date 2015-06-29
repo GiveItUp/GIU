@@ -181,7 +181,7 @@ public class PluginManager : MonoBehaviour
 															 "com.east2west.impossiball.stage17",
 							     							 "com.east2west.impossiball.stage18", };
 
-	public static string[] IOS_Leaderboards = new string[] { "com.east2west.impossiball.attemps", "com.east2west.impossiball.dailychallenge", "com.east2west.impossiball.completedlevels" };
+	public static string[] IOS_Leaderboards = new string[] { "com.east2west.impossiball.attemps", "Octopus_ranking01", "com.east2west.impossiball.completedlevels" };
 
 	public static string IOS_FlurryApiKey = "-";
     public static string IOS_UpsightsToken = "-";
