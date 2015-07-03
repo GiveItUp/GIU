@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System;
@@ -233,7 +233,10 @@ public class SocialManager
     public void SubmitScore(eSocialAdapter adapter, eLeaderboard leaderboard, long score)
     {
         if (SocialAdapters.ContainsKey(adapter))
+		{
+			Debug.Log("SubmitScore "+leaderboard+":"+score);
             SocialAdapters[adapter].SubmitScore(leaderboard, score);
+		}
         else
             Debug.LogError("Adapter " + adapter.ToString() + " not found!");
     }
