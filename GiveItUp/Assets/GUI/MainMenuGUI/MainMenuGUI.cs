@@ -198,8 +198,13 @@ public class MainMenuGUI : GUIMenu
 		yield return StartCoroutine (ComponentAnimation_Show (go_ball.transform, 0.15f));
 		
 		#if UNITY_ANDROID
-		EtceteraAndroidManager.alertButtonClickedEvent += ExitGame;
-		InitBackButton (() => { EtceteraAndroid.showAlert ("退出游戏", "您想退出游戏吗", "是", "否"); });
+		if(ReinPluginManager.channleId == 1 || ReinPluginManager.channleId == -1){
+			InitBackButton (() => { ReinPluginManager.ExitGame(); });
+		}
+		else{
+			EtceteraAndroidManager.alertButtonClickedEvent += ExitGame;
+			InitBackButton (() => { EtceteraAndroid.showAlert ("退出游戏", "您想退出游戏吗", "是", "否"); });
+		}
 		#endif
 		
 		_inputEnabled = true;
@@ -458,8 +463,7 @@ public class MainMenuGUI : GUIMenu
 	public void Refresh ()
 	{
 		btn_remove_ads.gameObject.SetActive (false);
-		btn_EliminateAds.gameObject.SetActive (User.HasIAP_UnlockAll && UmengInitializer._showAdChance != 0);
-
+		btn_EliminateAds.gameObject.SetActive (!User.HasIAP_UnlockAll && UmengInitializer._showAdChance != 0);
 		btn_unlock_all.gameObject.SetActive (!User.HasIAP_UnlockAll);
 		//		btn_start_random.gameObject.SetActive (User.HasIAP_UnlockAll);
 		PositionThis ();
@@ -509,7 +513,7 @@ public class MainMenuGUI : GUIMenu
 	private IEnumerator OnStart ()
 	{
 		#if UNITY_ANDROID
-//		if (_selectedStageIndex == 0 || _selectedStageIndex == 18 || (!UmengInitializer._isShowIap && User.GetLevelScore (_selectedStageIndex-1) >= 100) || (User.GetLevelScore (_selectedStageIndex-1) >= 30 && User.HasIAP_UnlockAll) || User.GetLevelScore (_selectedStageIndex) > 0){//(User.HasIAP_ShareUnlockGame && _selectedStageIndex == 1)) {
+		if (_selectedStageIndex == 0 || _selectedStageIndex == 18 || (!UmengInitializer._isShowIap && User.GetLevelScore (_selectedStageIndex-1) >= 100) || (User.GetLevelScore (_selectedStageIndex-1) >= 30 && User.HasIAP_UnlockAll) || User.GetLevelScore (_selectedStageIndex) > 0){//(User.HasIAP_ShareUnlockGame && _selectedStageIndex == 1)) {
 			if (_inputEnabled) {
 				_isStage = true;
 				_inputEnabled = false;
@@ -522,11 +526,11 @@ public class MainMenuGUI : GUIMenu
 				CGame.menuLayer.CloseMainMenuGUI ();
 				CGame.Instance.InitGamelogic (_selectedStageIndex, _selectedStage);
 			}
-//		}else if(User.GetLevelScore (_selectedStageIndex-1) < 30 && User.HasIAP_UnlockAll){
-//			EtceteraAndroid.showAlert ("提示", "您已开启休闲模式，上一关达到30%即可开启本关", "确定");
-//		} else {
-//			OnUnlockAll ();
-//		}
+		}else if(User.GetLevelScore (_selectedStageIndex-1) < 30 && User.HasIAP_UnlockAll){
+			EtceteraAndroid.showAlert ("提示", "您已开启休闲模式，上一关达到30%即可开启本关", "确定");
+		} else {
+			OnUnlockAll ();
+		}
 		#elif UNITY_IPHONE
 		if(_inputEnabled)
 		{

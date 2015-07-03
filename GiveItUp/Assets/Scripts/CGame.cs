@@ -247,6 +247,7 @@ public class CGame : MonoBehaviour
 				needrefresh = false;
 			}
 			User.HasIAP_UnlockAll = true;
+			User.HasIAP_RemoveAds = true;
 			User.Save();
 			
 			//PluginManager.social.SubmitScore(eLeaderboard.CompletedLevels, 18);

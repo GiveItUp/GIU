@@ -243,13 +243,13 @@
 <!-- 添加360SDK必需的meta-data：QHOPENSDK_APPID。此处value为APPID。请在360应用开放平台注册申请-->
 <meta-data
 android:name="QHOPENSDK_APPID"
-android:value="202352196">
+android:value="202573801">
 </meta-data>
 
 <!--添加360SDK必需的meta-data：QHOPENSDK_APPKEY。此处value为APPKEY。请在360应用开放平台注册申请-->
 <meta-data
 android:name="QHOPENSDK_APPKEY"
-android:value="4d9bb760dcddaf9f715771da143c7166">
+android:value="674b0a9e28d36d50a792b7b683877dcb">
 </meta-data>
 
   </application>

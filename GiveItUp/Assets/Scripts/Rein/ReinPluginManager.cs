@@ -8,20 +8,13 @@ public class ReinPluginManager : MonoBehaviour
 	#if UNITY_ANDROID
 	public static AndroidJavaObject _plugin;
 	#endif
+
+	public static int channleId = 0;//-1没有后缀包名的360,0没有后缀的包名，1.baidu 2.anzhi 3.baofeng 4.lenovo 5.leshi 6.iqiyi 7.oppo
 	
 	void Awake ()
 	{
 		#if UNITY_ANDROID		
-		int channleId = 0;//0没有后缀的包名，1.baidu 2.anzhi 3.baofeng 4.lenovo 5.leshi 6.iqiyi 7.oppo
 		switch(channleId){
-		case 0:
-			using (var pluginClass = new AndroidJavaClass( "com.east2west.octopus.MainActivity" )) {
-				_plugin = pluginClass.CallStatic<AndroidJavaObject> ("getInstance");
-				//_plugin.Call("Login");
-				Debug.Log ("PLUGIN INITIAL0");
-			}
-			//				User._isToChangePackage = false;
-			break;
 		case 1://
 			using (var pluginClass = new AndroidJavaClass( "com.east2west.octopus.baidu.MainActivity" )) {
 				_plugin = pluginClass.CallStatic<AndroidJavaObject> ("getInstance");
@@ -78,6 +71,14 @@ public class ReinPluginManager : MonoBehaviour
 			}
 			//				User._isToChangePackage = true;
 			break;
+		default:
+			using (var pluginClass = new AndroidJavaClass( "com.east2west.octopus.MainActivity" )) {
+				_plugin = pluginClass.CallStatic<AndroidJavaObject> ("getInstance");
+				//_plugin.Call("Login");
+				Debug.Log ("PLUGIN INITIAL0");
+			}
+			//				User._isToChangePackage = false;
+			break;
 		}
 		#endif
 		
@@ -97,8 +98,8 @@ public class ReinPluginManager : MonoBehaviour
 					}
 				}
 			}
+			#endif
 		}
-		#endif
 	}
 	
 	public static void Purchase (string pid)
