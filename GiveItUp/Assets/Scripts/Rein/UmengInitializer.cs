@@ -21,7 +21,11 @@ public class UmengInitializer : MonoBehaviour
 	{
 //		umengIdDict.Add (East2WestGames.GiveItUp, "55713c8b67e58e5d74005592");
 //		GA.StartWithAppKeyAndChannelId (umengIdDict [East2WestGames.GiveItUp], channel.ToString());
+		#if UNITY_ANDROID
 		GA.StartWithAppKeyAndChannelId ("55713c8b67e58e5d74005592", channel.ToString());
+		#elif UNITY_IPHONE 
+		GA.StartWithAppKeyAndChannelId ("55a7923967e58e996e00280b", channel.ToString());
+		#endif
 		
 		Debug.Log("Umeng Start");
 //		ad.channel = channel;
@@ -128,9 +132,6 @@ public class UmengInitializer : MonoBehaviour
 			if(GA.GetConfigParamForKey ("GameAD") == "1"){
 				_isShowGameAd = true;
 			}
-		}
-		if (channel.ToString () == "MM") {
-			_showAdChance = 0;//广告数字为0关闭非0为百分比
 		}
 	}
 
